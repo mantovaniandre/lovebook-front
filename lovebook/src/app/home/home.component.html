@@ -1,0 +1,56 @@
+<ejs-sidebar id="default-sidebar" #sidebar (created)="onCreated($event)" style="visibility: hidden" [width]="width" [showBackdrop]="showBackdrop" [closeOnDocumentClick]="closeOnDocumentClick">
+  <div class="title"> Sidebar content</div>
+  <div class="sub-title">
+      Click the button to close the Sidebar.
+  </div>
+  <div class="center-align">
+    <button ejs-button id="close" (click)="closeClick()" class="e-btn close-btn btn btn-dark">Close Sidebar</button>
+  </div>
+</ejs-sidebar>
+<div>
+  <div class="title">Home</div>
+  <div class="sub-title"> Click the button to open/close the Sidebar.</div>
+  <div style="padding:20px" class="center-align">
+
+    <button ejs-button id="toggle" class="e-btn e-info btn btn-dark" (click)="toggleClick()">Toggle Sidebar</button>
+  </div>
+
+  <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+              [animation]="'slide'">
+  <mdb-carousel-item *ngFor="let item of slides; let i = index">
+    <div class="col-md-4" *ngFor="let card of item; let cardIndex = index">
+      <mdb-card class="my-1">
+        <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h4>{{card.title}}</h4>
+          </mdb-card-title>
+          <p>{{card.description}}</p>
+          <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect>{{card.buttonText}}</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel>
+
+<mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+              [animation]="'slide'">
+  <mdb-carousel-item *ngFor="let item of slides; let i = index">
+    <div class="col-md-4" *ngFor="let card of item; let cardIndex = index">
+      <mdb-card class="my-1">
+        <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
+        <mdb-card-body>
+          <mdb-card-title>
+            <h4>{{card.title}}</h4>
+          </mdb-card-title>
+          <p>{{card.description}}</p>
+          <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect>{{card.buttonText}}</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel>
+
+
+</div>
+
