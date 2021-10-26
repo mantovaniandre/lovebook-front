@@ -9,7 +9,6 @@ import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
 export class HomeComponent implements OnInit {
 
 
-
   @ViewChild('sidebar')
   sidebar!: SidebarComponent;
   public showBackdrop: boolean = true;
