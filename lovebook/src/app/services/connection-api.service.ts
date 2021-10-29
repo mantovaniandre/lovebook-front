@@ -12,7 +12,7 @@ export class ConnectionApiService {
 
   getBooks(Livro: any): Observable<any> {
 
-    let url = 'localhost:8080/book'
+    let url = 'http://localhost:8080/book'
 
     const params = new HttpParams().set('nome', Livro)
 
