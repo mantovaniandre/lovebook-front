@@ -34,7 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     SidebarModule,
     MDBBootstrapModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,15 +19,10 @@
     <button type="submit" (click)=getLivros(campoInput.value)>Pesquisar</button>
   </div>
 
-  <div *ngIf = "$livros != null" >
+  <!--div *ngIf = "$livros != null" >
     <div class = "row-md-12" *ngIf = "$livros | async as content; else loading">
       <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
                   [animation]="'slide'">
-          <div class="controls-top row justify-content-md-center mb-3">
-            <a class="btn btn-primary mr-1" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-            <a class="btn btn-primary ml-1" href="#multi-item-example" data-slide="next"><i
-                class="fas fa-chevron-right"></i></a>
-            </div>
       <mdb-carousel-item *ngFor="let item of slides; let i = index">
         <div class="col-md-2" *ngFor="let Livro of item; let cardIndex = index">
           <mdb-card class="my-1">
@@ -44,159 +39,84 @@
       </mdb-carousel-item>
       </mdb-carousel>
     </div>
+  </!--div-->
+
+<div class="row" *ngIf = "$livros | async as content; else loading">
+  <div class="container my-4">
+
+  <!--Carousel Wrapper-->
+  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top row justify-content-md-center mb-3">
+  <a class="btn btn-primary mr-1" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+  <a class="btn btn-primary ml-1" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
   </div>
+  <!--/.Controls-->
 
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+  <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+  <li data-target="#multi-item-example" data-slide-to="1"></li>
 
-<div class="container my-4">
+  </ol>
+  <!--/.Indicators-->
 
-<!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
 
-<!--Controls-->
-<div class="controls-top row justify-content-md-center mb-3">
-<a class="btn btn-primary mr-1" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-<a class="btn btn-primary ml-1" href="#multi-item-example" data-slide="next"><i
-    class="fas fa-chevron-right"></i></a>
-</div>
-<!--/.Controls-->
+  <!--First slide-->
 
-<!--Indicators-->
-<ol class="carousel-indicators">
-<li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-<li data-target="#multi-item-example" data-slide-to="1"></li>
+  <div class="carousel-item active">
 
-</ol>
-<!--/.Indicators-->
-
-<!--Slides-->
-<div class="carousel-inner" role="listbox">
-
-<!--First slide-->
-<div *ngFor="let item of slides; let i = index">
-
-    <div class="carousel-item active">
-      <div class="col-md-3" style="float:left">
+    <div *ngFor="let Livro of data" class="col-md-3" style="float:left">
       <div class="card mb-2">
-          <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Button</a>
+        <img class="card-img-top"
+          src={{Livro.urlDaImagemDoLivro}} alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">{{Livro.nomeDoLivro}}</h4>
+          <p class="card-text">{{Livro.nomeDoAutor}}</p>
+          <a class="btn btn-primary">Button</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--/.First slide-->
+
+  <!--Second slide-->
+  <div *ngFor="let item of slides; let i = index">
+    <div class="carousel-item">
+      <div *ngFor="let Livro of item; let cardIndex = index">
+
+
+        <div class="col-md-3" style="float:left">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src= {{Livro.urlDaImagemDoLivro}} alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">{{Livro.nomeDoLivro}}</h4>
+              <p class="card-text">{{Livro.nomeDoAutor}}</p>
+              <a class="btn btn-primary">Button</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Button</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-        <div class="card mb-2">
-          <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Button</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3" style="float:left">
-      <div class="card mb-2">
-          <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
-            <a class="btn btn-primary">Button</a>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
-<!--/.First slide-->
-
-<!--Second slide-->
-<div class="carousel-item">
-
-  <div class="col-md-3" style="float:left">
-    <div class="card mb-2">
-      <img class="card-img-top"
-        src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-          card's content.</p>
-        <a class="btn btn-primary">Button</a>
-      </div>
     </div>
   </div>
+  <!--/.Second slide-->
 
-  <div class="col-md-3" style="float:left">
-    <div class="card mb-2">
-      <img class="card-img-top"
-        src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-          card's content.</p>
-        <a class="btn btn-primary">Button</a>
-      </div>
-    </div>
+
+
   </div>
+  <!--/.Slides-->
 
-  <div class="col-md-3" style="float:left">
-    <div class="card mb-2">
-      <img class="card-img-top"
-        src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-          card's content.</p>
-        <a class="btn btn-primary">Button</a>
-      </div>
-    </div>
   </div>
-
-  <div class="col-md-3" style="float:left">
-    <div class="card mb-2">
-      <img class="card-img-top"
-        src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-          card's content.</p>
-        <a class="btn btn-primary">Button</a>
-      </div>
-    </div>
+  <!--/.Carousel Wrapper-->
   </div>
-
 </div>
-<!--/.Second slide-->
-
-
-
-</div>
-<!--/.Slides-->
-
-</div>
-<!--/.Carousel Wrapper-->
-</div>
-
 <ng-template #loading>
   <div class="text-center">
     <div class="spinner-border text-warning" role="status">

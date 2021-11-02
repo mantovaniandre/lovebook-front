@@ -13,6 +13,7 @@ import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
 export class GetLivroComponent implements OnInit {
 
   data!: Array<any>;
+  data2!: Array<any>;
 
   $livros!: Observable<Array<Livro>>;
 
@@ -55,8 +56,10 @@ export class GetLivroComponent implements OnInit {
     this.$livros = this.service.getBooks(livro);
     this.$livros.subscribe(data => {
       console.log(data);
-      this.data = data;
-      this.slides = this.chunk(this.data, 1);
+      this.data = data.slice(0, 4);
+      this.data2 = data.slice(4, data.length);
+      this.slides = this.chunk(this.data2, 4);
+      console.log(this.slides);
     })
   }
 
