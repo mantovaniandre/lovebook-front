@@ -90,6 +90,8 @@ export class HomeComponent implements OnInit {
     }
     return R;
   }
+
+  
   ngOnInit() {
     this.slides = this.chunk(this.cards, 3);
   }

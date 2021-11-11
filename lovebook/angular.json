@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lovebook": {
+    "lovebook-frontnew": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lovebook",
+            "outputPath": "dist/lovebook-frontnew",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,22 +27,11 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
-              "./node_modules/@fortawesome/fontawesome-free/scss/solid.scss",
-              "./node_modules/@fortawesome/fontawesome-free/scss/regular.scss",
-              "./node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
-              "./node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
-              "./node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
-              "./node_modules/animate.css/animate.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.js",
-	            "./node_modules/popper.js/dist/umd/popper.js",
-	            "./node_modules/bootstrap/dist/js/bootstrap.js",
-              "./node_modules/chart.js/dist/Chart.js",
-              "./node_modules/hammerjs/hammer.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {
@@ -82,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "lovebook:build:production"
+              "browserTarget": "lovebook-frontnew:build:production"
             },
             "development": {
-              "browserTarget": "lovebook:build:development"
+              "browserTarget": "lovebook-frontnew:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lovebook:build"
+            "browserTarget": "lovebook-frontnew:build"
           }
         },
         "test": {
@@ -116,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "lovebook"
+  "defaultProject": "lovebook-frontnew"
 }
