@@ -7,7 +7,6 @@ import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
-import { GetLivroComponent } from './get-livro/get-livro.component';
 
 const routes: Routes = [
   {
@@ -35,10 +34,6 @@ const routes: Routes = [
     path: 'sibling3',
     component: Sibling3Component
   },
-  {
-    path: 'livros',
-    component: GetLivroComponent,
-  }
 ];
 
 @NgModule({

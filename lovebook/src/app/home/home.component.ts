@@ -1,4 +1,8 @@
+import { Content } from './../models/Content';
+import { Observable } from 'rxjs';
+import { ConnectionApiService } from './../services/connection-api.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Livro } from '../models/Livro';
 import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
 
 @Component({
@@ -9,6 +13,14 @@ import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
 export class HomeComponent implements OnInit {
 
 
+  data!: Array<any>;
+
+  $livros!: Observable<Array<Livro>>;
+
+  constructor(private service: ConnectionApiService) {
+    this.data = new Array<any>();
+   }
+
   @ViewChild('sidebar')
   sidebar!: SidebarComponent;
   public showBackdrop: boolean = true;
@@ -16,72 +28,20 @@ export class HomeComponent implements OnInit {
   public width: string ='280px';
   public closeOnDocumentClick: boolean = true;
   public onCreated(args: any) {
-       this.sidebar.element.style.visibility = '';
+    this.sidebar.element.style.visibility = '';
+
   }
   closeClick(): void {
-      this.sidebar.hide();
+    this.sidebar.hide();
   };
 
   toggleClick():void{
     this.sidebar.show();
   }
 
-  cards = [
-    {
-      title: 'Card Title 1',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
-    },
-    {
-      title: 'Card Title 2',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
-    },
-    {
-      title: 'Card Title 3',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
-    },
-    {
-      title: 'Card Title 4',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
-    },
-    {
-      title: 'Card Title 5',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
-    },
-    {
-      title: 'Card Title 6',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
-    },
-    {
-      title: 'Card Title 7',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
-    },
-    {
-      title: 'Card Title 8',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
-    },
-    {
-      title: 'Card Title 9',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
-    },
-  ];
+  ngOnInit() {
+  }
+
   slides: any = [[]];
   chunk(arr: string | any[], chunkSize: number) {
     let R = [];
@@ -91,12 +51,18 @@ export class HomeComponent implements OnInit {
     return R;
   }
 
-  
-  ngOnInit() {
-    this.slides = this.chunk(this.cards, 3);
+  counter(){
+    return new Array(this.slides.length);
   }
 
-
-
+  getLivros(livro: string){
+    event?.preventDefault();
+    this.$livros = this.service.getBooks(livro);
+    this.$livros.subscribe(data => {
+      console.log(data);
+      this.data = data;
+      this.slides = this.chunk(this.data, 5);
+    })
+  }
 
 }

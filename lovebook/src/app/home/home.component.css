@@ -1,5 +1,4 @@
 
-
 .center-align {
   text-align: center;
   padding: 20px;
@@ -34,8 +33,19 @@ body {
 }
 
 #default-sidebar {
-  background-color: rgb(25, 118, 210);
+  background: rgb(140,205,188);
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
   color: #ffffff;
+}
+
+.botao-estilizado {
+  background: rgb(140,205,188);
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+}
+
+input[type=text]:focus {
+  border: solid red;
 }
 
 .close-btn:hover {

@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { ChildComponent } from './child/child.component';
 import { Child2Component } from './child2/child2.component';
-import { GetLivroComponent } from './get-livro/get-livro.component';
 import { HomeComponent } from './home/home.component';
 import { ParentComponent } from './parent/parent.component';
 import { Parent2Component } from './parent2/parent2.component';
@@ -25,7 +24,7 @@ import { Sibling3Component } from './sibling3/sibling3.component';
     Child2Component,
     Parent3Component,
     Sibling3Component,
-    GetLivroComponent
+
   ],
   imports: [
     BrowserModule,
