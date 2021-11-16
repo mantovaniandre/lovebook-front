@@ -13,6 +13,9 @@ import { ParentComponent } from './parent/parent.component';
 import { Parent2Component } from './parent2/parent2.component';
 import { Parent3Component } from './parent3/parent3.component';
 import { Sibling3Component } from './sibling3/sibling3.component';
+import { CadastroLivrosComponent } from './cadastro-livros/cadastro-livros.component';
+import { LoginComponent } from './login/login.component';
+import { AtualizacaoCadastralComponent } from './atualizacao-cadastral/atualizacao-cadastral.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { Sibling3Component } from './sibling3/sibling3.component';
     Child2Component,
     Parent3Component,
     Sibling3Component,
+    CadastroLivrosComponent,
+    LoginComponent,
+    AtualizacaoCadastralComponent,
 
   ],
   imports: [

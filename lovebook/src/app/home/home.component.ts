@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit {
     this.$livros.subscribe(data => {
       console.log(data);
       this.data = data;
-      this.slides = this.chunk(this.data, 5);
+      this.slides = this.chunk(this.data, 4);
     })
   }
 

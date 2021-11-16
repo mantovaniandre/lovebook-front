@@ -7,6 +7,9 @@ import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
+import { CadastroLivrosComponent } from './cadastro-livros/cadastro-livros.component';
+import { LoginComponent } from './login/login.component';
+import { AtualizacaoCadastralComponent } from './atualizacao-cadastral/atualizacao-cadastral.component';
 
 const routes: Routes = [
   {
@@ -31,9 +34,21 @@ const routes: Routes = [
     component: Parent3Component,
   },
   {
+    path: 'cadastroLivro',
+    component: CadastroLivrosComponent
+  },
+  {
+    path:'login',
+    component: LoginComponent
+  },
+  {
     path: 'sibling3',
     component: Sibling3Component
   },
+  {
+    path:'atualizacaoCadastral',
+    component: AtualizacaoCadastralComponent
+  }
 ];
 
 @NgModule({

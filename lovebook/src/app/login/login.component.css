@@ -1,0 +1,34 @@
+.title{
+  color:rgb(140,205,188);
+}
+
+.mgTp{
+  margin-top:10%;
+}
+
+.topBtn{
+  margin-top:15px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(140,205,188) !important;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(140,205,188) !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgb(140,205,188) !important;
+}
+
+.botao-login {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+}
+
+.nao-tem-cadastro a {
+  text-decoration: none;
+  color: rgb(140,205,188);
+}
