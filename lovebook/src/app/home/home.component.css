@@ -211,6 +211,7 @@ input[type=text]:focus{
 
 .input-estilizado {
   border-color:rgb(140,205,188);
+  border-radius: 5px;
 }
 
 .close-btn:hover {
