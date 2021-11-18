@@ -53,47 +53,125 @@
 </div>
 
 <div class="container">
-  <h2 class="mt-3" >Literatura</h2>
-  <hr>
-  <div class="row categoria" *ngIf ="$livros_literatura | async as content; else loading">
-    <div class="container">
+  <div class="categoria-title">
+    <h2 class="title">Literatura</h2>
+  </div>
+  <div class="row categoria-livro">
+    <div class="categoria-carousel-container" *ngIf ="$livros_literatura | async as content; else loading">
       <div class="carousel carousel-dark slide" id="carouselLiteratura" data-bs-ride="carousel">
         <div class="carousel-item" *ngFor="let listaLivro of slides_literatura; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
-          <div class="row container2">
-            <div class="container3 col-3" *ngFor="let livro of listaLivro">
-              <img src={{livro.urlDaImagemDoLivro}} class="card-img-top" alt="...">
-              <div class="container4">
-                <h6 class="card-title">{{livro.nomeDoLivro}}</h6>
-                <p class="card-text">{{livro.nomeDoAutor}}</p>
-                <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-                <div class="estrelas">
-                  <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                  <label for="cm_star-1"><i class="fa"></i></label>
-                  <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                  <label for="cm_star-2"><i class="fa"></i></label>
-                  <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                  <label for="cm_star-3"><i class="fa"></i></label>
-                  <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                  <label for="cm_star-4"><i class="fa"></i></label>
-                  <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                  <label for="cm_star-5"><i class="fa"></i></label>
-                  <input type="radio" id="cm_star-5" name="fb" value="5"/>
+          <div class="carousel-row">
+            <div class="carousel-row-subitem" *ngFor="let livro of listaLivro">
+              <div class="carousel-row-subitem-responsive">
+                <div class="img-responsive">
+                  <img src={{livro.urlDaImagemDoLivro}} class="img-book" alt="...">
                 </div>
-                <p class="card-text">R${{livro.precoDeVendaDoLivro}}</p>
-                <a href="#" class="btn btn-primary"><i class="bi bi-cart-check"></i> Comprar</a>
+                <div class="title-responsive">
+                  <h6 class="title-name-book">{{livro.nomeDoLivro}}</h6>
+                </div>
+                <div class="text-responsive">
+                  <p class="text-name-autor-book">{{livro.nomeDoAutor}}</p>
+                </div>
+                <div class="stars-responsive">
+                  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                  <div class="estrelas">
+                    <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                    <label for="cm_star-1"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                    <label for="cm_star-2"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                    <label for="cm_star-3"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                    <label for="cm_star-4"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                    <label for="cm_star-5"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                  </div>
+                </div>
+                <div class="text-price-responsive">
+                  <p class="text-price-book">R${{livro.precoDeVendaDoLivro}}</p>
+                </div>
+                <div class="btn-responsive">
+                  <a class="btn btn-primary"><i class="bi bi-cart-check"></i> Comprar</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="test3">
-          <div class="test1">
-            <span class="btn4" type="button" data-bs-target="#carouselLiteratura" data-bs-slide="prev">
+        <div class="carousel-arrow-1">
+          <div class="carousel-arrow-div">
+            <span class="carousel-arrow-div-btn" type="button" data-bs-target="#carouselLiteratura" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </span>
           </div>
-          <div class="test2">
-            <span class="btn5" type="button" data-bs-target="#carouselLiteratura" data-bs-slide="next">
+          <div class="carousel-arrow-2">
+            <span class="carousel-arrow-2-btn" type="button" data-bs-target="#carouselLiteratura" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="categoria-title">
+    <h2 class="title">Literatura</h2>
+  </div>
+  <div class="row categoria-livro">
+    <div class="categoria-carousel-container" *ngIf ="$livros_literatura | async as content; else loading">
+      <div class="carousel carousel-dark slide" id="carouselLiteratura" data-bs-ride="carousel">
+        <div class="carousel-item" *ngFor="let listaLivro of slides_literatura; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
+          <div class="carousel-row">
+            <div class="carousel-row-subitem" *ngFor="let livro of listaLivro">
+              <div class="carousel-row-subitem-responsive">
+                <div class="img-responsive">
+                  <img src={{livro.urlDaImagemDoLivro}} class="img-book" alt="...">
+                </div>
+                <div class="title-responsive">
+                  <h6 class="title-name-book">{{livro.nomeDoLivro}}</h6>
+                </div>
+                <div class="text-responsive">
+                  <p class="text-name-autor-book">{{livro.nomeDoAutor}}</p>
+                </div>
+                <div class="stars-responsive">
+                  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                  <div class="estrelas">
+                    <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                    <label for="cm_star-1"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                    <label for="cm_star-2"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                    <label for="cm_star-3"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                    <label for="cm_star-4"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                    <label for="cm_star-5"><i class="fa"></i></label>
+                    <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                  </div>
+                </div>
+                <div class="text-price-responsive">
+                  <p class="text-price-book">R${{livro.precoDeVendaDoLivro}}</p>
+                </div>
+                <div class="btn-responsive">
+                  <a class="btn btn-primary"><i class="bi bi-cart-check"></i> Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-arrow-1">
+          <div class="carousel-arrow-div">
+            <span class="carousel-arrow-div-btn" type="button" data-bs-target="#carouselLiteratura" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </span>
+          </div>
+          <div class="carousel-arrow-2">
+            <span class="carousel-arrow-2-btn" type="button" data-bs-target="#carouselLiteratura" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </span>

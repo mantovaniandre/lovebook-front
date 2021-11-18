@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
     this.$livros_literatura.subscribe(data => {
       console.log(data);
       this.data_literatura = data;
-      this.slides_literatura = this.chunk(this.data_literatura, 3);
+      this.slides_literatura = this.chunk(this.data_literatura, 5);
       console.log(this.slides_literatura);
     })
   }
@@ -81,7 +81,7 @@ export class HomeComponent implements OnInit {
     this.$livros.subscribe(data => {
       console.log(data);
       this.data = data;
-      this.slides = this.chunk(this.data, 3);
+      this.slides = this.chunk(this.data, 4);
     })
   }
 

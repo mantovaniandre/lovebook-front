@@ -1,24 +1,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100&display=swap');
 
-.container {
+.navbar {
   background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
   height: 85px;
   width: 100%;
 }
 
-.container .container-item1 {
+.container-item1 {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
 
-.container .container-item1 .container-subitem1 {
+.container-item1 .container-subitem1 {
   align-self: center;
   width: 50%;
 }
 
-.container .container-item1 .container-subitem1 .navbar-logo {
+.container-item1 .container-subitem1 .navbar-logo {
   width: 150px;
   margin-left: 40px;
   font-family: 'Big Shoulders Stencil Display', cursive;
@@ -27,18 +27,18 @@
   color: white;
 }
 
-.container .container-item1 .container-subitem2 {
+.container-item1 .container-subitem2 {
   display: flex;
   justify-content: center;
   width: 50%;
 }
 
-.container .container-item1 .container-subitem2 .dropdown {
+.container-item1 .container-subitem2 .dropdown {
   align-self: center;
   height: 40px;
 }
 
-.container .container-item1 .container-subitem2 .dropdown .dropdownchild {
+.container-item1 .container-subitem2 .dropdown .dropdownchild {
   background-color: white;
   border: 1px solid white;
   border-right: 1px solid gray;
@@ -47,24 +47,24 @@
   width: 100px;
 }
 
-.container .container-item1 .container-subitem2 .inputparent {
+.container-item1 .container-subitem2 .inputparent {
   align-self: center;
   height: 40px;
 }
 
-.container .container-item1 .container-subitem2 .inputparent .inputchild {
+.container-item1 .container-subitem2 .inputparent .inputchild {
   border: 1px solid white;
   height: 38px;
   width: 300px;
   outline: white;
 }
 
-.container .container-item1 .container-subitem2 .btnparent {
+.container-item1 .container-subitem2 .btnparent {
   align-self: center;
   height: 40px;
 }
 
-.container .container-item1 .container-subitem2 .btnparent .btnchild {
+.container-item1 .container-subitem2 .btnparent .btnchild {
   border: 1px solid white;
   border-left: 1px solid gray;
   background-color: white;
@@ -72,58 +72,53 @@
   width: 50px;
 }
 
-.container .container-item1 .container-subitem3 {
+.container-item1 .container-subitem3 {
   display: flex;
   justify-content: center;
   width: 50%;
 }
 
-.container .container-item1 .container-subitem3 .icon-person {
+.container-item1 .container-subitem3 .icon-person {
   align-self: center;
   font-size: 30px;
   color: white;
   height: 50px;
 }
 
-.container .container-item1 .container-subitem3 .login {
+.container-item1 .container-subitem3 .login {
   align-self: center;
   height: 40px;
 }
 
-.container .container-item1 .container-subitem3 .login .greating {
+.container-item1 .container-subitem3 .login .greating {
   height: 15px;
   font-size: 13px;
   color: white;
   margin-left: 5px;
 }
 
-.container .container-item1 .container-subitem3 .login .nome {
+.container-item1 .container-subitem3 .login .nome {
   height: 15px;
   font-size: 13px;
   color: white;
   margin-left: 5px;
 }
 
-.dropdownchild2 {
-  width: 200px;
-  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-}
-
-.container .container-item1 .container-subitem4 {
+.container-item1 .container-subitem4 {
   display: flex;
   justify-content: center;
   position: relative;
   width: 20%;
 }
 
-.container .container-item1 .container-subitem4 .icon-cart {
+.container-item1 .container-subitem4 .icon-cart {
   align-self: center;
   font-size: 30px;
   color: white;
   height: 50px;
 }
 
-.container .container-item1 .container-subitem4 .icon-cart .pill-badge {
+.container-item1 .container-subitem4 .icon-cart .pill-badge {
   background-color: red;
   width: 20px;
   height: 20px;
@@ -135,7 +130,7 @@
   left: 53px;
 }
 
-.container .container-item1 .container-subitem4 .icon-cart .pill-badge .pill-badg-paragraph {
+.container-item1 .container-subitem4 .icon-cart .pill-badge .pill-badg-paragraph {
   font-size: 10px;
   align-self: center;
   color: white;
@@ -143,8 +138,86 @@
   text-decoration: none;
 }
 
-.container .container-item2 {
-  background: linear-gradient(180deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  border-top: 1px solid white;
-  height: 35px;
+.carousel {
+  margin-top: 50px;
+  height: 220px;
+  background-color: none;
+}
+
+.test1 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-inner {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-responsive {
+  width: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+  width: 100%;
+  align-self: center;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
+
+.carousel-arrow-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  bottom: 190px;
+}
+
+.carousel-arrow-div {
+  width: 50px;
+  height: 100%;
+  display: flex;
+}
+
+.carousel-arrow-div-btn {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-control-prev-icon {
+  align-self: center;
+}
+
+.carousel-arrow-2 {
+  width: 50px;
+  height: 100%;
+  display: flex;
+}
+
+.carousel-arrow-2-btn {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-control-next-icon {
+  align-self: center;
 }
