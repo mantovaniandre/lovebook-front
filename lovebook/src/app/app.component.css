@@ -220,4 +220,185 @@
 
 .carousel-control-next-icon {
   align-self: center;
+  color: black;
 }
+
+.newsletter {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+}
+
+.newsletter-div {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.regiter-newsletter {
+  align-self: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+}
+
+.newsletter-text {
+  margin-right: 20px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.regiter-newsletter .inputchild {
+  border: 1px solid white;
+  border-radius: 5px;
+  height: 30px;
+  width: 300px;
+  outline: white;
+}
+
+.regiter-newsletter .btnchild {
+  border: 1px solid white;
+  border-left: 1px solid gray;
+  border-radius: 5px;
+  background-color: white;
+  height: 30px;
+  width: 50px;
+}
+
+.socialmidia {
+  align-self: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+}
+
+.icon-facebook {
+  align-self: center;
+  color: white;
+  font-size: 30px;
+}
+
+.icon-instagram {
+  align-self: center;
+  color: white;
+  font-size: 30px;
+}
+
+.icon-twitter {
+  align-self: center;
+  color: white;
+  font-size: 30px;
+}
+
+.footer {
+  width: 100%;
+  height: 180px;
+  background: rgb(241, 241, 241);
+}
+
+.footer-div {
+  width: 100%;
+  height: 180px;
+  background: rgb(241, 241, 241);
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+.title-about {
+  text-transform: uppercase;
+  color: rgba(53,126,107,1);
+}
+
+.aboutus {
+  font-size: 14px;
+  color: rgb(70, 73, 73);
+  margin-top: 5px;
+}
+
+.workus {
+  font-size: 14px;
+  color: rgb(70, 73, 73);
+  margin-top: 5px;
+}
+
+.gift {
+  font-size: 14px;
+  color: rgb(70, 73, 73);
+  margin-top: 5px;
+}
+
+.title-attendance {
+  text-transform: uppercase;
+  color: rgba(53,126,107,1);
+}
+
+.contact {
+  font-size: 14px;
+  color: rgb(70, 73, 73);
+  margin-top: 5px;
+}
+
+.privacy {
+  font-size: 14px;
+  color: rgb(70, 73, 73);
+  margin-top: 5px;
+}
+
+.devolution {
+  font-size: 14px;
+  color: rgb(70, 73, 73);
+  margin-top: 5px;
+}
+
+.questions {
+  font-size: 14px;
+  color: rgb(70, 73, 73);
+  margin-top: 5px;
+}
+
+.payment {
+  text-transform: uppercase;
+  color: rgba(53,126,107,1);
+}
+
+.certificate {
+  text-transform: uppercase;
+  color: rgba(53,126,107,1);
+}
+
+.information-cnpj {
+  width: 100%;
+  height: 60px;
+  background: rgb(241, 241, 241);
+  display: flex;
+}
+
+.information-cnpj-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+}
+
+.cnpj {
+  text-align: center;
+}
+
+.cnpj-text {
+  font-size: 12px;
+}
+
+.address {
+  text-align: center;
+}
+
+.address-text {
+  font-size: 12px;
+}
+
+
+
+

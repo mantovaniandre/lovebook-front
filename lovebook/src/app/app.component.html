@@ -21,7 +21,6 @@
         <button class="btnchild" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
       </div>
     </div>
-
     <div class="container-subitem3">
       <div class="icon-person">
         <i class="bi bi-person-circle"></i>
@@ -35,7 +34,6 @@
         </div>
       </div>
     </div>
-
     <div class="container-subitem4">
       <div class="icon-cart">
         <i class="bi bi-cart"></i>
@@ -83,3 +81,81 @@
 </div>
 
 <router-outlet></router-outlet>
+
+<div class="newsletter">
+  <div class="newsletter-div">
+    <div class="regiter-newsletter">
+      <a class="newsletter-text">Cadastre em nossa newsletter</a>
+      <input class="inputchild" type="text" #campoInput placeholder="Cadastre seu e-mail aqui">
+      <button class="btnchild" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
+    </div>
+    <div class="socialmidia">
+      <a>Acompanhe a gente</a>
+    </div>
+    <div class="icon-facebook">
+      <i class="bi bi-facebook"></i>
+    </div>
+    <div class="icon-instagram">
+      <i class="bi bi-instagram"></i>
+    </div>
+    <div class="icon-twitter">
+      <i class="bi bi-twitter"></i>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-div">
+    <div class="about">
+      <h6 class="title-about">Sobre a Lovebook</h6>
+      <div class="aboutus">
+        <a>Quem somos</a>
+      </div>
+      <div class="workus">
+        <a>Trabalhe conosco</a>
+      </div>
+      <div class="gift">
+        <a>Vale-presente</a>
+      </div>
+    </div>
+    <div class="attendance">
+      <h6 class="title-attendance">Atendimento ao cliente</h6>
+      <div class="contact">
+        <a>Entre em contato</a>
+      </div>
+      <div class="privacy">
+        <a>Política de privacidade</a>
+      </div>
+      <div class="devolution">
+        <a>Política de entrega e devolução</a>
+      </div>
+      <div class="questions">
+        <a>Perguntas e respostas</a>
+      </div>
+    </div>
+    <div class="payment">
+      <h6 class="title-payment">Formas de pagamentos</h6>
+      <div>
+        <img src="../assets/images/bandeiraTipoPagamento.png">
+      </div>
+    </div>
+    <div class="certificate">
+      <h6 class="title-certificate">Certificados</h6>
+      <div>
+        <img src="../assets/images/CompraSegura.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="information-cnpj">
+  <div class="row information-cnpj-div">
+    <div class="cnpj">
+      <p class="cnpj-text">lovebook.com.br Serviços de Busca de livros na Internet Ltda - CNPJ 00.000.000/0001-60</p>
+    </div>
+    <div class="address">
+      <p class="address-text">Av. Cidade Jardim, 0000,  São José dos Campos, SP Cep: 00000-000 - atendimento@lovebook.com.br</p>
+    </div>
+  </div>
+</div>
+
