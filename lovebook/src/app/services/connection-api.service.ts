@@ -10,11 +10,13 @@ export class ConnectionApiService {
 
   constructor(private http: HttpClient) { }
 
-  getBooks(Livro: any): Observable<any> {
+  getBooks(Livro: string, Categoria: string): Observable<any> {
 
     let url = 'http://localhost:8080/book'
 
-    const params = new HttpParams().set('nome', Livro)
+    const params = new HttpParams()
+      .set('nome', Livro)
+      .set('categoria', Categoria)
 
     return this.http.get(url, {params})
   }

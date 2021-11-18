@@ -12,6 +12,15 @@ import { LoginComponent } from './login/login.component';
 import { AtualizacaoCadastralComponent } from './atualizacao-cadastral/atualizacao-cadastral.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +31,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AtualizacaoCadastralComponent,
     CadastroUsuarioComponent,
     DashboardComponent,
-
+    
   ],
   imports: [
     BrowserModule,
@@ -30,6 +39,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppRoutingModule,
     HttpClientModule,
     SidebarModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatMenuModule,
+    MatSelectModule
 
   ],
   providers: [],

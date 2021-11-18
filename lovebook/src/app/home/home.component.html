@@ -1,131 +1,114 @@
-<ejs-sidebar id="default-sidebar" #sidebar (created)="onCreated($event)" class="sidebar-botao-close-estilizado" style="visibility: hidden" [width]="width" [showBackdrop]="showBackdrop" [closeOnDocumentClick]="closeOnDocumentClick">
-  <div><h2 class="logo-estilizada">Lovebook</h2></div>
-
-  <div class="sidebar-user-estilizada">
-    <a href="">
-      <i class="bi bi-person-circle"></i>
-      <p class="p-user">André Mantovani</p>
-    </a>
-  </div>
-
-  <div class="sidebar-home-estilizada">
-    <a href="#">
-      <i class="bi bi-house icon-home"></i>
-      <p class="p-home">Home</p>
-    </a>
-  </div>
-
-  <div class="sidebar-dashboard-estilizada">
-    <a href="#">
-      <i class="bi bi-bar-chart icon-home"></i>
-      <p class="p-dashboard">Dashboard</p>
-    </a>
-  </div>
-
-  <div class="sidebar-cadastro-livro-estilizada">
-    <a href="#">
-      <i class="bi bi-journal-plus icon-home"></i>
-      <p class="p-cadastro-livro">Cadastro de livros</p>
-    </a>
-  </div>
-
-  <div class="sidebar-atualizacao-cadastral-estilizada">
-    <a href="#">
-      <i class="bi bi-info-square icon-home"></i>
-      <p class="p-atualizacao-cadastral">Atualização cadastral</p>
-    </a>
-  </div>
-
-  <div class="sidebar-seus-pedidos-estilizada">
-    <a href="#">
-      <i class="bi bi-bag icon-home"></i>
-      <p class="p-seus-pedidos">Seus pedidos</p>
-    </a>
-  </div>
-
-  <div class="center-align">
-    <button ejs-button id="close" (click)="closeClick()" class="e-btn close-btn btn sidebar-botao-close-estilizado" style="margin-top: 25px;">Close Sidebar</button>
-  </div>
-</ejs-sidebar>
-<div>
-  <div class="container">
-    <div class="row">
-      <div class="col-2">
-        <div style="padding:20px" class="">
-          <button ejs-button id="toggle" class="sidebar-botao-open-menu-estilizado btn" (click)="toggleClick()"><i class="bi bi-list"></i></button>
-        </div>
-      </div>
-        <div style="padding:20px" class="col-8 offset-2">
-          <div class="row">
-            <input class="col-5 input-estilizado" type="text" #campoInput placeholder="Qual livro você procura?">
-            <button class="sidebar-botao-pesquisa-estilizado col-1 btn" style="margin-left: 5px;" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
+<div *ngIf="$livros != null">
+  <div class="row" *ngIf = "$livros | async as content; else loading">
+    <div class="container">
+      <h2 class="mt-3">Livros conforme sua busca</h2>
+      <hr>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="" style="height: 480px;">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" *ngFor="let number of counter(''); let i = index" [ngClass]="{'active': i == 0}" [attr.data-bs-slide-to]=i [attr.aria-current]="i === 0 ? 'true' :null" [attr.aria-label]=i></button>
           </div>
-        </div>
-    </div>
-  </div>
-
-  <hr class="divisor">
-
-  <div *ngIf="$livros != null" style="width: 98%;">
-    <div class="row" *ngIf = "$livros | async as content; else loading">
-      <div class="container">
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="" style="height: 480px;">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleDark" *ngFor="let number of counter(); let i = index" [ngClass]="{'active': i == 0}" [attr.data-bs-slide-to]=i [attr.aria-current]="i === 0 ? 'true' :null" [attr.aria-label]=i></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item" *ngFor="let listaLivro of slides; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
-                <div class="row justify-content-center">
-                  <div class="card col-4" *ngFor="let livro of listaLivro" style="width: 12rem; margin-left: 5px;">
-                    <img src={{livro.urlDaImagemDoLivro}} class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h6 class="card-title">{{livro.nomeDoLivro}}</h6>
-                      <p class="card-text">{{livro.nomeDoAutor}}</p>
-                      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-                      <div class="estrelas">
-                        <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                        <label for="cm_star-1"><i class="fa"></i></label>
-                        <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                        <label for="cm_star-2"><i class="fa"></i></label>
-                        <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                        <label for="cm_star-3"><i class="fa"></i></label>
-                        <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                        <label for="cm_star-4"><i class="fa"></i></label>
-                        <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                        <label for="cm_star-5"><i class="fa"></i></label>
-                        <input type="radio" id="cm_star-5" name="fb" value="5"/>
-                      </div>
-
-                      <p class="card-text">R${{livro.precoDeVendaDoLivro}}</p>
-                      <a href="#" class="sidebar-botao-compra-estilizado btn"><i class="bi bi-cart-check"></i> Comprar</a>
+          <div class="carousel-inner">
+            <div class="carousel-item" *ngFor="let listaLivro of slides; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
+              <div class="row justify-content-center">
+                <div class="card col-4" *ngFor="let livro of listaLivro">
+                  <img src={{livro.urlDaImagemDoLivro}} class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6 class="card-title">{{livro.nomeDoLivro}}</h6>
+                    <p class="card-text">{{livro.nomeDoAutor}}</p>
+                    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                    <div class="estrelas">
+                      <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                      <label for="cm_star-1"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                      <label for="cm_star-2"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                      <label for="cm_star-3"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                      <label for="cm_star-4"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                      <label for="cm_star-5"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-5" name="fb" value="5"/>
                     </div>
+
+                    <p class="card-text">R${{livro.precoDeVendaDoLivro}}</p>
+                    <a href="#" class="sidebar-botao-compra-estilizado btn"><i class="bi bi-cart-check"></i> Comprar</a>
                   </div>
                 </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="mt-3" >Literatura</h2>
+  <hr>
+  <div class="row categoria" *ngIf ="$livros_literatura | async as content; else loading">
+    <div class="container">
+      <div class="carousel carousel-dark slide" id="carouselLiteratura" data-bs-ride="carousel">
+        <div class="carousel-item" *ngFor="let listaLivro of slides_literatura; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
+          <div class="row container2">
+            <div class="container3 col-3" *ngFor="let livro of listaLivro">
+              <img src={{livro.urlDaImagemDoLivro}} class="card-img-top" alt="...">
+              <div class="container4">
+                <h6 class="card-title">{{livro.nomeDoLivro}}</h6>
+                <p class="card-text">{{livro.nomeDoAutor}}</p>
+                <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                <div class="estrelas">
+                  <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                  <label for="cm_star-1"><i class="fa"></i></label>
+                  <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                  <label for="cm_star-2"><i class="fa"></i></label>
+                  <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                  <label for="cm_star-3"><i class="fa"></i></label>
+                  <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                  <label for="cm_star-4"><i class="fa"></i></label>
+                  <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                  <label for="cm_star-5"><i class="fa"></i></label>
+                  <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                </div>
+                <p class="card-text">R${{livro.precoDeVendaDoLivro}}</p>
+                <a href="#" class="btn btn-primary"><i class="bi bi-cart-check"></i> Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="test3">
+          <div class="test1">
+            <span class="btn4" type="button" data-bs-target="#carouselLiteratura" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            </span>
+          </div>
+          <div class="test2">
+            <span class="btn5" type="button" data-bs-target="#carouselLiteratura" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+              <span class="visually-hidden">Previous</span>
+            </span>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
-  <ng-template #loading>
-    <div class="text-center">
-      <div class="spinner-border text-warning" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
-    </div>
-  </ng-template>
-
 </div>
+
+<ng-template #loading>
+  <div class="d-flex justify-content-center">
+    <div class="spinner-border text-success" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+</ng-template>
 

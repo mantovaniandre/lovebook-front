@@ -20,7 +20,7 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'cadastroLivro',
+    path: 'cadastroLivros',
     component: CadastroLivrosComponent
   },
   {
@@ -38,7 +38,7 @@ const routes: Routes = [
   {
     path:'dashboard',
     component: DashboardComponent
-  }
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100&display=swap');
+
+.container {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  height: 85px;
+  width: 100%;
+}
+
+.container .container-item1 {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.container .container-item1 .container-subitem1 {
+  align-self: center;
+  width: 50%;
+}
+
+.container .container-item1 .container-subitem1 .navbar-logo {
+  width: 150px;
+  margin-left: 40px;
+  font-family: 'Big Shoulders Stencil Display', cursive;
+  text-decoration: none;
+  font-size: 50px;
+  color: white;
+}
+
+.container .container-item1 .container-subitem2 {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.container .container-item1 .container-subitem2 .dropdown {
+  align-self: center;
+  height: 40px;
+}
+
+.container .container-item1 .container-subitem2 .dropdown .dropdownchild {
+  background-color: white;
+  border: 1px solid white;
+  border-right: 1px solid gray;
+  color: gray;
+  height: 38px;
+  width: 100px;
+}
+
+.container .container-item1 .container-subitem2 .inputparent {
+  align-self: center;
+  height: 40px;
+}
+
+.container .container-item1 .container-subitem2 .inputparent .inputchild {
+  border: 1px solid white;
+  height: 38px;
+  width: 300px;
+  outline: white;
+}
+
+.container .container-item1 .container-subitem2 .btnparent {
+  align-self: center;
+  height: 40px;
+}
+
+.container .container-item1 .container-subitem2 .btnparent .btnchild {
+  border: 1px solid white;
+  border-left: 1px solid gray;
+  background-color: white;
+  height: 38px;
+  width: 50px;
+}
+
+.container .container-item1 .container-subitem3 {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.container .container-item1 .container-subitem3 .icon-person {
+  align-self: center;
+  font-size: 30px;
+  color: white;
+  height: 50px;
+}
+
+.container .container-item1 .container-subitem3 .login {
+  align-self: center;
+  height: 40px;
+}
+
+.container .container-item1 .container-subitem3 .login .greating {
+  height: 15px;
+  font-size: 13px;
+  color: white;
+  margin-left: 5px;
+}
+
+.container .container-item1 .container-subitem3 .login .nome {
+  height: 15px;
+  font-size: 13px;
+  color: white;
+  margin-left: 5px;
+}
+
+.dropdownchild2 {
+  width: 200px;
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+}
+
+.container .container-item1 .container-subitem4 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 20%;
+}
+
+.container .container-item1 .container-subitem4 .icon-cart {
+  align-self: center;
+  font-size: 30px;
+  color: white;
+  height: 50px;
+}
+
+.container .container-item1 .container-subitem4 .icon-cart .pill-badge {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 12px;
+  left: 53px;
+}
+
+.container .container-item1 .container-subitem4 .icon-cart .pill-badge .pill-badg-paragraph {
+  font-size: 10px;
+  align-self: center;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.container .container-item2 {
+  background: linear-gradient(180deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  border-top: 1px solid white;
+  height: 35px;
+}

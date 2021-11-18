@@ -1,1 +1,53 @@
+<div class="container">
+
+  <div class="container-item1">
+    <div class="container-subitem1">
+      <a class="navbar-logo">Lovebook</a>
+    </div>
+    <div class="container-subitem2">
+      <div class="dropdown">
+        <button class="dropdownchild dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+         Autor
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item">Autor</a></li>
+          <li><a class="dropdown-item">Título</a></li>
+          <li><a class="dropdown-item">Editora</a></li>
+        </ul>
+      </div>
+      <div class="inputparent">
+        <input class="inputchild" type="text" #campoInput placeholder="O que você procura?">
+      </div>
+      <div class="btnparent">
+        <button class="btnchild" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
+      </div>
+    </div>
+
+    <div class="container-subitem3">
+      <div class="icon-person">
+        <i class="bi bi-person-circle"></i>
+      </div>
+      <div class="login">
+        <div class="greating">
+          <p>Olá</p>
+        </div>
+        <div class="nome">
+          <p>André Mantovani &darr;</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-subitem4">
+      <div class="icon-cart">
+        <i class="bi bi-cart"></i>
+        <div class="pill-badge">
+          <a class="pill-badg-paragraph">1</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row container-item2">
+  </div>
+</div>
 <router-outlet></router-outlet>

@@ -1,3 +1,7 @@
+ :root {
+  background: rgb(168, 47, 47);
+}
+
 .title{
   color:rgb(140,205,188);
 }
@@ -31,4 +35,5 @@
 .nao-tem-cadastro a {
   text-decoration: none;
   color: rgb(140,205,188);
+  cursor: pointer;
 }
