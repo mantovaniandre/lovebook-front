@@ -162,6 +162,7 @@
 
 .sidebar-botao-compra-estilizado {
   background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: white;
 }
 
 .carousel-control-next-icon {
