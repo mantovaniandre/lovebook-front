@@ -22,6 +22,10 @@
 .container {
   height: 450px;
   margin-top: 50px;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+  margin-bottom: 80px;
 }
 
 .container .categoria-title {
@@ -156,8 +160,14 @@
   height: 50px;
 }
 
+.sidebar-botao-compra-estilizado {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+}
+
 .carousel-control-next-icon {
   align-self: center;
 }
+
+
 
 

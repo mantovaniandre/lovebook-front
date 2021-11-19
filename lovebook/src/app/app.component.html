@@ -4,15 +4,13 @@
       <a class="navbar-logo">Lovebook</a>
     </div>
     <div class="container-subitem2">
-      <div class="dropdown">
-        <button class="dropdownchild dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-         Autor
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item">Autor</a></li>
-          <li><a class="dropdown-item">Título</a></li>
-          <li><a class="dropdown-item">Editora</a></li>
-        </ul>
+      <div class="test1">
+        <select class="test2" aria-label="Default select example">
+          <option selected>Pesquisar por</option>
+          <option value="1">Autor</option>
+          <option value="2">Editora</option>
+          <option value="3">Livro</option>
+        </select>
       </div>
       <div class="inputparent">
         <input class="inputchild" type="text" #campoInput placeholder="O que você procura?">
@@ -26,11 +24,17 @@
         <i class="bi bi-person-circle"></i>
       </div>
       <div class="login">
-        <div class="greating">
-          <p>Olá</p>
-        </div>
         <div class="nome">
-          <p>André Mantovani &darr;</p>
+          <div class="dropdown">
+            <button style="font-size: 13px; color: white" class="test5 btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <a>Olá, André Mantovani</a>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -65,16 +69,16 @@
     </div>
     <div class="carousel-arrow-1">
       <div class="carousel-arrow-div">
-        <span class="carousel-arrow-div-btn" type="button" data-bs-target="#carouselLiteratura" data-bs-slide="prev">
+        <button class="carousel-arrow-div-btn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
-        </span>
+        </button>
       </div>
       <div class="carousel-arrow-2">
-        <span class="carousel-arrow-2-btn" type="button" data-bs-target="#carouselLiteratura" data-bs-slide="next">
+        <button class="carousel-arrow-2-btn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
-        </span>
+        </button>
       </div>
     </div>
   </div>
@@ -158,4 +162,5 @@
     </div>
   </div>
 </div>
+
 

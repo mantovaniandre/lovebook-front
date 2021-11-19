@@ -22,6 +22,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,7 @@ import { MatSelectModule } from '@angular/material/select';
     AtualizacaoCadastralComponent,
     CadastroUsuarioComponent,
     DashboardComponent,
-    
+
   ],
   imports: [
     BrowserModule,
