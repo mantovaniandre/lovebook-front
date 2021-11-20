@@ -3,11 +3,10 @@ import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
-import { CadastroLivrosComponent } from './cadastro-livros/cadastro-livros.component';
 import { LoginComponent } from './login/login.component';
-import { AtualizacaoCadastralComponent } from './atualizacao-cadastral/atualizacao-cadastral.component';
 import { CadastroUsuarioComponent } from "./cadastro-usuario/cadastro-usuario.component";
-import { DashboardComponent } from "./dashboard/dashboard.component";
+import { MinhaContaClienteComponent } from "./minha-conta-cliente/minha-conta-cliente.component";
+
 
 const routes: Routes = [
   {
@@ -20,25 +19,17 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'cadastroLivros',
-    component: CadastroLivrosComponent
-  },
-  {
     path:'login',
     component: LoginComponent
-  },
-  {
-    path:'atualizacaoCadastral',
-    component: AtualizacaoCadastralComponent
   },
   {
     path:'cadastroUsuario',
     component: CadastroUsuarioComponent
   },
   {
-    path:'dashboard',
-    component: DashboardComponent
-  },
+    path: 'minhaConta',
+    component: MinhaContaClienteComponent
+  }
 ];
 
 @NgModule({

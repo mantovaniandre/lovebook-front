@@ -6,12 +6,12 @@
   color:rgb(140,205,188);
 }
 
-.mgTp{
-  margin-top:10%;
-}
-
-.topBtn{
-  margin-top:15px;
+.container {
+  margin-top:50px;
+  margin-bottom: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

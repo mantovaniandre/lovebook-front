@@ -4,12 +4,12 @@
       <a class="navbar-logo">Lovebook</a>
     </div>
     <div class="container-subitem2">
-      <div class="test1">
-        <select class="test2" aria-label="Default select example">
-          <option selected>Pesquisar por</option>
-          <option value="1">Autor</option>
-          <option value="2">Editora</option>
-          <option value="3">Livro</option>
+      <div class="search-parent">
+        <select class="search-child" aria-label="Default select example">
+          <option class="select" selected>Pesquisar por</option>
+          <option class="select1" value="1">Autor</option>
+          <option class="select2" value="2">Editora</option>
+          <option class="select3" value="3">Livro</option>
         </select>
       </div>
       <div class="inputparent">
@@ -27,13 +27,19 @@
         <div class="nome">
           <div class="dropdown">
             <button style="font-size: 13px; color: white" class="test5 btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              <a>Olá, André Mantovani</a>
+              <a>Olá, MINHA CONTA</a>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <div class="test8">
+                <p class="open">Entrar</p>
+              </div>
+              <div class="test9">
+                <p class="newregister">Cadastrar</p>
+              </div>
+              <div class="test10">
+                <p class="myaccount">Minha conta</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -49,41 +55,6 @@
   </div>
 </div>
 
-<div id="carouselExampleControls" class="carousel container carousel slide" data-bs-ride="carousel">
-  <div class="row test1">
-    <div class="carousel-inner">
-      <div class="carousel-responsive">
-        <div class="carousel-item active">
-          <img src="../assets/images/banner1.png" class="img d-block" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/images/banner2.png" class="img d-block" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/images/banner3.png" class="img d-block" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/images/banner4.png" class="img d-block" alt="...">
-        </div>
-      </div>
-    </div>
-    <div class="carousel-arrow-1">
-      <div class="carousel-arrow-div">
-        <button class="carousel-arrow-div-btn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="" aria-hidden="true"><i class="bi bi-chevron-left icon-arrow"></i></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-      </div>
-      <div class="carousel-arrow-2">
-        <button class="carousel-arrow-2-btn" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="" aria-hidden="true"><i class="bi bi-chevron-right icon-arrow"></i></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <router-outlet></router-outlet>
 
 <div class="newsletter">
@@ -91,7 +62,7 @@
     <div class="regiter-newsletter">
       <a class="newsletter-text">Cadastre em nossa newsletter</a>
       <input class="inputchild" type="text" #campoInput placeholder="Cadastre seu e-mail aqui">
-      <button class="btnchild" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
+      <button class="btnchild" type="submit"><i class="bi bi-search"></i></button>
     </div>
     <div class="socialmidia">
       <a>Acompanhe a gente</a>
