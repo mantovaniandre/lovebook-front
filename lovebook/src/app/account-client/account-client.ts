@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ConnectionApiService } from '../services/connection-api.service';
 
 @Component({
-  selector: 'app-minha-conta-cliente',
-  templateUrl: './minha-conta-cliente.component.html',
-  styleUrls: ['./minha-conta-cliente.component.css']
+  selector: 'app-account-client',
+  templateUrl: './account-client.html',
+  styleUrls: ['./account-client.css']
 })
-export class MinhaContaClienteComponent implements OnInit {
+export class AccountClientComponent implements OnInit {
   $livros_literatura: any;
   data_literatura: any;
   data: any[];

@@ -8,8 +8,8 @@ import { AppRoutingModule } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MinhaContaClienteComponent } from './minha-conta-cliente/minha-conta-cliente.component'
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { AccountClientComponent } from './account-client/account-client';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    MinhaContaClienteComponent,
+    AccountClientComponent,
   ],
   imports: [
     BrowserModule,
