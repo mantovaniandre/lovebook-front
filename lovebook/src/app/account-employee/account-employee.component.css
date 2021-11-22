@@ -1,0 +1,128 @@
+/*Division of field client account*/
+
+.employeeregistrationupdate-account-container {
+  height: auto;
+}
+
+/*Division of field the dashboard*/
+
+.dashboard-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+}
+
+.dashboard-title-div {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.dashboard-title {
+  font-size: 25px;
+  font-style: italic;
+  color:rgb(138, 138, 138);
+  font-weight: 700;
+}
+
+.dashboard-informations-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.dashboard-informations-div1 {
+  margin-bottom: 10px;
+}
+
+
+/*Division of field the registration update*/
+
+.employeeregistrationupdate-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+}
+
+.employeeregistrationupdate-title-div {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.employeeregistrationupdate-title {
+  font-size: 25px;
+  font-style: italic;
+  color:rgb(138, 138, 138);
+  font-weight: 700;
+}
+
+.employeeregistrationupdate-informations-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.employeeregistrationupdate-informations-div1 {
+  margin-bottom: 10px;
+}
+
+.employeeregistrationupdate-name-label {
+  color:rgb(138, 138, 138);
+}
+
+.employeeregistrationupdate-lastname-label {
+  color:rgb(138, 138, 138);
+}
+
+.employeeregistrationupdate-email-label {
+  color:rgb(138, 138, 138);
+}
+
+.employeeregistrationupdate-password-label {
+  color:rgb(138, 138, 138);
+}
+
+.employeeregistrationupdate-gender-label {
+  color:rgb(138, 138, 138);
+}
+
+.employeeregistrationupdate-zipcode-label {
+  color:rgb(138, 138, 138);
+}
+
+.employeeregistrationupdate-city-label {
+  color:rgb(138, 138, 138);
+}
+
+.employeeregistrationupdate-state-label {
+  color:rgb(138, 138, 138);
+}
+
+.form-control {
+  box-shadow: 0 0 0 0;
+  border: 1px solid rgb(209, 208, 208);
+  outline: 0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(140,205,188) !important;
+  opacity: 1; /* Firefox */
+}
+
+.employeeregistrationupdate-btn-update-registration {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+

@@ -1,0 +1,105 @@
+
+<div class="container employee-account-container">
+  <div class="container dashboard-container">
+    <div class="dashboard-title-div">
+      <p class="dashboard-title">Dashboard</p>
+    </div>
+
+
+
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <div class="dashboard-informations-container">
+      <div class="row dashboard-informations-div1">
+        <div class="col-sm-12 col-md-3">
+
+        </div>
+        <div class="col-sm-12 col-md-3">
+
+        </div>
+        <div class="col-sm-12 col-md-3">
+
+        </div>
+        <div class="col-sm-12 col-md-3">
+
+        </div>
+      </div>
+      <div class="row employeeregistrationupdate-informations-div2">
+        <div class="col-sm-12 col-md-3">
+
+        </div>
+        <div class="col-sm-12 col-md-3">
+
+        </div>
+        <div class="col-sm-12 col-md-3">
+
+        </div>
+        <div class="col-sm-12 col-md-3">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container employeeregistrationupdate-container">
+    <div class="employeeregistrationupdate-title-div">
+      <p class="employeeregistrationupdate-title">Atualização Cadastral</p>
+    </div>
+    <div class="employeeregistrationupdate-informations-container">
+      <form>
+        <div class="row employeeregistrationupdate-informations-div1">
+          <div class="col-sm-12 col-md-3">
+            <label class="employeeregistrationupdate-name-label">Nome</label>
+            <input type="text" class="form-control" placeholder="Nome">
+          </div>
+          <div class="col-sm-12 col-md-3">
+              <label class="employeeregistrationupdate-lastname-label">Sobrenome</label>
+              <input type="text" class="form-control" placeholder="Sobrenome">
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="employeeregistrationupdate-email-label">E-mail</label>
+            <input type="email" class="form-control" placeholder="E-mail">
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="employeeregistrationupdate-password-label">Senha</label>
+            <input type="password" class="form-control" placeholder="Senha">
+          </div>
+        </div>
+        <div class="row employeeregistrationupdate-informations-div2">
+          <div class="col-sm-12 col-md-3">
+            <label class="employeeregistrationupdate-gender-label">Sexo</label>
+            <input type="text" class="form-control" placeholder="Sexo">
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="employeeregistrationupdate-zipcode-label">CEP</label>
+            <input type="text" class="form-control" placeholder="CEP">
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="employeeregistrationupdate-city-label">Cidade</label>
+            <input type="text" class="form-control" placeholder="Cidade">
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="employeeregistrationupdate-state-label">Estado</label>
+            <input type="text" class="form-control" placeholder="Estado">
+          </div>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="submit" class="btn employeeregistrationupdate-btn-update-registration">Atualizar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </ng-template>
+</div>
+

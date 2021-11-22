@@ -6,7 +6,7 @@
 
 /*Division of field the registration update*/
 
-.registrationupdate-container {
+.clientregistrationupdate-container {
   margin-top: 50px;
   margin-bottom: 50px;
   height: auto;
@@ -15,26 +15,58 @@
   border-radius: 5px;
 }
 
-.registrationupdate-title-div {
+.clientregistrationupdate-title-div {
   width: 100%;
   height: auto;
   border-bottom: 1px solid rgb(204, 203, 203);
 }
 
-.registrationupdate-title {
+.clientregistrationupdate-title {
   font-size: 25px;
   font-style: italic;
   color:rgb(138, 138, 138);
   font-weight: 700;
 }
 
-.registrationupdate-informations-container {
+.clientregistrationupdate-informations-container {
   margin-top: 10px;
   margin-bottom: 10px;
   height: auto;
 }
 
-.registrationupdate-name-label {
+.clientregistrationupdate-informations-div1 {
+  margin-bottom: 10px;
+}
+
+.clientregistrationupdate-name-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientregistrationupdate-lastname-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientregistrationupdate-email-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientregistrationupdate-password-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientregistrationupdate-gender-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientregistrationupdate-zipcode-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientregistrationupdate-city-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientregistrationupdate-state-label {
   color:rgb(138, 138, 138);
 }
 
@@ -49,7 +81,7 @@
   opacity: 1; /* Firefox */
 }
 
-.registrationupdate-btn-update-registration {
+.clientregistrationupdate-btn-update-registration {
   background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
   color: #ffffff;
   margin-top: 10px;
@@ -172,6 +204,20 @@
 }
 
 .yourcomments-date-p2 {
+  margin-left: 5px;
+  color:rgb(138, 138, 138);
+  font-style: italic;
+}
+
+.yourcomments-price-div {
+  display: flex;
+}
+
+.yourcomments-price-p1 {
+  font-weight: 700;
+}
+
+.yourcomments-price-p2 {
   margin-left: 5px;
   color:rgb(138, 138, 138);
   font-style: italic;
@@ -359,8 +405,22 @@
   font-style: italic;
 }
 
+.purchases-price-div {
+  display: flex;
+}
+
+.purchases-price-p1 {
+  font-weight: 700;
+}
+
+.purchases-price-p2 {
+  margin-left: 5px;
+  color:rgb(138, 138, 138);
+  font-style: italic;
+}
+
 .purchases-rating-div {
-  margin-top: 5px;
+  margin-top: 25px;
 }
 
 .purchases-stars-container {

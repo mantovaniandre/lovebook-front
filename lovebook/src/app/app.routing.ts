@@ -5,6 +5,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from './login/login.component';
 import { AccountClientComponent } from "./account-client/account-client";
+import { AccountEmployeeComponent } from "./account-employee/account-employee.component";
 
 
 const routes: Routes = [
@@ -22,8 +23,12 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'minhaConta',
+    path: 'minhaContaCliente',
     component: AccountClientComponent
+  },
+  {
+    path: 'minhaContaFuncionario',
+    component: AccountEmployeeComponent
   }
 ];
 

@@ -10,6 +10,18 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { AccountClientComponent } from './account-client/account-client';
+import { AccountEmployeeComponent } from './account-employee/account-employee.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatSelectModule } from '@angular/material/select'
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatMenuModule } from '@angular/material/menu';
+
+
+
 
 
 @NgModule({
@@ -18,6 +30,7 @@ import { AccountClientComponent } from './account-client/account-client';
     HomeComponent,
     LoginComponent,
     AccountClientComponent,
+    AccountEmployeeComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +39,16 @@ import { AccountClientComponent } from './account-client/account-client';
     HttpClientModule,
     SidebarModule,
     BrowserAnimationsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatChipsModule,
+    MatSelectModule,
+    MatChipsModule,
+    MatIconModule,
+    MatProgressBarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
