@@ -1,24 +1,34 @@
+/*Division of field the registration update */
 
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100&display=swap');
 
-.navbar {
+
+/*Division of field the app */
+
+.app-container {
+  height: auto;
+}
+
+/*Division of field the navbar */
+
+.navbar-container {
   background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
   height: 90px;
   width: 100%;
 }
 
-.container-item1 {
+.navbar-div {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
 
-.container-item1 .container-subitem1 {
+.navbar-logo-div {
   align-self: center;
   width: 50%;
 }
 
-.container-item1 .container-subitem1 .navbar-logo {
+.navbar-logo-text {
   width: 150px;
   margin-left: 40px;
   font-family: 'Big Shoulders Stencil Display', cursive;
@@ -27,17 +37,17 @@
   color: white;
 }
 
-.container-item1 .container-subitem2 {
+.navbar-search-div {
   display: flex;
   justify-content: center;
   width: 50%;
 }
 
-.search-parent {
+.navbar-search-select-div {
   align-self: center;
 }
 
-.search-child {
+.navbar-search-select {
   align-self: center;
   border-radius: 0;
   width: 160px;
@@ -50,92 +60,118 @@
   height: 38px;
 }
 
-.container-item1 .container-subitem2 .inputparent {
+.navbar-search-input-div {
   align-self: center;
   height: 40px;
 }
 
-.container-item1 .container-subitem2 .inputparent .inputchild {
+.navbar-search-input-text {
   border: 1px solid white;
   height: 38px;
   width: 300px;
   outline: none;
 }
 
-.container-item1 .container-subitem2 .btnparent {
+.navbar-search-btn-div {
   align-self: center;
   height: 40px;
 }
 
-.container-item1 .container-subitem2 .btnparent .btnchild {
+.navbar-search-btn {
   border: 1px solid white;
   background-color: white;
   height: 38px;
   width: 50px;
-  position: absolute;
-  right: 398px;
+  position: relative;
+  right: 20px;
   color: rgb(140,205,188);
 }
 
-.container-item1 .container-subitem3 {
+.navbar-account-div {
   display: flex;
   justify-content: center;
   width: 50%;
 }
 
-.container-item1 .container-subitem3 .icon-person {
+.navbar-account-icon-div {
   align-self: center;
   font-size: 30px;
   color: white;
   height: 50px;
 }
 
-.container-item1 .container-subitem3 .login {
+.navbar-description-account-login-div {
   align-self: center;
   height: 40px;
 }
 
-.container-item1 .container-subitem3 .login .greating {
-  height: 15px;
+.navbar-description-account-dropdownmenu-btn {
   font-size: 13px;
   color: white;
-  margin-left: 5px;
 }
 
-.container-item1 .container-subitem3 .login .nome {
-  height: 15px;
-  font-size: 13px;
+.navbar-description-account-dropdownmenu-btn:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+.dropdown-menu {
+  background-color: rgb(241, 241, 241);
+}
+
+.navbar-description-account-dropdownmenu-open {
+  border-bottom: 2px solid white;
+  padding: 5px;
+  text-transform: uppercase;
+  text-align: center;
   color: white;
-  margin-left: 5px;
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  margin: 5px;
 }
 
-.container-item1 .container-subitem4 {
+.navbar-description-account-dropdownmenu-newregister {
+  border-bottom: 1px solid white;
+  padding: 5px;
+}
+
+.navbar-description-account-dropdownmenu-myaccount {
+  padding: 5px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(140,205,188) !important;
+  opacity: 1; /* Firefox */
+  padding-left: 10px;
+}
+
+.navbar-description-account-cart-div {
   display: flex;
   justify-content: center;
   position: relative;
   width: 20%;
 }
 
-.container-item1 .container-subitem4 .icon-cart {
+.navbar-description-account-cart-icon {
   align-self: center;
   font-size: 30px;
   color: white;
   height: 50px;
 }
 
-.container-item1 .container-subitem4 .icon-cart .pill-badge {
+.navbar-description-account-pillbadge {
   background-color: red;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: 12px;
-  left: 53px;
+  position: relative;
+  bottom: 40px;
+  left: 18px;
 }
 
-.container-item1 .container-subitem4 .icon-cart .pill-badge .pill-badg-paragraph {
+.navbar-description-account-pillbadge-number {
   font-size: 10px;
   align-self: center;
   color: white;
@@ -143,14 +179,16 @@
   text-decoration: none;
 }
 
-.newsletter {
+/*Division of field the newsletter */
+
+.newsletter-container {
   width: 100%;
   height: 80px;
   background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
   display: flex;
 }
 
-.newsletter-div {
+.newsletter-informations-div {
   width: 100%;
   height: 50px;
   display: flex;
@@ -158,20 +196,20 @@
   align-self: center;
 }
 
-.regiter-newsletter {
+.newsletter-informations-registernewsletter-div {
   align-self: center;
   text-transform: uppercase;
   color: white;
   font-weight: bold;
 }
 
-.newsletter-text {
+.newsletter-informations-registernewsletter-title {
   margin-right: 20px;
   color: white;
   font-weight: bold;
   text-decoration: none;
 }
-.regiter-newsletter .inputchild {
+.newsletter-informations-registernewsletter-input {
   border: 1px solid white;
   border-radius: 5px;
   height: 30px;
@@ -179,50 +217,52 @@
   outline: white;
 }
 
-.regiter-newsletter .btnchild {
+.newsletter-informations-registernewsletter-btn {
   border: 1px solid white;
   border-left: 1px solid white;
   border-radius: 5px;
   background-color: white;
   height: 30px;
   width: 50px;
-  position: absolute;
-  right: 700px;
+  position: relative;
+  right: 20px;
   color: rgb(140,205,188);
 }
 
-.socialmidia {
+.newsletter-informations-socialmidia-title-div {
   align-self: center;
   text-transform: uppercase;
   color: white;
   font-weight: bold;
 }
 
-.icon-facebook {
+.newsletter-informations-socialmidia-icon-facebook {
   align-self: center;
   color: white;
   font-size: 30px;
 }
 
-.icon-instagram {
+.newsletter-informations-socialmidia-icon-instagram {
   align-self: center;
   color: white;
   font-size: 30px;
 }
 
-.icon-twitter {
+.newsletter-informations-socialmidia-icon-twitter {
   align-self: center;
   color: white;
   font-size: 30px;
 }
 
-.footer {
+/*Division of field the footer */
+
+.footer-container {
   width: 100%;
   height: 180px;
   background: rgb(241, 241, 241);
 }
 
-.footer-div {
+.footer-informations-div {
   width: 100%;
   height: 180px;
   background: rgb(241, 241, 241);
@@ -231,144 +271,99 @@
   margin-top: 40px;
 }
 
-.title-about {
+.footer-about-div {
   text-transform: uppercase;
   color: rgba(53,126,107,1);
 }
 
-.aboutus {
+.footer-aboutus-title {
   font-size: 14px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
 
-.workus {
+.footer-workus-title {
   font-size: 14px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
 
-.gift {
+.footer-gift-title {
   font-size: 14px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
 
-.title-attendance {
+.footer-attendance-div {
   text-transform: uppercase;
   color: rgba(53,126,107,1);
 }
 
-.contact {
+.footer-contact-title {
   font-size: 14px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
 
-.privacy {
+.footer-privacy-title {
   font-size: 14px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
 
-.devolution {
+.footer-devolution-title {
   font-size: 14px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
 
-.questions {
+.footer-questions-title {
   font-size: 14px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
 
-.payment {
+.footer-payment-div {
   text-transform: uppercase;
   color: rgba(53,126,107,1);
 }
 
-.certificate {
+.footer-certificate-div {
   text-transform: uppercase;
   color: rgba(53,126,107,1);
 }
 
-.information-cnpj {
+
+/*Division of field the cnpj information */
+
+.informationcnpj {
   width: 100%;
   height: 60px;
   background: rgb(241, 241, 241);
   display: flex;
 }
 
-.information-cnpj-div {
+.informationcnpj-informations-div {
   display: flex;
   justify-content: center;
   width: 100%;
   height: 60px;
 }
 
-.cnpj {
+.informationcnpj-informations-cnpj-div {
   text-align: center;
 }
 
-.cnpj-text {
+.informationcnpj-informations-cnpj-text {
   font-size: 12px;
 }
 
-.address {
+.informationcnpj-informations-address-div {
   text-align: center;
 }
 
-.address-text {
+.informationcnpj-informations-address-text {
   font-size: 12px;
 }
 
-.test5:focus {
-  box-shadow: 0 0 0 0;
-  border: 0 none;
-  outline: 0;
 
-}
-
-
-.dropdown-menu {
-  background-color: rgb(241, 241, 241);
-
-}
-
-.open{
-  border-bottom: 2px solid white;
-  padding: 5px;
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-}
-
-.test8 {
-  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  margin: 5px;
-}
-
-.newregister {
-  border-bottom: 1px solid white;
-  padding: 5px;
-}
-
-.myaccount {
-  padding: 5px;
-}
-
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(140,205,188) !important;
-  opacity: 1; /* Firefox */
-  padding-left: 10px;
-}
-
-.select {
-  color: rgb(140,205,188) !important;
-}
-
-:option:fpcus {
-  color:rgb(140,205,188);
-}

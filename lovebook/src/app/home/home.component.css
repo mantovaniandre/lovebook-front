@@ -1,33 +1,42 @@
+/*Division of field imports */
 
 @import url('https://fonts.googleapis.com/css2?family=Akronim&family=Ephesis&display=swap');
 
-.carousel-parent {
+/*Division of field home */
+
+.home-container {
+  height: auto;
+}
+
+/*Division of field banner */
+
+.banner-carousel {
   margin-top: 50px;
   height: 150px;
 }
 
-.carousel-inner-parent {
+.banner-carousel-div {
   height: 100%;
   display: flex;
   justify-content: center;
 }
 
-.carousel-inner {
+.banner-carousel-subdiv {
   height: 100%;
   width: 80%;
 }
 
-.carousel-responsive {
+.banner-carousel-img-div {
   width: 100%;
   height: 1500px;
 }
 
-.img {
+.carousel-item-img {
   width: 100%;
   height: 150px;
 }
 
-.banner-carousel-arrow-1 {
+.banner-carousel-arrow-div {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -36,13 +45,13 @@
   bottom: 150px;
 }
 
-.banner-carousel-arrow-div {
+.banner-carousel-arrow-subdiv1 {
   width: 50px;
   height: 100%;
   display: flex;
 }
 
-.banner-carousel-arrow-div-btn {
+.banner-carousel-arrow-subdiv1-btn {
   align-self: center;
   display: flex;
   justify-content: center;
@@ -52,13 +61,13 @@
   height: 50px;
 }
 
-.banner-carousel-arrow-2 {
+.banner-carousel-arrow-subdiv2 {
   width: 50px;
   height: 100%;
   display: flex;
 }
 
-.banner-carousel-arrow-2-btn {
+.banner-carousel-arrow-subdiv2-btn {
   align-self: center;
   display: flex;
   justify-content: center;
@@ -68,71 +77,17 @@
   height: 50px;
 }
 
-.banner-icon-arrow {
+.banner-carousel-arrow-subdiv1-btn-icon {
   font-size: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.estrelas input[type=radio] {
-  display: none;
+.banner-carousel-arrow-subdiv2-btn-icon{
+  font-size: 30px;
 }
 
-.estrelas label i.fa{
-  font-size: 1.0em
-}
+/*Division of field books search */
 
-.estrelas label i.fa:before {
-  content:'\f005';
-  color: rgb(140,205,188);
-}
-
-.estrelas input[type=radio]:checked ~ label i.fa:before {
-  color: #CCC;
-}
-
-.container-parent {
+.bookcategory-container {
   height: 450px;
   margin-top: 50px;
   background-color: white;
@@ -141,48 +96,45 @@
   margin-bottom: 80px;
 }
 
-.container .categoria-title {
+.bookcategory-title-div {
   width: 100%;
   height: 50px;
   border-bottom: 1px solid rgb(204, 203, 203);
 }
 
-.categoria-title .title {
+.bookcategory-title {
   font-size: 25px;
   font-style: italic;
+  color:rgb(138, 138, 138);
+  font-weight: 700;
 }
 
-.categoria-livro {
+.bookcategory-information-of-book-container {
   height: 350px;
   margin-top: 20px;
 }
 
-.container .categoria-livro {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.categoria-carousel-container {
+.bookcategory-information-of-book-div {
   height: 350px;
 }
 
-.carousel-test {
+.bookcategory-information-of-book-carousel {
   display: flex;
   justify-content: center;
   height: 350px;
 }
 
-.carousel-item {
-  height: 300px;
+.bookcategory-information-of-book-carousel-item {
+  height: auto;
 }
 
-.carousel-row {
+.bookcategory-information-of-book-carousel-item-container {
   height: 350px;
   display: flex;
   justify-content: center;
 }
 
-.carousel-row-subitem {
+.bookcategory-information-of-book-carousel-item-div {
   height: 350px;
   width: 12rem;
   border: 2px solid rgb(221, 221, 221);
@@ -192,58 +144,75 @@
   margin-right: 3px;
 }
 
-.carousel-row-subitem-responsive {
+.bookcategory-information-of-book-carousel-item-subdiv {
   width: 100%;
 }
 
-.img-responsive {
+.bookcategory-information-of-book-img-div {
   display: flex;
   justify-content: center;
 }
 
-.img-book {
+.bookcategory-information-of-book-img {
   height: 150px;
 }
 
-.title-responsive {
+.bookcategory-information-of-book-title-div {
   display: flex;
   justify-content: center;
 }
 
-.text-responsive {
+.bookcategory-information-of-book-author-div {
   display: flex;
   justify-content: center;
 }
 
-.stars-responsive {
+.bookcategory-rating-div {
   display: flex;
   justify-content: center;
 }
 
-.text-price-responsive {
+.bookcategory-stars-container input[type=radio] {
+  display: none;
+}
+
+.bookcategory-stars-container label i.fa{
+  font-size: 1.0em
+}
+
+.bookcategory-stars-container label i.fa:before {
+  content:'\f005';
+  color: rgb(140,205,188);
+}
+
+.bookcategory-stars-container input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+.bookcategory-information-of-book-price-div {
   display: flex;
   justify-content: center;
 }
 
-.btn-responsive {
+.bookcategory-information-of-book-btn-div {
   display: flex;
   justify-content: center;
 }
 
-.carousel-arrow-1 {
+.bookcategory-carousel-arrow-div {
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 100%;
 }
 
-.carousel-arrow-div {
+.bookcategory-carousel-arrow-subdiv1 {
   width: 50px;
   height: 100%;
   display: flex;
 }
 
-.carousel-arrow-div-btn {
+.bookcategory-carousel-arrow-subdiv1-btn {
   align-self: center;
   display: flex;
   justify-content: center;
@@ -257,13 +226,13 @@
   align-self: center;
 }
 
-.carousel-arrow-2 {
+.bookcategory-carousel-arrow-subdiv2 {
   width: 50px;
   height: 100%;
   display: flex;
 }
 
-.carousel-arrow-2-btn {
+.bookcategory-carousel-arrow-subdiv2-btn {
   align-self: center;
   display: flex;
   justify-content: center;
@@ -273,7 +242,173 @@
   height: 50px;
 }
 
-.sidebar-botao-compra-estilizado {
+.bookcategory-btn-modify-book {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: white;
+}
+
+.carousel-control-next-icon {
+  align-self: center;
+}
+
+/*Division of field book category */
+
+.booksearch-container {
+  height: 450px;
+  margin-top: 50px;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+  margin-bottom: 80px;
+}
+
+.booksearch-title-div {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.booksearch-title {
+  font-size: 25px;
+  font-style: italic;
+  color:rgb(138, 138, 138);
+  font-weight: 700;
+}
+
+.booksearch-information-of-book-container {
+  height: 350px;
+  margin-top: 20px;
+}
+
+.booksearch-information-of-book-div {
+  height: 350px;
+}
+
+.booksearch-information-of-book-carousel {
+  display: flex;
+  justify-content: center;
+  height: 350px;
+}
+
+.booksearch-information-of-book-carousel-item {
+  height: auto;
+}
+
+.booksearch-information-of-book-carousel-item-container {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.booksearch-information-of-book-carousel-item-div {
+  height: 350px;
+  width: 12rem;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-right: 3px;
+}
+
+.booksearch-information-of-book-carousel-item-subdiv {
+  width: 100%;
+}
+
+.booksearch-information-of-book-img-div {
+  display: flex;
+  justify-content: center;
+}
+
+.booksearch-information-of-book-img {
+  height: 150px;
+}
+
+.booksearch-information-of-book-title-div {
+  display: flex;
+  justify-content: center;
+}
+
+.booksearch-information-of-book-author-div {
+  display: flex;
+  justify-content: center;
+}
+
+.booksearch-rating-div {
+  display: flex;
+  justify-content: center;
+}
+
+.booksearch-stars-container input[type=radio] {
+  display: none;
+}
+
+.booksearch-stars-container label i.fa{
+  font-size: 1.0em
+}
+
+.booksearch-stars-container label i.fa:before {
+  content:'\f005';
+  color: rgb(140,205,188);
+}
+
+.booksearch-stars-container input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+.booksearch-information-of-book-price-div {
+  display: flex;
+  justify-content: center;
+}
+
+.booksearch-information-of-book-btn-div {
+  display: flex;
+  justify-content: center;
+}
+
+.booksearch-carousel-arrow-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.booksearch-carousel-arrow-subdiv1 {
+  width: 50px;
+  height: 100%;
+  display: flex;
+}
+
+.booksearch-carousel-arrow-subdiv1-btn {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-control-prev-icon {
+  align-self: center;
+}
+
+.booksearch-carousel-arrow-subdiv2 {
+  width: 50px;
+  height: 100%;
+  display: flex;
+}
+
+.booksearch-carousel-arrow-subdiv2-btn {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.booksearch-btn-modify-book {
   background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
   color: white;
 }

@@ -1,30 +1,23 @@
-<div class="container">
-  <div class="row mgTp">
-    <form class="col-md-6 offset-md-3">
-      <h3 class="title">Login</h3>
+<div class="container login-container">
+  <div class="row login-informations-div">
+    <form class="col-md-6 offset-md-3 login-informations-form">
+      <h3 class="login-informations-form-title">Login</h3>
       <hr class="divisor">
-
       <br>
       <div class="form-group">
-          <label >E-mail</label>
+          <label>E-mail</label>
           <input type="email" class="form-control" placeholder="E-mail">
       </div>
-
       <br>
-
       <div class="form-group">
           <label >Senha</label>
           <input type="password" class="form-control" placeholder="Senha">
       </div>
-
-      <div class="nao-tem-cadastro" (click)="go('cadastroUsuario')">
+      <div class="login-dont-fave-register" (click)="go('cadastroUsuario')">
         <a>Não tem cadastro ></a>
       </div>
-
       <br>
-
-      <button type="submit" class="btn botao-login topBtn"><i class="fa fa-sign-in"></i>Entrar</button>
-
+      <button type="submit" class="btn login-btn"><i class="fa fa-sign-in"></i>Entrar</button>
     </form>
   </div>
 </div>

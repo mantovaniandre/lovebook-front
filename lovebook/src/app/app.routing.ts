@@ -4,7 +4,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from './login/login.component';
-import { CadastroUsuarioComponent } from "./cadastro-usuario/cadastro-usuario.component";
 import { MinhaContaClienteComponent } from "./minha-conta-cliente/minha-conta-cliente.component";
 
 
@@ -21,10 +20,6 @@ const routes: Routes = [
   {
     path:'login',
     component: LoginComponent
-  },
-  {
-    path:'cadastroUsuario',
-    component: CadastroUsuarioComponent
   },
   {
     path: 'minhaConta',

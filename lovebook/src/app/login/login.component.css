@@ -1,12 +1,6 @@
- :root {
-  background: rgb(168, 47, 47);
-}
+/*Division of field login */
 
-.title{
-  color:rgb(140,205,188);
-}
-
-.container {
+.login-container {
   margin-top:50px;
   margin-bottom: 150px;
   padding-top: 10px;
@@ -14,26 +8,24 @@
   border-radius: 5px;
 }
 
+.login-informations-form-title {
+  color:rgb(140,205,188);
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(140,205,188) !important;
   opacity: 1; /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: rgb(140,205,188) !important;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgb(140,205,188) !important;
-}
-
-.botao-login {
-  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  color: #ffffff;
-}
-
-.nao-tem-cadastro a {
+.login-dont-fave-register a {
   text-decoration: none;
   color: rgb(140,205,188);
   cursor: pointer;
 }
+
+.login-btn {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+}
+
+

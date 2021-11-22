@@ -1,0 +1,419 @@
+/*Division of field client account*/
+
+.client-account-container {
+  height: auto;
+}
+
+/*Division of field the registration update*/
+
+.registrationupdate-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+}
+
+.registrationupdate-title-div {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.registrationupdate-title {
+  font-size: 25px;
+  font-style: italic;
+  color:rgb(138, 138, 138);
+  font-weight: 700;
+}
+
+.registrationupdate-informations-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.registrationupdate-name-label {
+  color:rgb(138, 138, 138);
+}
+
+.form-control {
+  box-shadow: 0 0 0 0;
+  border: 1px solid rgb(209, 208, 208);
+  outline: 0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(140,205,188) !important;
+  opacity: 1; /* Firefox */
+}
+
+.registrationupdate-btn-update-registration {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*Division of the field of my comments and ratings*/
+
+.yourcomments-container {
+  border: 2px solid black;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+}
+
+.yourcomments-title-container {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgb(204, 203, 203);
+  border: 2px solid black;
+}
+
+.yourcomments-title-div {
+  border-bottom: 1px solid rgb(204, 203, 203);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.yourcomments-title {
+  font-size: 25px;
+  font-style: italic;
+  color:rgb(138, 138, 138);
+  font-weight: 700;
+}
+
+.yourcomments-informations-container {
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.yourcomments-informations-div {
+  border: 1px solid rgb(204, 203, 203);
+  border-radius: 5px;
+}
+
+.yourcomments-img-div {
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid rgb(204, 203, 203);
+}
+
+.yourcomments-img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.yourcomments-informations-of-book-container {
+  display: flex;
+}
+
+.yourcomments-informations-of-book-div {
+  align-self: center;
+}
+
+.yourcomments-title-book-div {
+  border-bottom: 1px solid rgb(204, 203, 203);
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+  color:rgb(138, 138, 138);
+  font-weight: 700;
+}
+
+.yourcomments-author-publishingcompany-date-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.yourcomments-author-div {
+  display: flex;
+}
+
+.yourcomments-author-p1 {
+  font-weight: 700;
+}
+
+.yourcomments-author-p2 {
+  margin-left: 5px;
+  color:rgb(138, 138, 138);
+  font-style: italic;
+}
+
+.yourcomments-publishingcompany-div {
+  display: flex;
+}
+
+.yourcomments-publishingcompany-p1 {
+  font-weight: 700;
+}
+
+.yourcomments-publishingcompany-p2 {
+  margin-left: 5px;
+  color:rgb(138, 138, 138);
+  font-style: italic;
+}
+
+.yourcomments-date-div {
+  display: flex;
+}
+
+.yourcomments-date-p1 {
+  font-weight: 700;
+}
+
+.yourcomments-date-p2 {
+  margin-left: 5px;
+  color:rgb(138, 138, 138);
+  font-style: italic;
+}
+
+.yourcomments-rating-div {
+  margin-top: 25px;
+}
+
+.yourcomments-stars-container {
+  display: flex;
+}
+
+.yourcomments-classification-text {
+  font-weight: 700;
+}
+
+.yourcomments-stars-div {
+  margin-left: 5px;
+}
+
+.yourcomments-stars-div input[type=radio] {
+  display: none;
+}
+
+.yourcomments-stars-div label i.fa{
+  font-size: 1.0em
+}
+
+.yourcomments-stars-div label i.fa:before {
+  content:'\f005';
+  color:rgb(140,205,188);
+}
+
+.yourcomments-stars-div input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+.yourcomments-textarea {
+  margin-top: 25px;
+}
+
+.yourcomments-textarea-text {
+  width: 100%;
+  height: 70px;
+  border: 1px solid rgb(204, 203, 203);
+  border-radius: 5px;
+  outline: white;
+}
+
+.yourcomments-btn-modify-book {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.yourcomments-btn-update-book {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*Division of the field of my purchases*/
+
+.purchases-container {
+  border: 2px solid black;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+.purchases-title-container {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgb(204, 203, 203);
+  border: 2px solid black;
+}
+
+.purchases-title-div {
+  border-bottom: 1px solid rgb(204, 203, 203);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.purchases-title {
+  font-size: 25px;
+  font-style: italic;
+  color:rgb(138, 138, 138);
+  font-weight: 700;
+}
+
+.purchases-informations-container {
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.purchases-informations-div {
+  border: 1px solid rgb(204, 203, 203);
+  border-radius: 5px;
+}
+
+.purchases-img-div {
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid rgb(204, 203, 203);
+}
+
+.purchases-img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.purchases-informations-of-book-container {
+  display: flex;
+}
+
+.purchases-informations-of-book-div {
+  align-self: center;
+}
+
+.purchases-title-book-div {
+  border-bottom: 1px solid rgb(204, 203, 203);
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+  color:rgb(138, 138, 138);
+  font-weight: 700;
+}
+
+.purchases-author-publishingcompany-date-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.purchases-author-div {
+  display: flex;
+}
+
+.purchases-author-p1 {
+  font-weight: 700;
+}
+
+.purchases-author-p2 {
+  margin-left: 5px;
+  color:rgb(138, 138, 138);
+  font-style: italic;
+}
+
+.purchases-publishingcompany-div {
+  display: flex;
+}
+
+.purchases-publishingcompany-p1 {
+  font-weight: 700;
+}
+
+.purchases-publishingcompany-p2 {
+  margin-left: 5px;
+  color:rgb(138, 138, 138);
+  font-style: italic;
+}
+
+.purchases-date-div {
+  display: flex;
+}
+
+.purchases-date-p1 {
+  font-weight: 700;
+}
+
+.purchases-date-p2 {
+  margin-left: 5px;
+  color:rgb(138, 138, 138);
+  font-style: italic;
+}
+
+.purchases-rating-div {
+  margin-top: 5px;
+}
+
+.purchases-stars-container {
+  display: flex;
+}
+
+.purchases-classification-text {
+  font-weight: 700;
+}
+
+.purchases-stars-div {
+  margin-left: 25px;
+}
+
+.purchases-stars-div input[type=radio] {
+  display: none;
+}
+
+.purchases-stars-div label i.fa{
+  font-size: 1.0em
+}
+
+.purchases-stars-div label i.fa:before {
+  content:'\f005';
+  color:rgb(140,205,188);
+}
+
+.purchases-stars-div input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+.purchases-textarea {
+  margin-top: 25px;
+}
+
+.purchases-textarea-text {
+  width: 100%;
+  height: 70px;
+  border: 1px solid rgb(204, 203, 203);
+  border-radius: 5px;
+  outline: white;
+}
+
+.purchases-btn-modify-book {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.purchases-btn-update-book {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
