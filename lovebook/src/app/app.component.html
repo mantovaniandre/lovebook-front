@@ -1,55 +1,71 @@
 <div class="app-container">
   <div class="container navbar-container">
-    <div class="navbar-div">
-      <div class="navbar-logo-div">
-        <a class="navbar-logo-text">Lovebook</a>
+    <div class="row navbar-div">
+      <div class="col navbar-logo-div">
+        <div class="navbar-logo-subdiv">
+          <p class="navbar-logo-text">Lovebook</p>
+        </div>
       </div>
-      <div class="navbar-search-div">
-        <div class="navbar-search-select-div">
+      <div class="col navbar-search-div">
+        <div class="d-flex justify-content-center navbar-search-subdiv">
           <select class="navbar-search-select" aria-label="Default select example">
             <option selected>Pesquisar por</option>
             <option value="1">Autor</option>
             <option value="2">Editora</option>
             <option value="3">Livro</option>
           </select>
-        </div>
-        <div class="navbar-search-input-div">
-          <input class="navbar-search-input-text" type="text" #campoInput placeholder="O que você procura?">
-        </div>
-        <div class="navbar-search-btn-div">
-          <button class="navbar-search-btn" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
+          <div class="navbar-search-input-div">
+            <input class="navbar-search-input-text" type="text" #campoInput placeholder="O que você procura?">
+          </div>
+          <div class="navbar-search-btn-div">
+            <button class="navbar-search-btn" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
+          </div>
         </div>
       </div>
-      <div class="navbar-account-div">
-        <div class="navbar-account-icon-div">
-          <i class="bi bi-person-circle"></i>
-        </div>
-        <div class="navbar-description-account-login-div">
-          <div class="navbar-description-account-login-name">
-            <div class="dropdown navbar-description-account-dropdownmenu">
-              <button class="navbar-description-account-dropdownmenu-btn btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <a>Olá, MINHA CONTA</a>
-              </button>
-              <div class="dropdown-menu navbar-description-account-dropdownmenu" aria-labelledby="dropdownMenuButton1">
-                <div>
-                  <p class="navbar-description-account-dropdownmenu-open">Entrar</p>
-                </div>
-                <div>
-                  <p class="navbar-description-account-dropdownmenu-newregister">Cadastrar</p>
-                </div>
-                <div>
-                  <p class="navbar-description-account-dropdownmenu-myaccount">Minha conta</p>
+      <div class="col navbar-account-div">
+        <div class="navbar-account-subdiv justify-content-center">
+          <div class="navbar-account-div-principal">
+            <div class="navbar-account-icon-div">
+              <i class="bi bi-person-circle"></i>
+            </div>
+          </div>
+          <div class="navbar-description-account-login-div">
+            <div class="navbar-description-account-login-name">
+              <div class="dropdown navbar-description-account-dropdownmenu">
+                <button class="navbar-description-account-dropdownmenu-btn btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="navbar-login-name">André</a>
+                </button>
+                <div class="dropdown-menu navbar-description-account-dropdownmenu" aria-labelledby="dropdownMenuButton1">
+                  <div>
+                    <p class="navbar-description-account-dropdownmenu-open">Entrar</p>
+                  </div>
+                  <div>
+                    <p class="navbar-description-account-dropdownmenu-newregister">Cadastrar</p>
+                  </div>
+                  <div>
+                    <p class="navbar-description-account-dropdownmenu-myaccount">Minha conta</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="navbar-description-account-cart-div">
-        <div class="navbar-description-account-cart-icon">
-          <i class="bi bi-cart"></i>
-          <div class="navbar-description-account-pillbadge">
-            <a class="navbar-description-account-pillbadge-number">1</a>
+      <div class="col navbar-cart-container">
+        <div class="navbar-cart-container-div justify-content-center">
+          <div class="navbar-cart-container-subdiv">
+            <div class="navbar-cart-container-icon-div">
+              <i class="bi bi-cart"></i>
+            </div>
+          </div>
+          <div class="navbar-cart-div">
+            <div class="navbar-cart-div-name">
+              <div class="navbar-cart-div-name-subdiv">
+                <div class="navbar-cart-div-name btn">
+                  <a class="navbar-cart-name">Carrinho</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -59,76 +75,81 @@
   <router-outlet></router-outlet>
 
   <div class="newsletter-container">
-    <div class="newsletter-informations-div">
-      <div class="newsletter-informations-registernewsletter-div">
-        <a class="newsletter-informations-registernewsletter-title">Cadastre em nossa newsletter</a>
-        <input class="newsletter-informations-registernewsletter-input" type="text" #campoInput placeholder="Cadastre seu e-mail aqui">
-        <button class="newsletter-informations-registernewsletter-btn" type="submit"><i class="bi bi-search"></i></button>
-      </div>
-      <div class="newsletter-informations-socialmidia-title-div">
-        <a>Acompanhe a gente</a>
-      </div>
-      <div class="newsletter-informations-socialmidia-icon-facebook">
-        <i class="bi bi-facebook"></i>
-      </div>
-      <div class="newsletter-informations-socialmidia-icon-instagram">
-        <i class="bi bi-instagram"></i>
-      </div>
-      <div class="newsletter-informations-socialmidia-icon-twitter">
-        <i class="bi bi-twitter"></i>
-      </div>
-    </div>
-  </div>
-
-  <div class="container footer-container">
-    <div class="row footer-informations-div">
-      <div class="col-sm-12 col-md-3 footer-about-div">
-        <div>
-          <h6 class="footer-about-title">Sobre a Lovebook</h6>
+    <div class="container newsletter-informations-div">
+      <div class="row">
+        <div class="col-12 col-md-3 d-flex justify-content-center mt-3 mb-3 newsletter-informations-registernewsletter-div">
+          <a class="align-self-center newsletter-informations-registernewsletter-title">Assine nossa Newsletter</a>
         </div>
-        <div class="footer-aboutus-title">
-          <a>Quem somos</a>
+        <div class="col-12 col-md-3 d-flex justify-content-center mt-3 mb-3 newsletter-register-email-input-div">
+          <input class="newsletter-register-email-input-text" type="text" #registeremailInput placeholder="Cadastre seu e-mail aqui?">
+          <button class="newsletter-regiter-email-btn" type="submit" (click)=getLivros(registeremailInput.value)><i class="bi bi-search"></i></button>
         </div>
-        <div class="footer-workus-title">
-          <a>Trabalhe conosco</a>
+        <div class="col-12 col-md-2 d-flex justify-content-center mt-3 mb-3 newsletter-informations-registernewsletter-socialmidia-title-div">
+          <a class="align-self-center newsletter-informations-registernewsletter-socialmidia-title">Acompanhe a gente</a>
         </div>
-        <div class="footer-gift-title">
-          <a>Vale-presente</a>
+        <div class="col-4 col-md-1 d-flex justify-content-center mt-3  mb-3 newsletter-informations-socialmidia-icon-facebook">
+          <i class="align-self-center bi bi-facebook"></i>
         </div>
-      </div>
-      <div class="col-sm-12 col-md-3 footer-attendance-div">
-        <h6 class="footer-attendance-title">Atendimento ao cliente</h6>
-        <div class="footer-contact-title">
-          <a>Entre em contato</a>
+        <div class="col-4 col-md-1 d-flex justify-content-center mt-3  mb-3 newsletter-informations-socialmidia-icon-instagram">
+          <i class="align-self-center bi bi-instagram"></i>
         </div>
-        <div class="footer-privacy-title">
-          <a>Política de privacidade</a>
-        </div>
-        <div class="footer-devolution-title">
-          <a>Política de entrega e devolução</a>
-        </div>
-        <div class="footer-questions-title">
-          <a>Perguntas e respostas</a>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-3 footer-payment-div">
-        <h6 class="footer-payment-title">Formas de pagamentos</h6>
-        <div>
-          <img src="../assets/images/bandeiraPagamento1.png">
-          <img src="../assets/images/bandeiraPagamento2.png">
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-3 footer-certificate-div">
-        <h6 class="footer-certificate-title">Certificados</h6>
-        <div>
-          <img src="../assets/images/CompraSegura.png">
+        <div class="col-4 col-md-1 d-flex justify-content-center mt-3 mb-3 newsletter-informations-socialmidia-icon-twitter">
+          <i class="align-self-center bi bi-twitter"></i>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="footer-container">
+    <div class="container footer-informations-div">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-3 footer-about-div">
+          <div class="">
+            <h6 class="footer-about-title">Sobre a Lovebook</h6>
+          </div>
+          <div class="footer-aboutus-title">
+            <a>Quem somos</a>
+          </div>
+          <div class="footer-workus-title">
+            <a>Trabalhe conosco</a>
+          </div>
+          <div class="footer-gift-title">
+            <a>Vale-presente</a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-3 footer-attendance-div">
+          <h6 class="footer-attendance-title">Atendimento ao cliente</h6>
+          <div class="footer-contact-title">
+            <a>Entre em contato</a>
+          </div>
+          <div class="footer-privacy-title">
+            <a>Política de privacidade</a>
+          </div>
+          <div class="footer-devolution-title">
+            <a>Política de entrega e devolução</a>
+          </div>
+          <div class="footer-questions-title">
+            <a>Perguntas e respostas</a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-3 footer-payment-div">
+          <h6 class="footer-payment-title">Formas de pagamentos</h6>
+          <div>
+            <img src="../assets/images/bandeiraPagamento1.png">
+            <img src="../assets/images/bandeiraPagamento2.png">
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-3 footer-certificate-div">
+          <h6 class="footer-certificate-title">Certificados</h6>
+          <div>
+            <img src="../assets/images/CompraSegura.png">
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
 
-  <div class="informationcnpj-container">
+  <div class="informationcnpj-container mt-3">
     <div class="row informationcnpj-informations-div">
       <div class="col-sm-12 informationcnpj-informations-cnpj-div">
         <p class="informationcnpj-informations-cnpj-text">lovebook.com.br Serviços de Busca de livros na Internet Ltda - CNPJ 00.000.000/0001-60</p>

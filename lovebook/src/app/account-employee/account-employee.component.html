@@ -4,93 +4,391 @@
     <div class="dashboard-title-div">
       <p class="dashboard-title">Dashboard</p>
     </div>
-
-
-
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-    <mat-menu #menu="matMenu">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-    </mat-menu>
-
-    <div class="dashboard-informations-container">
+    <div class="row mt-3 mb-5">
+      <div class="col dashboard-input-div d-flex justify-content-center" >
+        <input class="dashboard-input-text" type="text" #campoInput placeholder="Escolha um mês?">
+        <button class="dashboard-btn" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
+      </div>
+    </div>
+    <div class="container dashboard-informations-container">
       <div class="row dashboard-informations-div1">
-        <div class="col-sm-12 col-md-3">
-
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-readers-div">
+          <div class="row mt-2 dashboard-card-readers-subdiv">
+            <div class="col-8 dashboard-card-readers-title">
+              <p class="dashboard-card-readers-value"  data-bs-toggle="tooltip" data-bs-placement="top" title="1500">1500</p>
+              <p class="dashboard-card-readers-text">Quantidade de leitores</p>
+            </div>
+            <div class="col-4 d-flex justify-content-center dashboard-card-readers-icon">
+              <i><i class="bi bi-people align-self-center dashboard-icon-readers-book"></i></i>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-3">
-
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-profit-div">
+          <div class="row mt-2 dashboard-card-profit-subdiv">
+            <div class="col-8 dashboard-card-profit-title">
+              <p class="dashboard-card-profit-value"  data-bs-toggle="tooltip" data-bs-placement="top" title="R$ 200.000,00">R$ 200.000,00</p>
+              <p class="dashboard-card-profit-text">Lucratividade</p>
+            </div>
+            <div class="col-4 d-flex justify-content-center dashboard-card-profit-icon">
+              <i><i class="bi bi-bar-chart-line align-self-center dashboard-icon-profit-book"></i></i>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-3">
-
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-best-selling-book-category-div">
+          <div class="row mt-2 dashboard-card-best-selling-book-category-subdiv">
+            <div class="col-8 dashboard-card-best-selling-book-category-title">
+              <p class="dashboard-card-best-selling-book-category-value" data-bs-toggle="tooltip" data-bs-placement="top" title="Literatura">Literatura</p>
+              <p class="dashboard-card-best-selling-book-category-text">Categoria mais vendido</p>
+            </div>
+            <div class="col-4 d-flex justify-content-center dashboard-card-best-selling-book-category-icon">
+              <i><i class="bi bi-stack align-self-center dashboard-icon-best-selling-book-category-book"></i></i>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-3">
-
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-how-many-books-are-in-stock-div">
+          <div class="row mt-2 dashboard-card-how-many-books-are-in-stock-subdiv">
+            <div class="col-8 dashboard-card-how-many-books-are-in-stock-title">
+              <p class="dashboard-card-how-many-books-are-in-stock-value" data-bs-toggle="tooltip" data-bs-placement="top" title="10.500">10.500</p>
+              <p class="dashboard-card-how-many-books-are-in-stock-text">Livros em estoque</p>
+            </div>
+            <div class="col-4 d-flex justify-content-center dashboard-card-how-many-books-are-in-stock-icon">
+              <i><i class="bi bi-box align-self-center dashboard-icon-how-many-books-are-in-stock-book"></i></i>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row employeeregistrationupdate-informations-div2">
-        <div class="col-sm-12 col-md-3">
-
+      <div class="row dashboard-informations-div2">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-best-selling-books-div">
+          <div class="row mt-2 dashboard-card-best-selling-books-subdiv">
+            <div class="col-8 dashboard-card-best-selling-books-title">
+              <p class="dashboard-card-best-selling-books-value" data-bs-toggle="tooltip" data-bs-placement="top" title="Dom Casmurro">Dom Casmurro</p>
+              <p class="dashboard-card-best-selling-books-text">Livro mais vendido</p>
+            </div>
+            <div class="col-4 d-flex justify-content-center dashboard-card-best-selling-books-icon">
+              <i><i class="bi bi-book align-self-center dashboard-icon-best-selling-books-book"></i></i>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-3">
-
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-region-that-bought-the-most-book-div">
+          <div class="row mt-2 dashboard-card-region-that-bought-the-most-book-subdiv">
+            <div class="col-8 dashboard-card-region-that-bought-the-most-book-title">
+              <p class="dashboard-card-region-that-bought-the-most-book-value" data-bs-toggle="tooltip" data-bs-placement="top" title="Sudeste">Sudeste</p>
+              <p class="dashboard-card-region-that-bought-the-most-book-text">Leitor por região</p>
+            </div>
+            <div class="col-4 d-flex justify-content-center dashboard-card-region-that-bought-the-most-book-icon">
+              <i><i class="bi bi-geo-alt align-self-center dashboard-icon-region-that-bought-the-most-book-book"></i></i>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-3">
-
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-genre-that-bought-the-most-book-div">
+          <div class="row mt-2 dashboard-card-genre-that-bought-the-most-book-subdiv">
+            <div class="col-8 dashboard-card-genre-that-bought-the-most-book-title">
+              <p class="dashboard-card-genre-that-bought-the-most-book-value" data-bs-toggle="tooltip" data-bs-placement="top" title="Feminino">Feminino</p>
+              <p class="dashboard-card-genre-that-bought-the-most-book-text">Leitor por gênero</p>
+            </div>
+            <div class="col-4 d-flex justify-content-center dashboard-card-genre-that-bought-the-most-book-icon">
+              <i><i class="bi bi-gender-ambiguous align-self-center dashboard-icon-genre-that-bought-the-most-book-book"></i></i>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-3">
-
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-books-sold-div">
+          <div class="row mt-2 dashboard-card-books-sold-subdiv">
+            <div class="col-8 dashboard-card-books-sold-title">
+              <p class="dashboard-card-books-sold-value" data-bs-toggle="tooltip" data-bs-placement="top" title="15.000">15.000</p>
+              <p class="dashboard-card-books-sold-text">Livros vendidos</p>
+            </div>
+            <div class="col-4 d-flex justify-content-center dashboard-card-books-sold-icon">
+              <i><i class="bi bi-book align-self-center dashboard-icon-books-sold-book"></i></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <div class="container employeeregistrationupdate-container">
-    <div class="employeeregistrationupdate-title-div">
-      <p class="employeeregistrationupdate-title">Atualização Cadastral</p>
+    <div class="container employeeregistrationupdate-div">
+      <div class="employeeregistrationupdate-div">
+        <div class="employeeregistrationupdate-title-div">
+          <p class="employeeregistrationupdate-title">Atualização Cadastral</p>
+        </div>
+        <div class="employeeregistrationupdate-informations-container">
+          <form>
+            <div class="row employeeregistrationupdate-informations-div1">
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationupdate-name-label">Nome</label>
+                <input type="text" class="form-control" placeholder="Nome">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                  <label class="employeeregistrationupdate-lastname-label">Sobrenome</label>
+                  <input type="text" class="form-control" placeholder="Sobrenome">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationupdate-email-label">E-mail</label>
+                <input type="email" class="form-control" placeholder="E-mail">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationupdate-password-label">Senha</label>
+                <input type="password" class="form-control" placeholder="Senha">
+              </div>
+            </div>
+            <div class="row employeeregistrationupdate-informations-div2">
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationupdate-gender-label">Sexo</label>
+                <input type="text" class="form-control" placeholder="Sexo">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationupdate-zipcode-label">CEP</label>
+                <input type="text" class="form-control" placeholder="CEP">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationupdate-city-label">Cidade</label>
+                <input type="text" class="form-control" placeholder="Cidade">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationupdate-state-label">Estado</label>
+                <input type="text" class="form-control" placeholder="Estado">
+              </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button type="submit" class="btn employeeregistrationupdate-btn-update-registration">Atualizar</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="employeeregistrationupdate-informations-container">
-      <form>
-        <div class="row employeeregistrationupdate-informations-div1">
-          <div class="col-sm-12 col-md-3">
-            <label class="employeeregistrationupdate-name-label">Nome</label>
-            <input type="text" class="form-control" placeholder="Nome">
-          </div>
-          <div class="col-sm-12 col-md-3">
-              <label class="employeeregistrationupdate-lastname-label">Sobrenome</label>
-              <input type="text" class="form-control" placeholder="Sobrenome">
-          </div>
-          <div class="col-sm-12 col-md-3">
-            <label class="employeeregistrationupdate-email-label">E-mail</label>
-            <input type="email" class="form-control" placeholder="E-mail">
-          </div>
-          <div class="col-sm-12 col-md-3">
-            <label class="employeeregistrationupdate-password-label">Senha</label>
-            <input type="password" class="form-control" placeholder="Senha">
+  </div>
+
+  <div class="container employeeregistrationbook-container">
+    <div class="container employeeregistrationbook-div">
+      <div class="employeeregistrationbook-div">
+        <div class="employeeregistrationbook-title-div">
+          <p class="employeeregistrationbook-title">Cadastro de Livros</p>
+        </div>
+        <div class="employeeregistrationbook-informations-container">
+          <form>
+            <div class="row employeeregistrationbook-informations-div1">
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-name-label">Nome do livro</label>
+                <input type="text" class="form-control" placeholder="Nome">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                  <label class="employeeregistrationbook-publishingcompany-label">Editora</label>
+                  <input type="text" class="form-control" placeholder="Editora">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-language-label">Idioma</label>
+                <input type="text" class="form-control" placeholder="Idioma">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-price-label">Preço de Venda</label>
+                <input type="text" class="form-control" placeholder="Preço de Venda">
+              </div>
+            </div>
+            <div class="row employeeregistrationbook-informations-div2">
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-urlimage-label">URL da Imagem</label>
+                <input type="text" class="form-control" placeholder="URL da Imagem">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-numberpage-label">Número de Páginas</label>
+                <input type="text" class="form-control" placeholder="Número de Páginas">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-cost-label">Custo</label>
+                <input type="text" class="form-control" placeholder="Custo">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-authorname-label">Nome do Autor</label>
+                <input type="text" class="form-control" placeholder="Nome do Autor">
+              </div>
+            </div>
+            <div class="row employeeregistrationbook-informations-div3">
+              <div class="col">
+                <label class="employeeregistrationbook-quantity-label">Quantidade</label>
+                <input type="text" class="form-control" placeholder="Quantidade">
+              </div>
+              <div class="col">
+                <label class="employeeregistrationbook-category-label">Categoria</label>
+                <input type="text" class="form-control" placeholder="Categoria">
+              </div>
+            </div>
+            <div class="row employeeregistrationbook-informations-div3">
+              <div class="col">
+                <label class="employeeregistrationbook-description-label">Descrição</label>
+                <input type="text" class="form-control" placeholder="Descrição">
+              </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button type="submit" class="btn employeeregistrationbook-btn-update-registration">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container employeeupdatebook-container">
+    <div class="container employeeupdatebook-div">
+      <div class="employeeupdatebook-div">
+        <div class="employeeupdatebook-title-div">
+          <p class="employeeupdatebook-title">Atualização do Livro</p>
+        </div>
+        <div class="row mt-3 mb-5">
+          <div class="col employeeupdatebook-input-div d-flex justify-content-center" >
+            <input class="employeeupdatebook-input-text" type="text" #campoInput placeholder="Qual livro será excluído?">
+            <button class="employeeupdatebook-btn" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
           </div>
         </div>
-        <div class="row employeeregistrationupdate-informations-div2">
-          <div class="col-sm-12 col-md-3">
-            <label class="employeeregistrationupdate-gender-label">Sexo</label>
-            <input type="text" class="form-control" placeholder="Sexo">
-          </div>
-          <div class="col-sm-12 col-md-3">
-            <label class="employeeregistrationupdate-zipcode-label">CEP</label>
-            <input type="text" class="form-control" placeholder="CEP">
-          </div>
-          <div class="col-sm-12 col-md-3">
-            <label class="employeeregistrationupdate-city-label">Cidade</label>
-            <input type="text" class="form-control" placeholder="Cidade">
-          </div>
-          <div class="col-sm-12 col-md-3">
-            <label class="employeeregistrationupdate-state-label">Estado</label>
-            <input type="text" class="form-control" placeholder="Estado">
+        <div class="employeeupdatebook-informations-container">
+          <div class="container row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center">
+              <div class="d-flex justify-content-center">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/41GeyYROqTL._SY344_BO1,204,203,200_QL70_ML2_.jpg" style="width: 100%; height: 90%;">
+              </div>
+            </div>
+            <form class="col-12 col-sm-12 col-md-12 col-lg-8">
+              <div class="row employeeupdatebook-informations-div1">
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeeupdatebook-name-label">Nome do livro</label>
+                  <input type="text" class="form-control" placeholder="Nome">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <label class="employeeupdatebook-publishingcompany-label">Editora</label>
+                    <input type="text" class="form-control" placeholder="Editora">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeeupdatebook-language-label">Idioma</label>
+                  <input type="text" class="form-control" placeholder="Idioma">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeeupdatebook-price-label">Preço de Venda</label>
+                  <input type="text" class="form-control" placeholder="Preço de Venda">
+                </div>
+              </div>
+              <div class="row employeeupdatebook-informations-div2">
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeeupdatebook-urlimage-label">URL da Imagem</label>
+                  <input type="text" class="form-control" placeholder="URL da Imagem">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeeupdatebook-numberpage-label">Número de Páginas</label>
+                  <input type="text" class="form-control" placeholder="Número de Páginas">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeeupdatebook-cost-label">Custo</label>
+                  <input type="text" class="form-control" placeholder="Custo">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeeupdatebook-authorname-label">Nome do Autor</label>
+                  <input type="text" class="form-control" placeholder="Nome do Autor">
+                </div>
+              </div>
+              <div class="row employeeupdatebook-informations-div3">
+                <div class="col">
+                  <label class="employeeupdatebook-quantity-label">Quantidade</label>
+                  <input type="text" class="form-control" placeholder="Quantidade">
+                </div>
+                <div class="col">
+                  <label class="employeeupdatebook-category-label">Categoria</label>
+                  <input type="text" class="form-control" placeholder="Categoria">
+                </div>
+              </div>
+              <div class="row employeeupdatebook-informations-div3">
+                <div class="col">
+                  <label class="employeeupdatebook-description-label">Descrição</label>
+                  <input type="text" class="form-control" placeholder="Descrição">
+                </div>
+              </div>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn employeeupdatebook-btn-update-registration">Atualizar</button>
+              </div>
+            </form>
           </div>
         </div>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button type="submit" class="btn employeeregistrationupdate-btn-update-registration">Atualizar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container employeedeletebook-container">
+    <div class="container employeedeletebook-div">
+      <div class="employeedeletebook-div">
+        <div class="employeedeletebook-title-div">
+          <p class="employeedeletebook-title">Excluir um Livro</p>
         </div>
-      </form>
+        <div class="row mt-3 mb-5">
+          <div class="col employeedeletebook-input-div d-flex justify-content-center" >
+            <input class="employeedeletebook-input-text" type="text" #campoInput placeholder="Qual livro será excluído?">
+            <button class="employeedeletebook-btn" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
+          </div>
+        </div>
+        <div class="employeedeletebook-informations-container">
+          <div class="container row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center">
+              <div class="d-flex justify-content-center">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/41GeyYROqTL._SY344_BO1,204,203,200_QL70_ML2_.jpg" style="width: 100%; height: 90%;">
+              </div>
+            </div>
+            <form class="col-12 col-sm-12 col-md-12 col-lg-8">
+              <div class="row employeedeletebook-informations-div1">
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeedeletebook-name-label">Nome do livro</label>
+                  <input type="text" class="form-control" placeholder="Nome">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <label class="employeedeletebook-publishingcompany-label">Editora</label>
+                    <input type="text" class="form-control" placeholder="Editora">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeedeletebook-language-label">Idioma</label>
+                  <input type="text" class="form-control" placeholder="Idioma">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeedeletebook-price-label">Preço de Venda</label>
+                  <input type="text" class="form-control" placeholder="Preço de Venda">
+                </div>
+              </div>
+              <div class="row employeedeletebook-informations-div2">
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeedeletebook-urlimage-label">URL da Imagem</label>
+                  <input type="text" class="form-control" placeholder="URL da Imagem">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeedeletebook-numberpage-label">Número de Páginas</label>
+                  <input type="text" class="form-control" placeholder="Número de Páginas">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeedeletebook-cost-label">Custo</label>
+                  <input type="text" class="form-control" placeholder="Custo">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label class="employeedeletebook-authorname-label">Nome do Autor</label>
+                  <input type="text" class="form-control" placeholder="Nome do Autor">
+                </div>
+              </div>
+              <div class="row employeedeletebook-informations-div3">
+                <div class="col">
+                  <label class="employeedeletebook-quantity-label">Quantidade</label>
+                  <input type="text" class="form-control" placeholder="Quantidade">
+                </div>
+                <div class="col">
+                  <label class="employeedeletebook-category-label">Categoria</label>
+                  <input type="text" class="form-control" placeholder="Categoria">
+                </div>
+              </div>
+              <div class="row employeedeletebook-informations-div3">
+                <div class="col">
+                  <label class="employeedeletebook-description-label">Descrição</label>
+                  <input type="text" class="form-control" placeholder="Descrição">
+                </div>
+              </div>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn employeedeletebook-btn-update-registration">Excluir</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

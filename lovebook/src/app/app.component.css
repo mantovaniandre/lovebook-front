@@ -13,24 +13,32 @@
 
 .navbar-container {
   background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  height: 90px;
+  height: auto;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-div {
-  display: flex;
-  justify-content: space-around;
   width: 100%;
+  height: auto;
 }
 
 .navbar-logo-div {
+  height: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-logo-subdiv {
   align-self: center;
-  width: 50%;
+  height: auto;
+  width: auto;
 }
 
 .navbar-logo-text {
-  width: 150px;
-  margin-left: 40px;
+  text-align: center;
   font-family: 'Big Shoulders Stencil Display', cursive;
   text-decoration: none;
   font-size: 50px;
@@ -38,20 +46,19 @@
 }
 
 .navbar-search-div {
-  display: flex;
-  justify-content: center;
-  width: 50%;
+  height: auto;
+  width: 350px;
+  margin-top: 10px;
 }
 
-.navbar-search-select-div {
-  align-self: center;
+.navbar-search-subdiv {
+  height: auto;
+  width: auto;
 }
 
 .navbar-search-select {
-  align-self: center;
   border-radius: 0;
-  width: 160px;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
   outline: none;
   color: rgb(140,205,188);
   border: 1px solid white;
@@ -61,20 +68,20 @@
 }
 
 .navbar-search-input-div {
-  align-self: center;
   height: 40px;
+  align-self: center;
 }
 
 .navbar-search-input-text {
   border: 1px solid white;
   height: 38px;
-  width: 300px;
+  width: auto;
   outline: none;
 }
 
 .navbar-search-btn-div {
-  align-self: center;
   height: 40px;
+  align-self: center;
 }
 
 .navbar-search-btn {
@@ -88,21 +95,24 @@
 }
 
 .navbar-account-div {
+  height: auto;
+  margin-top: 10px;
+}
+
+.navbar-account-subdiv {
+  height: 100%;
   display: flex;
-  justify-content: center;
-  width: 50%;
+}
+
+.navbar-account-div-principal {
+  align-self: center;
 }
 
 .navbar-account-icon-div {
-  align-self: center;
   font-size: 30px;
   color: white;
-  height: 50px;
-}
-
-.navbar-description-account-login-div {
+  height: 30px;
   align-self: center;
-  height: 40px;
 }
 
 .navbar-description-account-dropdownmenu-btn {
@@ -110,10 +120,21 @@
   color: white;
 }
 
+.navbar-login-name {
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+}
+
 .navbar-description-account-dropdownmenu-btn:focus {
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
+}
+
+.navbar-description-account-login-div {
+  align-self: center;
 }
 
 .dropdown-menu {
@@ -145,18 +166,69 @@
   padding-left: 10px;
 }
 
-.navbar-description-account-cart-div {
+.navbar-cart-container {
+  height: auto;
+  margin-top: 10px;
+}
+
+.navbar-cart-container-div {
+  height: 100%;
   display: flex;
-  justify-content: center;
-  position: relative;
-  width: 20%;
+}
+
+.navbar-cart-container-subdiv {
+  align-self: center;
+}
+
+.navbar-cart-container-icon-div {
+  font-size: 30px;
+  color: white;
+  height: 30px;
+  align-self: center;
+}
+
+.navbar-cart-div {
+  align-self: center;
+}
+
+.navbar-description-account-dropdownmenu-btn {
+  font-size: 13px;
+  color: white;
+}
+
+.navbar-cart-name {
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-description-account-cart-container {
+  height: 50px;
+  margin-top: 10px;
 }
 
 .navbar-description-account-cart-icon {
-  align-self: center;
+  display: flex;
+  height: 100%;
+}
+
+.navbar-cart-icon-div {
+  display: flex;
+  padding-top: 5px;
+}
+
+.navbar-title {
+  height: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+  align-items: flex-start;
+  color: white;
+}
+
+.navbar-cart-icon {
   font-size: 30px;
   color: white;
-  height: 50px;
 }
 
 .navbar-description-account-pillbadge {
@@ -183,38 +255,46 @@
 
 .newsletter-container {
   width: 100%;
-  height: 80px;
+  height: auto;
   background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  display: flex;
 }
 
 .newsletter-informations-div {
   width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: space-around;
-  align-self: center;
+  height: auto;
 }
 
 .newsletter-informations-registernewsletter-div {
-  align-self: center;
-  text-transform: uppercase;
-  color: white;
   font-weight: bold;
+
 }
 
 .newsletter-informations-registernewsletter-title {
-  margin-right: 20px;
   color: white;
   font-weight: bold;
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
 }
-.newsletter-informations-registernewsletter-input {
+
+.newsletter-register-email-input-div {
+  height: auto;
+  align-self: center;
+}
+
+.newsletter-register-email-input-text {
   border: 1px solid white;
-  border-radius: 5px;
-  height: 30px;
+  height: 38px;
   width: 300px;
-  outline: white;
+}
+
+.newsletter-regiter-email-btn {
+  border: 1px solid white;
+  background-color: white;
+  height: 38px;
+  width: 50px;
+  position: relative;
+  color: rgb(140,205,188);
 }
 
 .newsletter-informations-registernewsletter-btn {
@@ -229,27 +309,39 @@
   color: rgb(140,205,188);
 }
 
+.newsletter-informations-registernewsletter-socialmidia-title-div {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.newsletter-informations-registernewsletter-socialmidia-title {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
 .newsletter-informations-socialmidia-title-div {
-  align-self: center;
   text-transform: uppercase;
   color: white;
   font-weight: bold;
 }
 
 .newsletter-informations-socialmidia-icon-facebook {
-  align-self: center;
   color: white;
   font-size: 30px;
 }
 
 .newsletter-informations-socialmidia-icon-instagram {
-  align-self: center;
   color: white;
   font-size: 30px;
 }
 
 .newsletter-informations-socialmidia-icon-twitter {
-  align-self: center;
   color: white;
   font-size: 30px;
 }
@@ -259,38 +351,34 @@
 .footer-container {
   width: 100%;
   height: auto;
-  background: rgb(241, 241, 241);
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-informations-div {
-  width: 100%;
-  height: 180px;
-  background: rgb(241, 241, 241);
-  margin-top: 40px;
 }
 
 .footer-about-div {
   text-transform: uppercase;
   color: rgba(53,126,107,1);
-  border: 2px solid black;
+  border:0.5px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.footer-about-title {
+  font-size: 14px;
 }
 
 .footer-aboutus-title {
-  font-size: 14px;
+  font-size: 12px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
 
 .footer-workus-title {
-  font-size: 14px;
+  font-size: 12px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
 
 .footer-gift-title {
-  font-size: 14px;
+  font-size: 12px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
@@ -298,29 +386,35 @@
 .footer-attendance-div {
   text-transform: uppercase;
   color: rgba(53,126,107,1);
-  border: 2px solid black;
+  border:0.5px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.footer-attendance-title {
+  font-size: 14px;
 }
 
 .footer-contact-title {
-  font-size: 14px;
+  font-size: 12px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
 
 .footer-privacy-title {
-  font-size: 14px;
+  font-size: 12px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
 
 .footer-devolution-title {
-  font-size: 14px;
+  font-size: 12px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
 
 .footer-questions-title {
-  font-size: 14px;
+  font-size: 12px;
   color: rgb(70, 73, 73);
   margin-top: 5px;
 }
@@ -328,35 +422,43 @@
 .footer-payment-div {
   text-transform: uppercase;
   color: rgba(53,126,107,1);
-  border: 2px solid black;
+  border:0.5px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.footer-payment-title {
+  font-size: 14px;
 }
 
 .footer-certificate-div {
   text-transform: uppercase;
   color: rgba(53,126,107,1);
-  border: 2px solid black;
+  border:0.5px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  background-color: white;
 }
 
+.footer-certificate-title {
+  font-size: 14px;
+}
 
 /*Division of field the cnpj information */
 
 .informationcnpj-container {
-  width: 100%;
+  width: auto;
   height: auto;
 }
 
 .informationcnpj {
-  width: 100%;
+  width: auto;
   height: auto;
   background: rgb(241, 241, 241);
-  display: flex;
 }
 
 .informationcnpj-informations-div {
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 60px;
 }
 
 .informationcnpj-informations-cnpj-div {

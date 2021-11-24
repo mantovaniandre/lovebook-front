@@ -13,6 +13,11 @@
   background-color: white;
   border: 1px solid rgb(209, 208, 208);
   border-radius: 5px;
+
+}
+
+.clientregistrationupdate-div {
+  margin-top: 10px;
 }
 
 .clientregistrationupdate-title-div {
@@ -98,6 +103,10 @@
   border-radius: 5px;
 }
 
+.yourcomments-div {
+  margin-top: 10px;
+}
+
 .yourcomments-title-container {
   width: 100%;
   height: auto;
@@ -158,6 +167,7 @@
   justify-content: center;
   color:rgb(138, 138, 138);
   font-weight: 700;
+  margin-top: 10px;
 }
 
 .yourcomments-author-publishingcompany-date-div {
@@ -294,6 +304,10 @@
   margin-bottom: 150px;
 }
 
+.purchases-div {
+  margin-top: 10px;
+}
+
 .purchases-title-container {
   width: 100%;
   height: auto;
@@ -354,6 +368,7 @@
   justify-content: center;
   color:rgb(138, 138, 138);
   font-weight: 700;
+  margin-top: 10px;
 }
 
 .purchases-author-publishingcompany-date-div {
