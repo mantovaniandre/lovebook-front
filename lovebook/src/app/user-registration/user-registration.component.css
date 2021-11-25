@@ -1,0 +1,87 @@
+/*Division of field the user registration*/
+
+.userregistration-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+}
+
+.userregistration-div {
+  margin-top: 10px;
+}
+
+.userregistration-title-div {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.userregistration-title {
+  font-size: 25px;
+  font-style: italic;
+  color: rgb(140,205,188);
+  font-weight: 700;
+}
+
+.userregistration-informations-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.userregistration-informations-div1 {
+  margin-bottom: 10px;
+}
+
+.userregistration-name-label {
+  color:rgb(138, 138, 138);
+}
+
+.userregistration-lastname-label {
+  color:rgb(138, 138, 138);
+}
+
+.userregistration-email-label {
+  color:rgb(138, 138, 138);
+}
+
+.userregistration-password-label {
+  color:rgb(138, 138, 138);
+}
+
+.userregistration-gender-label {
+  color:rgb(138, 138, 138);
+}
+
+.userregistration-zipcode-label {
+  color:rgb(138, 138, 138);
+}
+
+.userregistration-city-label {
+  color:rgb(138, 138, 138);
+}
+
+.userregistration-state-label {
+  color:rgb(138, 138, 138);
+}
+
+.form-control {
+  box-shadow: 0 0 0 0;
+  border: 1px solid rgb(209, 208, 208);
+  outline: 0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(140,205,188) !important;
+  opacity: 1; /* Firefox */
+}
+
+.userregistration-btn-update-registration {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

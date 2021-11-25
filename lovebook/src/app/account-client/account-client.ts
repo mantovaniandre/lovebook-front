@@ -19,7 +19,7 @@ this.data = new Array<any>();
 
   ngOnInit() {
     event?.preventDefault();
-    this.$livros_literatura = this.service.getBooks("","Romance");
+    this.$livros_literatura = this.service.getBooks("","Romance","","");
     this.$livros_literatura.subscribe((data: any) => {
       console.log(data);
       this.data_literatura = data;

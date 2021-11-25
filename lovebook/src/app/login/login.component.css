@@ -8,13 +8,33 @@
   border-radius: 5px;
 }
 
+.login-informations-form {
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+  padding: 10px;
+}
+
 .login-informations-form-title {
   color:rgb(140,205,188);
+  font-size: 30px;
+}
+
+.login-email-title {
+  color:rgb(138, 138, 138);
+}
+
+.login-password-title {
+  color:rgb(138, 138, 138);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(140,205,188) !important;
   opacity: 1; /* Firefox */
+}
+
+.login-dont-fave-register {
+  margin-top: 10px;
 }
 
 .login-dont-fave-register a {

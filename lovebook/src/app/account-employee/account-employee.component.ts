@@ -39,7 +39,7 @@ slides: any = [[]];
 
 getLivros(livro: string){
   event?.preventDefault();
-  this.$livros = this.service.getBooks(livro, "");
+  this.$livros = this.service.getBooks(livro,"","","");
   this.$livros.subscribe(data => {
     console.log(data);
     this.data = data;

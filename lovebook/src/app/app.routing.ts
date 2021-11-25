@@ -6,6 +6,8 @@ import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from './login/login.component';
 import { AccountClientComponent } from "./account-client/account-client";
 import { AccountEmployeeComponent } from "./account-employee/account-employee.component";
+import { UserRegistrationComponent } from "./user-registration/user-registration.component";
+import { ShoppingCartComponent } from "./shopping-cart/shopping-cart.component";
 
 
 const routes: Routes = [
@@ -23,12 +25,20 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'minhaContaCliente',
+    path: 'cliente',
     component: AccountClientComponent
   },
   {
-    path: 'minhaContaFuncionario',
+    path: 'colaborador',
     component: AccountEmployeeComponent
+  },
+  {
+    path: 'registrar',
+    component: UserRegistrationComponent
+  },
+  {
+    path: 'carrinho',
+    component: ShoppingCartComponent
   }
 ];
 

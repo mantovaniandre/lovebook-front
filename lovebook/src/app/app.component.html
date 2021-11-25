@@ -8,11 +8,11 @@
       </div>
       <div class="col navbar-search-div">
         <div class="d-flex justify-content-center navbar-search-subdiv">
-          <select class="navbar-search-select" aria-label="Default select example">
-            <option selected>Pesquisar por</option>
-            <option value="1">Autor</option>
-            <option value="2">Editora</option>
-            <option value="3">Livro</option>
+          <select (change)="selectFiltro($event)" class="navbar-search-select" aria-label="Default select example">
+            <option value="" selected>Pesquisar por</option>
+            <option value="Autor">Autor</option>
+            <option value="Editora">Editora</option>
+            <option value="Livro">Livro</option>
           </select>
           <div class="navbar-search-input-div">
             <input class="navbar-search-input-text" type="text" #campoInput placeholder="O que você procura?">
@@ -100,7 +100,7 @@
     </div>
   </div>
 
-  <div class="footer-container">
+  <div class="container footer-container">
     <div class="container footer-informations-div">
       <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-3 mt-3 footer-about-div">

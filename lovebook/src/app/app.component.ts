@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { Livro } from './models/Livro';
 import { ConnectionApiService } from './services/connection-api.service';
+import { DataService } from './services/data.service';
 
 
 @Component({
@@ -13,31 +14,27 @@ import { ConnectionApiService } from './services/connection-api.service';
 export class AppComponent {
   title = 'lovebook-frontnew';
 
-  data!: Array<any>;
-  $livros!: Observable<Array<Livro>>;
+  message:any;
+  subscription!: Subscription;
+  filtroSelecionado!: string;
 
-  constructor(private service: ConnectionApiService,
-    private router: Router) {
-    this.data = new Array<any>();
+  constructor(private data: DataService) {
+
   }
 
-  slides: any = [[]];
-    chunk(arr: string | any[], chunkSize: number) {
-      let R = [];
-      for (let i = 0, len = arr.length; i < len; i += chunkSize) {
-        R.push(arr.slice(i, i + chunkSize));
-      }
-      return R;
-    }
+  ngOnInit(){
+    this.subscription = this.data.currentMessage.subscribe(message => this.message = message)
+  }
 
   getLivros(livro: string){
     event?.preventDefault();
-    this.$livros = this.service.getBooks(livro, "");
-    this.$livros.subscribe(data => {
-      console.log(data);
-      this.data = data;
-      this.slides = this.chunk(this.data, 3);
-    })
+    this.message = [livro, this.filtroSelecionado];
+    this.data.changeMessage(this.message);
+  }
+
+  selectFiltro(event: any){
+    this.filtroSelecionado = event.target.value;
+    console.log(this.filtroSelecionado);
   }
 
 

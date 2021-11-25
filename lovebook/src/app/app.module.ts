@@ -19,6 +19,8 @@ import { MatSelectModule } from '@angular/material/select'
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatMenuModule } from '@angular/material/menu';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
 
@@ -31,6 +33,8 @@ import { MatMenuModule } from '@angular/material/menu';
     LoginComponent,
     AccountClientComponent,
     AccountEmployeeComponent,
+    UserRegistrationComponent,
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,

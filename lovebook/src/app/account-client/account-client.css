@@ -13,7 +13,6 @@
   background-color: white;
   border: 1px solid rgb(209, 208, 208);
   border-radius: 5px;
-
 }
 
 .clientregistrationupdate-div {
@@ -29,7 +28,7 @@
 .clientregistrationupdate-title {
   font-size: 25px;
   font-style: italic;
-  color:rgb(138, 138, 138);
+  color: rgb(140,205,188);
   font-weight: 700;
 }
 
@@ -84,6 +83,7 @@
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(140,205,188) !important;
   opacity: 1; /* Firefox */
+
 }
 
 .clientregistrationupdate-btn-update-registration {
@@ -123,7 +123,7 @@
 .yourcomments-title {
   font-size: 25px;
   font-style: italic;
-  color:rgb(138, 138, 138);
+  color: rgb(140,205,188);
   font-weight: 700;
 }
 
@@ -165,7 +165,7 @@
   display: flex;
   font-size: 25px;
   justify-content: center;
-  color:rgb(138, 138, 138);
+  color: rgb(140,205,188);
   font-weight: 700;
   margin-top: 10px;
 }
@@ -324,7 +324,7 @@
 .purchases-title {
   font-size: 25px;
   font-style: italic;
-  color:rgb(138, 138, 138);
+  color: rgb(140,205,188);
   font-weight: 700;
 }
 
@@ -366,7 +366,7 @@
   display: flex;
   font-size: 25px;
   justify-content: center;
-  color:rgb(138, 138, 138);
+  color: rgb(140,205,188);
   font-weight: 700;
   margin-top: 10px;
 }
@@ -469,6 +469,7 @@
 
 .purchases-textarea {
   margin-top: 25px;
+  padding-right: 10px;
 }
 
 .purchases-textarea-text {
