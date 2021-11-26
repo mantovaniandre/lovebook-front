@@ -58,10 +58,6 @@
   color:rgb(138, 138, 138);
 }
 
-.clientregistrationupdate-gender-label {
-  color:rgb(138, 138, 138);
-}
-
 .clientregistrationupdate-zipcode-label {
   color:rgb(138, 138, 138);
 }
@@ -70,8 +66,43 @@
   color:rgb(138, 138, 138);
 }
 
+.clientregistrationupdate-address-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientregistrationupdate-number-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientregistrationupdate-complement-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientregistrationupdate-informations-div3 {
+  margin-top: 10px;
+}
+
+.clientregistrationupdate-select {
+  color: rgb(140,205,188);
+}
+
 .clientregistrationupdate-state-label {
   color:rgb(138, 138, 138);
+}
+.clientregistrationupdate-user-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientregistrationupdate-select-user {
+  color: rgb(140,205,188);
+}
+
+.clientregistrationupdate-gender-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientregistrationupdate-select-gender {
+  color: rgb(140,205,188);
 }
 
 .form-control {
@@ -83,7 +114,6 @@
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(140,205,188) !important;
   opacity: 1; /* Firefox */
-
 }
 
 .clientregistrationupdate-btn-update-registration {

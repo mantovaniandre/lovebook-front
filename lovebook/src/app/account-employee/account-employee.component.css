@@ -373,10 +373,6 @@
   color:rgb(138, 138, 138);
 }
 
-.employeeregistrationupdate-gender-label {
-  color:rgb(138, 138, 138);
-}
-
 .employeeregistrationupdate-zipcode-label {
   color:rgb(138, 138, 138);
 }
@@ -385,8 +381,43 @@
   color:rgb(138, 138, 138);
 }
 
+.employeeregistrationupdate-address-label {
+  color:rgb(138, 138, 138);
+}
+
+.employeeregistrationupdate-number-label {
+  color:rgb(138, 138, 138);
+}
+
+.employeeregistrationupdate-complement-label {
+  color:rgb(138, 138, 138);
+}
+
+.employeeregistrationupdate-informations-div3 {
+  margin-top: 10px;
+}
+
+.employeeregistrationupdate-select {
+  color: rgb(140,205,188);
+}
+
 .employeeregistrationupdate-state-label {
   color:rgb(138, 138, 138);
+}
+.employeeregistrationupdate-user-label {
+  color:rgb(138, 138, 138);
+}
+
+.employeeregistrationupdate-select-user {
+  color: rgb(140,205,188);
+}
+
+.employeeregistrationupdate-gender-label {
+  color:rgb(138, 138, 138);
+}
+
+.employeeregistrationupdate-select-gender {
+  color: rgb(140,205,188);
 }
 
 .form-control {
@@ -644,135 +675,373 @@
   margin-bottom: 10px;
 }
 
-/*Division of field the delete book*/
-
-.employeedeletebook-container {
-  margin-top: 50px;
-  margin-bottom: 50px;
+.employeeupdatebook-search-div {
   height: auto;
-  background-color: white;
-  border: 1px solid rgb(209, 208, 208);
-  border-radius: 5px;
-}
-
-.employeedeletebook-div {
+  width: 100%;
   margin-top: 10px;
 }
 
-.employeedeletebook-title-div {
-  width: 100%;
+.employeeupdatebook-search-subdiv {
   height: auto;
+  width: auto;
+}
+
+.employeeupdatebook-search-select {
+  border-radius: 0;
+  margin-bottom: 2px;
+  outline: none;
+  color: rgb(140,205,188);
+  border: 1px solid white;
+  padding: 5px;
+  border: 1px solid rgb(158, 158, 158);
+  height: 38px;
+}
+
+.employeeupdatebook-search-input-div {
+  height: 40px;
+  align-self: center;
+}
+
+.employeeupdatebook-search-input-text {
+  border: 1px solid white;
+  border-top: 1px solid rgb(158, 158, 158);
+  border-bottom: 1px solid rgb(158, 158, 158);
+  height: 38px;
+  width: auto;
+  outline: none;
+}
+
+.employeeupdatebook-search-btn-div {
+  height: 40px;
+  align-self: center;
+}
+
+.employeeupdatebook-search-btn {
+  border: 1px solid white;
+  background-color: white;
+  border: 1px solid rgb(158, 158, 158);
+  height: 38px;
+  width: 50px;
+  position: relative;
+  right: 2px;
+  color: rgb(140,205,188);
+}
+
+.employeeupdatebook-information-of-book-container {
+  height: 350px;
+  margin-top: 20px;
+}
+
+.employeeupdatebook-information-of-book-div {
+  height: 350px;
+}
+
+.employeeupdatebook-information-of-book-carousel {
+  display: flex;
+  justify-content: center;
+  height: 350px;
+}
+
+.employeeupdatebook-information-of-book-carousel-item {
+  height: auto;
+}
+
+.employeeupdatebook-information-of-book-carousel-item-container {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.employeeupdatebook-information-of-book-carousel-item-div {
+  height: 350px;
+  width: 12rem;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-right: 3px;
+}
+
+.employeeupdatebook-information-of-book-carousel-item-subdiv {
+  width: 100%;
+}
+
+.employeeupdatebook-information-of-book-img-div {
+  display: flex;
+  justify-content: center;
+}
+
+.employeeupdatebook-information-of-book-img {
+  height: 150px;
+}
+
+.employeeupdatebook-information-of-book-title-div {
+  display: flex;
+  justify-content: center;
+}
+
+.employeeupdatebook-information-of-book-author-div {
+  display: flex;
+  justify-content: center;
+}
+
+.employeeupdatebook-rating-div {
+  display: flex;
+  justify-content: center;
+}
+
+.employeeupdatebook-stars-container input[type=radio] {
+  display: none;
+}
+
+.employeeupdatebook-stars-container label i.fa{
+  font-size: 1.0em
+}
+
+.employeeupdatebook-stars-container label i.fa:before {
+  content:'\f005';
+  color: rgb(140,205,188);
+}
+
+.employeeupdatebook-stars-container input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+.employeeupdatebook-information-of-book-price-div {
+  display: flex;
+  justify-content: center;
+}
+
+.employeeupdatebook-information-of-book-btn-div {
+  display: flex;
+  justify-content: center;
+}
+
+.employeeupdatebook-carousel-arrow-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.employeeupdatebook-carousel-arrow-subdiv1 {
+  width: 50px;
+  height: 100%;
+  display: flex;
+}
+
+.employeeupdatebook-carousel-arrow-subdiv1-btn {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-control-prev-icon {
+  align-self: center;
+}
+
+.employeeupdatebook-carousel-arrow-subdiv2 {
+  width: 50px;
+  height: 100%;
+  display: flex;
+}
+
+.employeeupdatebook-carousel-arrow-subdiv2-btn {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.employeeupdatebook-btn-modify-book {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: white;
+}
+
+.carousel-control-next-icon {
+  align-self: center;
+}
+
+
+/*Division of field book category */
+
+.bookcategory-container {
+  height: 450px;
+  margin-top: 50px;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+  margin-bottom: 80px;
+}
+
+.bookcategory-div {
+  margin-top: 10px;
+}
+
+.bookcategory-title-div {
+  width: 100%;
+  height: 50px;
   border-bottom: 1px solid rgb(204, 203, 203);
 }
 
-.employeedeletebook-title {
+.bookcategory-title {
   font-size: 25px;
   font-style: italic;
   color: rgb(140,205,188);
   font-weight: 700;
 }
 
-.employeedeletebook-input-div {
+.bookcategory-information-of-book-container {
+  height: 350px;
+  margin-top: 20px;
+}
+
+.bookcategory-information-of-book-div {
+  height: 350px;
+}
+
+.bookcategory-information-of-book-carousel {
+  display: flex;
+  justify-content: center;
+  height: 350px;
+}
+
+.bookcategory-information-of-book-carousel-item {
   height: auto;
 }
 
-.employeedeletebook-input-text {
-  border: 1px solid rgb(209, 208, 208);
-  height: 38px;
-  width: 250px;
-  outline: none;
+.bookcategory-information-of-book-carousel-item-container {
+  height: 350px;
+  display: flex;
+  justify-content: center;
 }
 
-.employeedeletebook-btn {
-  border: 1px solid rgb(209, 208, 208);
-  background-color: white;
-  height: 38px;
-  width: 50px;
-  position: relative;
-  right: 20px;
+.bookcategory-information-of-book-carousel-item-container {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.bookcategory-information-of-book-carousel-item-div {
+  height: 350px;
+  width: 12rem;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-right: 3px;
+}
+
+.bookcategory-information-of-book-carousel-item-subdiv {
+  width: 100%;
+}
+
+.bookcategory-information-of-book-img-div {
+  display: flex;
+  justify-content: center;
+}
+
+.bookcategory-information-of-book-img {
+  height: 150px;
+}
+
+.bookcategory-information-of-book-title-div {
+  display: flex;
+  justify-content: center;
+}
+
+.bookcategory-information-of-book-author-div {
+  display: flex;
+  justify-content: center;
+}
+
+.bookcategory-rating-div {
+  display: flex;
+  justify-content: center;
+}
+
+.bookcategory-stars-container input[type=radio] {
+  display: none;
+}
+
+.bookcategory-stars-container label i.fa{
+  font-size: 1.0em
+}
+
+.bookcategory-stars-container label i.fa:before {
+  content:'\f005';
   color: rgb(140,205,188);
 }
 
-.employeedeletebook-informations-container {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: auto;
+.bookcategory-stars-container input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
 }
 
-.employeedeletebook-informations-div1 {
-  margin-bottom: 10px;
+.bookcategory-information-of-book-price-div {
+  display: flex;
+  justify-content: center;
 }
 
-.employeedeletebook-name-label {
-  color:rgb(138, 138, 138);
+.bookcategory-information-of-book-btn-div {
+  display: flex;
+  justify-content: center;
 }
 
-.employeedeletebook-publishingcompany-label {
-  color:rgb(138, 138, 138);
+.bookcategory-carousel-arrow-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
 }
 
-.employeedeletebook-language-label {
-  color:rgb(138, 138, 138);
+.bookcategory-carousel-arrow-subdiv1 {
+  width: 50px;
+  height: 100%;
+  display: flex;
 }
 
-.employeedeletebook-password-label {
-  color:rgb(138, 138, 138);
+.bookcategory-carousel-arrow-subdiv1-btn {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
 }
 
-.employeedeletebook-price-label {
-  color:rgb(138, 138, 138);
+.carousel-control-prev-icon {
+  align-self: center;
 }
 
-.employeedeletebook-urlimage-label {
-  color:rgb(138, 138, 138);
+.bookcategory-carousel-arrow-subdiv2 {
+  width: 50px;
+  height: 100%;
+  display: flex;
 }
 
-.employeedeletebook-numberpage-label {
-  color:rgb(138, 138, 138);
+.bookcategory-carousel-arrow-subdiv2-btn {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
 }
 
-.employeedeletebook-cost-label {
-  color:rgb(138, 138, 138);
-}
-
-.employeedeletebook-quantity-label {
-  color:rgb(138, 138, 138);
-}
-
-.employeedeletebook-category-label {
-  color:rgb(138, 138, 138);
-}
-
-.employeedeletebook-description-label {
-  color:rgb(138, 138, 138);
-}
-
-.employeedeletebook-cost-label {
-  color:rgb(138, 138, 138);
-}
-
-.employeedeletebook-authorname-label {
-  color:rgb(138, 138, 138);
-}
-
-.form-control {
-  box-shadow: 0 0 0 0;
-  border: 1px solid rgb(209, 208, 208);
-  outline: 0;
-}
-
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(140,205,188) !important;
-  opacity: 1; /* Firefox */
-}
-
-.employeedeletebook-btn-update-registration {
+.bookcategory-btn-modify-book {
   background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  color: #ffffff;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  color: white;
 }
 
-
-
+.carousel-control-next-icon {
+  align-self: center;
+}

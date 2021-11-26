@@ -18,7 +18,7 @@ export class AppComponent {
   subscription!: Subscription;
   filtroSelecionado!: string;
 
-  constructor(private data: DataService) {
+  constructor(private data: DataService, private router: Router) {
 
   }
 
@@ -30,11 +30,11 @@ export class AppComponent {
     event?.preventDefault();
     this.message = [livro, this.filtroSelecionado];
     this.data.changeMessage(this.message);
+    this.router.navigate(['/home']);
   }
 
   selectFiltro(event: any){
     this.filtroSelecionado = event.target.value;
-    console.log(this.filtroSelecionado);
   }
 
 

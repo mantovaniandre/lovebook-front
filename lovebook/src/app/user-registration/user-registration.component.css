@@ -52,10 +52,6 @@
   color:rgb(138, 138, 138);
 }
 
-.userregistration-gender-label {
-  color:rgb(138, 138, 138);
-}
-
 .userregistration-zipcode-label {
   color:rgb(138, 138, 138);
 }
@@ -64,8 +60,43 @@
   color:rgb(138, 138, 138);
 }
 
+.userregistration-address-label {
+  color:rgb(138, 138, 138);
+}
+
+.userregistration-number-label {
+  color:rgb(138, 138, 138);
+}
+
+.userregistration-complement-label {
+  color:rgb(138, 138, 138);
+}
+
+.userregistration-informations-div3 {
+  margin-top: 10px;
+}
+
+.userregistration-select {
+  color: rgb(140,205,188);
+}
+
 .userregistration-state-label {
   color:rgb(138, 138, 138);
+}
+.userregistration-user-label {
+  color:rgb(138, 138, 138);
+}
+
+.userregistration-select-user {
+  color: rgb(140,205,188);
+}
+
+.userregistration-gender-label {
+  color:rgb(138, 138, 138);
+}
+
+.userregistration-select-gender {
+  color: rgb(140,205,188);
 }
 
 .form-control {

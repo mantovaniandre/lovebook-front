@@ -1,6 +1,6 @@
 /*Division of field shopping cart*/
 
-.shoppingcart-container {
+.shoppingcart-container-div {
   border: 2px solid black;
   height: auto;
   background-color: white;
@@ -55,7 +55,7 @@
 .shoppingcart-img {
   display: flex;
   justify-content: center;
-  margin: 5px;
+  margin-top: 15px;
 }
 
 .shoppingcart-img .img {
@@ -75,16 +75,17 @@
 
 .shoppingcart-title-book-div {
   display: flex;
-  font-size: 25px;
+  font-size: 20px;
   color: rgb(140,205,188);
   font-weight: 700;
-  margin-top: 10px;
+  margin-top: 30px;
+  font-style: italic;
 }
 
 .shoppingcart-author-publishingcompany-date-div {
   display: flex;
   flex-direction: column;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 .shoppingcart-author-div {
@@ -222,3 +223,200 @@
   color: rgb(140,205,188) !important;
   opacity: 1; /* Firefox */
 }
+
+/*Division of field the address*/
+
+.shoppingcartaddress-container {
+  margin-top: 50px;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+}
+
+.shoppingcartaddress-div {
+  margin-top: 10px;
+}
+
+.shoppingcartaddress-title-div {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.shoppingcartaddress-title {
+  font-size: 25px;
+  font-style: italic;
+  color: rgb(140,205,188);
+  font-weight: 700;
+}
+
+.shoppingcartaddress-informations-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.shoppingcartaddress-informations-div1 {
+  margin-bottom: 10px;
+}
+
+.shoppingcartaddress-zipcode-label {
+  color:rgb(138, 138, 138);
+}
+
+.shoppingcartaddress-city-label {
+  color:rgb(138, 138, 138);
+}
+
+.shoppingcartaddress-address-label {
+  color:rgb(138, 138, 138);
+}
+
+.shoppingcartaddress-number-label {
+  color:rgb(138, 138, 138);
+}
+
+.shoppingcartaddress-complement-label {
+  color:rgb(138, 138, 138);
+}
+
+.shoppingcartaddress-select {
+  color: rgb(140,205,188);
+}
+
+.shoppingcartaddress-state-label {
+  color:rgb(138, 138, 138);
+}
+
+.form-control {
+  box-shadow: 0 0 0 0;
+  border: 1px solid rgb(209, 208, 208);
+  outline: 0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(140,205,188) !important;
+  opacity: 1; /* Firefox */
+}
+
+.shoppingcartaddress-btn-update-registration {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*Division of field the payment*/
+
+.shoppingcartpayment-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+}
+
+.shoppingcartpayment-div {
+  margin-top: 10px;
+}
+
+.shoppingcartpayment-title-div {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.shoppingcartpayment-title {
+  font-size: 25px;
+  font-style: italic;
+  color: rgb(140,205,188);
+  font-weight: 700;
+}
+
+.shoppingcartpayment-informations-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.shoppingcartpayment-informations-div1 {
+  margin-bottom: 10px;
+}
+
+.shoppingcartpayment-creditcard-label {
+  color:rgb(138, 138, 138);
+}
+
+.shoppingcartpayment-cardnumber-label {
+  color:rgb(138, 138, 138);
+}
+
+.shoppingcartpayment-expiriondate-label {
+  color:rgb(138, 138, 138);
+}
+
+.shoppingcartpayment-securitycode-label {
+  color:rgb(138, 138, 138);
+}
+
+.shoppingcartpayment-select-mounth {
+  color: rgb(140,205,188);
+  margin-right: 20px;
+}
+
+.shoppingcartpayment-select-year {
+  color: rgb(140,205,188);
+}
+
+
+.form-control {
+  box-shadow: 0 0 0 0;
+  border: 1px solid rgb(209, 208, 208);
+  outline: 0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(140,205,188) !important;
+  opacity: 1; /* Firefox */
+}
+
+.shoppingcartpayment-btn-update-registration {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*Division of field the finalize order*/
+
+.shoppingcartpaymentandconfirmorder-container {
+  margin-top: 50px;
+  margin-bottom: 150px;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+}
+
+.shoppingcartfinalizeorder-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+}
+
+.bookcategory-information-of-book-btn-div {
+  display: flex;
+  justify-content: end;
+}
+
+.bookcategory-btn-modify-book {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: white;
+}
+
+

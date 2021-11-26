@@ -5,9 +5,9 @@
       <p class="dashboard-title">Dashboard</p>
     </div>
     <div class="row mt-3 mb-5">
-      <div class="col dashboard-input-div d-flex justify-content-center" >
+      <div class="col dashboard-input-div d-flex justify-content-center mt-3" >
         <input class="dashboard-input-text" type="text" #campoInput placeholder="Escolha um mês?">
-        <button class="dashboard-btn" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
+        <button class="dashboard-btn" type="submit" (click)=getSeacrh(campoInput.value)><i class="bi bi-search"></i></button>
       </div>
     </div>
     <div class="container dashboard-informations-container">
@@ -112,7 +112,7 @@
         <div class="employeeregistrationupdate-title-div">
           <p class="employeeregistrationupdate-title">Atualização Cadastral</p>
         </div>
-        <div class="employeeregistrationupdate-informations-container">
+        <div class="employeeregistrationupdate-informations-container mt-3">
           <form>
             <div class="row employeeregistrationupdate-informations-div1">
               <div class="col-sm-12 col-md-3">
@@ -134,20 +134,76 @@
             </div>
             <div class="row employeeregistrationupdate-informations-div2">
               <div class="col-sm-12 col-md-3">
-                <label class="employeeregistrationupdate-gender-label">Sexo</label>
-                <input type="text" class="form-control" placeholder="Sexo">
-              </div>
-              <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-zipcode-label">CEP</label>
                 <input type="text" class="form-control" placeholder="CEP">
               </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationupdate-address-label">Endereço</label>
+                <input type="text" class="form-control" placeholder="Endereço">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationupdate-number-label">Número</label>
+                <input type="text" class="form-control" placeholder="Número">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationupdate-complement-label">Complemento</label>
+                <input type="text" class="form-control" placeholder="Complemento">
+              </div>
+            </div>
+            <div class="row employeeregistrationupdate-informations-div3">
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-city-label">Cidade</label>
                 <input type="text" class="form-control" placeholder="Cidade">
               </div>
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-state-label">Estado</label>
-                <input type="text" class="form-control" placeholder="Estado">
+                <select class="form-select employeeregistrationupdate-select" aria-label="Default select example">
+                  <option selected>Estado</option>
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                  <option value="EX">Estrangeiro</option>
+                </select>
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationupdate-user-label">Tipo de Usuário</label>
+                <select class="form-select employeeregistrationupdate-select-user" aria-label="Default select example">
+                  <option selected>Tipo de Usuário</option>
+                  <option value="Ciente">Cliente</option>
+                  <option value="Colaborador">Colaborador</option>
+                </select>
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationupdate-gender-label">Sexo</label>
+                <select class="form-select employeeregistrationupdate-select-gender" aria-label="Default select example">
+                  <option selected>Sexo</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Feminino">Feminino</option>
+                </select>
               </div>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -165,7 +221,7 @@
         <div class="employeeregistrationbook-title-div">
           <p class="employeeregistrationbook-title">Cadastro de Livros</p>
         </div>
-        <div class="employeeregistrationbook-informations-container">
+        <div class="employeeregistrationbook-informations-container mt-3">
           <form>
             <div class="row employeeregistrationbook-informations-div1">
               <div class="col-sm-12 col-md-3">
@@ -228,166 +284,99 @@
     </div>
   </div>
 
-  <div class="container employeeupdatebook-container">
+  <div class="container employeeupdatebook-container" style="height: 500px;">
     <div class="container employeeupdatebook-div">
       <div class="employeeupdatebook-div">
         <div class="employeeupdatebook-title-div">
-          <p class="employeeupdatebook-title">Atualização do Livro</p>
+          <p class="employeeupdatebook-title">Edição de Livros</p>
         </div>
-        <div class="row mt-3 mb-5">
-          <div class="col employeeupdatebook-input-div d-flex justify-content-center" >
-            <input class="employeeupdatebook-input-text" type="text" #campoInput placeholder="Qual livro será excluído?">
-            <button class="employeeupdatebook-btn" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
-          </div>
-        </div>
-        <div class="employeeupdatebook-informations-container">
-          <div class="container row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center">
-              <div class="d-flex justify-content-center">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/41GeyYROqTL._SY344_BO1,204,203,200_QL70_ML2_.jpg" style="width: 100%; height: 90%;">
+        <div class="col employeeupdatebook-search-div mt-3">
+          <div class="employeeupdatebook-search-subdiv">
+            <div class="d-flex justify-content-center">
+              <select (change)="selectFiltro($event)" class="employeeupdatebook-search-select" aria-label="Default select example">
+                <option value="" selected>Pesquisar por</option>
+                <option value="Autor">Autor</option>
+                <option value="Editora">Editora</option>
+                <option value="Livro">Livro</option>
+              </select>
+              <div class="employeeupdatebook-search-input-div">
+                <input class="employeeupdatebook-search-input-text" type="text" #campoInputUpdate placeholder="O que você procura?">
+              </div>
+              <div class="employeeupdatebook-search-btn-div">
+                <button class="employeeupdatebook-search-btn" type="submit" (click)=getSeacrh(campoInputUpdate.value)><i class="bi bi-search"></i></button>
               </div>
             </div>
-            <form class="col-12 col-sm-12 col-md-12 col-lg-8">
-              <div class="row mt-2 employeeupdatebook-informations-div1">
-                <div class="col-sm-12 col-md-6 ">
-                  <label class="employeeupdatebook-name-label">Nome do livro</label>
-                  <input type="text" class="form-control" placeholder="Nome">
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <label class="employeeupdatebook-publishingcompany-label">Editora</label>
-                    <input type="text" class="form-control" placeholder="Editora">
-                </div>
-                <div class="col-sm-12 col-md-6 mt-2">
-                  <label class="employeeupdatebook-language-label">Idioma</label>
-                  <input type="text" class="form-control" placeholder="Idioma">
-                </div>
-                <div class="col-sm-12 col-md-6 mt-2">
-                  <label class="employeeupdatebook-price-label">Preço de Venda</label>
-                  <input type="text" class="form-control" placeholder="Preço de Venda">
-                </div>
-              </div>
-              <div class="row mt-2 employeeupdatebook-informations-div2">
-                <div class="col-sm-12 col-md-6">
-                  <label class="employeeupdatebook-urlimage-label">URL da Imagem</label>
-                  <input type="text" class="form-control" placeholder="URL da Imagem">
-                </div>
-                <div class="col-sm-12 col-md-6">
-                  <label class="employeeupdatebook-numberpage-label">Número de Páginas</label>
-                  <input type="text" class="form-control" placeholder="Número de Páginas">
-                </div>
-                <div class="col-sm-12 col-md-6 mt-2">
-                  <label class="employeeupdatebook-cost-label">Custo</label>
-                  <input type="text" class="form-control" placeholder="Custo">
-                </div>
-                <div class="col-sm-12 col-md-6 mt-2">
-                  <label class="employeeupdatebook-authorname-label">Nome do Autor</label>
-                  <input type="text" class="form-control" placeholder="Nome do Autor">
-                </div>
-              </div>
-              <div class="row mt-2 employeeupdatebook-informations-div3">
-                <div class="col">
-                  <label class="employeeupdatebook-quantity-label">Quantidade</label>
-                  <input type="text" class="form-control" placeholder="Quantidade">
-                </div>
-                <div class="col">
-                  <label class="employeeupdatebook-category-label">Categoria</label>
-                  <input type="text" class="form-control" placeholder="Categoria">
-                </div>
-              </div>
-              <div class="row mt-2 employeeupdatebook-informations-div4">
-                <div class="col">
-                  <label class="employeeupdatebook-description-label">Descrição</label>
-                  <input type="text" class="form-control" placeholder="Descrição">
-                </div>
-              </div>
-              <div class="d-grid d-md-flex justify-content-md-end">
-                <button type="submit" class="btn employeeupdatebook-btn-update-registration">Atualizar</button>
-              </div>
-            </form>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+        <div class="row employeeupdatebook-information-of-book-container">
+          <div class="employeeupdatebook-information-of-book-div" *ngIf = "$livros | async as content; else loading">
+            <div class="carousel employeeupdatebook-information-of-book-carousel carousel-dark slide" id="carouselbookcategory" data-bs-ride="carousel">
+              <div class="carousel-item employeeupdatebook-information-of-book-carousel-item" *ngFor="let listaLivro of slides_literatura; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
+                <div class="employeeupdatebook-information-of-book-carousel-item-container">
+                  <div class="employeeupdatebook-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro">
+                    <div class="employeeupdatebook-information-of-book-carousel-item-subdiv">
+                      <div class="employeeupdatebook-information-of-book-img-div">
+                        <img src={{livro.urlDaImagemDoLivro}} class="employeeupdatebook-information-of-book-img" alt="...">
+                      </div>
+                      <div class="employeeupdatebook-information-of-book-title-div">
+                        <h6 class="employeeupdatebook-information-of-book-title-text">{{livro.nomeDoLivro}}</h6>
+                      </div>
+                      <div class="employeeupdatebook-information-of-book-author-div">
+                        <p class="employeeupdatebook-information-of-book-author-text">{{livro.nomeDoAutor}}</p>
+                      </div>
+                      <div class="employeeupdatebook-rating-div">
+                        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                        <div class="employeeupdatebook-stars-container">
+                          <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                          <label for="cm_star-1"><i class="fa"></i></label>
+                          <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                          <label for="cm_star-2"><i class="fa"></i></label>
+                          <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                          <label for="cm_star-3"><i class="fa"></i></label>
+                          <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                          <label for="cm_star-4"><i class="fa"></i></label>
+                          <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                          <label for="cm_star-5"><i class="fa"></i></label>
+                          <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                        </div>
+                      </div>
+                      <div class="employeeupdatebook-information-of-book-price-div">
+                        <p class="employeeupdatebook-information-of-book-price-text">R${{livro.precoDeVendaDoLivro}}</p>
+                      </div>
+                      <div class="employeeupdatebook-information-of-book-btn-div">
+                        <a class="btn employeeupdatebook-btn-modify-book"> Editar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="employeeupdatebook-carousel-arrow-div">
+                <div class="employeeupdatebook-carousel-arrow-subdiv1">
+                  <button class="employeeupdatebook-carousel-arrow-subdiv1-btn" type="button" data-bs-target="#carouselbookcategory" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                </div>
+                <div class="employeeupdatebook-carousel-arrow-subdiv2">
+                  <button class="employeeupdatebook-carousel-arrow-subdiv2-btn" type="button" data-bs-target="#carouselbookcategory" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <div class="container employeedeletebook-container">
-    <div class="container employeedeletebook-div">
-      <div class="employeedeletebook-div">
-        <div class="employeedeletebook-title-div">
-          <p class="employeedeletebook-title">Excluir um Livro</p>
-        </div>
-        <div class="row mt-3 mb-5">
-          <div class="col employeedeletebook-input-div d-flex justify-content-center" >
-            <input class="employeedeletebook-input-text" type="text" #campoInput placeholder="Qual livro será excluído?">
-            <button class="employeedeletebook-btn" type="submit" (click)=getLivros(campoInput.value)><i class="bi bi-search"></i></button>
-          </div>
-        </div>
-        <div class="employeedeletebook-informations-container">
-          <div class="container row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center">
-              <div class="d-flex justify-content-center">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/41GeyYROqTL._SY344_BO1,204,203,200_QL70_ML2_.jpg" style="width: 100%; height: 90%;">
-              </div>
-            </div>
-            <form class="col-12 col-sm-12 col-md-12 col-lg-8">
-              <div class="row mt-2 employeedeletebook-informations-div1">
-                <div class="col-sm-12 col-md-6">
-                  <label class="employeedeletebook-name-label">Nome do livro</label>
-                  <input type="text" class="form-control" placeholder="Nome">
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <label class="employeedeletebook-publishingcompany-label">Editora</label>
-                    <input type="text" class="form-control" placeholder="Editora">
-                </div>
-                <div class="col-sm-12 col-md-6 mt-2">
-                  <label class="employeedeletebook-language-label">Idioma</label>
-                  <input type="text" class="form-control" placeholder="Idioma">
-                </div>
-                <div class="col-sm-12 col-md-6 mt-2">
-                  <label class="employeedeletebook-price-label">Preço de Venda</label>
-                  <input type="text" class="form-control" placeholder="Preço de Venda">
-                </div>
-              </div>
-              <div class="row mt-2 employeedeletebook-informations-div2">
-                <div class="col-sm-12 col-md-6">
-                  <label class="employeedeletebook-urlimage-label">URL da Imagem</label>
-                  <input type="text" class="form-control" placeholder="URL da Imagem">
-                </div>
-                <div class="col-sm-12 col-md-6">
-                  <label class="employeedeletebook-numberpage-label">Número de Páginas</label>
-                  <input type="text" class="form-control" placeholder="Número de Páginas">
-                </div>
-                <div class="col-sm-12 col-md-6 mt-2">
-                  <label class="employeedeletebook-cost-label">Custo</label>
-                  <input type="text" class="form-control" placeholder="Custo">
-                </div>
-                <div class="col-sm-12 col-md-6 mt-2">
-                  <label class="employeedeletebook-authorname-label">Nome do Autor</label>
-                  <input type="text" class="form-control" placeholder="Nome do Autor">
-                </div>
-              </div>
-              <div class="row mt-2 employeedeletebook-informations-div3">
-                <div class="col">
-                  <label class="employeedeletebook-quantity-label">Quantidade</label>
-                  <input type="text" class="form-control" placeholder="Quantidade">
-                </div>
-                <div class="col">
-                  <label class="employeedeletebook-category-label">Categoria</label>
-                  <input type="text" class="form-control" placeholder="Categoria">
-                </div>
-              </div>
-              <div class="row mt-2 employeedeletebook-informations-div3">
-                <div class="col">
-                  <label class="employeedeletebook-description-label">Descrição</label>
-                  <input type="text" class="form-control" placeholder="Descrição">
-                </div>
-              </div>
-              <div class="d-grid d-md-flex justify-content-md-end">
-                <button type="submit" class="btn employeedeletebook-btn-update-registration">Excluir</button>
-              </div>
-            </form>
-          </div>
-        </div>
+
+
+
+
+
+
+
+
+
       </div>
     </div>
   </div>
