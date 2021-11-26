@@ -27,7 +27,8 @@ export class HomeComponent implements OnInit {
   $loadingError = new Subject<boolean>();
 
   constructor(private service: ConnectionApiService,
-              private router: Router, private dataService: DataService) {
+              private router: Router,
+              private dataService: DataService,) {
     this.data = new Array<any>();
    }
 
@@ -74,7 +75,7 @@ export class HomeComponent implements OnInit {
     }
     if(filtro == "Livro"){
       this.$livros = this.service.getBooks(busca,"", "", "");
-    } 
+    }
     console.log(this.$livros)
     this.$livros.subscribe(data => {
       this.data = data;
