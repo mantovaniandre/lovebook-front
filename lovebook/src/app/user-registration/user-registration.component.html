@@ -1,110 +1,106 @@
 <div class="container userregistration-container">
-  <div class="container userregistration-container">
-    <div class="container userregistration-div">
-      <div class="userregistration-div">
-        <div class="userregistration-title-div">
-          <p class="userregistration-title">Faça seu Cadastro</p>
+  <div class="userregistration-div">
+    <div class="userregistration-title-div">
+      <p class="userregistration-title">Faça seu Cadastro</p>
+    </div>
+    <div class="userregistration-informations-container">
+      <form>
+        <div class="row userregistration-informations-div1">
+          <div class="col-sm-12 col-md-3">
+            <label class="userregistration-name-label">Nome</label>
+            <input type="text" class="form-control" placeholder="Nome">
+          </div>
+          <div class="col-sm-12 col-md-3">
+              <label class="userregistration-lastname-label">Sobrenome</label>
+              <input type="text" class="form-control" placeholder="Sobrenome">
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="userregistration-email-label">E-mail</label>
+            <input type="email" class="form-control" placeholder="E-mail">
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="userregistration-password-label">Senha</label>
+            <input type="password" class="form-control" placeholder="Senha">
+          </div>
         </div>
-        <div class="userregistration-informations-container">
-          <form>
-            <div class="row userregistration-informations-div1">
-              <div class="col-sm-12 col-md-3">
-                <label class="userregistration-name-label">Nome</label>
-                <input type="text" class="form-control" placeholder="Nome">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                  <label class="userregistration-lastname-label">Sobrenome</label>
-                  <input type="text" class="form-control" placeholder="Sobrenome">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="userregistration-email-label">E-mail</label>
-                <input type="email" class="form-control" placeholder="E-mail">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="userregistration-password-label">Senha</label>
-                <input type="password" class="form-control" placeholder="Senha">
-              </div>
-            </div>
-            <div class="row userregistration-informations-div2">
-              <div class="col-sm-12 col-md-3">
-                <label class="userregistration-zipcode-label">CEP</label>
-                <input type="text" class="form-control" placeholder="CEP">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="userregistration-address-label">Endereço</label>
-                <input type="text" class="form-control" placeholder="Endereço">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="userregistration-number-label">Número</label>
-                <input type="text" class="form-control" placeholder="Número">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="userregistration-complement-label">Complemento</label>
-                <input type="text" class="form-control" placeholder="Complemento">
-              </div>
-            </div>
-            <div class="row userregistration-informations-div3">
-              <div class="col-sm-12 col-md-3">
-                <label class="userregistration-city-label">Cidade</label>
-                <input type="text" class="form-control" placeholder="Cidade">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="userregistration-state-label">Estado</label>
-                <select class="form-select userregistration-select" aria-label="Default select example">
-                  <option selected>Estado</option>
-                  <option value="AC">Acre</option>
-                  <option value="AL">Alagoas</option>
-                  <option value="AP">Amapá</option>
-                  <option value="AM">Amazonas</option>
-                  <option value="BA">Bahia</option>
-                  <option value="CE">Ceará</option>
-                  <option value="DF">Distrito Federal</option>
-                  <option value="ES">Espírito Santo</option>
-                  <option value="GO">Goiás</option>
-                  <option value="MA">Maranhão</option>
-                  <option value="MT">Mato Grosso</option>
-                  <option value="MS">Mato Grosso do Sul</option>
-                  <option value="MG">Minas Gerais</option>
-                  <option value="PA">Pará</option>
-                  <option value="PB">Paraíba</option>
-                  <option value="PR">Paraná</option>
-                  <option value="PE">Pernambuco</option>
-                  <option value="PI">Piauí</option>
-                  <option value="RJ">Rio de Janeiro</option>
-                  <option value="RN">Rio Grande do Norte</option>
-                  <option value="RS">Rio Grande do Sul</option>
-                  <option value="RO">Rondônia</option>
-                  <option value="RR">Roraima</option>
-                  <option value="SC">Santa Catarina</option>
-                  <option value="SP">São Paulo</option>
-                  <option value="SE">Sergipe</option>
-                  <option value="TO">Tocantins</option>
-                  <option value="EX">Estrangeiro</option>
-                </select>
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="userregistration-user-label">Tipo de Usuário</label>
-                <select class="form-select userregistration-select-user" aria-label="Default select example">
-                  <option selected>Tipo de Usuário</option>
-                  <option value="Ciente">Cliente</option>
-                  <option value="Colaborador">Colaborador</option>
-                </select>
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="userregistration-gender-label">Sexo</label>
-                <select class="form-select userregistration-select-gender" aria-label="Default select example">
-                  <option selected>Sexo</option>
-                  <option value="Masculino">Masculino</option>
-                  <option value="Feminino">Feminino</option>
-                </select>
-              </div>
-            </div>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <button type="submit" class="btn userregistration-btn-update-registration">Cadastrar</button>
-            </div>
-          </form>
+        <div class="row userregistration-informations-div2">
+          <div class="col-sm-12 col-md-3">
+            <label class="userregistration-zipcode-label">CEP</label>
+            <input type="text" class="form-control" placeholder="CEP">
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="userregistration-address-label">Endereço</label>
+            <input type="text" class="form-control" placeholder="Endereço">
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="userregistration-number-label">Número</label>
+            <input type="text" class="form-control" placeholder="Número">
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="userregistration-complement-label">Complemento</label>
+            <input type="text" class="form-control" placeholder="Complemento">
+          </div>
         </div>
-      </div>
+        <div class="row userregistration-informations-div3">
+          <div class="col-sm-12 col-md-3">
+            <label class="userregistration-city-label">Cidade</label>
+            <input type="text" class="form-control" placeholder="Cidade">
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="userregistration-state-label">Estado</label>
+            <select class="form-select userregistration-select" aria-label="Default select example">
+              <option selected>Estado</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+              <option value="EX">Estrangeiro</option>
+            </select>
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="userregistration-user-label">Tipo de Usuário</label>
+            <select class="form-select userregistration-select-user" aria-label="Default select example">
+              <option selected>Tipo de Usuário</option>
+              <option value="Ciente">Cliente</option>
+              <option value="Colaborador">Colaborador</option>
+            </select>
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <label class="userregistration-gender-label">Sexo</label>
+            <select class="form-select userregistration-select-gender" aria-label="Default select example">
+              <option selected>Sexo</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Feminino">Feminino</option>
+            </select>
+          </div>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="submit" class="btn userregistration-btn-update-registration">Cadastrar</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

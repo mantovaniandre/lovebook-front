@@ -8,6 +8,8 @@ import { AccountClientComponent } from "./account-client/account-client";
 import { AccountEmployeeComponent } from "./account-employee/account-employee.component";
 import { UserRegistrationComponent } from "./user-registration/user-registration.component";
 import { ShoppingCartComponent } from "./shopping-cart/shopping-cart.component";
+import { EditBookComponent } from "./edit-book/edit-book.component";
+import { KnowMoreComponent } from "./know-more/know-more.component";
 
 
 const routes: Routes = [
@@ -39,6 +41,14 @@ const routes: Routes = [
   {
     path: 'carrinho',
     component: ShoppingCartComponent
+  },
+  {
+    path: 'editar',
+    component: EditBookComponent
+  },
+  {
+    path:'saibaMais',
+    component: KnowMoreComponent
   }
 ];
 

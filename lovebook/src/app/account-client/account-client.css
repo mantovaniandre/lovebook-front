@@ -8,7 +8,6 @@
 
 .clientregistrationupdate-container {
   margin-top: 50px;
-  margin-bottom: 50px;
   height: auto;
   background-color: white;
   border: 1px solid rgb(209, 208, 208);
@@ -117,6 +116,87 @@
 }
 
 .clientregistrationupdate-btn-update-registration {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*Division of field the payment*/
+
+.clientpayment-container-parent {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+}
+
+.clientpayment-div {
+  margin-top: 10px;
+}
+
+.clientpayment-title-div {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.clientpayment-title {
+  font-size: 25px;
+  font-style: italic;
+  color: rgb(140,205,188);
+  font-weight: 700;
+}
+
+.clientpayment-informations-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.clientpayment-informations-div1 {
+  margin-bottom: 10px;
+}
+
+.clientpayment-creditcard-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientpayment-cardnumber-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientpayment-expiriondate-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientpayment-securitycode-label {
+  color:rgb(138, 138, 138);
+}
+
+.clientpayment-select-mounth {
+  color: rgb(140,205,188);
+  margin-right: 20px;
+}
+
+.clientpayment-select-year {
+  color: rgb(140,205,188);
+}
+
+.form-control {
+  box-shadow: 0 0 0 0;
+  border: 1px solid rgb(209, 208, 208);
+  outline: 0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(140,205,188) !important;
+  opacity: 1; /* Firefox */
+}
+
+.clientpayment-btn-update-registration {
   background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
   color: #ffffff;
   margin-top: 10px;

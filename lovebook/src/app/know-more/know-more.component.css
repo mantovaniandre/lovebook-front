@@ -1,0 +1,553 @@
+/*Division of the field of know more*/
+
+.knowmore-container {
+  border: 2px solid black;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.knowmore-div {
+  margin-top: 10px;
+}
+
+.knowmore-title-container {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgb(204, 203, 203);
+  border: 2px solid black;
+}
+
+.knowmore-title-div {
+  border-bottom: 1px solid rgb(204, 203, 203);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.knowmore-title {
+  font-size: 25px;
+  font-style: italic;
+  color: rgb(140,205,188);
+  font-weight: 700;
+}
+
+.knowmore-informations-container {
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.knowmore-informations-div {
+  border: 1px solid rgb(204, 203, 203);
+  border-radius: 5px;
+}
+
+.knowmore-img-div {
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid rgb(204, 203, 203);
+}
+
+.knowmore-img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.knowmore-informations-of-book-container {
+  display: flex;
+}
+
+.knowmore-informations-of-book-div {
+  align-self: center;
+}
+
+.knowmore-title-book-div {
+  border-bottom: 1px solid rgb(204, 203, 203);
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+  color: rgb(140,205,188);
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.knowmore-author-publishingcompany-date-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.knowmore-author-div {
+  display: flex;
+}
+
+.knowmore-author-p1 {
+  font-weight: 700;
+}
+
+.knowmore-author-p2 {
+  margin-left: 5px;
+  color:rgb(138, 138, 138);
+  font-style: italic;
+}
+
+.knowmore-publishingcompany-div {
+  display: flex;
+}
+
+.knowmore-publishingcompany-p1 {
+  font-weight: 700;
+}
+
+.knowmore-publishingcompany-p2 {
+  margin-left: 5px;
+  color:rgb(138, 138, 138);
+  font-style: italic;
+}
+
+.knowmore-date-div {
+  display: flex;
+}
+
+.knowmore-date-p1 {
+  font-weight: 700;
+}
+
+.knowmore-date-p2 {
+  margin-left: 5px;
+  color:rgb(138, 138, 138);
+  font-style: italic;
+}
+
+.knowmore-price-div {
+  display: flex;
+}
+
+.knowmore-price-p1 {
+  font-weight: 700;
+}
+
+.knowmore-price-p2 {
+  margin-left: 5px;
+  color:rgb(138, 138, 138);
+  font-style: italic;
+}
+
+.knowmore-rating-div {
+  margin-top: 25px;
+}
+
+.knowmore-stars-container {
+  display: flex;
+}
+
+.knowmore-classification-text {
+  font-weight: 700;
+}
+
+.knowmore-stars-div {
+  margin-left: 5px;
+}
+
+.knowmore-stars-div input[type=radio] {
+  display: none;
+}
+
+.knowmore-stars-div label i.fa{
+  font-size: 1.0em
+}
+
+.knowmore-stars-div label i.fa:before {
+  content:'\f005';
+  color:rgb(140,205,188);
+}
+
+.knowmore-stars-div input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+.knowmore-textarea {
+  margin-top: 25px;
+}
+
+.knowmore-textarea-text {
+  width: 100%;
+  height: 70px;
+  border: 1px solid rgb(204, 203, 203);
+  border-radius: 5px;
+  outline: white;
+}
+
+.knowmore-btn-modify-book {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.knowmore-btn-update-book {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Division of the field Product Detail */
+
+.productdetails-container {
+  border: 2px solid black;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.productdetails-div {
+  margin-top: 10px;
+}
+
+.productdetails-title-container {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgb(204, 203, 203);
+  border: 2px solid black;
+}
+
+.productdetails-title-div {
+  border-bottom: 1px solid rgb(204, 203, 203);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.productdetails-title {
+  font-size: 25px;
+  font-style: italic;
+  color: rgb(140,205,188);
+  font-weight: 700;
+}
+
+.productdetails-nameofproduct-container {
+  height: auto;
+}
+
+.productdetails-nameofproduct-div1{
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+
+}
+
+.productdetails-nameofproduct-subdiv1 {
+  border-right: 3px solid white;
+  display: flex;
+}
+
+.productdetails-nameofproduct-subdiv1-description1 {
+  align-self: center;
+}
+
+.productdetails-nameofproduct-div2 {
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+  display: flex;
+}
+
+.productdetails-nameofproduct-subdiv2-description2 {
+  align-self: center;
+}
+
+/* Division of the field publishing company */
+
+.productdetails-publishingcompany-container {
+  height: auto;
+}
+
+.productdetails-publishingcompany-div1{
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+}
+
+.productdetails-publishingcompany-subdiv1 {
+  border-right: 3px solid white;
+  display: flex;
+}
+
+.productdetails-publishingcompany-subdiv1-description1 {
+  align-self: center;
+}
+
+.productdetails-publishingcompany-div2 {
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+  display: flex;
+}
+
+.productdetails-publishingcompany-subdiv2-description2 {
+  align-self: center;
+}
+
+/* Division of the field language */
+
+.productdetails-language-container {
+  height: auto;
+}
+
+.productdetails-language-div1{
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+}
+
+.productdetails-language-subdiv1 {
+  border-right: 3px solid white;
+  display: flex;
+}
+
+.productdetails-language-subdiv1-description1 {
+  align-self: center;
+}
+
+.productdetails-language-div2 {
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+  display: flex;
+}
+
+.productdetails-language-subdiv2-description2 {
+  align-self: center;
+}
+
+/* Division of the field sale price */
+
+.productdetails-saleprice-container {
+  height: auto;
+}
+
+.productdetails-saleprice-div1{
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+}
+
+.productdetails-saleprice-subdiv1 {
+  border-right: 3px solid white;
+  display: flex;
+}
+
+.productdetails-saleprice-subdiv1-description1 {
+  align-self: center;
+}
+
+.productdetails-saleprice-div2 {
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+  display: flex;
+}
+
+.productdetails-saleprice-subdiv2-description2 {
+  align-self: center;
+}
+
+/* Division of the field number of pages */
+
+.productdetails-numberofpages-container {
+  height: auto;
+}
+
+.productdetails-numberofpages-div1{
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+}
+
+.productdetails-numberofpages-subdiv1 {
+  border-right: 3px solid white;
+  display: flex;
+}
+
+.productdetails-numberofpages-subdiv1-description1 {
+  align-self: center;
+}
+
+.productdetails-numberofpages-div2 {
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+  display: flex;
+}
+
+.productdetails-numberofpages-subdiv2-description2 {
+  align-self: center;
+}
+
+/* Division of the field author name */
+
+.productdetails-authorname-container {
+  height: auto;
+}
+
+.productdetails-authorname-div1{
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+}
+
+.productdetails-authorname-subdiv1 {
+  border-right: 3px solid white;
+  display: flex;
+}
+
+.productdetails-authorname-subdiv1-description1 {
+  align-self: center;
+}
+
+.productdetails-authorname-div2 {
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+  display: flex;
+}
+
+.productdetails-authorname-subdiv2-description2 {
+  align-self: center;
+}
+
+/* Division of the field inventory */
+
+.productdetails-inventory-container {
+  height: auto;
+}
+
+.productdetails-inventory-div1{
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+}
+
+.productdetails-inventory-subdiv1 {
+  border-right: 3px solid white;
+  display: flex;
+}
+
+.productdetails-inventory-subdiv1-description1 {
+  align-self: center;
+}
+
+.productdetails-inventory-div2 {
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+  display: flex;
+}
+
+.productdetails-inventory-subdiv2-description2 {
+  align-self: center;
+}
+
+/* Division of the field category */
+
+.productdetails-category-container {
+  height: auto;
+}
+
+.productdetails-category-div1{
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+}
+
+.productdetails-category-subdiv1 {
+  border-right: 3px solid white;
+  display: flex;
+}
+
+.productdetails-category-subdiv1-description1 {
+  align-self: center;
+}
+
+.productdetails-category-div2 {
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+  display: flex;
+}
+
+.productdetails-category-subdiv2-description2 {
+  align-self: center;
+}
+
+/* Division of the field description */
+
+.productdetails-description-container {
+  height: auto;
+}
+
+.productdetails-description-div1{
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+}
+
+.productdetails-description-subdiv1 {
+  border-right: 3px solid white;
+  display: flex;
+}
+
+.productdetails-description-subdiv1-description1 {
+  align-self: center;
+}
+
+.productdetails-description-div2 {
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+  display: flex;
+}
+
+.productdetails-description-subdiv2-description2 {
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+.yourcomments-rating-div {
+  margin-top: 25px;
+}
+
+.yourcomments-stars-container {
+  display: flex;
+}
+
+.yourcomments-classification-text {
+  font-weight: 700;
+}
+
+.yourcomments-stars-div {
+  margin-left: 5px;
+}
+
+.yourcomments-stars-div input[type=radio] {
+  display: none;
+}
+
+.yourcomments-stars-div label i.fa{
+  font-size: 1.0em
+}
+
+.yourcomments-stars-div label i.fa:before {
+  content:'\f005';
+  color:rgb(140,205,188);
+}
+
+.yourcomments-stars-div input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+
+
+
+
+

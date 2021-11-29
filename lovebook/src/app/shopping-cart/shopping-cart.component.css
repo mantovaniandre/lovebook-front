@@ -1,7 +1,6 @@
 /*Division of field shopping cart*/
 
 .shoppingcart-container-div {
-  border: 2px solid black;
   height: auto;
   background-color: white;
   border: 1px solid rgb(209, 208, 208);
@@ -18,7 +17,6 @@
   width: 100%;
   height: auto;
   border-bottom: 1px solid rgb(204, 203, 203);
-  border: 2px solid black;
 }
 
 .shoppingcart-title-div {
@@ -32,12 +30,6 @@
   font-style: italic;
   color: rgb(140,205,188);
   font-weight: 700;
-}
-
-.shoppingcart-informations-container {
-  height: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .shoppingcart-informations-div {
@@ -224,14 +216,19 @@
   opacity: 1; /* Firefox */
 }
 
+.shoppingcart-delete {
+  color: rgb(140,205,188)
+}
+
 /*Division of field the address*/
 
 .shoppingcartaddress-container {
-  margin-top: 50px;
   height: auto;
   background-color: white;
   border: 1px solid rgb(209, 208, 208);
   border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .shoppingcartaddress-div {
@@ -253,7 +250,6 @@
 
 .shoppingcartaddress-informations-container {
   margin-top: 10px;
-  margin-bottom: 10px;
   height: auto;
 }
 
@@ -369,7 +365,6 @@
 .shoppingcartpayment-select-year {
   color: rgb(140,205,188);
 }
-
 
 .form-control {
   box-shadow: 0 0 0 0;

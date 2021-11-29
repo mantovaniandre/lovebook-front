@@ -1,12 +1,12 @@
 <div class="container shoppingcart-container">
+
   <div class="container shoppingcart-container-div">
     <div class="container shoppingcart-div">
-      <div class="shoppingcart-div">
+      <div class="container shoppingcart-subdiv">
         <div class="shoppingcart-title-div">
           <p class="shoppingcart-title">Carrinho de compra</p>
         </div>
-        <div class="container shoppingcart-informations-container mt-3">
-          <div class="row shoppingcart-informations-div">
+        <div class="row shoppingcart-informations-div mt-3">
             <div class="col-6 col-sm-6 col-md-3 shoppingcart-img-div">
               <div style="width: 100%;">
                 <div class="shoppingcart-img">
@@ -65,17 +65,16 @@
               </div>
           </div>
         </div>
+        <div class="row mt-3">
+          <div class="d-flex justify-content-end">
+            <p class="shoppingcart-delete">Excluir</p>
+          </div>
         </div>
         <div class="row">
           <div class="d-flex justify-content-end">
-            <p>Excluir</p>
+            <h2>Subtotal: R$</h2>
+            <h2>20,00</h2>
           </div>
-        </div>
-      </div>
-      <div class="row ">
-        <div class="d-flex justify-content-end">
-          <h2>Subtotal: R$</h2>
-          <h2 class="ml-2">20,00</h2>
         </div>
       </div>
     </div>
@@ -83,77 +82,80 @@
 
   <div class="container shoppingcartaddress-container">
     <div class="container shoppingcartaddress-div">
-      <div class="shoppingcartaddress-div">
+      <div class="container shoppingcartaddress-subdiv">
         <div class="shoppingcartaddress-title-div">
           <p class="shoppingcartaddress-title">Endereço de Entrega</p>
         </div>
-        <div class="shoppingcartaddress-informations-container mt-3">
-          <form>
-            <div class="row shoppingcartaddress-informations-div1">
-              <div class="col-sm-12 col-md-4">
-                <label class="shoppingcartaddress-zipcode-label">CEP</label>
-                <input type="text" class="form-control" placeholder="CEP">
-              </div>
-              <div class="col-sm-12 col-md-4">
-                <label class="shoppingcartaddress-address-label">Endereço</label>
-                <input type="text" class="form-control" placeholder="Endereço">
-              </div>
-              <div class="col-sm-12 col-md-4">
-                <label class="shoppingcartaddress-number-label">Número</label>
-                <input type="text" class="form-control" placeholder="Número">
-              </div>
+        <div class="shoppingcartaddress-informations-form mt-3">
+          <div class="row shoppingcartaddress-informations-div1">
+            <div class="col-sm-12 col-md-4">
+              <label class="shoppingcartaddress-zipcode-label">CEP</label>
+              <input type="text" class="form-control" placeholder="CEP">
             </div>
-            <div class="row shoppingcartaddress-informations-div2">
-              <div class="col-sm-12 col-md-4">
-                <label class="shoppingcartaddress-complement-label">Complemento</label>
-                <input type="text" class="form-control" placeholder="Complemento">
-              </div>
-              <div class="col-sm-12 col-md-4">
-                <label class="shoppingcartaddress-city-label">Cidade</label>
-                <input type="text" class="form-control" placeholder="Cidade">
-              </div>
-              <div class="col-sm-12 col-md-4">
-                <label class="shoppingcartaddress-state-label">Estado</label>
-                <select class="form-select shoppingcartaddress-select" aria-label="Default select example">
-                  <option selected>Estado</option>
-                  <option value="AC">Acre</option>
-                  <option value="AL">Alagoas</option>
-                  <option value="AP">Amapá</option>
-                  <option value="AM">Amazonas</option>
-                  <option value="BA">Bahia</option>
-                  <option value="CE">Ceará</option>
-                  <option value="DF">Distrito Federal</option>
-                  <option value="ES">Espírito Santo</option>
-                  <option value="GO">Goiás</option>
-                  <option value="MA">Maranhão</option>
-                  <option value="MT">Mato Grosso</option>
-                  <option value="MS">Mato Grosso do Sul</option>
-                  <option value="MG">Minas Gerais</option>
-                  <option value="PA">Pará</option>
-                  <option value="PB">Paraíba</option>
-                  <option value="PR">Paraná</option>
-                  <option value="PE">Pernambuco</option>
-                  <option value="PI">Piauí</option>
-                  <option value="RJ">Rio de Janeiro</option>
-                  <option value="RN">Rio Grande do Norte</option>
-                  <option value="RS">Rio Grande do Sul</option>
-                  <option value="RO">Rondônia</option>
-                  <option value="RR">Roraima</option>
-                  <option value="SC">Santa Catarina</option>
-                  <option value="SP">São Paulo</option>
-                  <option value="SE">Sergipe</option>
-                  <option value="TO">Tocantins</option>
-                  <option value="EX">Estrangeiro</option>
-                </select>
-              </div>
+            <div class="col-sm-12 col-md-4">
+              <label class="shoppingcartaddress-address-label">Endereço</label>
+              <input type="text" class="form-control" placeholder="Endereço">
             </div>
-            <div class="row mt-2">
-              <div class="d-flex justify-content-end">
-                <h2>Frete: R$</h2>
-                <h2 class="ml-2">20,00</h2>
-              </div>
+            <div class="col-sm-12 col-md-4">
+              <label class="shoppingcartaddress-number-label">Número</label>
+              <input type="text" class="form-control" placeholder="Número">
             </div>
-          </form>
+          </div>
+          <div class="row shoppingcartaddress-informations-div2">
+            <div class="col-sm-12 col-md-4">
+              <label class="shoppingcartaddress-complement-label">Complemento</label>
+              <input type="text" class="form-control" placeholder="Complemento">
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label class="shoppingcartaddress-city-label">Cidade</label>
+              <input type="text" class="form-control" placeholder="Cidade">
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <label class="shoppingcartaddress-state-label">Estado</label>
+              <select class="form-select shoppingcartaddress-select" aria-label="Default select example">
+                <option selected>Estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+                <option value="EX">Estrangeiro</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="d-flex justify-content-end">
+            <p class="shoppingcart-delete">Excluir</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="d-flex justify-content-end">
+            <h2>Frete: R$</h2>
+            <h2>20,00</h2>
+          </div>
         </div>
       </div>
     </div>
@@ -161,22 +163,22 @@
 
   <div class="container shoppingcartpaymentandconfirmorder-container">
     <div class="row">
-      <div class="col-12 col-sm-12 col-md-5 container shoppingcartpayment-container">
+      <div class="col-12 col-sm-12 col-md-6 container shoppingcartpayment-container">
         <div class="container shoppingcartpayment-div">
           <div class="shoppingcartpayment-div">
             <div class="shoppingcartpayment-title-div">
               <p class="shoppingcartpayment-title">Forma de Pagamento</p>
             </div>
             <div class="shoppingcartpayment-informations-container mt-3">
-              <form>
+              <div>
                 <div class="row shoppingcartpayment-informations-div1">
                   <div class="col-sm-12 col-md-6">
                     <label class="shoppingcartpayment-creditcard-label">Número do cartão de crédito</label>
-                    <input type="text" class="form-control" placeholder="Número do Cartão de Crédito">
+                    <input type="text" class="form-control" placeholder="Número">
                   </div>
                   <div class="col-sm-12 col-md-6">
                       <label class="shoppingcartpayment-cardnumber-label">Nome do cartão de crédito</label>
-                      <input type="text" class="form-control" placeholder="Nome do Cartão de Crédito">
+                      <input type="text" class="form-control" placeholder="Nome">
                   </div>
                   <div class="col-6 col-sm-6 col-md-6 mt-3">
                     <label class="shoppingcartpayment-expiriondate-label">Data de expiração</label>
@@ -215,10 +217,10 @@
                     <input type="text" class="form-control" placeholder="CVV">
                   </div>
                 </div>
-              </form>
-              <div class="row ">
+              </div>
+              <div class="row">
                 <div class="d-flex justify-content-end">
-                  <h2>Alterar</h2>
+                  <p class="shoppingcart-delete">Alterar</p>
                 </div>
               </div>
             </div>

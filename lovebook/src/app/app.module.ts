@@ -21,6 +21,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatMenuModule } from '@angular/material/menu';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
+import { KnowMoreComponent } from './know-more/know-more.component';
 
 
 
@@ -35,6 +37,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     AccountEmployeeComponent,
     UserRegistrationComponent,
     ShoppingCartComponent,
+    EditBookComponent,
+    KnowMoreComponent,
   ],
   imports: [
     BrowserModule,
