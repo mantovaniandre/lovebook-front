@@ -513,13 +513,9 @@
 
 
 
-.yourcomments-rating-div {
-  margin-top: 25px;
-}
 
-.yourcomments-stars-container {
-  display: flex;
-}
+
+
 
 .yourcomments-classification-text {
   font-weight: 700;
@@ -534,7 +530,7 @@
 }
 
 .yourcomments-stars-div label i.fa{
-  font-size: 1.0em
+  font-size: 1.5em
 }
 
 .yourcomments-stars-div label i.fa:before {
