@@ -1,3 +1,4 @@
+import { Cliente } from './../models/Cliente';
 import { Content } from './../models/Content';
 import { Observable, Subject, Subscription } from 'rxjs';
 import { ConnectionApiService } from './../services/connection-api.service';
@@ -15,6 +16,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
+  $nomeUsuario!: Observable<Cliente>;
+  nomeUsuario!: string;
   data!: Array<any>;
   data_literatura!: Array<any>;
   $livros!: Observable<Array<Livro>>;
@@ -51,6 +54,16 @@ export class HomeComponent implements OnInit {
     })
 
     this.subscription = this.dataService.currentMessage.subscribe(message => this.getLivros(message[0],message[1]))
+
+
+    this.$nomeUsuario = this.service.identificacaoUsuario();
+    this.$nomeUsuario.subscribe(data => {
+      this.nomeUsuario = data.nome;
+      this.dataService.changeUser(this.nomeUsuario)
+    })
+
+
+
   }
 
 
@@ -93,5 +106,7 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
+
 
 }

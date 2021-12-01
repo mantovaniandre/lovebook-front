@@ -23,4 +23,14 @@ export class ConnectionApiService {
     return this.http.get(url, {params})
   }
 
+  login(credentials: any): Observable<any>{
+    let url = 'http://localhost:8080/auth'
+    return this.http.post(url, credentials)
+  }
+
+  identificacaoUsuario(): Observable<any>{
+    let url = 'http://localhost:8080/user'
+    return this.http.get(url)
+  }
+
 }

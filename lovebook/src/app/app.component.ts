@@ -15,7 +15,9 @@ export class AppComponent {
   title = 'lovebook-frontnew';
 
   message:any;
+  messageUser:any;
   subscription!: Subscription;
+  SubscriptionUser!: Subscription;
   filtroSelecionado!: string;
 
   constructor(private data: DataService, private router: Router) {
@@ -24,6 +26,7 @@ export class AppComponent {
 
   ngOnInit(){
     this.subscription = this.data.currentMessage.subscribe(message => this.message = message)
+    this.SubscriptionUser = this.data.currentUser.subscribe(messageUser => this.messageUser = messageUser)
   }
 
   getLivros(livro: string){

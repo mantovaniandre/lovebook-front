@@ -7,18 +7,18 @@
         <br>
         <div class="form-group">
             <label class="login-email-title">E-mail</label>
-            <input type="email" class="form-control" placeholder="E-mail">
+            <input type="email" class="form-control" placeholder="E-mail" #inputEmail >
         </div>
         <br>
         <div class="form-group">
             <label class="login-password-title">Senha</label>
-            <input type="password" class="form-control" placeholder="Senha">
+            <input type="password" class="form-control" placeholder="Senha" #inputPassword>
         </div>
-        <div class="login-dont-fave-register" (click)="go('cadastroUsuario')">
+        <div class="login-dont-fave-register" (click)="go('registrar')">
           <a>Não tem cadastro ></a>
         </div>
         <br>
-        <button type="submit" class="btn login-btn"><i class="fa fa-sign-in"></i>Entrar</button>
+        <button type="submit" (click)="login(inputEmail.value, inputPassword.value)" class="btn login-btn"><i class="fa fa-sign-in"></i>Entrar</button>
       </div>
     </form>
   </div>

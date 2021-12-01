@@ -10,6 +10,7 @@ import { UserRegistrationComponent } from "./user-registration/user-registration
 import { ShoppingCartComponent } from "./shopping-cart/shopping-cart.component";
 import { EditBookComponent } from "./edit-book/edit-book.component";
 import { KnowMoreComponent } from "./know-more/know-more.component";
+import { AuthGuardServiceService } from "./Guards/AuthGuardService.service";
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [AuthGuardServiceService]
   },
   {
     path:'login',
@@ -28,11 +30,13 @@ const routes: Routes = [
   },
   {
     path: 'cliente',
-    component: AccountClientComponent
+    component: AccountClientComponent,
+    canActivate: [AuthGuardServiceService]
   },
   {
     path: 'colaborador',
-    component: AccountEmployeeComponent
+    component: AccountEmployeeComponent,
+    canActivate: [AuthGuardServiceService]
   },
   {
     path: 'registrar',
@@ -40,15 +44,18 @@ const routes: Routes = [
   },
   {
     path: 'carrinho',
-    component: ShoppingCartComponent
+    component: ShoppingCartComponent,
+    canActivate: [AuthGuardServiceService]
   },
   {
     path: 'editar',
-    component: EditBookComponent
+    component: EditBookComponent,
+    canActivate: [AuthGuardServiceService]
   },
   {
     path:'saibaMais',
-    component: KnowMoreComponent
+    component: KnowMoreComponent,
+    canActivate: [AuthGuardServiceService]
   }
 ];
 

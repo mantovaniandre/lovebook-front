@@ -1,3 +1,5 @@
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
+import { ErrorInterceptorProvider } from './interceptors/error.interceptor';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,6 +25,7 @@ import { UserRegistrationComponent } from './user-registration/user-registration
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { KnowMoreComponent } from './know-more/know-more.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -56,9 +59,13 @@ import { KnowMoreComponent } from './know-more/know-more.component';
     MatChipsModule,
     MatIconModule,
     MatProgressBarModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    ErrorInterceptorProvider,
+    AuthInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
