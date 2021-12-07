@@ -162,8 +162,17 @@
 }
 
 .booksearch-information-of-book-title-div {
+  margin-top: 15px;
   display: flex;
   justify-content: center;
+}
+
+.booksearch-information-of-book-title-text {
+  font-size: 15px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .booksearch-information-of-book-author-div {
@@ -338,8 +347,17 @@
 }
 
 .bookcategory-information-of-book-title-div {
+  margin-top: 15px;
   display: flex;
   justify-content: center;
+}
+
+.bookcategory-information-of-book-title-text {
+  font-size: 15px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .bookcategory-information-of-book-author-div {

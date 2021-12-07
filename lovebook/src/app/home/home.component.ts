@@ -19,12 +19,45 @@ export class HomeComponent implements OnInit {
   $nomeUsuario!: Observable<Cliente>;
   nomeUsuario!: string;
   data!: Array<any>;
-  data_literatura!: Array<any>;
   $livros!: Observable<Array<Livro>>;
+
+  data_literatura!: Array<any>;
   $livros_literatura!: Observable<Array<Livro>>;
-  subscription!: Subscription;
   slides_literatura: any = [[]];
+  
+  data_aventura!: Array<any>;
+  $livros_aventura!: Observable<Array<Livro>>;
+  slides_aventura: any = [[]];
+
+  data_romance!: Array<any>;
+  $livros_romance!: Observable<Array<Livro>>;
+  slides_romance: any = [[]];
+
+  data_autoajuda!: Array<any>;
+  $livros_autoajuda!: Observable<Array<Livro>>;
+  slides_autoajuda: any = [[]];
+
+  data_religiao!: Array<any>;
+  $livros_religiao!: Observable<Array<Livro>>;
+  slides_religiao: any = [[]];
+
+  data_geek!: Array<any>;
+  $livros_geek!: Observable<Array<Livro>>;
+  slides_geek: any = [[]];
+
+  data_biografias!: Array<any>;
+  $livros_biografias!: Observable<Array<Livro>>;
+  slides_biografias: any = [[]];
+
+  data_policial!: Array<any>;
+  $livros_policial!: Observable<Array<Livro>>;
+  slides_policial: any = [[]];
+
+
+
+
   slides: any = [[]];
+  subscription!: Subscription;
   sidebar!: SidebarComponent;
   erroString!: string;
   $loadingError = new Subject<boolean>();
@@ -47,11 +80,62 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     event?.preventDefault();
-    this.$livros_literatura = this.service.getBooks("","Romance", "","");
+    this.$livros_literatura = this.service.getBooks("","Literatura", "","");
     this.$livros_literatura.subscribe(data => {
       this.data_literatura = data;
       this.slides_literatura = this.chunk(this.data_literatura, 5);
     })
+
+    event?.preventDefault();
+    this.$livros_aventura = this.service.getBooks("","Aventura", "","");
+    this.$livros_aventura.subscribe(data => {
+      this.data_aventura = data;
+      this.slides_aventura = this.chunk(this.data_aventura, 5);
+    })
+
+    event?.preventDefault();
+    this.$livros_romance = this.service.getBooks("","Romance", "","");
+    this.$livros_romance.subscribe(data => {
+      this.data_romance = data;
+      this.slides_romance = this.chunk(this.data_romance, 5);
+    })
+
+    event?.preventDefault();
+    this.$livros_autoajuda = this.service.getBooks("","Auto Ajuda", "","");
+    this.$livros_autoajuda.subscribe(data => {
+      this.data_autoajuda = data;
+      this.slides_autoajuda = this.chunk(this.data_autoajuda, 5);
+    })
+
+    event?.preventDefault();
+    this.$livros_religiao = this.service.getBooks("","Religião", "","");
+    this.$livros_religiao.subscribe(data => {
+      this.data_religiao = data;
+      this.slides_religiao = this.chunk(this.data_religiao, 5);
+    })
+
+    event?.preventDefault();
+    this.$livros_geek = this.service.getBooks("","Geek", "","");
+    this.$livros_geek.subscribe(data => {
+      this.data_geek = data;
+      this.slides_geek = this.chunk(this.data_geek, 5);
+    })
+
+    event?.preventDefault();
+    this.$livros_biografias = this.service.getBooks("","Biografias", "","");
+    this.$livros_biografias.subscribe(data => {
+      this.data_biografias = data;
+      this.slides_biografias = this.chunk(this.data_biografias, 5);
+    })
+
+    event?.preventDefault();
+    this.$livros_policial = this.service.getBooks("","Policial", "","");
+    this.$livros_policial.subscribe(data => {
+      this.data_policial = data;
+      this.slides_policial = this.chunk(this.data_policial, 5);
+    })
+
+
 
     this.subscription = this.dataService.currentMessage.subscribe(message => this.getLivros(message[0],message[1]))
 

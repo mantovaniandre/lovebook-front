@@ -52,7 +52,7 @@
                       <img src={{livro.urlDaImagemDoLivro}} class="booksearch-information-of-book-img" alt="...">
                     </div>
                     <div class="booksearch-information-of-book-title-div">
-                      <h6 class="booksearch-information-of-book-title-text">{{livro.nomeDoLivro}}</h6>
+                      <h6 class="booksearch-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
                     </div>
                     <div class="booksearch-information-of-book-author-div">
                       <p class="booksearch-information-of-book-author-text">{{livro.nomeDoAutor}}</p>
@@ -110,7 +110,7 @@
       </div>
       <div class="row bookcategory-information-of-book-container mt-3">
         <div class="bookcategory-information-of-book-div" *ngIf ="$livros_literatura | async as content; else loadingOrError">
-          <div class="carousel bookcategory-information-of-book-carousel carousel-dark slide" id="carouselbooksearch" data-bs-ride="carousel">
+          <div class="carousel bookcategory-information-of-book-carousel carousel-dark slide" id="carouselbooksearchliteratura" data-bs-ride="carousel">
             <div class="carousel-item bookcategory-information-of-book-carousel-item" *ngFor="let listaLivro of slides_literatura; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
               <div class="bookcategory-information-of-book-carousel-item-container">
                 <div class="bookcategory-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro">
@@ -119,10 +119,10 @@
                       <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
                     </div>
                     <div class="bookcategory-information-of-book-title-div">
-                      <h6 class="bookcategory-information-of-book-title-text">{{livro.nomeDoLivro}}</h6>
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
                     </div>
                     <div class="bookcategory-information-of-book-author-div">
-                      <p class="bookcategory-information-of-book-author-text">{{livro.nomeDoAutor}}</p>
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
                     </div>
                     <div class="bookcategory-rating-div">
                       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -152,13 +152,482 @@
             </div>
             <div class="bookcategory-carousel-arrow-div">
               <div class="bookcategory-carousel-arrow-subdiv1">
-                <button class="bookcategory-carousel-arrow-subdiv1-btn" type="button" data-bs-target="#carouselbooksearch" data-bs-slide="prev">
+                <button class="bookcategory-carousel-arrow-subdiv1-btn" type="button" data-bs-target="#carouselbooksearchliteratura" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
               </div>
               <div class="bookcategory-carousel-arrow-subdiv2">
-                <button class="bookcategory-carousel-arrow-subdiv2-btn" type="button" data-bs-target="#carouselbooksearch" data-bs-slide="next">
+                <button class="bookcategory-carousel-arrow-subdiv2-btn" type="button" data-bs-target="#carouselbooksearchliteratura" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bookcategory-container">
+    <div class="bookcategory-div">
+      <div class="bookcategory-title-div">
+        <h2 class="bookcategory-title">Aventura</h2>
+      </div>
+      <div class="row bookcategory-information-of-book-container mt-3">
+        <div class="bookcategory-information-of-book-div" *ngIf ="$livros_literatura | async as content; else loadingOrError">
+          <div class="carousel bookcategory-information-of-book-carousel carousel-dark slide" id="carouselbooksearchaventura" data-bs-ride="carousel">
+            <div class="carousel-item bookcategory-information-of-book-carousel-item" *ngFor="let listaLivro of slides_aventura; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
+              <div class="bookcategory-information-of-book-carousel-item-container">
+                <div class="bookcategory-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro">
+                  <div class="bookcategory-information-of-book-carousel-item-subdiv">
+                    <div class="bookcategory-information-of-book-img-div">
+                      <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
+                    </div>
+                    <div class="bookcategory-information-of-book-title-div">
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                    </div>
+                    <div class="bookcategory-information-of-book-author-div">
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                    </div>
+                    <div class="bookcategory-rating-div">
+                      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                      <div class="bookcategory-stars-container">
+                        <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                        <label for="cm_star-1"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                        <label for="cm_star-2"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                        <label for="cm_star-3"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                        <label for="cm_star-4"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                        <label for="cm_star-5"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                      </div>
+                    </div>
+                    <div class="bookcategory-information-of-book-price-div">
+                      <p class="bookcategory-information-of-book-price-text">R${{livro.precoDeVendaDoLivro}}</p>
+                    </div>
+                    <div class="bookcategory-information-of-book-btn-div">
+                      <a class="btn bookcategory-btn-modify-book">Saiba Mais</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bookcategory-carousel-arrow-div">
+              <div class="bookcategory-carousel-arrow-subdiv1">
+                <button class="bookcategory-carousel-arrow-subdiv1-btn" type="button" data-bs-target="#carouselbooksearchaventura" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+              <div class="bookcategory-carousel-arrow-subdiv2">
+                <button class="bookcategory-carousel-arrow-subdiv2-btn" type="button" data-bs-target="#carouselbooksearchaventura" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bookcategory-container">
+    <div class="bookcategory-div">
+      <div class="bookcategory-title-div">
+        <h2 class="bookcategory-title">Romance</h2>
+      </div>
+      <div class="row bookcategory-information-of-book-container mt-3">
+        <div class="bookcategory-information-of-book-div" *ngIf ="$livros_literatura | async as content; else loadingOrError">
+          <div class="carousel bookcategory-information-of-book-carousel carousel-dark slide" id="carouselbooksearchromance" data-bs-ride="carousel">
+            <div class="carousel-item bookcategory-information-of-book-carousel-item" *ngFor="let listaLivro of slides_romance; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
+              <div class="bookcategory-information-of-book-carousel-item-container">
+                <div class="bookcategory-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro">
+                  <div class="bookcategory-information-of-book-carousel-item-subdiv">
+                    <div class="bookcategory-information-of-book-img-div">
+                      <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
+                    </div>
+                    <div class="bookcategory-information-of-book-title-div">
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                    </div>
+                    <div class="bookcategory-information-of-book-author-div">
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                    </div>
+                    <div class="bookcategory-rating-div">
+                      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                      <div class="bookcategory-stars-container">
+                        <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                        <label for="cm_star-1"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                        <label for="cm_star-2"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                        <label for="cm_star-3"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                        <label for="cm_star-4"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                        <label for="cm_star-5"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                      </div>
+                    </div>
+                    <div class="bookcategory-information-of-book-price-div">
+                      <p class="bookcategory-information-of-book-price-text">R${{livro.precoDeVendaDoLivro}}</p>
+                    </div>
+                    <div class="bookcategory-information-of-book-btn-div">
+                      <a class="btn bookcategory-btn-modify-book">Saiba Mais</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bookcategory-carousel-arrow-div">
+              <div class="bookcategory-carousel-arrow-subdiv1">
+                <button class="bookcategory-carousel-arrow-subdiv1-btn" type="button" data-bs-target="#carouselbooksearchromance" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+              <div class="bookcategory-carousel-arrow-subdiv2">
+                <button class="bookcategory-carousel-arrow-subdiv2-btn" type="button" data-bs-target="#carouselbooksearchromance" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bookcategory-container">
+    <div class="bookcategory-div">
+      <div class="bookcategory-title-div">
+        <h2 class="bookcategory-title">Auto Ajuda</h2>
+      </div>
+      <div class="row bookcategory-information-of-book-container mt-3">
+        <div class="bookcategory-information-of-book-div" *ngIf ="$livros_literatura | async as content; else loadingOrError">
+          <div class="carousel bookcategory-information-of-book-carousel carousel-dark slide" id="carouselbooksearchautoajuda" data-bs-ride="carousel">
+            <div class="carousel-item bookcategory-information-of-book-carousel-item" *ngFor="let listaLivro of slides_autoajuda; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
+              <div class="bookcategory-information-of-book-carousel-item-container">
+                <div class="bookcategory-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro">
+                  <div class="bookcategory-information-of-book-carousel-item-subdiv">
+                    <div class="bookcategory-information-of-book-img-div">
+                      <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
+                    </div>
+                    <div class="bookcategory-information-of-book-title-div">
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                    </div>
+                    <div class="bookcategory-information-of-book-author-div">
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                    </div>
+                    <div class="bookcategory-rating-div">
+                      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                      <div class="bookcategory-stars-container">
+                        <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                        <label for="cm_star-1"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                        <label for="cm_star-2"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                        <label for="cm_star-3"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                        <label for="cm_star-4"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                        <label for="cm_star-5"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                      </div>
+                    </div>
+                    <div class="bookcategory-information-of-book-price-div">
+                      <p class="bookcategory-information-of-book-price-text">R${{livro.precoDeVendaDoLivro}}</p>
+                    </div>
+                    <div class="bookcategory-information-of-book-btn-div">
+                      <a class="btn bookcategory-btn-modify-book">Saiba Mais</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bookcategory-carousel-arrow-div">
+              <div class="bookcategory-carousel-arrow-subdiv1">
+                <button class="bookcategory-carousel-arrow-subdiv1-btn" type="button" data-bs-target="#carouselbooksearchautoajuda" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+              <div class="bookcategory-carousel-arrow-subdiv2">
+                <button class="bookcategory-carousel-arrow-subdiv2-btn" type="button" data-bs-target="#carouselbooksearchautoajuda" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bookcategory-container">
+    <div class="bookcategory-div">
+      <div class="bookcategory-title-div">
+        <h2 class="bookcategory-title">Religião</h2>
+      </div>
+      <div class="row bookcategory-information-of-book-container mt-3">
+        <div class="bookcategory-information-of-book-div" *ngIf ="$livros_literatura | async as content; else loadingOrError">
+          <div class="carousel bookcategory-information-of-book-carousel carousel-dark slide" id="carouselbooksearchreligiao" data-bs-ride="carousel">
+            <div class="carousel-item bookcategory-information-of-book-carousel-item" *ngFor="let listaLivro of slides_religiao; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
+              <div class="bookcategory-information-of-book-carousel-item-container">
+                <div class="bookcategory-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro">
+                  <div class="bookcategory-information-of-book-carousel-item-subdiv">
+                    <div class="bookcategory-information-of-book-img-div">
+                      <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
+                    </div>
+                    <div class="bookcategory-information-of-book-title-div">
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                    </div>
+                    <div class="bookcategory-information-of-book-author-div">
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                    </div>
+                    <div class="bookcategory-rating-div">
+                      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                      <div class="bookcategory-stars-container">
+                        <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                        <label for="cm_star-1"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                        <label for="cm_star-2"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                        <label for="cm_star-3"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                        <label for="cm_star-4"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                        <label for="cm_star-5"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                      </div>
+                    </div>
+                    <div class="bookcategory-information-of-book-price-div">
+                      <p class="bookcategory-information-of-book-price-text">R${{livro.precoDeVendaDoLivro}}</p>
+                    </div>
+                    <div class="bookcategory-information-of-book-btn-div">
+                      <a class="btn bookcategory-btn-modify-book">Saiba Mais</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bookcategory-carousel-arrow-div">
+              <div class="bookcategory-carousel-arrow-subdiv1">
+                <button class="bookcategory-carousel-arrow-subdiv1-btn" type="button" data-bs-target="#carouselbooksearchreligiao" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+              <div class="bookcategory-carousel-arrow-subdiv2">
+                <button class="bookcategory-carousel-arrow-subdiv2-btn" type="button" data-bs-target="#carouselbooksearchreligiao" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bookcategory-container">
+    <div class="bookcategory-div">
+      <div class="bookcategory-title-div">
+        <h2 class="bookcategory-title">Geek</h2>
+      </div>
+      <div class="row bookcategory-information-of-book-container mt-3">
+        <div class="bookcategory-information-of-book-div" *ngIf ="$livros_literatura | async as content; else loadingOrError">
+          <div class="carousel bookcategory-information-of-book-carousel carousel-dark slide" id="carouselbooksearchgeek" data-bs-ride="carousel">
+            <div class="carousel-item bookcategory-information-of-book-carousel-item" *ngFor="let listaLivro of slides_geek; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
+              <div class="bookcategory-information-of-book-carousel-item-container">
+                <div class="bookcategory-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro">
+                  <div class="bookcategory-information-of-book-carousel-item-subdiv">
+                    <div class="bookcategory-information-of-book-img-div">
+                      <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
+                    </div>
+                    <div class="bookcategory-information-of-book-title-div">
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                    </div>
+                    <div class="bookcategory-information-of-book-author-div">
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                    </div>
+                    <div class="bookcategory-rating-div">
+                      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                      <div class="bookcategory-stars-container">
+                        <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                        <label for="cm_star-1"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                        <label for="cm_star-2"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                        <label for="cm_star-3"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                        <label for="cm_star-4"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                        <label for="cm_star-5"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                      </div>
+                    </div>
+                    <div class="bookcategory-information-of-book-price-div">
+                      <p class="bookcategory-information-of-book-price-text">R${{livro.precoDeVendaDoLivro}}</p>
+                    </div>
+                    <div class="bookcategory-information-of-book-btn-div">
+                      <a class="btn bookcategory-btn-modify-book">Saiba Mais</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bookcategory-carousel-arrow-div">
+              <div class="bookcategory-carousel-arrow-subdiv1">
+                <button class="bookcategory-carousel-arrow-subdiv1-btn" type="button" data-bs-target="#carouselbooksearchgeek" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+              <div class="bookcategory-carousel-arrow-subdiv2">
+                <button class="bookcategory-carousel-arrow-subdiv2-btn" type="button" data-bs-target="#carouselbooksearchgeek" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bookcategory-container">
+    <div class="bookcategory-div">
+      <div class="bookcategory-title-div">
+        <h2 class="bookcategory-title">Biografia</h2>
+      </div>
+      <div class="row bookcategory-information-of-book-container mt-3">
+        <div class="bookcategory-information-of-book-div" *ngIf ="$livros_literatura | async as content; else loadingOrError">
+          <div class="carousel bookcategory-information-of-book-carousel carousel-dark slide" id="carouselbooksearchbiografias" data-bs-ride="carousel">
+            <div class="carousel-item bookcategory-information-of-book-carousel-item" *ngFor="let listaLivro of slides_biografias; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
+              <div class="bookcategory-information-of-book-carousel-item-container">
+                <div class="bookcategory-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro">
+                  <div class="bookcategory-information-of-book-carousel-item-subdiv">
+                    <div class="bookcategory-information-of-book-img-div">
+                      <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
+                    </div>
+                    <div class="bookcategory-information-of-book-title-div">
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                    </div>
+                    <div class="bookcategory-information-of-book-author-div">
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                    </div>
+                    <div class="bookcategory-rating-div">
+                      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                      <div class="bookcategory-stars-container">
+                        <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                        <label for="cm_star-1"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                        <label for="cm_star-2"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                        <label for="cm_star-3"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                        <label for="cm_star-4"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                        <label for="cm_star-5"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                      </div>
+                    </div>
+                    <div class="bookcategory-information-of-book-price-div">
+                      <p class="bookcategory-information-of-book-price-text">R${{livro.precoDeVendaDoLivro}}</p>
+                    </div>
+                    <div class="bookcategory-information-of-book-btn-div">
+                      <a class="btn bookcategory-btn-modify-book">Saiba Mais</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bookcategory-carousel-arrow-div">
+              <div class="bookcategory-carousel-arrow-subdiv1">
+                <button class="bookcategory-carousel-arrow-subdiv1-btn" type="button" data-bs-target="#carouselbooksearchbiografias" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+              <div class="bookcategory-carousel-arrow-subdiv2">
+                <button class="bookcategory-carousel-arrow-subdiv2-btn" type="button" data-bs-target="#carouselbooksearchbiografias" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bookcategory-container">
+    <div class="bookcategory-div">
+      <div class="bookcategory-title-div">
+        <h2 class="bookcategory-title">Policial</h2>
+      </div>
+      <div class="row bookcategory-information-of-book-container mt-3">
+        <div class="bookcategory-information-of-book-div" *ngIf ="$livros_literatura | async as content; else loadingOrError">
+          <div class="carousel bookcategory-information-of-book-carousel carousel-dark slide" id="carouselbooksearchpolicial" data-bs-ride="carousel">
+            <div class="carousel-item bookcategory-information-of-book-carousel-item" *ngFor="let listaLivro of slides_policial; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
+              <div class="bookcategory-information-of-book-carousel-item-container">
+                <div class="bookcategory-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro">
+                  <div class="bookcategory-information-of-book-carousel-item-subdiv">
+                    <div class="bookcategory-information-of-book-img-div">
+                      <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
+                    </div>
+                    <div class="bookcategory-information-of-book-title-div">
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                    </div>
+                    <div class="bookcategory-information-of-book-author-div">
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                    </div>
+                    <div class="bookcategory-rating-div">
+                      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                      <div class="bookcategory-stars-container">
+                        <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                        <label for="cm_star-1"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                        <label for="cm_star-2"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                        <label for="cm_star-3"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                        <label for="cm_star-4"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                        <label for="cm_star-5"><i class="fa"></i></label>
+                        <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                      </div>
+                    </div>
+                    <div class="bookcategory-information-of-book-price-div">
+                      <p class="bookcategory-information-of-book-price-text">R${{livro.precoDeVendaDoLivro}}</p>
+                    </div>
+                    <div class="bookcategory-information-of-book-btn-div">
+                      <a class="btn bookcategory-btn-modify-book">Saiba Mais</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bookcategory-carousel-arrow-div">
+              <div class="bookcategory-carousel-arrow-subdiv1">
+                <button class="bookcategory-carousel-arrow-subdiv1-btn" type="button" data-bs-target="#carouselbooksearchpolicial" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              </div>
+              <div class="bookcategory-carousel-arrow-subdiv2">
+                <button class="bookcategory-carousel-arrow-subdiv2-btn" type="button" data-bs-target="#carouselbooksearchpolicial" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
