@@ -41,6 +41,7 @@
   text-align: center;
   font-family: 'Big Shoulders Stencil Display', cursive;
   text-decoration: none;
+  cursor: pointer;
   font-size: 50px;
   color: white;
 }
@@ -141,17 +142,6 @@
   background-color: rgb(241, 241, 241);
 }
 
-.navbar-description-account-dropdownmenu-open {
-  border-bottom: 2px solid white;
-  padding: 5px;
-  width: 180px;
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  margin: 5px;
-}
-
 .navbar-description-account-dropdownmenu-newregister {
   border-bottom: 1px solid white;
   padding: 5px;
@@ -159,6 +149,25 @@
 
 .navbar-description-account-dropdownmenu-myaccount {
   padding: 5px;
+  cursor: pointer;
+  color: black;
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.navbar-description-account-dropdownmenu-myaccount:hover {
+  color: rgb(140,205,188);
+}
+
+.navbar-description-account-dropdownmenu-logout {
+  padding: 5px;
+  width: 100%;
+  cursor: pointer;
+  color: black;
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.navbar-description-account-dropdownmenu-logout:hover {
+  color: rgb(140,205,188);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

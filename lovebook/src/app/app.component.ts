@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
-import { Livro } from './models/Livro';
-import { ConnectionApiService } from './services/connection-api.service';
 import { DataService } from './services/data.service';
 
 
@@ -38,6 +36,10 @@ export class AppComponent {
 
   selectFiltro(event: any){
     this.filtroSelecionado = event.target.value;
+  }
+
+  go(destination: string){
+    this.router.navigate(['/' + destination]);
   }
 
 

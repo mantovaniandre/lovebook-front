@@ -53,9 +53,6 @@ export class HomeComponent implements OnInit {
   $livros_policial!: Observable<Array<Livro>>;
   slides_policial: any = [[]];
 
-
-
-
   slides: any = [[]];
   subscription!: Subscription;
   sidebar!: SidebarComponent;
@@ -75,7 +72,6 @@ export class HomeComponent implements OnInit {
   public closeOnDocumentClick: boolean = true;
   public onCreated(args: any) {
     this.sidebar.element.style.visibility = '';
-
   }
 
   ngOnInit() {
@@ -135,10 +131,7 @@ export class HomeComponent implements OnInit {
       this.slides_policial = this.chunk(this.data_policial, 5);
     })
 
-
-
     this.subscription = this.dataService.currentMessage.subscribe(message => this.getLivros(message[0],message[1]))
-
 
     this.$nomeUsuario = this.service.identificacaoUsuario();
     this.$nomeUsuario.subscribe(data => {

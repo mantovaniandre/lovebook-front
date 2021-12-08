@@ -2,8 +2,8 @@
   <div class="container navbar-container">
     <div class="row navbar-div">
       <div class="col navbar-logo-div">
-        <div class="navbar-logo-subdiv">
-          <p class="navbar-logo-text">Lovebook</p>
+        <div class="navbar-logo-subdiv" (click)="go('home')">
+          <a class="navbar-logo-text">Lovebook</a>
         </div>
       </div>
       <div class="col navbar-search-div">
@@ -36,11 +36,11 @@
                   <a class="navbar-login-name">{{messageUser}}</a>
                 </button>
                 <div class="dropdown-menu navbar-description-account-dropdownmenu" aria-labelledby="dropdownMenuButton1">
-                  <div>
-                    <p class="navbar-description-account-dropdownmenu-open">Entrar / Cadastrar</p>
-                  </div>
-                  <div>
+                  <div (click)="go('cliente')">
                     <p class="navbar-description-account-dropdownmenu-myaccount">Minha conta</p>
+                  </div>
+                  <div (click)="go('login')">
+                    <p class="navbar-description-account-dropdownmenu-logout">Logout</p>
                   </div>
                 </div>
               </div>
@@ -58,7 +58,7 @@
           <div class="navbar-cart-div">
             <div class="navbar-cart-div-name">
               <div class="navbar-cart-div-name-subdiv">
-                <div class="navbar-cart-div-name btn">
+                <div class="navbar-cart-div-name btn" (click)="go('carrinho')">
                   <a class="navbar-cart-name">Carrinho</a>
                 </div>
               </div>
