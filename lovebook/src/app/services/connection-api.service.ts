@@ -33,4 +33,9 @@ export class ConnectionApiService {
     return this.http.get(url)
   }
 
+  identificacaoLivro(): Observable<any>{
+    let url = 'http://localhost:8080/book'
+    return this.http.get(url)
+  }
+
 }

@@ -12,8 +12,6 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./account-client.css']
 })
 export class AccountClientComponent implements OnInit {
-  $livros_literatura: any;
-  data_literatura: any;
   data: any[];
   $usuario!: Observable<Cliente>;
   usuario!: Cliente;
@@ -24,35 +22,11 @@ export class AccountClientComponent implements OnInit {
 }
 
   ngOnInit() {
-    event?.preventDefault();
-    this.$livros_literatura = this.service.getBooks("","Romance","","");
-    this.$livros_literatura.subscribe((data: any) => {
-      this.data_literatura = data;
-      this.slides_literatura = this.chunk(this.data_literatura, 5);
-    })
-
     this.$usuario = this.connectionApiService.identificacaoUsuario();
     this.$usuario.subscribe(data => {
       this.usuario = data;
     console.log(this.usuario)
     })
-
-  
-
-
-
   }
-
-  slides_literatura: any = [[]];
-
-  slides: any = [[]];
-  chunk(arr: string | any[], chunkSize: number) {
-    let R = [];
-    for (let i = 0, len = arr.length; i < len; i += chunkSize) {
-      R.push(arr.slice(i, i + chunkSize));
-    }
-    return R;
-  }
-
 
 }

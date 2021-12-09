@@ -26,9 +26,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { KnowMoreComponent } from './know-more/know-more.component';
 import { FormsModule } from '@angular/forms';
-
-
-
+import { CookieModule } from 'ngx-cookie';
 
 
 @NgModule({
@@ -61,6 +59,7 @@ import { FormsModule } from '@angular/forms';
     MatProgressBarModule,
     MatMenuModule,
     FormsModule,
+    CookieModule.forRoot(),
   ],
   providers: [
     ErrorInterceptorProvider,

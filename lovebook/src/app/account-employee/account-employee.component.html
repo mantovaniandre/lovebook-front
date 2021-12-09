@@ -112,20 +112,20 @@
         <div class="employeeregistrationupdate-title-div">
           <p class="employeeregistrationupdate-title">Atualização Cadastral</p>
         </div>
-        <div class="employeeregistrationupdate-informations-container mt-3">
+        <div class="employeeregistrationupdate-informations-container mt-3" *ngIf="usuario">
           <form>
-            <div class="row employeeregistrationupdate-informations-div1">
+            <div class="row employeeregistrationupdate-informations-div1" >
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-name-label">Nome</label>
-                <input type="text" class="form-control" placeholder="Nome">
+                <input type="text" class="form-control" placeholder="{{usuario.nome}}">
               </div>
               <div class="col-sm-12 col-md-3">
                   <label class="employeeregistrationupdate-lastname-label">Sobrenome</label>
-                  <input type="text" class="form-control" placeholder="Sobrenome">
+                  <input type="text" class="form-control" placeholder="{{usuario.sobrenome}}">
               </div>
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-email-label">E-mail</label>
-                <input type="email" class="form-control" placeholder="E-mail">
+                <input type="email" class="form-control" placeholder="{{usuario.emailUsuario}}">
               </div>
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-password-label">Senha</label>
@@ -135,30 +135,30 @@
             <div class="row employeeregistrationupdate-informations-div2">
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-zipcode-label">CEP</label>
-                <input type="text" class="form-control" placeholder="CEP">
+                <input type="text" class="form-control" placeholder="{{usuario.cepUsuario}}">
               </div>
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-address-label">Endereço</label>
-                <input type="text" class="form-control" placeholder="Endereço">
+                <input type="text" class="form-control" placeholder="{{usuario.enderecoUsuario}}">
               </div>
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-number-label">Número</label>
-                <input type="text" class="form-control" placeholder="Número">
+                <input type="text" class="form-control" placeholder="{{usuario.numeroEnderecoUsuario}}">
               </div>
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-complement-label">Complemento</label>
-                <input type="text" class="form-control" placeholder="Complemento">
+                <input type="text" class="form-control" placeholder="{{usuario.complementoEnderecoUsuario}}">
               </div>
             </div>
             <div class="row employeeregistrationupdate-informations-div3">
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-city-label">Cidade</label>
-                <input type="text" class="form-control" placeholder="Cidade">
+                <input type="text" class="form-control" placeholder="{{usuario.cidadeUsuario}}">
               </div>
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-state-label">Estado</label>
                 <select class="form-select employeeregistrationupdate-select" aria-label="Default select example">
-                  <option selected>Estado</option>
+                  <option selected>{{usuario.estadoUsuario}}</option>
                   <option value="AC">Acre</option>
                   <option value="AL">Alagoas</option>
                   <option value="AP">Amapá</option>
@@ -192,7 +192,7 @@
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-user-label">Tipo de Usuário</label>
                 <select class="form-select employeeregistrationupdate-select-user" aria-label="Default select example">
-                  <option selected>Tipo de Usuário</option>
+                  <option selected>{{usuario.tipoUsuario.nome}}</option>
                   <option value="Ciente">Cliente</option>
                   <option value="Colaborador">Colaborador</option>
                 </select>
@@ -200,7 +200,7 @@
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationupdate-gender-label">Sexo</label>
                 <select class="form-select employeeregistrationupdate-select-gender" aria-label="Default select example">
-                  <option selected>Sexo</option>
+                  <option selected>{{usuario.sexoUsuario}}</option>
                   <option value="Masculino">Masculino</option>
                   <option value="Feminino">Feminino</option>
                 </select>

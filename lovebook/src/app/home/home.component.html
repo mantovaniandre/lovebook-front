@@ -113,16 +113,16 @@
           <div class="carousel bookcategory-information-of-book-carousel carousel-dark slide" id="carouselbooksearchliteratura" data-bs-ride="carousel">
             <div class="carousel-item bookcategory-information-of-book-carousel-item" *ngFor="let listaLivro of slides_literatura; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
               <div class="bookcategory-information-of-book-carousel-item-container">
-                <div class="bookcategory-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro">
+                <div class="bookcategory-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro" >
                   <div class="bookcategory-information-of-book-carousel-item-subdiv">
                     <div class="bookcategory-information-of-book-img-div">
                       <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
                     </div>
                     <div class="bookcategory-information-of-book-title-div">
-                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                      <h6 class="bookcategory-information-of-book-title-text">{{livro.nomeDoLivro}}</h6>
                     </div>
                     <div class="bookcategory-information-of-book-author-div">
-                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                      <p class="bookcategory-information-of-book-author-text">{{livro.nomeDoAutor}}</p>
                     </div>
                     <div class="bookcategory-rating-div">
                       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -144,7 +144,7 @@
                       <p class="bookcategory-information-of-book-price-text">R${{livro.precoDeVendaDoLivro}}</p>
                     </div>
                     <div class="bookcategory-information-of-book-btn-div">
-                      <a class="btn bookcategory-btn-modify-book">Saiba Mais</a>
+                      <button type="submit" class="btn bookcategory-btn-modify-book" (click)="informacaoDoLivro(livro)">Saiba Mais</button>
                     </div>
                   </div>
                 </div>
@@ -186,10 +186,10 @@
                       <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
                     </div>
                     <div class="bookcategory-information-of-book-title-div">
-                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoLivro}}</h6>
                     </div>
                     <div class="bookcategory-information-of-book-author-div">
-                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoAutor}}</p>
                     </div>
                     <div class="bookcategory-rating-div">
                       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -253,10 +253,10 @@
                       <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
                     </div>
                     <div class="bookcategory-information-of-book-title-div">
-                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoLivro}}</h6>
                     </div>
                     <div class="bookcategory-information-of-book-author-div">
-                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoAutor}}</p>
                     </div>
                     <div class="bookcategory-rating-div">
                       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -320,10 +320,10 @@
                       <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
                     </div>
                     <div class="bookcategory-information-of-book-title-div">
-                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoLivro}}</h6>
                     </div>
                     <div class="bookcategory-information-of-book-author-div">
-                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoAutor}}</p>
                     </div>
                     <div class="bookcategory-rating-div">
                       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -387,10 +387,10 @@
                       <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
                     </div>
                     <div class="bookcategory-information-of-book-title-div">
-                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoLivro}}</h6>
                     </div>
                     <div class="bookcategory-information-of-book-author-div">
-                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoAutor}}</p>
                     </div>
                     <div class="bookcategory-rating-div">
                       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -454,10 +454,10 @@
                       <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
                     </div>
                     <div class="bookcategory-information-of-book-title-div">
-                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoLivro}}</h6>
                     </div>
                     <div class="bookcategory-information-of-book-author-div">
-                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoAutor}}</p>
                     </div>
                     <div class="bookcategory-rating-div">
                       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -521,10 +521,10 @@
                       <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
                     </div>
                     <div class="bookcategory-information-of-book-title-div">
-                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoLivro}}</h6>
                     </div>
                     <div class="bookcategory-information-of-book-author-div">
-                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoAutor}}</p>
                     </div>
                     <div class="bookcategory-rating-div">
                       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -588,10 +588,10 @@
                       <img src={{livro.urlDaImagemDoLivro}} class="bookcategory-information-of-book-img" alt="...">
                     </div>
                     <div class="bookcategory-information-of-book-title-div">
-                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoLivro}}">{{livro.nomeDoLivro}}</h6>
+                      <h6 class="bookcategory-information-of-book-title-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoLivro}}</h6>
                     </div>
                     <div class="bookcategory-information-of-book-author-div">
-                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top" title="{{livro.nomeDoAutor}}">{{livro.nomeDoAutor}}</p>
+                      <p class="bookcategory-information-of-book-author-text" data-bs-toggle="tooltip" data-bs-placement="top">{{livro.nomeDoAutor}}</p>
                     </div>
                     <div class="bookcategory-rating-div">
                       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">

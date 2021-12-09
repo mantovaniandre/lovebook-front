@@ -8,6 +8,7 @@ import { SidebarComponent } from '@syncfusion/ej2-angular-navigations';
 import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
   nomeUsuario!: string;
   data!: Array<any>;
   $livros!: Observable<Array<Livro>>;
+  nomeDoLivro!: string;
 
   data_literatura!: Array<any>;
   $livros_literatura!: Observable<Array<Livro>>;
@@ -58,10 +60,12 @@ export class HomeComponent implements OnInit {
   sidebar!: SidebarComponent;
   erroString!: string;
   $loadingError = new Subject<boolean>();
+  
 
   constructor(private service: ConnectionApiService,
               private router: Router,
-              private dataService: DataService,) {
+              private dataService: DataService,
+              private cookieService: CookieService) {
     this.data = new Array<any>();
    }
 
@@ -184,6 +188,15 @@ export class HomeComponent implements OnInit {
     })
   }
 
+
+  informacaoDoLivro(livro: Livro){
+    this.cookieService.remove('livro');
+    this.cookieService.putObject('livro', livro);
+    this.router.navigate(['/saibaMais']);
+    
+  }
+
+ 
 
 
 }

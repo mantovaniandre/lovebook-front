@@ -82,7 +82,7 @@
 
   <div class="container shoppingcartaddress-container">
     <div class="container shoppingcartaddress-div">
-      <div class="container shoppingcartaddress-subdiv">
+      <div class="container shoppingcartaddress-subdiv" *ngIf="usuario">
         <div class="shoppingcartaddress-title-div">
           <p class="shoppingcartaddress-title">Endereço de Entrega</p>
         </div>
@@ -90,30 +90,30 @@
           <div class="row shoppingcartaddress-informations-div1">
             <div class="col-sm-12 col-md-4">
               <label class="shoppingcartaddress-zipcode-label">CEP</label>
-              <input type="text" class="form-control" placeholder="CEP">
+              <input disabled type="text" class="form-control" placeholder="{{usuario.cepUsuario}}">
             </div>
             <div class="col-sm-12 col-md-4">
               <label class="shoppingcartaddress-address-label">Endereço</label>
-              <input type="text" class="form-control" placeholder="Endereço">
+              <input disabled type="text" class="form-control" placeholder="{{usuario.enderecoUsuario}}">
             </div>
             <div class="col-sm-12 col-md-4">
               <label class="shoppingcartaddress-number-label">Número</label>
-              <input type="text" class="form-control" placeholder="Número">
+              <input disabled type="text" class="form-control" placeholder="{{usuario.numeroEnderecoUsuario}}">
             </div>
           </div>
           <div class="row shoppingcartaddress-informations-div2">
             <div class="col-sm-12 col-md-4">
               <label class="shoppingcartaddress-complement-label">Complemento</label>
-              <input type="text" class="form-control" placeholder="Complemento">
+              <input disabled type="text" class="form-control" placeholder="{{usuario.complementoEnderecoUsuario}}">
             </div>
             <div class="col-sm-12 col-md-4">
               <label class="shoppingcartaddress-city-label">Cidade</label>
-              <input type="text" class="form-control" placeholder="Cidade">
+              <input disabled type="text" class="form-control" placeholder="{{usuario.cidadeUsuario}}">
             </div>
             <div class="col-sm-12 col-md-4">
               <label class="shoppingcartaddress-state-label">Estado</label>
-              <select class="form-select shoppingcartaddress-select" aria-label="Default select example">
-                <option selected>Estado</option>
+              <select disabled class="form-select shoppingcartaddress-select" aria-label="Default select example">
+                <option selected>{{usuario.estadoUsuario}}</option>
                 <option value="AC">Acre</option>
                 <option value="AL">Alagoas</option>
                 <option value="AP">Amapá</option>
@@ -169,22 +169,22 @@
             <div class="shoppingcartpayment-title-div">
               <p class="shoppingcartpayment-title">Forma de Pagamento</p>
             </div>
-            <div class="shoppingcartpayment-informations-container mt-3">
+            <div class="shoppingcartpayment-informations-container mt-3" *ngIf="usuario">
               <div>
                 <div class="row shoppingcartpayment-informations-div1">
                   <div class="col-sm-12 col-md-6">
                     <label class="shoppingcartpayment-creditcard-label">Número do cartão de crédito</label>
-                    <input type="text" class="form-control" placeholder="Número">
+                    <input disabled type="text" class="form-control" placeholder="{{usuario.numeroCartaoCredito}}">
                   </div>
                   <div class="col-sm-12 col-md-6">
                       <label class="shoppingcartpayment-cardnumber-label">Nome do cartão de crédito</label>
-                      <input type="text" class="form-control" placeholder="Nome">
+                      <input disabled type="text" class="form-control" placeholder="{{usuario.nomeCartaoCredito}}">
                   </div>
                   <div class="col-6 col-sm-6 col-md-6 mt-3">
                     <label class="shoppingcartpayment-expiriondate-label">Data de expiração</label>
                     <div class="d-flex">
-                      <select class="form-select shoppingcartpayment-select-mounth" aria-label="Default select example" style="width: 80px;">
-                        <option value="1" selected>1</option>
+                      <select disabled class="form-select shoppingcartpayment-select-mounth" aria-label="Default select example" style="width: 80px;">
+                        <option value="1" selected>{{usuario.mesExpiracaoCartaoCredito}}</option>
                         <option value="1">2</option>
                         <option value="1">3</option>
                         <option value="1">4</option>
@@ -197,8 +197,8 @@
                         <option value="1">11</option>
                         <option value="1">12</option>
                       </select>
-                      <select class="form-select shoppingcartpayment-select-year" aria-label="Default select example" style="width: 100px;">
-                        <option value="1" selected>2021</option>
+                      <select disabled class="form-select shoppingcartpayment-select-year" aria-label="Default select example" style="width: 100px;">
+                        <option value="1" selected>{{usuario.anoExpiracaoCartaoCredito}}</option>
                         <option value="1">2022</option>
                         <option value="1">2023</option>
                         <option value="1">2024</option>
@@ -214,7 +214,7 @@
                   </div>
                   <div class="col-6 col-sm-6 col-md-6 mt-3">
                     <label class="shoppingcartpayment-securitycode-label">Código de segurança CVV</label>
-                    <input type="text" class="form-control" placeholder="CVV">
+                    <input disabled type="text" class="form-control" placeholder="{{usuario.codigoSegurancaCartaoCredito}}">
                   </div>
                 </div>
               </div>
@@ -236,17 +236,17 @@
             <div class="row shoppingcartpayment-informations-container mt-3">
               <div class="col-sm-12 col-md-6">
                 <label class="shoppingcartpayment-creditcard-label">Valor do Pedido</label>
-                <input type="text" class="form-control" placeholder="Valor do Pedido">
+                <input disabled type="text" class="form-control" placeholder="R$ 50.00">
               </div>
               <div class="col-sm-12 col-md-6">
-                <label class="shoppingcartpayment-creditcard-label">Total do Pedido</label>
-                <input type="text" class="form-control" placeholder="Total do Pedido">
+                <label class="shoppingcartpayment-creditcard-label">Valor do Frete</label>
+                <input disabled type="text" class="form-control" placeholder="R$ 50.00">
               </div>
             </div>
             <div class="row shoppingcartpayment-informations-container mt-3">
               <div class="col-sm-12 col-md-12">
-                <label class="shoppingcartpayment-creditcard-label">Total do Pedido</label>
-                <input type="text" class="form-control" placeholder="Total do Pedido">
+                <label class="shoppingcartpayment-creditcard-label">Valor Total</label>
+                <input disabled type="text" class="form-control" placeholder="R$ 100.00">
               </div>
             </div>
             <div class="bookcategory-information-of-book-btn-div">
