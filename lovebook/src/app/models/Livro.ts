@@ -10,5 +10,5 @@ export interface Livro{
   "quantidadeDeLivros": number,
   "precoDeVendaDoLivro": number,
   "categoriaDoLivro": string,
-  "numeroDaPaginaDoLivro": number
+  "numeroDaPaginaDoLivro": number,
 }

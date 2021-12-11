@@ -1,208 +1,5 @@
-/*Division of the field of know more*/
-
-.knowmore-container {
-  border: 2px solid black;
-  height: auto;
-  background-color: white;
-  border: 1px solid rgb(209, 208, 208);
-  border-radius: 5px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.knowmore-div {
-  margin-top: 10px;
-}
-
-.knowmore-title-container {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid rgb(204, 203, 203);
-  border: 2px solid black;
-}
-
-.knowmore-title-div {
-  border-bottom: 1px solid rgb(204, 203, 203);
-  display: flex;
-  justify-content: flex-start;
-}
-
-.knowmore-title {
-  font-size: 25px;
-  font-style: italic;
-  color: rgb(140,205,188);
-  font-weight: 700;
-}
-
-.knowmore-informations-container {
-  height: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.knowmore-informations-div {
-  border: 1px solid rgb(204, 203, 203);
-  border-radius: 5px;
-}
-
-.knowmore-img-div {
-  display: flex;
-  justify-content: center;
-  border-right: 1px solid rgb(204, 203, 203);
-}
-
-.knowmore-img {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  margin: 5px;
-}
-
-.knowmore-informations-of-book-container {
-  display: flex;
-}
-
-.knowmore-informations-of-book-div {
-  align-self: center;
-}
-
-.knowmore-title-book-div {
-  border-bottom: 1px solid rgb(204, 203, 203);
-  display: flex;
-  font-size: 25px;
-  justify-content: center;
-  color: rgb(140,205,188);
-  font-weight: 700;
-  margin-top: 10px;
-}
-
-.knowmore-author-publishingcompany-date-div {
-  display: flex;
-  flex-direction: column;
-  margin-top: 25px;
-  border-bottom: 1px solid rgb(204, 203, 203);
-}
-
-.knowmore-author-div {
-  display: flex;
-}
-
-.knowmore-author-p1 {
-  font-weight: 700;
-}
-
-.knowmore-author-p2 {
-  margin-left: 5px;
-  color:rgb(138, 138, 138);
-  font-style: italic;
-}
-
-.knowmore-publishingcompany-div {
-  display: flex;
-}
-
-.knowmore-publishingcompany-p1 {
-  font-weight: 700;
-}
-
-.knowmore-publishingcompany-p2 {
-  margin-left: 5px;
-  color:rgb(138, 138, 138);
-  font-style: italic;
-}
-
-.knowmore-date-div {
-  display: flex;
-}
-
-.knowmore-date-p1 {
-  font-weight: 700;
-}
-
-.knowmore-date-p2 {
-  margin-left: 5px;
-  color:rgb(138, 138, 138);
-  font-style: italic;
-}
-
-.knowmore-price-div {
-  display: flex;
-}
-
-.knowmore-price-p1 {
-  font-weight: 700;
-}
-
-.knowmore-price-p2 {
-  margin-left: 5px;
-  color:rgb(138, 138, 138);
-  font-style: italic;
-}
-
-.knowmore-rating-div {
-  margin-top: 25px;
-}
-
-.knowmore-stars-container {
-  display: flex;
-}
-
-.knowmore-classification-text {
-  font-weight: 700;
-}
-
-.knowmore-stars-div {
-  margin-left: 5px;
-}
-
-.knowmore-stars-div input[type=radio] {
-  display: none;
-}
-
-.knowmore-stars-div label i.fa{
-  font-size: 1.0em
-}
-
-.knowmore-stars-div label i.fa:before {
-  content:'\f005';
-  color:rgb(140,205,188);
-}
-
-.knowmore-stars-div input[type=radio]:checked ~ label i.fa:before {
-  color: #CCC;
-}
-
-.knowmore-textarea {
-  margin-top: 25px;
-}
-
-.knowmore-textarea-text {
-  width: 100%;
-  height: 70px;
-  border: 1px solid rgb(204, 203, 203);
-  border-radius: 5px;
-  outline: white;
-}
-
-.knowmore-btn-modify-book {
-  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  color: #ffffff;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.knowmore-btn-update-book {
-  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  color: #ffffff;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-/* Division of the field Product Detail */
 
 .productdetails-container {
-  border: 2px solid black;
   height: auto;
   background-color: white;
   border: 1px solid rgb(209, 208, 208);
@@ -213,13 +10,6 @@
 
 .productdetails-div {
   margin-top: 10px;
-}
-
-.productdetails-title-container {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid rgb(204, 203, 203);
-  border: 2px solid black;
 }
 
 .productdetails-title-div {
@@ -235,14 +25,9 @@
   font-weight: 700;
 }
 
-.productdetails-nameofproduct-container {
-  height: auto;
-}
-
 .productdetails-nameofproduct-div1{
   background-color: rgb(238, 238, 238);
-  height: 50px;
-
+  height: 40px;
 }
 
 .productdetails-nameofproduct-subdiv1 {
@@ -256,7 +41,7 @@
 
 .productdetails-nameofproduct-div2 {
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
   display: flex;
 }
 
@@ -264,15 +49,34 @@
   align-self: center;
 }
 
-/* Division of the field publishing company */
+.productdetails-btn-modify-book {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-.productdetails-publishingcompany-container {
-  height: auto;
+.productdetails-btn-update-book {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.productdetails-img-div {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+
+.productdetails-img {
+  display: flex;
+  justify-content: center;
 }
 
 .productdetails-publishingcompany-div1{
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
 }
 
 .productdetails-publishingcompany-subdiv1 {
@@ -286,7 +90,7 @@
 
 .productdetails-publishingcompany-div2 {
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
   display: flex;
 }
 
@@ -294,15 +98,9 @@
   align-self: center;
 }
 
-/* Division of the field language */
-
-.productdetails-language-container {
-  height: auto;
-}
-
 .productdetails-language-div1{
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
 }
 
 .productdetails-language-subdiv1 {
@@ -316,7 +114,7 @@
 
 .productdetails-language-div2 {
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
   display: flex;
 }
 
@@ -324,15 +122,9 @@
   align-self: center;
 }
 
-/* Division of the field sale price */
-
-.productdetails-saleprice-container {
-  height: auto;
-}
-
 .productdetails-saleprice-div1{
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
 }
 
 .productdetails-saleprice-subdiv1 {
@@ -346,7 +138,7 @@
 
 .productdetails-saleprice-div2 {
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
   display: flex;
 }
 
@@ -354,15 +146,9 @@
   align-self: center;
 }
 
-/* Division of the field number of pages */
-
-.productdetails-numberofpages-container {
-  height: auto;
-}
-
 .productdetails-numberofpages-div1{
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
 }
 
 .productdetails-numberofpages-subdiv1 {
@@ -376,7 +162,7 @@
 
 .productdetails-numberofpages-div2 {
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
   display: flex;
 }
 
@@ -384,15 +170,9 @@
   align-self: center;
 }
 
-/* Division of the field author name */
-
-.productdetails-authorname-container {
-  height: auto;
-}
-
 .productdetails-authorname-div1{
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
 }
 
 .productdetails-authorname-subdiv1 {
@@ -406,7 +186,7 @@
 
 .productdetails-authorname-div2 {
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
   display: flex;
 }
 
@@ -414,15 +194,9 @@
   align-self: center;
 }
 
-/* Division of the field inventory */
-
-.productdetails-inventory-container {
-  height: auto;
-}
-
 .productdetails-inventory-div1{
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
 }
 
 .productdetails-inventory-subdiv1 {
@@ -436,7 +210,7 @@
 
 .productdetails-inventory-div2 {
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
   display: flex;
 }
 
@@ -444,15 +218,9 @@
   align-self: center;
 }
 
-/* Division of the field category */
-
-.productdetails-category-container {
-  height: auto;
-}
-
 .productdetails-category-div1{
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
 }
 
 .productdetails-category-subdiv1 {
@@ -466,7 +234,7 @@
 
 .productdetails-category-div2 {
   background-color: rgb(238, 238, 238);
-  height: 50px;
+  height: 40px;
   display: flex;
 }
 
@@ -474,72 +242,151 @@
   align-self: center;
 }
 
-/* Division of the field description */
+/*Division of field the comments and rate*/
 
-.productdetails-description-container {
-  height: auto;
-}
-
-.productdetails-description-div1{
-  background-color: rgb(238, 238, 238);
-  height: 50px;
-}
-
-.productdetails-description-subdiv1 {
-  border-right: 3px solid white;
-  display: flex;
-}
-
-.productdetails-description-subdiv1-description1 {
-  align-self: center;
-}
-
-.productdetails-description-div2 {
-  background-color: rgb(238, 238, 238);
-  height: 50px;
-  display: flex;
-}
-
-.productdetails-description-subdiv2-description2 {
-  align-self: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.yourcomments-classification-text {
-  font-weight: 700;
-}
-
-.yourcomments-stars-div {
-  margin-left: 5px;
-}
-
-.yourcomments-stars-div input[type=radio] {
+.yourcomments-stars-appraisal-div input[type=radio] {
   display: none;
 }
 
-.yourcomments-stars-div label i.fa{
-  font-size: 1.5em
+.yourcomments-stars-appraisal-div label i.fa{
+  font-size: 2.0em
 }
 
-.yourcomments-stars-div label i.fa:before {
+.yourcomments-stars-appraisal-div label i.fa:before {
   content:'\f005';
   color:rgb(140,205,188);
 }
 
-.yourcomments-stars-div input[type=radio]:checked ~ label i.fa:before {
+.yourcomments-stars-appraisal-div input[type=radio]:checked ~ label i.fa:before {
   color: #CCC;
+} 
+
+.yourcomments-container-parent {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+}
+
+.yourcomments-container {
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.yourcomments-title-div {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.yourcomments-title {
+  font-size: 25px;
+  font-style: italic;
+  color: rgb(140,205,188);
+  font-weight: 700;
+}
+
+.yourcomments-informations-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.yourcomments-informations-div1 {
+  margin-bottom: 10px;
+}
+
+.yourcomments-rate-label {
+  color:rgb(138, 138, 138);
+}
+
+.yourcomments-commenttitle-label {
+  color:rgb(138, 138, 138);
+}
+
+.yourcomments-comments-label {
+  color:rgb(138, 138, 138);
+}
+
+.yourcomments-select-mounth {
+  color: rgb(140,205,188);
+  margin-right: 20px;
+}
+
+.yourcomments-select-year {
+  color: rgb(140,205,188);
+}
+
+.form-control {
+  box-shadow: 0 0 0 0;
+  border: 1px solid rgb(209, 208, 208);
+  outline: 0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(140,205,188) !important;
+  opacity: 1; /* Firefox */
+}
+
+.yourcomments-btn-update-registration {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+}
+
+.yourcomments-classification-text {
+  color:rgb(138, 138, 138);
+}
+
+.yourcomments-classify-stars-div input[type=radio] {
+  display: none;
+}
+
+.yourcomments-classify-stars-div label i.fa{
+  font-size: 2.0em
+}
+
+.yourcomments-classify-stars-div label i.fa:before {
+  content:'\f005';
+  color:rgb(140,205,188);
+}
+
+.yourcomments-classify-stars-div input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+} 
+
+.yourcomments-div {
+  margin-top: 10px;
+  height: auto;
+}
+
+.yourcomments-stars-commented-div input[type=radio] {
+  display: none;
+}
+
+.yourcomments-stars-commented-div label i.fa{
+  font-size: 1.5em
+}
+
+.yourcomments-stars-commented-div label i.fa:before {
+  content:'\f005';
+  color:rgb(140,205,188);
+}
+
+.yourcomments-stars-commented-div input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+.btn-comments{
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 

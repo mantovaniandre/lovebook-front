@@ -1,180 +1,115 @@
 <div>
-  <div class="container knowmore-container">
-    <div class="knowmore-div">
-      <div class="knowmore-title-div">
-        <p class="knowmore-title">Saiba Mais </p>
-      </div>
-      <div class="container knowmore-informations-container mt-3">
-        <div class="row knowmore-informations-div">
-          <div class="col-sm-12 col-md-6 knowmore-img-div">
-            <div class="knowmore-img">
-              <img src="https://images-na.ssl-images-amazon.com/images/I/41GeyYROqTL._SY344_BO1,204,203,200_QL70_ML2_.jpg">
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 knowmore-informations-of-book-container">
-            <div class="container knowmore-informations-of-book-div">
-              <div class="knowmore-title-book-div">
-                <p class="knowmore-title-book-p">{{livro.nomeDoLivro}}</p>
-              </div>
-              <div class="knowmore-author-publishingcompany-date-div">
-                <div class="row">
-                  <div class="col-sm-12 col-md-6 knowmore-author-div">
-                    <p class="knowmore-author-p1">Autor:</p>
-                    <p class="knowmore-author-p2">Machado de Assis</p>
-                  </div>
-                  <div class="col-sm-12 col-md-6 knowmore-publishingcompany-div">
-                    <p class="knowmore-publishingcompany-p1">Editora:</p>
-                    <p class="knowmore-publishingcompany-p2">Principis</p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12 col-md-6 knowmore-publishingcompany-div">
-                    <p class="knowmore-publishingcompany-p1">Estoque:</p>
-                    <p class="knowmore-publishingcompany-p2">1500</p>
-                  </div>
-                  <div class="col-sm-12 col-md-6 knowmore-price-div">
-                    <p class="knowmore-price-p1">Preço:</p>
-                    <p class="knowmore-price-p2">R$20,00</p>
-                  </div>
-                </div>
-              </div>
-              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="submit" class="btn knowmore-btn-modify-book">Adicionar ao Carrinho</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="container productdetails-container">
     <div class="productdetails-div">
       <div class="productdetails-title-div">
         <p class="productdetails-title">Detalhes do Livro</p>
       </div>
-      <div class="container productdetails-nameofproduct-container mt-3">
-        <div class="container row productdetails-nameofproduct-div">
-          <div class="col-3 row productdetails-nameofproduct-div1" >
-            <div class="row productdetails-nameofproduct-subdiv1">
-              <p class="productdetails-nameofproduct-subdiv1-description1">Nome do Livro</p>
+      <div class="row productdetails-row">
+        <div class="col-3">
+          <div class="productdetails-img-div mt-3" >
+            <div class="productdetails-img">
+              <img src="{{livro.urlDaImagemDoLivro}}">
             </div>
           </div>
-          <div class="col-9 productdetails-nameofproduct-div2">
-            <div class="row productdetails-nameofproduct-subdiv2">
-              <p class="productdetails-nameofproduct-subdiv2-description2">Nome do Livro</p>
-            </div>
+          <div class="d-md-flex justify-content-md-center mt-2" style="height: 60px;">
+            <button type="submit" class="btn productdetails-btn-modify-book">Adicionar ao Carrinho</button>
           </div>
         </div>
-      </div>
-      <div class="container productdetails-publishingcompany-container mt-3">
-        <div class="container row productdetails-publishingcompany-div">
-          <div class="col-3 row productdetails-publishingcompany-div1" >
-            <div class="row productdetails-publishingcompany-subdiv1">
-              <p class="productdetails-publishingcompany-subdiv1-description1">Edtiora</p>
+        <div class="col-9 productdetails-nameofproduct-container-parent">
+          <div class="container row productdetails-nameofproduct-div mt-3">
+            <div class="col-3 row productdetails-nameofproduct-div1" >
+              <div class="row productdetails-nameofproduct-subdiv1">
+                <p class="productdetails-nameofproduct-subdiv1-description1">Nome do Livro</p>
+              </div>
+            </div>
+            <div class="col-9 productdetails-nameofproduct-div2">
+              <div class="row productdetails-nameofproduct-subdiv2">
+                <p class="productdetails-nameofproduct-subdiv2-description2">{{livro.nomeDoLivro}}</p>
+              </div>
             </div>
           </div>
-          <div class="col-9 productdetails-publishingcompany-div2">
-            <div class="row productdetails-publishingcompany-subdiv2">
-              <p class="productdetails-publishingcompany-subdiv2-description2">Editora</p>
+          <div class="container row productdetails-publishingcompany-div mt-2">
+            <div class="col-3 row productdetails-publishingcompany-div1" >
+              <div class="row productdetails-publishingcompany-subdiv1">
+                <p class="productdetails-publishingcompany-subdiv1-description1">Edtiora</p>
+              </div>
+            </div>
+            <div class="col-9 productdetails-publishingcompany-div2">
+              <div class="row productdetails-publishingcompany-subdiv2">
+                <p class="productdetails-publishingcompany-subdiv2-description2">{{livro.editoraDoLivro}}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="container productdetails-language-container mt-3">
-        <div class="container row productdetails-language-div">
-          <div class="col-3 row productdetails-language-div1" >
-            <div class="row productdetails-language-subdiv1">
-              <p class="productdetails-language-subdiv1-description1">Idioma</p>
+          <div class="container row productdetails-language-div mt-2">
+            <div class="col-3 row productdetails-language-div1" >
+              <div class="row productdetails-language-subdiv1">
+                <p class="productdetails-language-subdiv1-description1">Idioma</p>
+              </div>
+            </div>
+            <div class="col-9 productdetails-language-div2">
+              <div class="row productdetails-language-subdiv2">
+                <p class="productdetails-language-subdiv2-description2">{{livro.idiomaDoLivro}}</p>
+              </div>
             </div>
           </div>
-          <div class="col-9 productdetails-language-div2">
-            <div class="row productdetails-language-subdiv2">
-              <p class="productdetails-language-subdiv2-description2">Idioma</p>
+          <div class="container row productdetails-saleprice-div mt-2">
+            <div class="col-3 row productdetails-saleprice-div1" >
+              <div class="row productdetails-saleprice-subdiv1">
+                <p class="productdetails-saleprice-subdiv1-description1">Preço de Venda</p>
+              </div>
+            </div>
+            <div class="col-9 productdetails-saleprice-div2">
+              <div class="row productdetails-saleprice-subdiv2">
+                <p class="productdetails-saleprice-subdiv2-description2">R$ {{livro.precoDeVendaDoLivro}}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="container productdetails-saleprice-container mt-3">
-        <div class="container row productdetails-saleprice-div">
-          <div class="col-3 row productdetails-saleprice-div1" >
-            <div class="row productdetails-saleprice-subdiv1">
-              <p class="productdetails-saleprice-subdiv1-description1">Preço de Venda</p>
+          <div class="container row productdetails-numberofpages-div mt-2">
+            <div class="col-3 row productdetails-numberofpages-div1" >
+              <div class="row productdetails-numberofpages-subdiv1">
+                <p class="productdetails-numberofpages-subdiv1-description1">Número de Páginas</p>
+              </div>
+            </div>
+            <div class="col-9 productdetails-numberofpages-div2">
+              <div class="row productdetails-numberofpages-subdiv2">
+                <p class="productdetails-numberofpages-subdiv2-description2">{{livro.numeroDaPaginaDoLivro}}</p>
+              </div>
             </div>
           </div>
-          <div class="col-9 productdetails-saleprice-div2">
-            <div class="row productdetails-saleprice-subdiv2">
-              <p class="productdetails-saleprice-subdiv2-description2">Preço de Venda</p>
+          <div class="container row productdetails-authorname-div mt-2">
+            <div class="col-3 row productdetails-authorname-div1" >
+              <div class="row productdetails-authorname-subdiv1">
+                <p class="productdetails-authorname-subdiv1-description1">Nome do Autor</p>
+              </div>
+            </div>
+            <div class="col-9 productdetails-authorname-div2">
+              <div class="row productdetails-authorname-subdiv2">
+                <p class="productdetails-authorname-subdiv2-description2">{{livro.nomeDoAutor}}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="container productdetails-numberofpages-container mt-3">
-        <div class="container row productdetails-numberofpages-div">
-          <div class="col-3 row productdetails-numberofpages-div1" >
-            <div class="row productdetails-numberofpages-subdiv1">
-              <p class="productdetails-numberofpages-subdiv1-description1">Número de Páginas</p>
+          <div class="container row productdetails-inventory-div mt-2">
+            <div class="col-3 row productdetails-inventory-div1" >
+              <div class="row productdetails-inventory-subdiv1">
+                <p class="productdetails-inventory-subdiv1-description1">Estoque</p>
+              </div>
+            </div>
+            <div class="col-9 productdetails-inventory-div2">
+              <div class="row productdetails-inventory-subdiv2">
+                <p class="productdetails-inventory-subdiv2-description2">{{livro.quantidadeDeLivros}}</p>
+              </div>
             </div>
           </div>
-          <div class="col-9 productdetails-numberofpages-div2">
-            <div class="row productdetails-numberofpages-subdiv2">
-              <p class="productdetails-numberofpages-subdiv2-description2">Número de Páginas</p>
+          <div class="container row productdetails-category-div mt-2 mb-3">
+            <div class="col-3 row productdetails-category-div1" >
+              <div class="row productdetails-category-subdiv1">
+                <p class="productdetails-category-subdiv1-description1">Categoria</p>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="container productdetails-authorname-container mt-3">
-        <div class="container row productdetails-authorname-div">
-          <div class="col-3 row productdetails-authorname-div1" >
-            <div class="row productdetails-authorname-subdiv1">
-              <p class="productdetails-authorname-subdiv1-description1">Nome do Autor</p>
-            </div>
-          </div>
-          <div class="col-9 productdetails-authorname-div2">
-            <div class="row productdetails-authorname-subdiv2">
-              <p class="productdetails-authorname-subdiv2-description2">Nome do Autor</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container productdetails-inventory-container mt-3">
-        <div class="container row productdetails-inventory-div">
-          <div class="col-3 row productdetails-inventory-div1" >
-            <div class="row productdetails-inventory-subdiv1">
-              <p class="productdetails-inventory-subdiv1-description1">Estoque</p>
-            </div>
-          </div>
-          <div class="col-9 productdetails-inventory-div2">
-            <div class="row productdetails-inventory-subdiv2">
-              <p class="productdetails-inventory-subdiv2-description2">Estoque</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container productdetails-category-container mt-3">
-        <div class="container row productdetails-category-div">
-          <div class="col-3 row productdetails-category-div1" >
-            <div class="row productdetails-category-subdiv1">
-              <p class="productdetails-category-subdiv1-description1">Categoria</p>
-            </div>
-          </div>
-          <div class="col-9 productdetails-category-div2">
-            <div class="row productdetails-category-subdiv2">
-              <p class="productdetails-category-subdiv2-description2">Categoria</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container productdetails-description-container mt-3 mb-3">
-        <div class="container row productdetails-description-div">
-          <div class="col-3 row productdetails-description-div1" >
-            <div class="row productdetails-description-subdiv1">
-              <p class="productdetails-description-subdiv1-description1">Descrição</p>
-            </div>
-          </div>
-          <div class="col-9 productdetails-description-div2">
-            <div class="row productdetails-description-subdiv2">
-              <p class="productdetails-description-subdiv2-description2">Descrição</p>
+            <div class="col-9 productdetails-category-div2">
+              <div class="row productdetails-category-subdiv2">
+                <p class="productdetails-category-subdiv2-description2">{{livro.categoriaDoLivro}}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -182,22 +117,21 @@
     </div>
   </div>
 
-  <div class="container productdetails-container">
-    <div class="productdetails-div">
-      <div class="productdetails-title-div">
-        <p class="productdetails-title">Avaliações</p>
+  <div class="container yourcomments-container">
+    <div class="yourcomments-div">
+      <div class="yourcomments-title-div">
+        <p class="yourcomments-title">Avaliações</p>
       </div>
-
       <div class="container d-flex">
-        <div class="container row justify-content-center">
-          <div class="row">
+        <div class="container row justify-content-center"> 
+          <div class="row" >
             <div class="col-12 mt-5">
               <h1 style="font-size: 45px;">4.7</h1>
             </div>
-            <div class="col-12 yourcomments-rating-div mt-3">
+            <div class="col-12 yourcomments-rating-appraisal-div mt-3">
               <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-              <div class="yourcomments-stars-container">
-                <div class="yourcomments-stars-div">
+              <div class="yourcomments-stars-appraisal-container">
+                <div class="yourcomments-stars-appraisal-div">
                   <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
                   <label for="cm_star-1"><i class="fa"></i></label>
                   <input type="radio" id="cm_star-1" name="fb" value="1"/>
@@ -216,6 +150,57 @@
               <h4>Baseado em 35 avaliações</h4>
             </div>
           </div>
+          <div class="row" >
+            <p>
+              <a class="btn btn-comments" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Avaliar e Comentar</a>
+            </p>
+            <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                  <div class="card card-body">
+                    <div class="yourcomments-informations-container">
+                      <div class="col-sm-12 col-md-6 mt-2">
+                        <label class="yourcomments-rate-label">Avaliador</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                      <div class="col-sm-12 col-md-6 mt-2">
+                          <label class="yourcomments-commenttitle-label">Título do Comentário</label>
+                          <input type="text" class="form-control" placeholder="">
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 mt-2">
+                        <label class="yourcomments-comments-label">Comentário</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                      <div class="yourcomments-rating-classify-div mt-2">
+                        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                        <div class="yourcomments-stars-classify-container">
+                          <div class="yourcomments-classify-text">
+                            <p>Classificar:</p>
+                          </div>
+                          <div class="yourcomments-classify-stars-div">
+                            <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                            <label for="cm_star-1"><i class="fa"></i></label>
+                            <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                            <label for="cm_star-2"><i class="fa"></i></label>
+                            <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                            <label for="cm_star-3"><i class="fa"></i></label>
+                            <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                            <label for="cm_star-4"><i class="fa"></i></label>
+                            <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                            <label for="cm_star-5"><i class="fa"></i></label>
+                            <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-grid d-md-flex justify-content-md-end">
+                        <button type="submit" class="btn yourcomments-btn-update-registration">Postar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
         </div>
       </div>
 
@@ -234,12 +219,20 @@
             </div>
             <div class="row">
               <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
+                <h3>Comentário</h3>
+              </div>
+              <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
+                <h3>Comentário  </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
                 <h3>Avaliação</h3>
               </div>
-              <div class="col-10 mt-3 yourcomments-rating-div" style="background-color: rgb(240, 240, 240);">
+              <div class="col-10 mt-3 yourcomments-rating-commented-div" style="background-color: rgb(240, 240, 240);">
                 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-                <div class="yourcomments-stars-container">
-                  <div class="yourcomments-stars-div">
+                <div class="yourcomments-stars-commented-container">
+                  <div class="yourcomments-stars-commented-div">
                     <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
                     <label for="cm_star-1"><i class="fa"></i></label>
                     <input type="radio" id="cm_star-1" name="fb" value="1"/>
@@ -289,12 +282,20 @@
             </div>
             <div class="row">
               <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
+                <h3>Comentário</h3>
+              </div>
+              <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
+                <h3>Comentário  </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
                 <h3>Avaliação</h3>
               </div>
-              <div class="col-10 mt-3 yourcomments-rating-div" style="background-color: rgb(240, 240, 240);">
+              <div class="col-10 mt-3 yourcomments-rating-commented-div" style="background-color: rgb(240, 240, 240);">
                 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-                <div class="yourcomments-stars-container">
-                  <div class="yourcomments-stars-div">
+                <div class="yourcomments-stars-commented-container">
+                  <div class="yourcomments-stars-commented-div">
                     <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
                     <label for="cm_star-1"><i class="fa"></i></label>
                     <input type="radio" id="cm_star-1" name="fb" value="1"/>
@@ -332,4 +333,5 @@
       </div>
     </div>
   </div>
+
 </div>

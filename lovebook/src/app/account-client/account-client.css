@@ -402,33 +402,25 @@
   margin-bottom: 10px;
 }
 
-/*Division of the field of my purchases*/
+/*Division of field book purchase */
 
 .purchases-container {
-  border: 2px solid black;
-  height: auto;
+  height: 450px;
+  margin-top: 50px;
   background-color: white;
   border: 1px solid rgb(209, 208, 208);
   border-radius: 5px;
-  margin-top: 50px;
-  margin-bottom: 150px;
+  margin-bottom: 80px;
 }
 
 .purchases-div {
   margin-top: 10px;
 }
 
-.purchases-title-container {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid rgb(204, 203, 203);
-  border: 2px solid black;
-}
-
 .purchases-title-div {
+  width: 100%;
+  height: 50px;
   border-bottom: 1px solid rgb(204, 203, 203);
-  display: flex;
-  justify-content: flex-start;
 }
 
 .purchases-title {
@@ -438,167 +430,159 @@
   font-weight: 700;
 }
 
-.purchases-informations-container {
-  height: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.purchases-information-of-book-container {
+  height: 350px;
+  margin-top: 20px;
 }
 
-.purchases-informations-div {
-  border: 1px solid rgb(204, 203, 203);
+.purchases-information-of-book-div {
+  height: 350px;
+}
+
+.purchases-information-of-book-carousel {
+  display: flex;
+  justify-content: center;
+  height: 350px;
+}
+
+.purchases-information-of-book-carousel-item {
+  height: auto;
+}
+
+.purchases-information-of-book-carousel-item-container {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.purchases-information-of-book-carousel-item-container {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.purchases-information-of-book-carousel-item-div {
+  height: 350px;
+  width: 12rem;
+  border: 2px solid rgb(221, 221, 221);
   border-radius: 5px;
-}
-
-.purchases-img-div {
   display: flex;
   justify-content: center;
-  border-right: 1px solid rgb(204, 203, 203);
+  margin-right: 3px;
 }
 
-.purchases-img {
+.purchases-information-of-book-carousel-item-subdiv {
   width: 100%;
-  height: auto;
+}
+
+.purchases-information-of-book-img-div {
   display: flex;
   justify-content: center;
-  margin: 5px;
 }
 
-.purchases-informations-of-book-container {
+.purchases-information-of-book-img {
+  height: 150px;
+}
+
+.purchases-information-of-book-title-div {
+  margin-top: 15px;
   display: flex;
-}
-
-.purchases-informations-of-book-div {
-  align-self: center;
-}
-
-.purchases-title-book-div {
-  border-bottom: 1px solid rgb(204, 203, 203);
-  display: flex;
-  font-size: 25px;
   justify-content: center;
-  color: rgb(140,205,188);
-  font-weight: 700;
-  margin-top: 10px;
 }
 
-.purchases-author-publishingcompany-date-div {
+.purchases-information-of-book-title-text {
+  font-size: 15px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.purchases-information-of-book-author-div {
   display: flex;
-  flex-direction: column;
-  margin-top: 25px;
-  border-bottom: 1px solid rgb(204, 203, 203);
-}
-
-.purchases-author-div {
-  display: flex;
-}
-
-.purchases-author-p1 {
-  font-weight: 700;
-}
-
-.purchases-author-p2 {
-  margin-left: 5px;
-  color:rgb(138, 138, 138);
-  font-style: italic;
-}
-
-.purchases-publishingcompany-div {
-  display: flex;
-}
-
-.purchases-publishingcompany-p1 {
-  font-weight: 700;
-}
-
-.purchases-publishingcompany-p2 {
-  margin-left: 5px;
-  color:rgb(138, 138, 138);
-  font-style: italic;
-}
-
-.purchases-date-div {
-  display: flex;
-}
-
-.purchases-date-p1 {
-  font-weight: 700;
-}
-
-.purchases-date-p2 {
-  margin-left: 5px;
-  color:rgb(138, 138, 138);
-  font-style: italic;
-}
-
-.purchases-price-div {
-  display: flex;
-}
-
-.purchases-price-p1 {
-  font-weight: 700;
-}
-
-.purchases-price-p2 {
-  margin-left: 5px;
-  color:rgb(138, 138, 138);
-  font-style: italic;
+  justify-content: center;
 }
 
 .purchases-rating-div {
-  margin-top: 25px;
-}
-
-.purchases-stars-container {
   display: flex;
+  justify-content: center;
 }
 
-.purchases-classification-text {
-  font-weight: 700;
-}
-
-.purchases-stars-div {
-  margin-left: 25px;
-}
-
-.purchases-stars-div input[type=radio] {
+.purchases-stars-container input[type=radio] {
   display: none;
 }
 
-.purchases-stars-div label i.fa{
+.purchases-stars-container label i.fa{
   font-size: 1.0em
 }
 
-.purchases-stars-div label i.fa:before {
+.purchases-stars-container label i.fa:before {
   content:'\f005';
-  color:rgb(140,205,188);
+  color: rgb(140,205,188);
 }
 
-.purchases-stars-div input[type=radio]:checked ~ label i.fa:before {
+.purchases-stars-container input[type=radio]:checked ~ label i.fa:before {
   color: #CCC;
 }
 
-.purchases-textarea {
-  margin-top: 25px;
+.purchases-information-of-book-price-div {
+  display: flex;
+  justify-content: center;
 }
 
-.purchases-textarea-text {
+.purchases-information-of-book-btn-div {
+  display: flex;
+  justify-content: center;
+}
+
+.purchases-carousel-arrow-div {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: 70px;
-  border: 1px solid rgb(204, 203, 203);
+  height: 100%;
+}
+
+.purchases-carousel-arrow-subdiv1 {
+  width: 50px;
+  height: 100%;
+  display: flex;
+}
+
+.purchases-carousel-arrow-subdiv1-btn {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(221, 221, 221);
   border-radius: 5px;
-  outline: white;
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-control-prev-icon {
+  align-self: center;
+}
+
+.purchases-carousel-arrow-subdiv2 {
+  width: 50px;
+  height: 100%;
+  display: flex;
+}
+
+.purchases-carousel-arrow-subdiv2-btn {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
 }
 
 .purchases-btn-modify-book {
   background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  color: #ffffff;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  color: white;
 }
 
-.purchases-btn-update-book {
-  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  color: #ffffff;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.carousel-control-next-icon {
+  align-self: center;
 }
