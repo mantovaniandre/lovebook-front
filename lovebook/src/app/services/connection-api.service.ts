@@ -38,4 +38,13 @@ export class ConnectionApiService {
     return this.http.get(url)
   }
 
+  getComentarios(Id: any): Observable<any>{
+    let url = 'http://localhost:8080/comments'
+
+    const params = new HttpParams()
+      .set('idDoLivro', Id)
+
+    return this.http.get(url, {params})
+  }
+  
 }

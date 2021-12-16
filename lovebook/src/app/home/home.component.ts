@@ -193,7 +193,6 @@ export class HomeComponent implements OnInit {
     this.cookieService.remove('livro');
     this.cookieService.putObject('livro', livro);
     this.router.navigate(['/saibaMais']);
-    
   }
 
  

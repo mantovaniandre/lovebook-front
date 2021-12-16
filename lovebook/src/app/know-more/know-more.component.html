@@ -161,7 +161,7 @@
                     <div class="yourcomments-informations-container">
                       <div class="col-sm-12 col-md-6 mt-2">
                         <label class="yourcomments-rate-label">Avaliador</label>
-                        <input type="text" class="form-control" placeholder="">
+                        <input disabled type="text" class="form-control" placeholder={{messageUser}}>
                       </div>
                       <div class="col-sm-12 col-md-6 mt-2">
                           <label class="yourcomments-commenttitle-label">Título do Comentário</label>
@@ -207,14 +207,14 @@
       <hr>
 
       <div class="container d-flex" >
-        <div class="container row justify-content-center mb-5">
-          <div class="row">
+        <div class="container row justify-content-center mb-5" >
+          <div class="row" *ngFor="let item of comentarios">
             <div class="row">
               <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
                 <h3>Título</h3>
               </div>
               <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
-                <h3>Título</h3>
+                <h3>{{item.titulo}}</h3>
               </div>
             </div>
             <div class="row">
@@ -222,7 +222,7 @@
                 <h3>Comentário</h3>
               </div>
               <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
-                <h3>Comentário  </h3>
+                <h3>{{item.comentario}}</h3>
               </div>
             </div>
             <div class="row">
@@ -253,83 +253,19 @@
                 <h3>Avaliado por</h3>
               </div>
               <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
-                <h3>André</h3>
+                <h3>{{item.usuario}}</h3>
               </div>
             </div>
-            <div class="row">
+            <div class="row mb-5">
               <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
                 <h3>Data</h3>
               </div>
               <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
-                <h3>20/11/2021</h3>
+                <h3>{{item.data}}</h3>
               </div>
             </div>
           </div>
         </div>
-        <hr>
-      </div>
-
-      <div class="container d-flex" >
-        <div class="container row justify-content-center mb-5">
-          <div class="row">
-            <div class="row">
-              <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
-                <h3>Título</h3>
-              </div>
-              <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
-                <h3>Título</h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
-                <h3>Comentário</h3>
-              </div>
-              <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
-                <h3>Comentário  </h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
-                <h3>Avaliação</h3>
-              </div>
-              <div class="col-10 mt-3 yourcomments-rating-commented-div" style="background-color: rgb(240, 240, 240);">
-                <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-                <div class="yourcomments-stars-commented-container">
-                  <div class="yourcomments-stars-commented-div">
-                    <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                    <label for="cm_star-1"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                    <label for="cm_star-2"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                    <label for="cm_star-3"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                    <label for="cm_star-4"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                    <label for="cm_star-5"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-5" name="fb" value="5"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
-                <h3>Avaliado por</h3>
-              </div>
-              <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
-                <h3>André</h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
-                <h3>Data</h3>
-              </div>
-              <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
-                <h3>20/11/2021</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
       </div>
     </div>
   </div>
