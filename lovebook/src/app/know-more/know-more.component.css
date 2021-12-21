@@ -8,10 +8,6 @@
   margin-bottom: 50px;
 }
 
-.productdetails-div {
-  margin-top: 10px;
-}
-
 .productdetails-title-div {
   border-bottom: 1px solid rgb(204, 203, 203);
   display: flex;
@@ -23,30 +19,6 @@
   font-style: italic;
   color: rgb(140,205,188);
   font-weight: 700;
-}
-
-.productdetails-nameofproduct-div1{
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-}
-
-.productdetails-nameofproduct-subdiv1 {
-  border-right: 3px solid white;
-  display: flex;
-}
-
-.productdetails-nameofproduct-subdiv1-description1 {
-  align-self: center;
-}
-
-.productdetails-nameofproduct-div2 {
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-  display: flex;
-}
-
-.productdetails-nameofproduct-subdiv2-description2 {
-  align-self: center;
 }
 
 .productdetails-btn-modify-book {
@@ -63,183 +35,9 @@
   margin-bottom: 10px;
 }
 
-.productdetails-img-div {
+.productdetails-img-container {
   display: flex;
-  justify-content: center;
-  height: 300px;
-}
-
-.productdetails-img {
-  display: flex;
-  justify-content: center;
-}
-
-.productdetails-publishingcompany-div1{
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-}
-
-.productdetails-publishingcompany-subdiv1 {
-  border-right: 3px solid white;
-  display: flex;
-}
-
-.productdetails-publishingcompany-subdiv1-description1 {
-  align-self: center;
-}
-
-.productdetails-publishingcompany-div2 {
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-  display: flex;
-}
-
-.productdetails-publishingcompany-subdiv2-description2 {
-  align-self: center;
-}
-
-.productdetails-language-div1{
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-}
-
-.productdetails-language-subdiv1 {
-  border-right: 3px solid white;
-  display: flex;
-}
-
-.productdetails-language-subdiv1-description1 {
-  align-self: center;
-}
-
-.productdetails-language-div2 {
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-  display: flex;
-}
-
-.productdetails-language-subdiv2-description2 {
-  align-self: center;
-}
-
-.productdetails-saleprice-div1{
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-}
-
-.productdetails-saleprice-subdiv1 {
-  border-right: 3px solid white;
-  display: flex;
-}
-
-.productdetails-saleprice-subdiv1-description1 {
-  align-self: center;
-}
-
-.productdetails-saleprice-div2 {
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-  display: flex;
-}
-
-.productdetails-saleprice-subdiv2-description2 {
-  align-self: center;
-}
-
-.productdetails-numberofpages-div1{
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-}
-
-.productdetails-numberofpages-subdiv1 {
-  border-right: 3px solid white;
-  display: flex;
-}
-
-.productdetails-numberofpages-subdiv1-description1 {
-  align-self: center;
-}
-
-.productdetails-numberofpages-div2 {
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-  display: flex;
-}
-
-.productdetails-numberofpages-subdiv2-description2 {
-  align-self: center;
-}
-
-.productdetails-authorname-div1{
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-}
-
-.productdetails-authorname-subdiv1 {
-  border-right: 3px solid white;
-  display: flex;
-}
-
-.productdetails-authorname-subdiv1-description1 {
-  align-self: center;
-}
-
-.productdetails-authorname-div2 {
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-  display: flex;
-}
-
-.productdetails-authorname-subdiv2-description2 {
-  align-self: center;
-}
-
-.productdetails-inventory-div1{
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-}
-
-.productdetails-inventory-subdiv1 {
-  border-right: 3px solid white;
-  display: flex;
-}
-
-.productdetails-inventory-subdiv1-description1 {
-  align-self: center;
-}
-
-.productdetails-inventory-div2 {
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-  display: flex;
-}
-
-.productdetails-inventory-subdiv2-description2 {
-  align-self: center;
-}
-
-.productdetails-category-div1{
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-}
-
-.productdetails-category-subdiv1 {
-  border-right: 3px solid white;
-  display: flex;
-}
-
-.productdetails-category-subdiv1-description1 {
-  align-self: center;
-}
-
-.productdetails-category-div2 {
-  background-color: rgb(238, 238, 238);
-  height: 40px;
-  display: flex;
-}
-
-.productdetails-category-subdiv2-description2 {
-  align-self: center;
+  flex-direction: column;
 }
 
 /*Division of field the comments and rate*/
@@ -277,61 +75,6 @@
   border-radius: 5px;
   margin-top: 50px;
   margin-bottom: 50px;
-}
-
-.yourcomments-title-div {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid rgb(204, 203, 203);
-}
-
-.yourcomments-title {
-  font-size: 25px;
-  font-style: italic;
-  color: rgb(140,205,188);
-  font-weight: 700;
-}
-
-.yourcomments-informations-container {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: auto;
-}
-
-.yourcomments-informations-div1 {
-  margin-bottom: 10px;
-}
-
-.yourcomments-rate-label {
-  color:rgb(138, 138, 138);
-}
-
-.yourcomments-commenttitle-label {
-  color:rgb(138, 138, 138);
-}
-
-.yourcomments-comments-label {
-  color:rgb(138, 138, 138);
-}
-
-.yourcomments-select-mounth {
-  color: rgb(140,205,188);
-  margin-right: 20px;
-}
-
-.yourcomments-select-year {
-  color: rgb(140,205,188);
-}
-
-.form-control {
-  box-shadow: 0 0 0 0;
-  border: 1px solid rgb(209, 208, 208);
-  outline: 0;
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(140,205,188) !important;
-  opacity: 1; /* Firefox */
 }
 
 .yourcomments-btn-update-registration {
@@ -388,6 +131,46 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.yourcomments-title-div {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.yourcomments-title {
+  font-size: 25px;
+  font-style: italic;
+  color: rgb(140,205,188);
+  font-weight: 700;
+}
+
+.comments-container {
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(209, 208, 208);
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.comments-stars-appraisal-div input[type=radio] {
+  display: none;
+}
+
+.comments-stars-appraisal-div label i.fa{
+  font-size: 1.2em
+}
+
+.comments-stars-appraisal-div label i.fa:before {
+  content:'\f005';
+  color:rgb(140,205,188);
+}
+
+.comments-stars-appraisal-div input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+} 
 
 
 

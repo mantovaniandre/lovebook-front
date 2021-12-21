@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Comentarios } from '../models/Comentarios';
 
 
 @Injectable({
@@ -45,6 +46,16 @@ export class ConnectionApiService {
       .set('idDoLivro', Id)
 
     return this.http.get(url, {params})
+  }
+
+  postComentarios(comentario: any): Observable<any>{
+    let url = 'http://localhost:8080/comments'
+    return this.http.post(url, comentario);
+  }
+
+  postRegistrar(registrar: any): Observable<any>{
+    let url = 'http://localhost:8080/user'
+    return this.http.post(url, registrar);
   }
   
 }

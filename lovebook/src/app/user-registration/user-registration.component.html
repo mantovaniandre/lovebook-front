@@ -8,47 +8,47 @@
         <div class="row userregistration-informations-div1">
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-name-label">Nome</label>
-            <input type="text" class="form-control" placeholder="Nome">
+            <input type="text" class="form-control" placeholder="Nome" #nome>
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
               <label class="userregistration-lastname-label">Sobrenome</label>
-              <input type="text" class="form-control" placeholder="Sobrenome">
+              <input type="text" class="form-control" placeholder="Sobrenome" #sobrenome>
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-email-label">E-mail</label>
-            <input type="email" class="form-control" placeholder="E-mail">
+            <input type="email" class="form-control" placeholder="E-mail" #emailUsuario>
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-password-label">Senha</label>
-            <input type="password" class="form-control" placeholder="Senha">
+            <input type="password" class="form-control" placeholder="Senha" #senhaUsuario>
           </div>
         </div>
         <div class="row userregistration-informations-div2">
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-zipcode-label">CEP</label>
-            <input type="text" class="form-control" placeholder="CEP">
+            <input type="text" class="form-control" placeholder="CEP" #cepUsuario>
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-address-label">Endereço</label>
-            <input type="text" class="form-control" placeholder="Endereço">
+            <input type="text" class="form-control" placeholder="Endereço" #enderecoUsuario>
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-number-label">Número</label>
-            <input type="text" class="form-control" placeholder="Número">
+            <input type="text" class="form-control" placeholder="Número" #numeroEnderecoUsuario>
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-complement-label">Complemento</label>
-            <input type="text" class="form-control" placeholder="Complemento">
+            <input type="text" class="form-control" placeholder="Complemento" #complementoEnderecoUsuario>
           </div>
         </div>
         <div class="row userregistration-informations-div3">
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-city-label">Cidade</label>
-            <input type="text" class="form-control" placeholder="Cidade">
+            <input type="text" class="form-control" placeholder="Cidade" #cidadeUsuario>
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-state-label">Estado</label>
-            <select class="form-select userregistration-select" aria-label="Default select example">
+            <select class="form-select userregistration-select" aria-label="Default select example" #estadoUsuario>
               <option selected>Estado</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
@@ -82,15 +82,15 @@
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-user-label">Tipo de Usuário</label>
-            <select class="form-select userregistration-select-user" aria-label="Default select example">
+            <select class="form-select userregistration-select-user" aria-label="Default select example" #perfil>
               <option selected>Tipo de Usuário</option>
-              <option value="Ciente">Cliente</option>
+              <option value="Cliente">Cliente</option>
               <option value="Colaborador">Colaborador</option>
             </select>
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-gender-label">Sexo</label>
-            <select class="form-select userregistration-select-gender" aria-label="Default select example">
+            <select class="form-select userregistration-select-gender" aria-label="Default select example" #sexoUsuario>
               <option selected>Sexo</option>
               <option value="Masculino">Masculino</option>
               <option value="Feminino">Feminino</option>
@@ -100,56 +100,57 @@
         <div class="row userregistration-informations-div4">
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="clientpayment-creditcard-label">Número do cartão de crédito</label>
-            <input type="text" class="form-control" placeholder="Número">
+            <input type="text" class="form-control" placeholder="Número" #numeroCartaoCredito>
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
               <label class="userregistration-cardnumber-label">Nome do cartão de crédito</label>
-              <input type="text" class="form-control" placeholder="Nome">
+              <input type="text" class="form-control" placeholder="Nome" #nomeCartaoCredito>
           </div>
           <div class="col-6 col-sm-6 col-md-3 mt-2">
             <div class="row">
               <div class="col">
                 <label class="userregistration-expiriondate-label">Mês de expiração</label>
-                <select class="form-select userregistration-select-mounth" aria-label="Default select example" style="width: 120px;">
+                <select class="form-select userregistration-select-mounth" aria-label="Default select example" style="width: 120px;" #mesExpiracaoCartaoCredito>
                   <option value="1" selected>1</option>
-                  <option value="1">2</option>
-                  <option value="1">3</option>
-                  <option value="1">4</option>
-                  <option value="1">5</option>
-                  <option value="1">6</option>
-                  <option value="1">7</option>
-                  <option value="1">8</option>
-                  <option value="1">9</option>
-                  <option value="1">10</option>
-                  <option value="1">11</option>
-                  <option value="1">12</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
                 </select>
               </div>
               <div class="col">
                 <label class="userregistration-expiriondate-label">Ano de expiração</label>
-                <select class="form-select userregistration-select-year" aria-label="Default select example" style="width: 120px;">
-                  <option value="1" selected>2021</option>
-                  <option value="1">2022</option>
-                  <option value="1">2023</option>
-                  <option value="1">2024</option>
-                  <option value="1">2025</option>
-                  <option value="1">2026</option>
-                  <option value="1">2027</option>
-                  <option value="1">2028</option>
-                  <option value="1">2029</option>
-                  <option value="1">2030</option>
-                  <option value="1">2031</option>
+                <select class="form-select userregistration-select-year" aria-label="Default select example" style="width: 120px;" #anoExpiracaoCartaoCredito>
+                  <option value="2021" selected>2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                  <option value="2031">2031</option>
                 </select>
               </div>
             </div>
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-securitycode-label">Código de segurança CVV</label>
-            <input type="text" class="form-control" placeholder="CVV">
+            <input type="text" class="form-control" placeholder="CVV" #codigoSegurancaCartaoCredito>
           </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button type="submit" class="btn userregistration-btn-update-registration">Cadastrar</button>
+          <button type="submit" class="btn userregistration-btn-update-registration" (click)="registrarUsuario(nome.value, sobrenome.value, emailUsuario.value, senhaUsuario.value, sexoUsuario.value, cepUsuario.value, cidadeUsuario.value, estadoUsuario.value, enderecoUsuario.value, numeroEnderecoUsuario.value, complementoEnderecoUsuario.value, numeroCartaoCredito.value, nomeCartaoCredito.value, mesExpiracaoCartaoCredito.value, anoExpiracaoCartaoCredito.value, codigoSegurancaCartaoCredito.value, perfil.value
+          )">Cadastrar</button>
         </div>
       </form>
     </div>

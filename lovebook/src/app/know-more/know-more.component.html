@@ -1,113 +1,87 @@
-<div>
-  <div class="container productdetails-container">
-    <div class="productdetails-div">
-      <div class="productdetails-title-div">
-        <p class="productdetails-title">Detalhes do Livro</p>
-      </div>
-      <div class="row productdetails-row">
-        <div class="col-3">
-          <div class="productdetails-img-div mt-3" >
-            <div class="productdetails-img">
-              <img src="{{livro.urlDaImagemDoLivro}}">
-            </div>
-          </div>
-          <div class="d-md-flex justify-content-md-center mt-2" style="height: 60px;">
-            <button type="submit" class="btn productdetails-btn-modify-book">Adicionar ao Carrinho</button>
-          </div>
-        </div>
-        <div class="col-9 productdetails-nameofproduct-container-parent">
-          <div class="container row productdetails-nameofproduct-div mt-3">
-            <div class="col-3 row productdetails-nameofproduct-div1" >
-              <div class="row productdetails-nameofproduct-subdiv1">
+<div class="container">
+  <div class="row">
+    <div class="col-3 container productdetails-img" style="margin-top: 50px;">
+      <img src="{{livro.urlDaImagemDoLivro}}" style="width: 100%; border-radius: 5px;">
+    </div>
+    <div class="col-8 container productdetails-container">
+      <div class="productdetails-div">
+        <div class="row container productdetails-nameofproduct-container-parent">
+          <div class="col-12 productdetails-nameofproduct-div mt-4" style="border-top: 1px solid rgb(204, 203, 203);">
+            <div class="productdetails-nameofproduct-subdiv1 d-flex mt-3">
+              <div class="col-6">
                 <p class="productdetails-nameofproduct-subdiv1-description1">Nome do Livro</p>
               </div>
-            </div>
-            <div class="col-9 productdetails-nameofproduct-div2">
-              <div class="row productdetails-nameofproduct-subdiv2">
+              <div class="col-6">
                 <p class="productdetails-nameofproduct-subdiv2-description2">{{livro.nomeDoLivro}}</p>
               </div>
             </div>
           </div>
-          <div class="container row productdetails-publishingcompany-div mt-2">
-            <div class="col-3 row productdetails-publishingcompany-div1" >
-              <div class="row productdetails-publishingcompany-subdiv1">
-                <p class="productdetails-publishingcompany-subdiv1-description1">Edtiora</p>
+          <div class="col-12 productdetails-publishcompany-div" style="border-top: 1px solid rgb(204, 203, 203);">
+            <div class="productdetails-publishcompany-subdiv1 d-flex mt-3">
+              <div class="col-6">
+                <p class="productdetails-publishcompany-subdiv1-description1">Editora</p>
               </div>
-            </div>
-            <div class="col-9 productdetails-publishingcompany-div2">
-              <div class="row productdetails-publishingcompany-subdiv2">
-                <p class="productdetails-publishingcompany-subdiv2-description2">{{livro.editoraDoLivro}}</p>
+              <div class="col-6">
+                <p class="productdetails-publishcompany-subdiv2-description2">{{livro.editoraDoLivro}}</p>
               </div>
             </div>
           </div>
-          <div class="container row productdetails-language-div mt-2">
-            <div class="col-3 row productdetails-language-div1" >
-              <div class="row productdetails-language-subdiv1">
+          <div class="col-12 productdetails-language-div" style="border-top: 1px solid rgb(204, 203, 203);">
+            <div class="productdetails-language-subdiv1 d-flex mt-3">
+              <div class="col-6">
                 <p class="productdetails-language-subdiv1-description1">Idioma</p>
               </div>
-            </div>
-            <div class="col-9 productdetails-language-div2">
-              <div class="row productdetails-language-subdiv2">
+              <div class="col-6">
                 <p class="productdetails-language-subdiv2-description2">{{livro.idiomaDoLivro}}</p>
               </div>
             </div>
           </div>
-          <div class="container row productdetails-saleprice-div mt-2">
-            <div class="col-3 row productdetails-saleprice-div1" >
-              <div class="row productdetails-saleprice-subdiv1">
-                <p class="productdetails-saleprice-subdiv1-description1">Preço de Venda</p>
+          <div class="col-12 productdetails-saleprice-div" style="border-top: 1px solid rgb(204, 203, 203);">
+            <div class="productdetails-saleprice-subdiv1 d-flex mt-3">
+              <div class="col-6">
+                <p class="productdetails-saleprice-subdiv1-description1">Preço de venda</p>
               </div>
-            </div>
-            <div class="col-9 productdetails-saleprice-div2">
-              <div class="row productdetails-saleprice-subdiv2">
-                <p class="productdetails-saleprice-subdiv2-description2">R$ {{livro.precoDeVendaDoLivro}}</p>
+              <div class="col-6">
+                <p class="productdetails-saleprice-subdiv2-description2">{{livro.precoDeVendaDoLivro}}</p>
               </div>
             </div>
           </div>
-          <div class="container row productdetails-numberofpages-div mt-2">
-            <div class="col-3 row productdetails-numberofpages-div1" >
-              <div class="row productdetails-numberofpages-subdiv1">
-                <p class="productdetails-numberofpages-subdiv1-description1">Número de Páginas</p>
+          <div class="col-12 productdetails-numberofpages-div" style="border-top: 1px solid rgb(204, 203, 203);">
+            <div class="productdetails-numberofpages-subdiv1 d-flex mt-3">
+              <div class="col-6">
+                <p class="productdetails-numberofpages-subdiv1-description1">Número de páginas</p>
               </div>
-            </div>
-            <div class="col-9 productdetails-numberofpages-div2">
-              <div class="row productdetails-numberofpages-subdiv2">
+              <div class="col-6">
                 <p class="productdetails-numberofpages-subdiv2-description2">{{livro.numeroDaPaginaDoLivro}}</p>
               </div>
             </div>
           </div>
-          <div class="container row productdetails-authorname-div mt-2">
-            <div class="col-3 row productdetails-authorname-div1" >
-              <div class="row productdetails-authorname-subdiv1">
-                <p class="productdetails-authorname-subdiv1-description1">Nome do Autor</p>
+          <div class="col-12 productdetails-nameofauthor-div" style="border-top: 1px solid rgb(204, 203, 203);">
+            <div class="productdetails-nameofauthor-subdiv1 d-flex mt-3">
+              <div class="col-6">
+                <p class="productdetails-nameofauthor-subdiv1-description1">Nome do autor</p>
               </div>
-            </div>
-            <div class="col-9 productdetails-authorname-div2">
-              <div class="row productdetails-authorname-subdiv2">
-                <p class="productdetails-authorname-subdiv2-description2">{{livro.nomeDoAutor}}</p>
+              <div class="col-6">
+                <p class="productdetails-nameofauthor-subdiv2-description2">{{livro.nomeDoAutor}}</p>
               </div>
             </div>
           </div>
-          <div class="container row productdetails-inventory-div mt-2">
-            <div class="col-3 row productdetails-inventory-div1" >
-              <div class="row productdetails-inventory-subdiv1">
+          <div class="col-12 productdetails-inventory-div" style="border-top: 1px solid rgb(204, 203, 203);">
+            <div class="productdetails-inventory-subdiv1 d-flex mt-3">
+              <div class="col-6">
                 <p class="productdetails-inventory-subdiv1-description1">Estoque</p>
               </div>
-            </div>
-            <div class="col-9 productdetails-inventory-div2">
-              <div class="row productdetails-inventory-subdiv2">
+              <div class="col-6">
                 <p class="productdetails-inventory-subdiv2-description2">{{livro.quantidadeDeLivros}}</p>
               </div>
             </div>
           </div>
-          <div class="container row productdetails-category-div mt-2 mb-3">
-            <div class="col-3 row productdetails-category-div1" >
-              <div class="row productdetails-category-subdiv1">
+          <div class="col-12 productdetails-category-div mb-4" style="border-top: 1px solid rgb(204, 203, 203); border-bottom: 1px solid rgb(204, 203, 203);">
+            <div class="productdetails-category-subdiv1 d-flex mt-3">
+              <div class="col-6">
                 <p class="productdetails-category-subdiv1-description1">Categoria</p>
               </div>
-            </div>
-            <div class="col-9 productdetails-category-div2">
-              <div class="row productdetails-category-subdiv2">
+              <div class="col-6">
                 <p class="productdetails-category-subdiv2-description2">{{livro.categoriaDoLivro}}</p>
               </div>
             </div>
@@ -116,8 +90,7 @@
       </div>
     </div>
   </div>
-
-  <div class="container yourcomments-container">
+  <div class="row container yourcomments-container">
     <div class="yourcomments-div">
       <div class="yourcomments-title-div">
         <p class="yourcomments-title">Avaliações</p>
@@ -161,15 +134,15 @@
                     <div class="yourcomments-informations-container">
                       <div class="col-sm-12 col-md-6 mt-2">
                         <label class="yourcomments-rate-label">Avaliador</label>
-                        <input disabled type="text" class="form-control" placeholder={{messageUser}}>
+                        <input disabled type="text" class="form-control" placeholder={{messageUser}} #inputAvaliador>
                       </div>
                       <div class="col-sm-12 col-md-6 mt-2">
                           <label class="yourcomments-commenttitle-label">Título do Comentário</label>
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" placeholder="" #inputTituloComentario>
                       </div>
                       <div class="col-6 col-sm-6 col-md-6 mt-2">
                         <label class="yourcomments-comments-label">Comentário</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" #inputComentario></textarea>
                       </div>
                       <div class="yourcomments-rating-classify-div mt-2">
                         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -193,7 +166,7 @@
                         </div>
                       </div>
                       <div class="d-grid d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn yourcomments-btn-update-registration">Postar</button>
+                        <button type="submit" class="btn yourcomments-btn-update-registration" (click)="postar(inputTituloComentario.value, inputComentario.value)">Postar</button>
                       </div>
                     </div>
                   </div>
@@ -206,62 +179,72 @@
 
       <hr>
 
-      <div class="container d-flex" >
-        <div class="container row justify-content-center mb-5" >
-          <div class="row" *ngFor="let item of comentarios">
-            <div class="row">
-              <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
-                <h3>Título</h3>
-              </div>
-              <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
-                <h3>{{item.titulo}}</h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
-                <h3>Comentário</h3>
-              </div>
-              <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
-                <h3>{{item.comentario}}</h3>
+      <div class="container comments-container" *ngFor="let item of comentarios">
+        <div class="comments-div" >
+          <div class="row container comments-nameofproduct-container-parent" >
+            <div class="col-12 comments-nameofproduct-div mt-4" style="border-top: 1px solid rgb(204, 203, 203);">
+              <div class="comments-nameofproduct-subdiv1 d-flex mt-3">
+                <div class="col-6">
+                  <p class="comments-nameofproduct-subdiv1-description1">Título do Comentário</p>
+                </div>
+                <div class="col-6">
+                  <p class="comments-nameofproduct-subdiv2-description2">{{item.titulo}}</p>
+                </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
-                <h3>Avaliação</h3>
+            <div class="col-12 comments-publishcompany-div" style="border-top: 1px solid rgb(204, 203, 203);">
+              <div class="comments-publishcompany-subdiv1 d-flex mt-3">
+                <div class="col-6">
+                  <p class="comments-publishcompany-subdiv1-description1">Comentário</p>
+                </div>
+                <div class="col-6">
+                  <p class="comments-publishcompany-subdiv2-description2">{{item.comentario}}</p>
+                </div>
               </div>
-              <div class="col-10 mt-3 yourcomments-rating-commented-div" style="background-color: rgb(240, 240, 240);">
-                <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-                <div class="yourcomments-stars-commented-container">
-                  <div class="yourcomments-stars-commented-div">
-                    <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                    <label for="cm_star-1"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                    <label for="cm_star-2"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                    <label for="cm_star-3"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                    <label for="cm_star-4"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                    <label for="cm_star-5"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-5" name="fb" value="5"/>
+            </div>
+            <div class="col-12 comments-language-div" style="border-top: 1px solid rgb(204, 203, 203);">
+              <div class="comments-language-subdiv1 d-flex mt-3">
+                <div class="col-6">
+                  <p class="comments-language-subdiv1-description1">Avaliação</p>
+                </div>
+                <div class="col-6 comments-rating-appraisal-div">
+                  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                  <div class="comments-stars-appraisal-container">
+                    <div class="comments-stars-appraisal-div">
+                      <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                      <label for="cm_star-1"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                      <label for="cm_star-2"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                      <label for="cm_star-3"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                      <label for="cm_star-4"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                      <label for="cm_star-5"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
-                <h3>Avaliado por</h3>
-              </div>
-              <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
-                <h3>{{item.usuario}}</h3>
+            <div class="col-12 comments-saleprice-div" style="border-top: 1px solid rgb(204, 203, 203);">
+              <div class="comments-saleprice-subdiv1 d-flex mt-3">
+                <div class="col-6">
+                  <p class="comments-saleprice-subdiv1-description1">Avaliado por</p>
+                </div>
+                <div class="col-6">
+                  <p class="comments-saleprice-subdiv2-description2">{{item.usuario}}</p>
+                </div>
               </div>
             </div>
-            <div class="row mb-5">
-              <div class="col-2 mt-3" style="background-color: rgb(240, 240, 240); border-right: 2px solid white;">
-                <h3>Data</h3>
-              </div>
-              <div class="col-10 mt-3" style="background-color: rgb(240, 240, 240);">
-                <h3>{{item.data}}</h3>
+            <div class="col-12 comments-saleprice-div" style="border-top: 1px solid rgb(204, 203, 203);">
+              <div class="comments-saleprice-subdiv1 d-flex mt-3">
+                <div class="col-6">
+                  <p class="productdetails-saleprice-subdiv1-description1">Data da avaliação</p>
+                </div>
+                <div class="col-6">
+                  <p class="productdetails-saleprice-subdiv2-description2">{{item.data}}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -269,5 +252,4 @@
       </div>
     </div>
   </div>
-
 </div>
