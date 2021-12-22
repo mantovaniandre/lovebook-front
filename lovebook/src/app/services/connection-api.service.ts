@@ -12,9 +12,7 @@ export class ConnectionApiService {
   constructor(private http: HttpClient) { }
 
   getBooks(Livro: string, Categoria: string, Autor: string, Editora: string): Observable<any> {
-
     let url = 'http://localhost:8080/book'
-
     const params = new HttpParams()
       .set('nome', Livro)
       .set('categoria', Categoria)
@@ -22,6 +20,11 @@ export class ConnectionApiService {
       .set('editora', Editora)
 
     return this.http.get(url, {params})
+  }
+
+  identificacaoLivro(): Observable<any>{
+    let url = 'http://localhost:8080/book'
+    return this.http.get(url)
   }
 
   login(credentials: any): Observable<any>{
@@ -34,17 +37,20 @@ export class ConnectionApiService {
     return this.http.get(url)
   }
 
-  identificacaoLivro(): Observable<any>{
-    let url = 'http://localhost:8080/book'
-    return this.http.get(url)
+  postRegistrar(registrar: any): Observable<any>{
+    let url = 'http://localhost:8080/user'
+    return this.http.post(url, registrar);
+  }
+
+  putUsuario(atualizarCadastro: any): Observable<any>{
+    let url = 'http://localhost:8080/user'
+    return this.http.put(url, atualizarCadastro);
   }
 
   getComentarios(Id: any): Observable<any>{
     let url = 'http://localhost:8080/comments'
-
     const params = new HttpParams()
       .set('idDoLivro', Id)
-
     return this.http.get(url, {params})
   }
 
@@ -53,9 +59,9 @@ export class ConnectionApiService {
     return this.http.post(url, comentario);
   }
 
-  postRegistrar(registrar: any): Observable<any>{
-    let url = 'http://localhost:8080/user'
-    return this.http.post(url, registrar);
+  pegarComentarios(): Observable<any>{
+    let url = 'http://localhost:8080/comments'
+    return this.http.get(url);
   }
   
 }

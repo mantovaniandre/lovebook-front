@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-3 container productdetails-img" style="margin-top: 50px;">
-      <img src="{{livro.urlDaImagemDoLivro}}" style="width: 100%; border-radius: 5px;">
+      <div class="d-flex justify-content-center">
+        <img src="{{livro.urlDaImagemDoLivro}}" style=" width: 400px; height: 440px; border-radius: 5px;">
+      </div>
     </div>
     <div class="col-8 container productdetails-container">
       <div class="productdetails-div">
@@ -88,6 +90,10 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="d-grid d-md-flex justify-content-md-end">
+      <button type="submit" class="btn yourcomments-btn-update-book" (click)="listaDeLivros(livro)">Adicionar ao carrinho</button>
     </div>
   </div>
   <div class="row container yourcomments-container">

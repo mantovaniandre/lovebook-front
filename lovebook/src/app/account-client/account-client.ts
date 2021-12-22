@@ -20,6 +20,26 @@ export class AccountClientComponent implements OnInit {
   $livros_literatura!: Observable<Array<Livro>>;
   slides_literatura: any = [[]];
 
+  atualizar = {
+    "nome": "",
+    "sobrenome": "",
+    "emailUsuario": "",
+    "senhaUsuario": "",
+    "sexoUsuario": "",
+    "cepUsuario": "",
+    "cidadeUsuario": "",
+    "estadoUsuario": "",
+    "enderecoUsuario": "",
+    "numeroEnderecoUsuario": "",
+    "complementoEnderecoUsuario": "",
+    "numeroCartaoCredito": "",
+    "nomeCartaoCredito": "",
+    "mesExpiracaoCartaoCredito": "",
+    "anoExpiracaoCartaoCredito": "",
+    "codigoSegurancaCartaoCredito": "",
+    "perfil": ""
+  }
+
   constructor(private service: ConnectionApiService, private dataService: DataService, private connectionApiService: ConnectionApiService,
     private router: Router) {
     this.data = new Array<any>();
@@ -38,6 +58,7 @@ export class AccountClientComponent implements OnInit {
       this.data_literatura = data;
       this.slides_literatura = this.chunk(this.data_literatura, 5);
     })
+
   }
 
   chunk(arr: string | any[], chunkSize: number) {
@@ -48,4 +69,30 @@ export class AccountClientComponent implements OnInit {
     return R;
   }
 
+  atualizarUsuario(nome: string, sobrenome: string, email: string, senha: string, cep: string, endereco: string, numero: string, complemento: string, cidade: string, estado: string, perfil: string, sexo: string, numeroCartaoCredito: string, nomeCartaoCredito: string, mesExpiracaoCartaoCredito: string, anoExpiracaoCartaoCredito: string, codigoSegurancaCartaoCredito: string){
+    event?.preventDefault();
+    this.atualizar.nome = nome;
+    this.atualizar.sobrenome = sobrenome;
+    this.atualizar.emailUsuario = email;
+    this.atualizar.senhaUsuario = senha;
+    this.atualizar.sexoUsuario = sexo;
+    this.atualizar.cepUsuario = cep;
+    this.atualizar.cidadeUsuario = cidade;
+    this.atualizar.estadoUsuario = estado;
+    this.atualizar.enderecoUsuario = endereco;
+    this.atualizar.numeroEnderecoUsuario = numero;
+    this.atualizar.complementoEnderecoUsuario = complemento;
+    this.atualizar.numeroCartaoCredito = numeroCartaoCredito;
+    this.atualizar.nomeCartaoCredito = nomeCartaoCredito;
+    this.atualizar.mesExpiracaoCartaoCredito = mesExpiracaoCartaoCredito;
+    this.atualizar.anoExpiracaoCartaoCredito = anoExpiracaoCartaoCredito;
+    this.atualizar.codigoSegurancaCartaoCredito =codigoSegurancaCartaoCredito;
+    this.atualizar.perfil = perfil;
+    console.log(this.atualizar);
+
+    this.service.putUsuario(this.atualizar).subscribe( data => {
+      console.log(data);
+      this.router.navigate(['/home']);
+    })
+  }
 }

@@ -37,10 +37,6 @@
   height: auto;
 }
 
-.clientregistrationupdate-informations-div1 {
-  margin-bottom: 10px;
-}
-
 .clientregistrationupdate-name-label {
   color:rgb(138, 138, 138);
 }
@@ -75,10 +71,6 @@
 
 .clientregistrationupdate-complement-label {
   color:rgb(138, 138, 138);
-}
-
-.clientregistrationupdate-informations-div3 {
-  margin-top: 10px;
 }
 
 .clientregistrationupdate-select {
@@ -148,12 +140,6 @@
   font-style: italic;
   color: rgb(140,205,188);
   font-weight: 700;
-}
-
-.clientpayment-informations-container {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: auto;
 }
 
 .clientpayment-informations-div1 {
