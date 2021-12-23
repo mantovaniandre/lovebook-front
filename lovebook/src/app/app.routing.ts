@@ -11,6 +11,9 @@ import { ShoppingCartComponent } from "./shopping-cart/shopping-cart.component";
 import { EditBookComponent } from "./edit-book/edit-book.component";
 import { KnowMoreComponent } from "./know-more/know-more.component";
 import { AuthGuardServiceService } from "./Guards/AuthGuardService.service";
+import { MyCommentsComponent } from "./my-comments/my-comments.component";
+import { MyShoppingComponent } from "./my-shopping/my-shopping.component";
+import { EditCommentComponent } from "./edit-comment/edit-comment.component";
 
 
 const routes: Routes = [
@@ -55,6 +58,21 @@ const routes: Routes = [
   {
     path:'saibaMais',
     component: KnowMoreComponent,
+    canActivate: [AuthGuardServiceService]
+  },
+  {
+    path:'meusComentarios',
+    component: MyCommentsComponent,
+    canActivate: [AuthGuardServiceService]
+  },
+  {
+    path:'minhasCompras',
+    component: MyShoppingComponent,
+    canActivate: [AuthGuardServiceService]
+  },
+  {
+    path:'editarComentario',
+    component: EditCommentComponent,
     canActivate: [AuthGuardServiceService]
   }
 ];

@@ -1,0 +1,174 @@
+/*Division of field shopping cart*/
+
+.shoppingcart-container-div {
+    height: auto;
+    background-color: white;
+    border: 1px solid rgb(209, 208, 208);
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .shoppingcart-div {
+    margin-top: 10px;
+  }
+  
+  .shoppingcart-title-container {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgb(204, 203, 203);
+  }
+  
+  .shoppingcart-title-div {
+    border-bottom: 1px solid rgb(204, 203, 203);
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .shoppingcart-title {
+    font-size: 25px;
+    font-style: italic;
+    color: rgb(140,205,188);
+    font-weight: 700;
+  }
+  
+  .shoppingcart-img-div {
+    height: 250px;
+    border: 1px solid rgb(204, 203, 203);
+    border-radius: 5px;
+  }
+  
+  .shoppingcart-img .img {
+    width: 150px;
+    height: 200px;
+  }
+  
+  .shoppingcart-informations-of-book-container {
+    border: 1px solid rgb(204, 203, 203);
+    border-radius: 5px;
+  }
+  
+  .shoppingcart-informations-of-book-div {
+    width: 100%;
+    height: auto;
+  }
+  
+  .shoppingcart-title-book-div {
+    display: flex;
+    font-size: 20px;
+    color: rgb(140,205,188);
+    font-weight: 700;
+  }
+  
+  .shoppingcart-author-div {
+    display: flex;
+  }
+  
+  .shoppingcart-author-p1 {
+    font-weight: 700;
+  }
+  
+  .shoppingcart-author-p2 {
+    margin-left: 5px;
+    color:rgb(138, 138, 138);
+  
+  }
+  
+  .shoppingcart-publishingcompany-div {
+    display: flex;
+  }
+  
+  .shoppingcart-publishingcompany-p1 {
+    font-weight: 700;
+  }
+  
+  .shoppingcart-publishingcompany-p2 {
+    margin-left: 5px;
+    color:rgb(138, 138, 138);
+  }
+  
+  .shoppingcart-date-div {
+    display: flex;
+  }
+  
+  .shoppingcart-date-p1 {
+    font-weight: 700;
+  }
+  
+  .shoppingcart-date-p2 {
+    margin-left: 5px;
+    color:rgb(138, 138, 138);
+  }
+  
+  .shoppingcart-price-div {
+    display: flex;
+  }
+  
+  .shoppingcart-price-p1 {
+    font-weight: 700;
+  }
+  
+  .shoppingcart-price-p2 {
+    margin-left: 5px;
+    color:rgb(138, 138, 138);
+  }
+  
+  .shoppingcart-rating-div {
+    margin-top: 25px;
+  }
+  
+  .shoppingcart-classification-text {
+    font-weight: 700;
+  }
+  
+  .shoppingcart-textarea {
+    margin-top: 25px;
+  }
+  
+  .shoppingcart-textarea-text {
+    width: 100%;
+    height: 70px;
+    border: 1px solid rgb(204, 203, 203);
+    border-radius: 5px;
+    outline: white;
+  }
+  
+  .shoppingcart-btn-modify-book {
+    background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .shoppingcart-btn-update-book {
+    background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(140,205,188) !important;
+    opacity: 1; /* Firefox */
+  }
+  
+  .shoppingcart-delete {
+    color: rgb(140,205,188)
+  }
+  
+  .yourcomments-classify-stars-div input[type=radio] {
+    display: none;
+  }
+  
+  .yourcomments-classify-stars-div label i.fa{
+    font-size: 1.0em
+  }
+  
+  .yourcomments-classify-stars-div label i.fa:before {
+    content:'\f005';
+    color:rgb(140,205,188);
+  }
+  
+  .yourcomments-classify-stars-div input[type=radio]:checked ~ label i.fa:before {
+    color: #CCC;
+  } 

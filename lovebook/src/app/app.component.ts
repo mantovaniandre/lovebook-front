@@ -42,6 +42,12 @@ export class AppComponent {
     this.router.navigate(['/' + destination]);
   }
 
+  logout(){
+    localStorage.removeItem('token')
+    this.data.changeUser("")
+    this.router.navigate(['/login']);
+  }
+
 
 }
 

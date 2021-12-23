@@ -1,0 +1,71 @@
+<div class="container shoppingcart-container-div" >
+  <div class="container shoppingcart-div">
+    <div class="container shoppingcart-subdiv">
+      <div class="shoppingcart-title-div">
+        <p class="shoppingcart-title">Meus Comentários</p>
+      </div>
+      <div class="container shoppingcart-informations-div mt-5 mb-5" *ngFor="let item of comentarios" >
+        <div class="shoppingcart-informations-of-book-container">
+          <div class="row shoppingcart-informations-of-book-div mt-4 mb-4">
+            <div class="col-12 col-sm-12 col-md-4 d-flex align-self-center justify-content-center mb-3">
+              <div class="shoppingcart-img">
+                <img class="img" src="{{item.livro.urlDaImagemDoLivro}}">
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 shoppingcart-author-publishingcompany-date-div">
+              <div style="margin: 10px;">
+                <div class="col shoppingcart-title-book-div">
+                    <p class="shoppingcart-title-book-p">{{item.livro.nomeDoLivro}}</p>
+                </div>
+                <div class="col shoppingcart-author-div" style="border-top: 1px solid rgb(204, 203, 203)">
+                  <p class="shoppingcart-author-p1 mt-2">Autor:</p>
+                  <p class="shoppingcart-author-p2 mt-2">{{item.livro.nomeDoAutor}}</p>
+                </div>
+                <div class="col shoppingcart-price-div" style="border-top: 1px solid rgb(204, 203, 203);">
+                  <p class="shoppingcart-price-p1 mt-2">Data:</p>
+                  <p class="shoppingcart-price-p2 mt-2">{{item.data}}</p>
+                </div>
+                <div class="yourcomments-rating-classify-div" style="border-top: 1px solid rgb(204, 203, 203);">
+                  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                  <div class="d-flex yourcomments-stars-classify-container">
+                    <div class="yourcomments-classify-text mt-2" style="margin-right: 5px;">
+                      <p style="font-weight: 700;">Classificar:</p>
+                    </div>
+                    <div class="yourcomments-classify-stars-div mt-2">
+                      <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+                      <label for="cm_star-1"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-1" name="fb" value="1"/>
+                      <label for="cm_star-2"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-2" name="fb" value="2"/>
+                      <label for="cm_star-3"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-3" name="fb" value="3"/>
+                      <label for="cm_star-4"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-4" name="fb" value="4"/>
+                      <label for="cm_star-5"><i class="fa"></i></label>
+                      <input type="radio" id="cm_star-5" name="fb" value="5"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="col shoppingcart-price-div" style="border-top: 1px solid rgb(204, 203, 203);">
+                    <p class="shoppingcart-price-p1 mt-2">Título:</p>
+                    <p class="shoppingcart-price-p2 mt-2">{{item.titulo}}</p>
+                </div>
+                <div class="col shoppingcart-price-div" style="border-top: 1px solid rgb(204, 203, 203);">
+                    <p class="shoppingcart-price-p1 mt-2">Comentário:</p>
+                    <p class="shoppingcart-price-p2 mt-2">{{item.comentario}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3" style="margin-left: 20px;">
+          <div class="d-flex justify-content-end">
+            <a class="shoppingcart-delete" style="margin-right: 15px;text-decoration: none; cursor: pointer;">Excluir</a>
+            <a class="shoppingcart-delete" style="text-decoration: none; cursor: pointer;" (click)="go('editarComentario')">Editar</a>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+

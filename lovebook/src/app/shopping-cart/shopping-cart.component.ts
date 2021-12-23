@@ -17,10 +17,14 @@ export class ShoppingCartComponent implements OnInit {
   listaLivros!: any;
   filtroSelecionado!: string;
   precoFinal!: any;
+  valorTotal = 0;
+  $compra!: Observable<any>
+  compra!: any;
+  showModalSuccess!: boolean;
+  showModalFailure!: boolean;
   
 
-    constructor(private service: ConnectionApiService, 
-                private connectionApiService: ConnectionApiService,
+    constructor(private connectionApiService: ConnectionApiService,
                 private router: Router,
                 private cookieService: CookieService,
                 ) {
@@ -34,15 +38,74 @@ export class ShoppingCartComponent implements OnInit {
     console.log(this.usuario)
     })
     this.listaLivros = this.cookieService.getObject('carrinho');
+    
+    this.popularValorTotal()
   }
 
   calcular(event: any, item: any){
+    let soma = 0;
     for(let i = 0; i<this.listaLivros.length; i++){
       if(this.listaLivros[i].id == item.id){
         this.listaLivros[i].quantidadeSelecionada = event.target.value;
-        break;
+      }
+      soma += this.listaLivros[i].precoDeVendaDoLivro * this.listaLivros[i].quantidadeSelecionada;
+    }
+    this.valorTotal = soma;
+  }
+
+  popularValorTotal(){
+    let soma = 0;
+    for(let i = 0; i<this.listaLivros.length; i++){
+      soma += this.listaLivros[i].precoDeVendaDoLivro * this.listaLivros[i].quantidadeSelecionada;
+    }
+    this.valorTotal = soma;
+  }
+
+  remover(id: any){
+    this.listaLivros.forEach((element: any,index: any)=>{
+      if(element.id == id) this.listaLivros.splice(index,1);
+    });
+
+    this.cookieService.remove('carrinho');
+    this.cookieService.putObject('carrinho', this.listaLivros);
+
+    this.popularValorTotal()
+
+  }
+
+
+  comprar(event: any){
+    let listaLivrosId = [];
+    for(let i = 0; i < this.listaLivros.length; i++){
+      if(this.listaLivros[i].quantidadeSelecionada > 1){
+        for(let j = 0; j < this.listaLivros[i].quantidadeSelecionada; j++){
+          listaLivrosId.push(this.listaLivros[i].id)
+        }
+      } else {
+        listaLivrosId.push(this.listaLivros[i].id)
       }
     }
+    let listaDeLivrosId = {
+      "listaIds": listaLivrosId
+    }
+
+    this.$compra = this.connectionApiService.postPurchase(listaDeLivrosId);
+    this.$compra.subscribe( data => {
+      this.cookieService.remove('carrinho')
+      this.listaLivros = [];
+      this.showModalSuccess = true;
+      
+      window.scroll(0,0);
+
+    }, 
+    error => {
+      this.showModalFailure = true;
+      window.scroll(0,0);
+    }
+    )
+
+
   }
+
 
 }

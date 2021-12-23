@@ -2,7 +2,7 @@
 <div class="container client-account-container">
   <div class="container clientregistrationupdate-container mb-5">
     <div class="container clientregistrationupdate-div">
-      <div class="clientregistrationupdate-div">
+      <div class="clientregistrationupdate-div mb-5">
         <div class="clientregistrationupdate-title-div">
           <p class="clientregistrationupdate-title">Atualização Cadastral</p>
         </div>
@@ -100,216 +100,75 @@
                 </select>
               </div>
             </div>
-            <div class="row clientregistrationupdate-informations-div4 mt-3">
-              <div class="col-12 col-md-3">
-                <label class="clientpayment-creditcard-label">Número do cartão de crédito</label>
-                <input type="text" class="form-control" placeholder="{{usuario.numeroCartaoCredito}}" #numeroCartaoCredito>
-              </div>
-              <div class="col-12 col-md-3">
-                  <label class="clientpayment-cardnumber-label">Nome do cartão de crédito</label>
-                  <input type="text" class="form-control" placeholder="{{usuario.nomeCartaoCredito}}" #nomeCartaoCredito>
-              </div>
-              <div class="col-12 col-md-3">
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md-6">
-                    <label class="clientpayment-expiriondate-label">Mês de expiração</label>
-                    <select class="form-select clientpayment-select-mounth" aria-label="Default select example" #mesExpiracaoCartaoCredito>
-                      <option value="1" selected>{{usuario.mesExpiracaoCartaoCredito}}</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                    </select>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-6">
-                    <label class="clientpayment-expiriondate-label">Ano de expiração</label>
-                    <select class="form-select clientpayment-select-year" aria-label="Default select example" #anoExpiracaoCartaoCredito>
-                      <option value="1" selected>{{usuario.anoExpiracaoCartaoCredito}}</option>
-                      <option value="2022">2022</option>
-                      <option value="2023">2023</option>
-                      <option value="2024">2024</option>
-                      <option value="2025">2025</option>
-                      <option value="2026">2026</option>
-                      <option value="2027">2027</option>
-                      <option value="2028">2028</option>
-                      <option value="2029">2029</option>
-                      <option value="2030">2030</option>
-                      <option value="2031">2031</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-3">
-                <label class="clientpayment-securitycode-label">Código de segurança CVV</label>
-                <input type="text" class="form-control" placeholder="{{usuario.codigoSegurancaCartaoCredito}}" #codigoSegurancaCartaoCredito>
-              </div>
-            </div>
-            <div class="d-grid d-md-flex justify-content-md-end mt-3">
-              <button type="submit" class="btn clientregistrationupdate-btn-update-registration" (click)="atualizarUsuario(nome.value, sobrenome.value, email.value, senha.value, cep.value, endereco.value, numero.value, complemento.value, cidade.value, estado.value, perfil.value, sexo.value, numeroCartaoCredito.value, nomeCartaoCredito.value, mesExpiracaoCartaoCredito.value, anoExpiracaoCartaoCredito.value, codigoSegurancaCartaoCredito.value)">Atualizar</button>
-            </div>
           </form>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container yourcomments-container">
-    <div class="yourcomments-div">
-      <div class="yourcomments-title-div">
-        <p class="yourcomments-title">Meus Comentários & Avaliações</p>
-      </div>
-      <div class="container yourcomments-informations-container mt-3">
-        <div class="row yourcomments-informations-div">
-          <div class="col-sm-12 col-md-6 yourcomments-img-div">
-            <div class="yourcomments-img">
-              <img src="https://images-na.ssl-images-amazon.com/images/I/41GeyYROqTL._SY344_BO1,204,203,200_QL70_ML2_.jpg">
+  <div class="container clientregistrationupdate-container">
+    <div class="container clientregistrationupdate-div">
+      <div class="clientregistrationupdate-div mb-4">
+        <div class="clientregistrationupdate-title-div">
+          <p class="clientregistrationupdate-title">Atualização de Pagamento</p>
+        </div>
+        <div class="row clientregistrationupdate-informations-div4 mt-3">
+          <div class="col-12 col-md-6" style="margin-bottom: 20px;">
+            <label class="clientpayment-creditcard-label">Número do cartão de crédito</label>
+            <input type="text" class="form-control" placeholder="{{usuario.numeroCartaoCredito}}" #numeroCartaoCredito>
+          </div>
+          <div class="col-12 col-md-6" style="margin-bottom: 20px;">
+              <label class="clientpayment-cardnumber-label">Nome do cartão de crédito</label>
+              <input type="text" class="form-control" placeholder="{{usuario.nomeCartaoCredito}}" #nomeCartaoCredito>
+          </div>
+          <div class="col-12 col-md-6" style="margin-bottom: 20px;">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-6">
+                <label class="clientpayment-expiriondate-label">Mês de expiração</label>
+                <select class="form-select clientpayment-select-mounth" aria-label="Default select example" #mesExpiracaoCartaoCredito>
+                  <option value="1" selected>{{usuario.mesExpiracaoCartaoCredito}}</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6">
+                <label class="clientpayment-expiriondate-label">Ano de expiração</label>
+                <select class="form-select clientpayment-select-year" aria-label="Default select example" #anoExpiracaoCartaoCredito>
+                  <option value="1" selected>{{usuario.anoExpiracaoCartaoCredito}}</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                  <option value="2031">2031</option>
+                </select>
+              </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 yourcomments-informations-of-book-container">
-            <div class="container yourcomments-informations-of-book-div">
-              <div class="yourcomments-title-book-div">
-                <p class="yourcomments-title-book-p">Dom Casmurro</p>
-              </div>
-              <div class="yourcomments-author-publishingcompany-date-div">
-                <div class="row">
-                  <div class="col-sm-12 col-md-6 yourcomments-author-div">
-                    <p class="yourcomments-author-p1">Autor:</p>
-                    <p class="yourcomments-author-p2">Machado de Assis</p>
-                  </div>
-                  <div class="col-sm-12 col-md-6 yourcomments-publishingcompany-div">
-                    <p class="yourcomments-publishingcompany-p1">Editora:</p>
-                    <p class="yourcomments-publishingcompany-p2">Principis</p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12 col-md-6 yourcomments-date-div">
-                    <p class="yourcomments-date-p1">Data:</p>
-                    <p class="yourcomments-date-p2">20/11/2021</p>
-                  </div>
-                  <div class="col-sm-12 col-md-6 yourcomments-price-div">
-                    <p class="yourcomments-price-p1">Preço:</p>
-                    <p class="yourcomments-price-p2">R$20,00</p>
-                  </div>
-                </div>
-              </div>
-              <div class="yourcomments-rating-div">
-                <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-                <div class="yourcomments-stars-container">
-                  <div class="yourcomments-classification-text">
-                    <p>Classificação:</p>
-                  </div>
-                  <div class="yourcomments-stars-div">
-                    <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                    <label for="cm_star-1"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                    <label for="cm_star-2"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                    <label for="cm_star-3"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                    <label for="cm_star-4"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                    <label for="cm_star-5"><i class="fa"></i></label>
-                    <input type="radio" id="cm_star-5" name="fb" value="5"/>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Título:">
-              </div>
-              <div>
-                <div class="yourcomments-textarea">
-                  <textarea class="yourcomments-textarea-text" placeholder="Comentário:"></textarea>
-                </div>
-              </div>
-              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="submit" class="btn yourcomments-btn-update-book">Atualizar</button>
-                <button type="submit" class="btn yourcomments-btn-update-book">Deletar</button>
-              </div>
-            </div>
+          <div class="col-12 col-md-6">
+            <label class="clientpayment-securitycode-label">Código de segurança CVV</label>
+            <input type="text" class="form-control" placeholder="{{usuario.codigoSegurancaCartaoCredito}}" #codigoSegurancaCartaoCredito>
           </div>
         </div>
       </div>
-      <mat-paginator [length]="100"
-                [pageSize]="10"
-                [pageSizeOptions]="[5, 10, 25, 100]"
-                aria-label="Select page">
-      </mat-paginator>
     </div>
-
   </div>
-  
-  <div class="container purchases-container">
-    <div class="purchases-div">
-      <div class="purchases-title-div">
-        <h2 class="purchases-title">Minhas Compras</h2>
-      </div>
-      <div class="row purchases-information-of-book-container mt-3">
-        <div class="purchases-information-of-book-div" *ngIf ="$livros_literatura | async as content; else loading">
-          <div class="carousel purchases-information-of-book-carousel carousel-dark slide" id="carouselbooksearchliteratura" data-bs-ride="carousel">
-            <div class="carousel-item purchases-information-of-book-carousel-item" *ngFor="let listaLivro of slides_literatura; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
-              <div class="purchases-information-of-book-carousel-item-container">
-                <div class="purchases-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro" >
-                  <div class="purchases-information-of-book-carousel-item-subdiv">
-                    <div class="purchases-information-of-book-img-div">
-                      <img src={{livro.urlDaImagemDoLivro}} class="purchases-information-of-book-img" alt="...">
-                    </div>
-                    <div class="purchases-information-of-book-title-div">
-                      <h6 class="purchases-information-of-book-title-text">{{livro.nomeDoLivro}}</h6>
-                    </div>
-                    <div class="purchases-information-of-book-author-div">
-                      <p class="purchases-information-of-book-author-text">{{livro.nomeDoAutor}}</p>
-                    </div>
-                    <div class="purchases-rating-div">
-                      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-                      <div class="purchases-stars-container">
-                        <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                        <label for="cm_star-1"><i class="fa"></i></label>
-                        <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                        <label for="cm_star-2"><i class="fa"></i></label>
-                        <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                        <label for="cm_star-3"><i class="fa"></i></label>
-                        <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                        <label for="cm_star-4"><i class="fa"></i></label>
-                        <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                        <label for="cm_star-5"><i class="fa"></i></label>
-                        <input type="radio" id="cm_star-5" name="fb" value="5"/>
-                      </div>
-                    </div>
-                    <div class="purchases-information-of-book-price-div mt-2">
-                      <p class="purchases-information-of-book-price-text">R${{livro.precoDeVendaDoLivro}}</p>
-                    </div>
-                    <div class="purchases-information-of-book-price-div">
-                      <p class="purchases-information-of-book-price-text">15/12/2021</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="purchases-carousel-arrow-div">
-              <div class="purchases-carousel-arrow-subdiv1">
-                <button class="purchases-carousel-arrow-subdiv1-btn" type="button" data-bs-target="#carouselbooksearchliteratura" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-              </div>
-              <div class="purchases-carousel-arrow-subdiv2">
-                <button class="purchases-carousel-arrow-subdiv2-btn" type="button" data-bs-target="#carouselbooksearchliteratura" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+  <div class="d-grid d-md-flex justify-content-md-end" style="margin-top: 20px; margin-bottom: 50px;">
+    <button type="submit" class="btn clientregistrationupdate-btn-update-registration" (click)="atualizarUsuario(nome.value, sobrenome.value, email.value, senha.value, cep.value, endereco.value, numero.value, complemento.value, cidade.value, estado.value, perfil.value, sexo.value, numeroCartaoCredito.value, nomeCartaoCredito.value, mesExpiracaoCartaoCredito.value, anoExpiracaoCartaoCredito.value, codigoSegurancaCartaoCredito.value)">Atualizar</button>
   </div>
 
   <ng-template #loading>

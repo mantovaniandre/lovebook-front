@@ -59,9 +59,10 @@ export class ConnectionApiService {
     return this.http.post(url, comentario);
   }
 
-  pegarComentarios(): Observable<any>{
-    let url = 'http://localhost:8080/comments'
-    return this.http.get(url);
+  postPurchase(listaLivros: any): Observable<any>{
+    let url = 'http://localhost:8080/purchase'
+    console.log(listaLivros)
+    return this.http.post(url, listaLivros);
   }
   
 }

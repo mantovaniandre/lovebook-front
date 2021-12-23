@@ -163,7 +163,28 @@
   width: 100%;
   cursor: pointer;
   color: black;
+}
+
+.navbar-description-account-dropdownmenu-mycomments {
+  padding: 5px;
+  cursor: pointer;
+  color: black;
   border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.navbar-description-account-dropdownmenu-mycomments:hover {
+  color: rgb(140,205,188);
+}
+
+.navbar-description-account-dropdownmenu-myshopping {
+  padding: 5px;
+  cursor: pointer;
+  color: black;
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.navbar-description-account-dropdownmenu-myshopping:hover {
+  color: rgb(140,205,188);
 }
 
 .navbar-description-account-dropdownmenu-logout:hover {

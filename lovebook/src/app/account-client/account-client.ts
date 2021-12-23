@@ -40,13 +40,13 @@ export class AccountClientComponent implements OnInit {
     "perfil": ""
   }
 
-  constructor(private service: ConnectionApiService, private dataService: DataService, private connectionApiService: ConnectionApiService,
-    private router: Router) {
+  constructor(private service: ConnectionApiService, private dataService: DataService,
+              private router: Router) {
     this.data = new Array<any>();
 }
 
   ngOnInit() {
-    this.$usuario = this.connectionApiService.identificacaoUsuario();
+    this.$usuario = this.service.identificacaoUsuario();
     this.$usuario.subscribe(data => {
       this.usuario = data;
     console.log(this.usuario)

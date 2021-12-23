@@ -1,5 +1,13 @@
 <div class="container shoppingcart-container">
+  <div class="container alert alert-success alert-dismissible fade show mt-5" role="alert" *ngIf="showModalSuccess">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
 
+  <div class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" *ngIf="showModalFailure">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
   <div class="container shoppingcart-container-div" >
     <div class="container shoppingcart-div">
       <div class="container shoppingcart-subdiv">
@@ -7,68 +15,69 @@
           <p class="shoppingcart-title">Carrinho de compra</p>
         </div>
         <div class="row shoppingcart-informations-div mt-3" *ngFor="let item of listaLivros">
-            <div class="col-6 col-sm-6 col-md-3 shoppingcart-img-div">
-              <div style="width: 100%;">
-                <div class="shoppingcart-img">
-                  <img class="img" src={{item.urlDaImagemDoLivro}}>
-                </div>
+          <div class="col-6 col-sm-6 col-md-3 shoppingcart-img-div">
+            <div style="width: 100%;">
+              <div class="shoppingcart-img">
+                <img class="img" src={{item.urlDaImagemDoLivro}}>
               </div>
             </div>
-            <div class="col-6 col-sm-6 col-md-3 shoppingcart-informations-of-book-container">
-              <div class="container shoppingcart-informations-of-book-div">
-                <div class="align-self-center shoppingcart-title-book-div">
-                  <p class="shoppingcart-title-book-p">{{item.nomeDoLivro}}</p>
-                </div>
-                <div class="align-self-center shoppingcart-author-publishingcompany-date-div">
-                  <div class="col shoppingcart-author-div">
-                    <p class="shoppingcart-author-p1">Autor:</p>
-                    <p class="shoppingcart-author-p2">{{item.nomeDoAutor}}</p>
-                  </div>
-                  <div class="col shoppingcart-price-div">
-                    <p class="shoppingcart-price-p1">Preço:</p>
-                    <p class="shoppingcart-price-p2">R$ {{item.precoDeVendaDoLivro}}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 col-md-3 shoppingcart-img-div" >
-              <div class="d-flex justify-content-center" style="height: 100%; width: 100%;">
-                <div class="align-self-center">
-                  <select (change)="calcular($event, item)" class="form-select">
-                    <option value="1" selected>1</option>
-                    <option value="2">2</option>
-                    <option value="3">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                  </select>
-                  <div class="col-sm-12 col-md-6 shoppingcart-inventory-div">
-                    <p class="shoppingcart-inventory-p1">{{item.quantidadeDeLivros}}</p>
-                    <p class="shoppingcart-inventory-p2"> disponíveis</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 col-md-3 shoppingcart-img-div">
-              <div class="d-flex justify-content-center" style="height: 100%; width: 100%;">
-                <div class="align-self-center shoppingcart-img">
-                  <h2>R$ {{item.quantidadeSelecionada * item.precoDeVendaDoLivro}}</h2>
-                </div>
-              </div>
           </div>
-        </div>
-        <div class="row mt-3">
-          <div class="d-flex justify-content-end">
-            <p class="shoppingcart-delete">Excluir</p>
+          <div class="col-6 col-sm-6 col-md-3 shoppingcart-informations-of-book-container">
+            <div class="container shoppingcart-informations-of-book-div">
+              <div class="align-self-center shoppingcart-title-book-div">
+                <p class="shoppingcart-title-book-p">{{item.nomeDoLivro}}</p>
+              </div>
+              <div class="align-self-center shoppingcart-author-publishingcompany-date-div">
+                <div class="col shoppingcart-author-div">
+                  <p class="shoppingcart-author-p1">Autor:</p>
+                  <p class="shoppingcart-author-p2">{{item.nomeDoAutor}}</p>
+                </div>
+                <div class="col shoppingcart-price-div">
+                  <p class="shoppingcart-price-p1">Preço:</p>
+                  <p class="shoppingcart-price-p2">R$ {{item.precoDeVendaDoLivro}}</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+          <div class="col-6 col-sm-6 col-md-3 shoppingcart-img-div" >
+            <div class="d-flex justify-content-center" style="height: 100%; width: 100%;">
+              <div class="align-self-center">
+                <select (change)="calcular($event, item)" class="form-select">
+                  <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <div class="col-sm-12 col-md-6 shoppingcart-inventory-div">
+                  <p class="shoppingcart-inventory-p1">{{item.quantidadeDeLivros}}</p>
+                  <p class="shoppingcart-inventory-p2"> disponíveis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-3 shoppingcart-img-div">
+            <div class="d-flex justify-content-center" style="height: 100%; width: 100%;">
+              <div class="align-self-center shoppingcart-img">
+                <h2>R$ {{item.quantidadeSelecionada * item.precoDeVendaDoLivro}}</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3" style="margin-left: 20px;">
+            <div class="d-flex justify-content-end">
+              <p (click)=remover(item.id) class="shoppingcart-delete" style="cursor: pointer;">Remover</p>
+            </div>
+          </div>
+        </div> 
         <div class="row">
           <div class="d-flex justify-content-end">
             <h2>Subtotal: R$</h2>
-            <h2>20,00</h2>
+             <h2>{{valorTotal}}</h2>
           </div>
         </div>
       </div>
@@ -180,30 +189,30 @@
                     <div class="d-flex">
                       <select disabled class="form-select shoppingcartpayment-select-mounth" aria-label="Default select example" style="width: 80px;">
                         <option value="1" selected>{{usuario.mesExpiracaoCartaoCredito}}</option>
-                        <option value="1">2</option>
-                        <option value="1">3</option>
-                        <option value="1">4</option>
-                        <option value="1">5</option>
-                        <option value="1">6</option>
-                        <option value="1">7</option>
-                        <option value="1">8</option>
-                        <option value="1">9</option>
-                        <option value="1">10</option>
-                        <option value="1">11</option>
-                        <option value="1">12</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
                       </select>
                       <select disabled class="form-select shoppingcartpayment-select-year" aria-label="Default select example" style="width: 100px;">
-                        <option value="1" selected>{{usuario.anoExpiracaoCartaoCredito}}</option>
-                        <option value="1">2022</option>
-                        <option value="1">2023</option>
-                        <option value="1">2024</option>
-                        <option value="1">2025</option>
-                        <option value="1">2026</option>
-                        <option value="1">2027</option>
-                        <option value="1">2028</option>
-                        <option value="1">2029</option>
-                        <option value="1">2030</option>
-                        <option value="1">2031</option>
+                        <option value="" selected>{{usuario.anoExpiracaoCartaoCredito}}</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
                       </select>
                   </div>
                   </div>
@@ -231,26 +240,47 @@
             <div class="row shoppingcartpayment-informations-container mt-3">
               <div class="col-sm-12 col-md-6">
                 <label class="shoppingcartpayment-creditcard-label">Valor do Pedido</label>
-                <input disabled type="text" class="form-control" placeholder="R$ 50.00">
+                <input disabled type="text" class="form-control" placeholder="R$ {{valorTotal}}">
               </div>
               <div class="col-sm-12 col-md-6">
                 <label class="shoppingcartpayment-creditcard-label">Valor do Frete</label>
-                <input disabled type="text" class="form-control" placeholder="R$ 50.00">
+                <input disabled type="text" class="form-control" placeholder="R$ 20.00">
               </div>
             </div>
             <div class="row shoppingcartpayment-informations-container mt-3">
               <div class="col-sm-12 col-md-12">
                 <label class="shoppingcartpayment-creditcard-label">Valor Total</label>
-                <input disabled type="text" class="form-control" placeholder="R$ 100.00">
+                <input disabled type="text" class="form-control" placeholder="R$ {{valorTotal + 20.00}}">
               </div>
-            </div>
-            <div class="bookcategory-information-of-book-btn-div">
-              <a class="btn bookcategory-btn-modify-book">Confirmar pedido</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="bookcategory-information-of-book-btn-div mb-2" style="margin-right: 20px;">
+      <a class="btn bookcategory-btn-modify-book" data-bs-toggle="modal" data-bs-target="#exampleModal" >Realizar pedido</a>
+    </div>
   </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmação da Compra</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Você confirma essa compra?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Desistir</button>
+        <button type="button" class="btn btn-primary" (click)="comprar($event)" data-bs-dismiss="modal">Confirmar Comprar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 

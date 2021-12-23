@@ -27,6 +27,9 @@ import { EditBookComponent } from './edit-book/edit-book.component';
 import { KnowMoreComponent } from './know-more/know-more.component';
 import { FormsModule } from '@angular/forms';
 import { CookieModule } from 'ngx-cookie';
+import { MyCommentsComponent } from './my-comments/my-comments.component';
+import { MyShoppingComponent } from './my-shopping/my-shopping.component';
+import { EditCommentComponent } from './edit-comment/edit-comment.component';
 
 
 @NgModule({
@@ -40,6 +43,9 @@ import { CookieModule } from 'ngx-cookie';
     ShoppingCartComponent,
     EditBookComponent,
     KnowMoreComponent,
+    MyCommentsComponent,
+    MyShoppingComponent,
+    EditCommentComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,9 +5,8 @@ export interface Comentarios{
     "usuario": string,
     "livro": {
         "id": any,
-        "nome": string
+        "nomeDoLivro": string,
+        "nomeDoAutor": string,
+        "urlDaImagemDoLivro": string
     }
-
-
-    
 }
