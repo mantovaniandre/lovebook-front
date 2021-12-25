@@ -15,18 +15,25 @@ export class MyCommentsComponent implements OnInit {
   $comentarios!: Observable<any>;
   comentarios!: Comentarios[];
   livro!: any;
+  showModalSuccess!: boolean;
+  showModalFailure!: boolean; 
 
   constructor(private service: ConnectionApiService, 
               private router: Router) { }
 
   ngOnInit(): void {
-    
+    this.$comentarios = this.service.pegarComentarios();
+    this.$comentarios.subscribe( data => {
+      this.comentarios = data;
+      window.scroll(0,0);
+    })
 
   }
   
 
   go(destination: string){
     this.router.navigate(['/' + destination]);
+    window.scroll(0,0);
   }
 
 }

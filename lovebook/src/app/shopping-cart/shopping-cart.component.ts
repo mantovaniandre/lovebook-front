@@ -40,6 +40,7 @@ export class ShoppingCartComponent implements OnInit {
     this.listaLivros = this.cookieService.getObject('carrinho');
     
     this.popularValorTotal()
+    window.scroll(0,0);
   }
 
   calcular(event: any, item: any){
@@ -71,6 +72,11 @@ export class ShoppingCartComponent implements OnInit {
 
     this.popularValorTotal()
 
+  }
+
+  go(destination: string){
+    this.router.navigate(['/' + destination]);
+    window.scroll(0,0);
   }
 
 

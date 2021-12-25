@@ -34,6 +34,7 @@ export class UserRegistrationComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
+    window.scroll(0,0);
   }
 
 

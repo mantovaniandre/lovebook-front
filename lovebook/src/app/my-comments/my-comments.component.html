@@ -1,4 +1,14 @@
 <div class="container shoppingcart-container-div" >
+  <div class="container alert alert-success alert-dismissible fade show mt-5" role="alert" *ngIf="showModalSuccess">
+    <strong>Sucesso:</strong> Seu comentário foi excluído com sucesso.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <div class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" *ngIf="showModalFailure">
+    <strong>Erro:</strong> Ao excluir seu comentário.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  
   <div class="container shoppingcart-div">
     <div class="container shoppingcart-subdiv">
       <div class="shoppingcart-title-div">
@@ -60,11 +70,30 @@
         </div>
         <div class="row mt-3" style="margin-left: 20px;">
           <div class="d-flex justify-content-end">
-            <a class="shoppingcart-delete" style="margin-right: 15px;text-decoration: none; cursor: pointer;">Excluir</a>
+            <a class="shoppingcart-delete" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-right: 15px;text-decoration: none; cursor: pointer;">Excluir</a>
             <a class="shoppingcart-delete" style="text-decoration: none; cursor: pointer;" (click)="go('editarComentario')">Editar</a>
           </div>
         </div>
       </div> 
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title shoppingcart-title" id="exampleModalLabel">Exclusão do Comentário</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Você confirma a exclusão do comentário?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn bookcategory-btn-modify-book" data-bs-dismiss="modal">Confirmar</button>
+      </div>
     </div>
   </div>
 </div>

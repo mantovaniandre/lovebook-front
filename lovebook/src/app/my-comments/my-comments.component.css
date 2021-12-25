@@ -172,3 +172,8 @@
 .yourcomments-classify-stars-div input[type=radio]:checked ~ label i.fa:before {
   color: #CCC;
 } 
+
+.bookcategory-btn-modify-book {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: white;
+}

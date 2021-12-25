@@ -1,5 +1,4 @@
 export interface Livro{
-
   "id": number,
   "nomeDoAutor": string,
   "custoDoLivro": number,

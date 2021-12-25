@@ -4,30 +4,30 @@
       <div class="shoppingcart-title-div">
         <p class="shoppingcart-title">Minhas Compras</p>
       </div>
-      <div class="container shoppingcart-informations-div mt-5 mb-5">
+      <div class="container shoppingcart-informations-div mt-5 mb-5" *ngFor="let item of compras">
         <div class="shoppingcart-informations-of-book-container">
           <div class="row shoppingcart-informations-of-book-div mt-4 mb-4">
             <div class="col-12 col-sm-12 col-md-4 d-flex align-self-center justify-content-center mb-3">
               <div class="shoppingcart-img">
-                <img class="img" src="">
+                <img class="img" src={{item.urlImagemLivro}}>
               </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 shoppingcart-author-publishingcompany-date-div">
               <div style="margin: 10px;">
                 <div class="col shoppingcart-title-book-div">
-                    <p class="shoppingcart-title-book-p">Título do Livro</p>
+                    <p class="shoppingcart-title-book-p">{{item.nomeDoLivro}}</p>
                 </div>
                 <div class="col shoppingcart-author-div" style="border-top: 1px solid rgb(204, 203, 203)">
                   <p class="shoppingcart-author-p1 mt-2">Autor:</p>
-                  <p class="shoppingcart-author-p2 mt-2">adsad</p>
+                  <p class="shoppingcart-author-p2 mt-2">{{item.nomeDoAutor}}</p>
                 </div>
                 <div class="col shoppingcart-price-div" style="border-top: 1px solid rgb(204, 203, 203);">
                   <p class="shoppingcart-price-p1 mt-2">Data do pedido:</p>
-                  <p class="shoppingcart-price-p2 mt-2">sada</p>
+                  <p class="shoppingcart-price-p2 mt-2">{{item.data}}</p>
                 </div>
                 <div class="col shoppingcart-price-div" style="border-top: 1px solid rgb(204, 203, 203);">
                     <p class="shoppingcart-price-p1 mt-2">Total do pedido:</p>
-                    <p class="shoppingcart-price-p2 mt-2">sada</p>
+                    <p class="shoppingcart-price-p2 mt-2">{{item.preco}}</p>
                 </div>
               </div>
             </div>

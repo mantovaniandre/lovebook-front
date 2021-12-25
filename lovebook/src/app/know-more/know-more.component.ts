@@ -34,6 +34,7 @@ export class KnowMoreComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
+    window.scroll(0,0);
     this.livro = this.cookieService.getObject('livro');
     this.SubscriptionUser = this.data.currentUser.subscribe(messageUser => this.messageUser = messageUser)
 

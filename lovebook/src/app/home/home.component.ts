@@ -182,7 +182,7 @@ export class HomeComponent implements OnInit {
         this.erroString = "Pesquisa não encontrada"
         this.$loadingError.next(true)
       } else {
-        this.erroString = "Ocorreu um erro ao realizar a pesquisa"
+        this.erroString = "Nenhum resultado encontrado, tente verificar a ortografia ou usar termos mais genéricos"
         this.$loadingError.next(true)
       }
     })

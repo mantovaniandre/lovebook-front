@@ -4,8 +4,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from './login/login.component';
-import { AccountClientComponent } from "./account-client/account-client";
-import { AccountEmployeeComponent } from "./account-employee/account-employee.component";
 import { UserRegistrationComponent } from "./user-registration/user-registration.component";
 import { ShoppingCartComponent } from "./shopping-cart/shopping-cart.component";
 import { EditBookComponent } from "./edit-book/edit-book.component";
@@ -14,6 +12,9 @@ import { AuthGuardServiceService } from "./Guards/AuthGuardService.service";
 import { MyCommentsComponent } from "./my-comments/my-comments.component";
 import { MyShoppingComponent } from "./my-shopping/my-shopping.component";
 import { EditCommentComponent } from "./edit-comment/edit-comment.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+import { RegisterBookComponent } from "./register-book/register-book.component";
+import { MyAccountComponent } from "./my-account/my-account.component";
 
 
 const routes: Routes = [
@@ -32,17 +33,12 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'cliente',
-    component: AccountClientComponent,
+    path: 'minhaConta',
+    component: MyAccountComponent,
     canActivate: [AuthGuardServiceService]
   },
   {
-    path: 'colaborador',
-    component: AccountEmployeeComponent,
-    canActivate: [AuthGuardServiceService]
-  },
-  {
-    path: 'registrar',
+    path: 'registrarUsuario',
     component: UserRegistrationComponent
   },
   {
@@ -51,7 +47,7 @@ const routes: Routes = [
     canActivate: [AuthGuardServiceService]
   },
   {
-    path: 'editar',
+    path: 'editarLivros',
     component: EditBookComponent,
     canActivate: [AuthGuardServiceService]
   },
@@ -73,6 +69,16 @@ const routes: Routes = [
   {
     path:'editarComentario',
     component: EditCommentComponent,
+    canActivate: [AuthGuardServiceService]
+  },
+  {
+    path:'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuardServiceService]
+  },
+  {
+    path:'cadastrarLivros',
+    component: RegisterBookComponent,
     canActivate: [AuthGuardServiceService]
   }
 ];

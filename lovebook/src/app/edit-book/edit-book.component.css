@@ -1,6 +1,51 @@
-/*Division of field the book registration*/
+.navbar-search-subdiv {
+  height: auto;
+  width: auto;
+}
 
-.editbook-container {
+.navbar-search-select {
+  border-radius: 0;
+  margin-bottom: 2px;
+  outline: none;
+  color: rgb(140,205,188);
+  border: 1px solid white;
+  padding: 5px;
+  border: 1px solid rgb(158, 158, 158);
+  height: 38px;
+}
+
+.navbar-search-input-div {
+  height: 40px;
+  align-self: center;
+}
+
+.navbar-search-input-text {
+  border: 1px solid white;
+  height: 38px;
+  width: auto;
+  outline: none;
+  border-bottom: 1px solid rgb(158, 158, 158);
+  border-top: 1px solid rgb(158, 158, 158);
+}
+
+.navbar-search-btn-div {
+  height: 40px;
+  align-self: center;
+
+}
+
+.navbar-search-btn {
+  border: 1px solid white;
+  background-color: white;
+  height: 38px;
+  width: 50px;
+  position: relative;
+  right: 20px;
+  color: rgb(140,205,188);
+  border: 1px solid rgb(158, 158, 158);
+}
+
+.dashboard-container {
   margin-top: 50px;
   margin-bottom: 50px;
   height: auto;
@@ -9,113 +54,18 @@
   border-radius: 5px;
 }
 
-.editbook-div {
-  margin-top: 10px;
-}
-
-.editbook-title-div {
+.dashboard-title-div {
   width: 100%;
   height: auto;
+  margin-top: 10px;
   border-bottom: 1px solid rgb(204, 203, 203);
 }
 
-.editbook-title {
+.dashboard-title {
   font-size: 25px;
   font-style: italic;
   color: rgb(140,205,188);
   font-weight: 700;
 }
 
-.editbook-informations-container {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: auto;
-}
 
-.editbook-informations-div1 {
-  margin-bottom: 10px;
-}
-
-.editbook-name-label {
-  color:rgb(138, 138, 138);
-}
-
-.editbook-publishingcompany-label {
-  color:rgb(138, 138, 138);
-}
-
-.editbook-language-label {
-  color:rgb(138, 138, 138);
-}
-
-.editbook-password-label {
-  color:rgb(138, 138, 138);
-}
-
-.editbook-price-label {
-  color:rgb(138, 138, 138);
-}
-
-.editbook-urlimage-label {
-  color:rgb(138, 138, 138);
-}
-
-.editbook-numberpage-label {
-  color:rgb(138, 138, 138);
-}
-
-.editbook-cost-label {
-  color:rgb(138, 138, 138);
-}
-
-.editbook-quantity-label {
-  color:rgb(138, 138, 138);
-}
-
-.editbook-category-label {
-  color:rgb(138, 138, 138);
-}
-
-.editbook-description-label {
-  color:rgb(138, 138, 138);
-}
-
-.editbook-cost-label {
-  color:rgb(138, 138, 138);
-}
-
-.editbook-authorname-label {
-  color:rgb(138, 138, 138);
-}
-
-.form-control {
-  box-shadow: 0 0 0 0;
-  border: 1px solid rgb(209, 208, 208);
-  outline: 0;
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgb(140,205,188) !important;
-  opacity: 1; /* Firefox */
-}
-
-.editbook-btn-update-registration {
-  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  color: #ffffff;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.editbook-btn-modify-book {
-  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  color: #ffffff;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.editbook-btn-delete-book {
-  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
-  color: #ffffff;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}

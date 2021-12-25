@@ -25,11 +25,13 @@ export class LoginComponent implements OnInit {
 
     this.cookieService.remove('carrinho');
     this.cookieService.remove('livro');
+    window.scroll(0,0);
 
   }
 
   go(destination: string){
     this.router.navigate(['/' + destination]);
+    window.scroll(0,0);
   }
 
   login(email: string, senha: string){

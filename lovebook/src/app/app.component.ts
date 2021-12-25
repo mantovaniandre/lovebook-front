@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { DataService } from './services/data.service';
 
 
@@ -40,6 +40,7 @@ export class AppComponent {
 
   go(destination: string){
     this.router.navigate(['/' + destination]);
+    window.scroll(0,0);
   }
 
   logout(){

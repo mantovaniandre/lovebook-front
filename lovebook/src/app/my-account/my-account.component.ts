@@ -1,4 +1,3 @@
-import { getMissingNgModuleMetadataErrorData } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -8,17 +7,19 @@ import { ConnectionApiService } from '../services/connection-api.service';
 import { DataService } from '../services/data.service';
 
 @Component({
-  selector: 'app-account-client',
-  templateUrl: './account-client.html',
-  styleUrls: ['./account-client.css']
+  selector: 'app-my-account',
+  templateUrl: './my-account.component.html',
+  styleUrls: ['./my-account.component.css']
 })
-export class AccountClientComponent implements OnInit {
+export class MyAccountComponent implements OnInit {
   data: any[];
   $usuario!: Observable<Cliente>;
   usuario!: Cliente;
   data_literatura!: Array<any>;
   $livros_literatura!: Observable<Array<Livro>>;
   slides_literatura: any = [[]];
+  showModalSuccess!: boolean;
+  showModalFailure!: boolean;
 
   atualizar = {
     "nome": "",
@@ -88,11 +89,17 @@ export class AccountClientComponent implements OnInit {
     this.atualizar.anoExpiracaoCartaoCredito = anoExpiracaoCartaoCredito;
     this.atualizar.codigoSegurancaCartaoCredito =codigoSegurancaCartaoCredito;
     this.atualizar.perfil = perfil;
-    console.log(this.atualizar);
 
     this.service.putUsuario(this.atualizar).subscribe( data => {
-      console.log(data);
-      this.router.navigate(['/home']);
-    })
+      this.showModalSuccess = true;
+      window.scroll(0,0);
+
+    }, 
+    error => {
+      this.showModalFailure = true;
+      window.scroll(0,0);
+    }
+    )
   }
+
 }

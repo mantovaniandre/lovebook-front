@@ -1,11 +1,11 @@
 <div class="container shoppingcart-container">
   <div class="container alert alert-success alert-dismissible fade show mt-5" role="alert" *ngIf="showModalSuccess">
-    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <strong>Sucesso:</strong> A sua compra foi feita com sucesso.
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 
   <div class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" *ngIf="showModalFailure">
-    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <strong>Erro:</strong> Ocorreu um erro ao realizar sua compra, tente novamente.
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
   <div class="container shoppingcart-container-div" >
@@ -152,7 +152,7 @@
         </div>
         <div class="row mt-3">
           <div class="d-flex justify-content-end">
-            <p class="shoppingcart-delete">Alterar</p>
+            <p (click)="go('cliente')" class="shoppingcart-delete" style="cursor: pointer;" class="shoppingcart-delete">Alterar</p>
           </div>
         </div>
         <div class="row">
@@ -224,7 +224,7 @@
               </div>
               <div class="row">
                 <div class="d-flex justify-content-end">
-                  <p class="shoppingcart-delete">Alterar</p>
+                  <p (click)="go('cliente')" class="shoppingcart-delete" style="cursor: pointer;">Alterar</p>
                 </div>
               </div>
             </div>
@@ -258,7 +258,7 @@
       </div>
     </div>
     <div class="bookcategory-information-of-book-btn-div mb-2" style="margin-right: 20px;">
-      <a class="btn bookcategory-btn-modify-book" data-bs-toggle="modal" data-bs-target="#exampleModal" >Realizar pedido</a>
+      <a class="btn bookcategory-btn-modify-book" data-bs-toggle="modal" data-bs-target="#exampleModal">Realizar pedido</a>
     </div>
   </div>
 </div>
@@ -268,15 +268,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Confirmação da Compra</h5>
+        <h5 class="modal-title shoppingcartpayment-title" id="exampleModalLabel">Confirmação da Compra</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         Você confirma essa compra?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Desistir</button>
-        <button type="button" class="btn btn-primary" (click)="comprar($event)" data-bs-dismiss="modal">Confirmar Comprar</button>
+        <button type="button" class="btn bookcategory-btn-modify-book" (click)="comprar($event)" data-bs-dismiss="modal">Confirmar</button>
       </div>
     </div>
   </div>

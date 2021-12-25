@@ -1,0 +1,105 @@
+<div class="container dashboard-container" style="margin-bottom: 200px;">
+  <div class="dashboard-title-div">
+    <p class="dashboard-title">Dashboard</p>
+  </div>
+  <div class="row mt-3 mb-5">
+    <div class="col dashboard-input-div d-flex justify-content-center mt-3" >
+      <input class="dashboard-input-text" type="text" #campoInput placeholder="Escolha um mês?">
+      <button class="dashboard-btn" type="submit"><i class="bi bi-search"></i></button>
+    </div>
+  </div>
+  <div class="container dashboard-informations-container">
+    <div class="row dashboard-informations-div1">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-readers-div">
+        <div class="row mt-2 dashboard-card-readers-subdiv">
+          <div class="col-8 dashboard-card-readers-title">
+            <p class="dashboard-card-readers-value" data-bs-toggle="tooltip" data-bs-placement="top" title="1500">1500</p>
+            <p class="dashboard-card-readers-text">Quantidade de leitores</p>
+          </div>
+          <div class="col-4 d-flex justify-content-center dashboard-card-readers-icon">
+            <i><i class="bi bi-people align-self-center dashboard-icon-readers-book"></i></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-profit-div">
+        <div class="row mt-2 dashboard-card-profit-subdiv">
+          <div class="col-8 dashboard-card-profit-title">
+            <p class="dashboard-card-profit-value"  data-bs-toggle="tooltip" data-bs-placement="top" title="R$ 200.000,00">R$ 200.000,00</p>
+            <p class="dashboard-card-profit-text">Lucratividade</p>
+          </div>
+          <div class="col-4 d-flex justify-content-center dashboard-card-profit-icon">
+            <i><i class="bi bi-bar-chart-line align-self-center dashboard-icon-profit-book"></i></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-best-selling-book-category-div">
+        <div class="row mt-2 dashboard-card-best-selling-book-category-subdiv">
+          <div class="col-8 dashboard-card-best-selling-book-category-title">
+            <p class="dashboard-card-best-selling-book-category-value" data-bs-toggle="tooltip" data-bs-placement="top" title="Literatura">Literatura</p>
+            <p class="dashboard-card-best-selling-book-category-text">Categoria mais vendido</p>
+          </div>
+          <div class="col-4 d-flex justify-content-center dashboard-card-best-selling-book-category-icon">
+            <i><i class="bi bi-stack align-self-center dashboard-icon-best-selling-book-category-book"></i></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-how-many-books-are-in-stock-div">
+        <div class="row mt-2 dashboard-card-how-many-books-are-in-stock-subdiv">
+          <div class="col-8 dashboard-card-how-many-books-are-in-stock-title">
+            <p class="dashboard-card-how-many-books-are-in-stock-value" data-bs-toggle="tooltip" data-bs-placement="top" title="10.500">10.500</p>
+            <p class="dashboard-card-how-many-books-are-in-stock-text">Livros em estoque</p>
+          </div>
+          <div class="col-4 d-flex justify-content-center dashboard-card-how-many-books-are-in-stock-icon">
+            <i><i class="bi bi-box align-self-center dashboard-icon-how-many-books-are-in-stock-book"></i></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row dashboard-informations-div2">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-best-selling-books-div">
+        <div class="row mt-2 dashboard-card-best-selling-books-subdiv">
+          <div class="col-8 dashboard-card-best-selling-books-title">
+            <p class="dashboard-card-best-selling-books-value" data-bs-toggle="tooltip" data-bs-placement="top" title="Dom Casmurro">Dom Casmurro</p>
+            <p class="dashboard-card-best-selling-books-text">Livro mais vendido</p>
+          </div>
+          <div class="col-4 d-flex justify-content-center dashboard-card-best-selling-books-icon">
+            <i><i class="bi bi-book align-self-center dashboard-icon-best-selling-books-book"></i></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-region-that-bought-the-most-book-div">
+        <div class="row mt-2 dashboard-card-region-that-bought-the-most-book-subdiv">
+          <div class="col-8 dashboard-card-region-that-bought-the-most-book-title">
+            <p class="dashboard-card-region-that-bought-the-most-book-value" data-bs-toggle="tooltip" data-bs-placement="top" title="Sudeste">Sudeste</p>
+            <p class="dashboard-card-region-that-bought-the-most-book-text">Leitor por região</p>
+          </div>
+          <div class="col-4 d-flex justify-content-center dashboard-card-region-that-bought-the-most-book-icon">
+            <i><i class="bi bi-geo-alt align-self-center dashboard-icon-region-that-bought-the-most-book-book"></i></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-genre-that-bought-the-most-book-div">
+        <div class="row mt-2 dashboard-card-genre-that-bought-the-most-book-subdiv">
+          <div class="col-8 dashboard-card-genre-that-bought-the-most-book-title">
+            <p class="dashboard-card-genre-that-bought-the-most-book-value" data-bs-toggle="tooltip" data-bs-placement="top" title="Feminino">Feminino</p>
+            <p class="dashboard-card-genre-that-bought-the-most-book-text">Leitor por gênero</p>
+          </div>
+          <div class="col-4 d-flex justify-content-center dashboard-card-genre-that-bought-the-most-book-icon">
+            <i><i class="bi bi-gender-ambiguous align-self-center dashboard-icon-genre-that-bought-the-most-book-book"></i></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 dashboard-card-books-sold-div">
+        <div class="row mt-2 dashboard-card-books-sold-subdiv">
+          <div class="col-8 dashboard-card-books-sold-title">
+            <p class="dashboard-card-books-sold-value" data-bs-toggle="tooltip" data-bs-placement="top" title="15.000">15.000</p>
+            <p class="dashboard-card-books-sold-text">Livros vendidos</p>
+          </div>
+          <div class="col-4 d-flex justify-content-center dashboard-card-books-sold-icon">
+            <i><i class="bi bi-book align-self-center dashboard-icon-books-sold-book"></i></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

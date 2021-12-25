@@ -11,8 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { AccountClientComponent } from './account-client/account-client';
-import { AccountEmployeeComponent } from './account-employee/account-employee.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -30,6 +28,9 @@ import { CookieModule } from 'ngx-cookie';
 import { MyCommentsComponent } from './my-comments/my-comments.component';
 import { MyShoppingComponent } from './my-shopping/my-shopping.component';
 import { EditCommentComponent } from './edit-comment/edit-comment.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterBookComponent } from './register-book/register-book.component';
+import { MyAccountComponent } from './my-account/my-account.component';
 
 
 @NgModule({
@@ -37,8 +38,6 @@ import { EditCommentComponent } from './edit-comment/edit-comment.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    AccountClientComponent,
-    AccountEmployeeComponent,
     UserRegistrationComponent,
     ShoppingCartComponent,
     EditBookComponent,
@@ -46,6 +45,9 @@ import { EditCommentComponent } from './edit-comment/edit-comment.component';
     MyCommentsComponent,
     MyShoppingComponent,
     EditCommentComponent,
+    DashboardComponent,
+    RegisterBookComponent,
+    MyAccountComponent,
   ],
   imports: [
     BrowserModule,
