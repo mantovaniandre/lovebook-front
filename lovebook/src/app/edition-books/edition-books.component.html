@@ -1,0 +1,92 @@
+<div class="container employeeregistrationbook-container">
+    <div class="container alert alert-success alert-dismissible fade show mt-5" role="alert" *ngIf="showModalSuccess">
+      <strong>Sucesso:</strong> Sua atualização foi realizado com sucesso.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  
+    <div class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" *ngIf="showModalFailure">
+      <strong>Erro:</strong> Ocorreu um erro ao realizar sua atualização cadastral.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    
+    
+    <div class="container employeeregistrationbook-div">
+      <div class="employeeregistrationbook-div">
+        <div class="employeeregistrationbook-title-div">
+          <p class="employeeregistrationbook-title">Edição de Livros</p>
+        </div>
+        <div class="employeeregistrationbook-informations-container mt-3">
+          <form>
+            <div class="row employeeregistrationbook-informations-div1">
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-name-label">Nome do livro</label>
+                <input type="text" class="form-control" placeholder="{{livro.nomeDoLivro}}">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                  <label class="employeeregistrationbook-publishingcompany-label">Editora</label>
+                  <input type="text" class="form-control" placeholder="{{livro.editoraDoLivro}}">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-language-label">Idioma</label>
+                <input type="text" class="form-control" placeholder="{{livro.idiomaDoLivro}}">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-price-label">Preço de Venda</label>
+                <input type="text" class="form-control" placeholder="{{livro.precoDeVendaDoLivro}}">
+              </div>
+            </div>
+            <div class="row mt-2 employeeregistrationbook-informations-div2">
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-urlimage-label">URL da Imagem</label>
+                <input type="text" class="form-control" placeholder="{{livro.urlDaImagemDoLivro}}">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-numberpage-label">Número de Páginas</label>
+                <input type="text" class="form-control" placeholder="{{livro.numeroDaPaginaDoLivro}}">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-cost-label">Custo</label>
+                <input type="text" class="form-control" placeholder="{{livro.custoDoLivro}}">
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-authorname-label">Nome do Autor</label>
+                <input type="text" class="form-control" placeholder="{{livro.nomeDoAutor}}">
+              </div>
+            </div>
+            <div class="row mt-2 employeeregistrationbook-informations-div3">
+              <div class="col">
+                <label class="employeeregistrationbook-quantity-label">Quantidade</label>
+                <input type="text" class="form-control" placeholder="{{livro.quantidadeDeLivros}}">
+              </div>
+              <div class="col">
+                <label class="employeeregistrationbook-category-label">Categoria</label>
+                <input type="text" class="form-control" placeholder="{{livro.categoriaDoLivro}}">
+              </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn employeeregistrationbook-btn-update-registration">Editar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title employeeregistrationbook-title" id="exampleModalLabel">Edição de Livros</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Você confirma a edição desse livro?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn clientregistrationupdate-btn-update-registration"  data-bs-dismiss="modal">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

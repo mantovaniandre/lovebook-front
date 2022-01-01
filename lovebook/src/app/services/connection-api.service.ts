@@ -73,5 +73,13 @@ export class ConnectionApiService {
     let url = 'http://localhost:8080/purchase'
     return this.http.get(url);
   }
+
+  deleteBook(id: any): Observable<any> {
+    let url = 'http://localhost:8080/book'
+    const params = new HttpParams()
+      .set('id', id)
+      console.log(id)
+    return this.http.delete(url, {params});
+  }
   
 }

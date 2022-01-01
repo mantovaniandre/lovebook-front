@@ -27,10 +27,10 @@ import { FormsModule } from '@angular/forms';
 import { CookieModule } from 'ngx-cookie';
 import { MyCommentsComponent } from './my-comments/my-comments.component';
 import { MyShoppingComponent } from './my-shopping/my-shopping.component';
-import { EditCommentComponent } from './edit-comment/edit-comment.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterBookComponent } from './register-book/register-book.component';
 import { MyAccountComponent } from './my-account/my-account.component';
+import { EditionBooksComponent } from './edition-books/edition-books.component';
 
 
 @NgModule({
@@ -44,10 +44,10 @@ import { MyAccountComponent } from './my-account/my-account.component';
     KnowMoreComponent,
     MyCommentsComponent,
     MyShoppingComponent,
-    EditCommentComponent,
     DashboardComponent,
     RegisterBookComponent,
     MyAccountComponent,
+    EditionBooksComponent,
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,7 @@
             <div class="row clientregistrationupdate-informations-div1 mt-3">
               <div class="col-sm-12 col-md-3">
                 <label class="clientregistrationupdate-name-label">Nome</label>
-                <input type="text" class="form-control" placeholder="{{usuario.nome}}" #nome>
+                <input id="oi" type="text" class="form-control" placeholder="{{usuario.nome}}" #nome>
               </div>
               <div class="col-sm-12 col-md-3">
                   <label class="clientregistrationupdate-lastname-label">Sobrenome</label>
@@ -94,7 +94,7 @@
                 </select>
               </div>
               <div class="col-sm-12 col-md-3">
-                <label class="clientregistrationupdate-user-label">Tipo de Usuário</label>
+                <label class="clientregistrationupdate-user-label">Tipo de usuário</label>
                 <select disabled class="form-select clientregistrationupdate-select-user" aria-label="Default select example" #perfil>
                   <option selected>{{usuario.tipoUsuario.nome}}</option>
                   <option value="Cliente">Cliente</option>
@@ -114,81 +114,73 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container clientregistrationupdate-container">
-      <div class="container clientregistrationupdate-div">
-        <div class="clientregistrationupdate-div mb-4">
-          <div class="clientregistrationupdate-title-div">
-            <p class="clientregistrationupdate-title">Atualização de Pagamento</p>
+  <div class="container clientregistrationupdate-container">
+    <div class="container clientregistrationupdate-div">
+      <div class="clientregistrationupdate-div mb-4">
+        <div class="clientregistrationupdate-title-div">
+          <p class="clientregistrationupdate-title">Atualização de Pagamento</p>
+        </div>
+        <div class="row clientregistrationupdate-informations-div4 mt-3">
+          <div class="col-12 col-md-6" style="margin-bottom: 20px;">
+            <label class="clientpayment-creditcard-label">Número do cartão de crédito</label>
+            <input type="text" class="form-control" placeholder="{{usuario.numeroCartaoCredito}}" #numeroCartaoCredito>
           </div>
-          <div class="row clientregistrationupdate-informations-div4 mt-3">
-            <div class="col-12 col-md-6" style="margin-bottom: 20px;">
-              <label class="clientpayment-creditcard-label">Número do cartão de crédito</label>
-              <input type="text" class="form-control" placeholder="{{usuario.numeroCartaoCredito}}" #numeroCartaoCredito>
-            </div>
-            <div class="col-12 col-md-6" style="margin-bottom: 20px;">
-                <label class="clientpayment-cardnumber-label">Nome do cartão de crédito</label>
-                <input type="text" class="form-control" placeholder="{{usuario.nomeCartaoCredito}}" #nomeCartaoCredito>
-            </div>
-            <div class="col-12 col-md-6" style="margin-bottom: 20px;">
-              <div class="row">
-                <div class="col-12 col-sm-12 col-md-6">
-                  <label class="clientpayment-expiriondate-label">Mês de expiração</label>
-                  <select class="form-select clientpayment-select-mounth" aria-label="Default select example" #mesExpiracaoCartaoCredito>
-                    <option value="1" selected>{{usuario.mesExpiracaoCartaoCredito}}</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                  </select>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6">
-                  <label class="clientpayment-expiriondate-label">Ano de expiração</label>
-                  <select class="form-select clientpayment-select-year" aria-label="Default select example" #anoExpiracaoCartaoCredito>
-                    <option value="1" selected>{{usuario.anoExpiracaoCartaoCredito}}</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                    <option value="2026">2026</option>
-                    <option value="2027">2027</option>
-                    <option value="2028">2028</option>
-                    <option value="2029">2029</option>
-                    <option value="2030">2030</option>
-                    <option value="2031">2031</option>
-                  </select>
-                </div>
+          <div class="col-12 col-md-6" style="margin-bottom: 20px;">
+              <label class="clientpayment-cardnumber-label">Nome do cartão de crédito</label>
+              <input type="text" class="form-control" placeholder="{{usuario.nomeCartaoCredito}}" #nomeCartaoCredito>
+          </div>
+          <div class="col-12 col-md-6" style="margin-bottom: 20px;">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-6">
+                <label class="clientpayment-expiriondate-label">Mês de expiração</label>
+                <select class="form-select clientpayment-select-mounth" aria-label="Default select example" #mesExpiracaoCartaoCredito>
+                  <option value="1" selected>{{usuario.mesExpiracaoCartaoCredito}}</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6">
+                <label class="clientpayment-expiriondate-label">Ano de expiração</label>
+                <select class="form-select clientpayment-select-year" aria-label="Default select example" #anoExpiracaoCartaoCredito>
+                  <option value="1" selected>{{usuario.anoExpiracaoCartaoCredito}}</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                  <option value="2031">2031</option>
+                </select>
               </div>
             </div>
-            <div class="col-12 col-md-6">
-              <label class="clientpayment-securitycode-label">Código de segurança CVV</label>
-              <input type="text" class="form-control" placeholder="{{usuario.codigoSegurancaCartaoCredito}}" #codigoSegurancaCartaoCredito>
-            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="clientpayment-securitycode-label">Código de segurança CVV</label>
+            <input type="text" class="form-control" placeholder="{{usuario.codigoSegurancaCartaoCredito}}" #codigoSegurancaCartaoCredito>
           </div>
         </div>
       </div>
     </div>
-  
-    <div class="d-grid d-md-flex justify-content-md-end" style="margin-top: 20px; margin-bottom: 50px;">
-      <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn clientregistrationupdate-btn-update-registration" (click)="atualizarUsuario(nome.value, sobrenome.value, email.value, senha.value, cep.value, endereco.value, numero.value, complemento.value, cidade.value, estado.value, perfil.value, sexo.value, numeroCartaoCredito.value, nomeCartaoCredito.value, mesExpiracaoCartaoCredito.value, anoExpiracaoCartaoCredito.value, codigoSegurancaCartaoCredito.value)">Atualizar</button>
-    </div>
-  
-    <ng-template #loading>
-      <div class="d-flex justify-content-center">
-        <div class="spinner-border text-success" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-    </ng-template>
-    
   </div>
+  
+  <div class="d-grid d-md-flex justify-content-md-end" style="margin-top: 20px; margin-bottom: 50px;">
+    <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn clientregistrationupdate-btn-update-registration">Atualizar</button>
+  </div>
+    
 </div>
   
 <!-- Modal -->
@@ -203,7 +195,7 @@
         Você confirma a atualização cadastral?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn clientregistrationupdate-btn-update-registration"  data-bs-dismiss="modal">Confirmar</button>
+        <button type="button" class="btn clientregistrationupdate-btn-update-registration" data-bs-dismiss="modal" (click)="atualizarUsuario(nome.value, sobrenome.value, email.value, senha.value, cep.value, endereco.value, numero.value, complemento.value, cidade.value, estado.value, perfil.value, sexo.value, numeroCartaoCredito.value, nomeCartaoCredito.value, mesExpiracaoCartaoCredito.value, anoExpiracaoCartaoCredito.value, codigoSegurancaCartaoCredito.value)">Confirmar</button>
       </div>
     </div>
   </div>

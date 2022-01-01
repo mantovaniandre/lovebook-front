@@ -20,6 +20,7 @@ export class MyAccountComponent implements OnInit {
   slides_literatura: any = [[]];
   showModalSuccess!: boolean;
   showModalFailure!: boolean;
+  usuarioEditado!: any;
 
   atualizar = {
     "nome": "",
@@ -41,7 +42,8 @@ export class MyAccountComponent implements OnInit {
     "perfil": ""
   }
 
-  constructor(private service: ConnectionApiService, private dataService: DataService,
+  constructor(private service: ConnectionApiService,
+              private dataService: DataService,
               private router: Router) {
     this.data = new Array<any>();
 }
@@ -50,7 +52,6 @@ export class MyAccountComponent implements OnInit {
     this.$usuario = this.service.identificacaoUsuario();
     this.$usuario.subscribe(data => {
       this.usuario = data;
-    console.log(this.usuario)
     })
 
     event?.preventDefault();
@@ -59,7 +60,6 @@ export class MyAccountComponent implements OnInit {
       this.data_literatura = data;
       this.slides_literatura = this.chunk(this.data_literatura, 5);
     })
-
   }
 
   chunk(arr: string | any[], chunkSize: number) {
@@ -71,7 +71,14 @@ export class MyAccountComponent implements OnInit {
   }
 
   atualizarUsuario(nome: string, sobrenome: string, email: string, senha: string, cep: string, endereco: string, numero: string, complemento: string, cidade: string, estado: string, perfil: string, sexo: string, numeroCartaoCredito: string, nomeCartaoCredito: string, mesExpiracaoCartaoCredito: string, anoExpiracaoCartaoCredito: string, codigoSegurancaCartaoCredito: string){
-    event?.preventDefault();
+    this.service.putUsuario(this.atualizar).subscribe( data => {
+      this.usuarioEditado = data;
+     
+      console.log(this.atualizar)
+      console.log(this.usuarioEditado)
+      window.scroll(0,0);
+      this.showModalSuccess = true;
+    },
     this.atualizar.nome = nome;
     this.atualizar.sobrenome = sobrenome;
     this.atualizar.emailUsuario = email;
@@ -87,14 +94,10 @@ export class MyAccountComponent implements OnInit {
     this.atualizar.nomeCartaoCredito = nomeCartaoCredito;
     this.atualizar.mesExpiracaoCartaoCredito = mesExpiracaoCartaoCredito;
     this.atualizar.anoExpiracaoCartaoCredito = anoExpiracaoCartaoCredito;
-    this.atualizar.codigoSegurancaCartaoCredito =codigoSegurancaCartaoCredito;
-    this.atualizar.perfil = perfil;
+    this.atualizar.codigoSegurancaCartaoCredito = codigoSegurancaCartaoCredito;
+    this.atualizar.perfil = tipoUsuario
+    .nome;
 
-    this.service.putUsuario(this.atualizar).subscribe( data => {
-      this.showModalSuccess = true;
-      window.scroll(0,0);
-
-    }, 
     error => {
       this.showModalFailure = true;
       window.scroll(0,0);

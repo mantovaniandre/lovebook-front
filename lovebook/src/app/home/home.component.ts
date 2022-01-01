@@ -22,6 +22,11 @@ export class HomeComponent implements OnInit {
   data!: Array<any>;
   $livros!: Observable<Array<Livro>>;
   nomeDoLivro!: string;
+  slides: any = [[]];
+  subscription!: Subscription;
+  sidebar!: SidebarComponent;
+  erroString!: string;
+  $loadingError = new Subject<boolean>();
 
   data_literatura!: Array<any>;
   $livros_literatura!: Observable<Array<Livro>>;
@@ -55,19 +60,12 @@ export class HomeComponent implements OnInit {
   $livros_policial!: Observable<Array<Livro>>;
   slides_policial: any = [[]];
 
-  slides: any = [[]];
-  subscription!: Subscription;
-  sidebar!: SidebarComponent;
-  erroString!: string;
-  $loadingError = new Subject<boolean>();
-  
-
   constructor(private service: ConnectionApiService,
               private router: Router,
               private dataService: DataService,
               private cookieService: CookieService) {
     this.data = new Array<any>();
-   }
+  }
 
   @ViewChild('sidebar')
   public showBackdrop: boolean = true;
@@ -142,9 +140,6 @@ export class HomeComponent implements OnInit {
       this.nomeUsuario = data.nome;
       this.dataService.changeUser(this.nomeUsuario)
     })
-
-
-
   }
 
 
@@ -182,7 +177,7 @@ export class HomeComponent implements OnInit {
         this.erroString = "Pesquisa não encontrada"
         this.$loadingError.next(true)
       } else {
-        this.erroString = "Nenhum resultado encontrado, tente verificar a ortografia ou usar termos mais genéricos"
+        this.erroString = "Nenhum resultado encontrado, tente verificar a ortografia ou usar termos mais genéricos."
         this.$loadingError.next(true)
       }
     })

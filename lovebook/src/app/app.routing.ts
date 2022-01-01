@@ -11,10 +11,10 @@ import { KnowMoreComponent } from "./know-more/know-more.component";
 import { AuthGuardServiceService } from "./Guards/AuthGuardService.service";
 import { MyCommentsComponent } from "./my-comments/my-comments.component";
 import { MyShoppingComponent } from "./my-shopping/my-shopping.component";
-import { EditCommentComponent } from "./edit-comment/edit-comment.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { RegisterBookComponent } from "./register-book/register-book.component";
 import { MyAccountComponent } from "./my-account/my-account.component";
+import { EditionBooksComponent } from "./edition-books/edition-books.component";
 
 
 const routes: Routes = [
@@ -67,11 +67,6 @@ const routes: Routes = [
     canActivate: [AuthGuardServiceService]
   },
   {
-    path:'editarComentario',
-    component: EditCommentComponent,
-    canActivate: [AuthGuardServiceService]
-  },
-  {
     path:'dashboard',
     component: DashboardComponent,
     canActivate: [AuthGuardServiceService]
@@ -80,7 +75,12 @@ const routes: Routes = [
     path:'cadastrarLivros',
     component: RegisterBookComponent,
     canActivate: [AuthGuardServiceService]
-  }
+  },
+  {
+    path:'edicaoDeLivros',
+    component: EditionBooksComponent,
+    canActivate: [AuthGuardServiceService]
+  },
 ];
 
 @NgModule({

@@ -44,7 +44,7 @@
       <div class="row booksearch-information-of-book-container mt-3">
         <div class="booksearch-information-of-book-div" *ngIf = "$livros | async as content; else loadingOrError">
           <div class="carousel booksearch-information-of-book-carousel carousel-dark slide" id="carouselbookcategory" data-bs-ride="carousel">
-            <div class="carousel-item booksearch-information-of-book-carousel-item" *ngFor="let listaLivro of slides_literatura; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
+            <div class="carousel-item booksearch-information-of-book-carousel-item" *ngFor="let listaLivro of slides; let i = index;" [ngClass]="{'active': i == 0}" data-bs-interval="10000">
               <div class="booksearch-information-of-book-carousel-item-container">
                 <div class="booksearch-information-of-book-carousel-item-div" *ngFor="let livro of listaLivro">
                   <div class="booksearch-information-of-book-carousel-item-subdiv">
@@ -77,7 +77,7 @@
                       <p class="booksearch-information-of-book-price-text">R${{livro.precoDeVendaDoLivro}}</p>
                     </div>
                     <div class="booksearch-information-of-book-btn-div">
-                      <a class="btn booksearch-btn-modify-book"> Saiba Mais</a>
+                      <a class="btn booksearch-btn-modify-book">Saiba Mais</a>
                     </div>
                   </div>
                 </div>
