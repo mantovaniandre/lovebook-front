@@ -168,7 +168,7 @@ export class HomeComponent implements OnInit {
     console.log(this.$livros)
     this.$livros.subscribe(data => {
       this.data = data;
-      this.slides = this.chunk(this.data, 4);
+      this.slides = this.chunk(this.data, 5);
     },
     (error: HttpErrorResponse) => {
       console.log(error);

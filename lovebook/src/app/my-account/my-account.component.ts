@@ -20,9 +20,8 @@ export class MyAccountComponent implements OnInit {
   slides_literatura: any = [[]];
   showModalSuccess!: boolean;
   showModalFailure!: boolean;
-  usuarioEditado!: any;
 
-  atualizar = {
+  formulario = {
     "nome": "",
     "sobrenome": "",
     "emailUsuario": "",
@@ -46,12 +45,31 @@ export class MyAccountComponent implements OnInit {
               private dataService: DataService,
               private router: Router) {
     this.data = new Array<any>();
-}
+  }
 
   ngOnInit() {
     this.$usuario = this.service.identificacaoUsuario();
     this.$usuario.subscribe(data => {
-      this.usuario = data;
+      console.log(data);
+
+    this.formulario.nome = data.nome;
+    this.formulario.sobrenome = data.sobrenome;
+    this.formulario.emailUsuario = data.emailUsuario;
+    this.formulario.senhaUsuario = data.senhaUsuario;
+    this.formulario.sexoUsuario = data.sexoUsuario;
+    this.formulario.cepUsuario = data.cepUsuario;
+    this.formulario.cidadeUsuario = data.cidadeUsuario;
+    this.formulario.estadoUsuario = data.estadoUsuario;
+    this.formulario.enderecoUsuario = data.enderecoUsuario;
+    this.formulario.numeroEnderecoUsuario = data.numeroEnderecoUsuario;
+    this.formulario.complementoEnderecoUsuario = data.complementoEnderecoUsuario;
+    this.formulario.numeroCartaoCredito = data.numeroCartaoCredito;
+    this.formulario.nomeCartaoCredito = data.nomeCartaoCredito;
+    this.formulario.mesExpiracaoCartaoCredito = data.mesExpiracaoCartaoCredito;
+    this.formulario.anoExpiracaoCartaoCredito = data.anoExpiracaoCartaoCredito;
+    this.formulario.codigoSegurancaCartaoCredito = data.codigoSegurancaCartaoCredito;
+    this.formulario.perfil = data.tipoUsuario.nome;
+
     })
 
     event?.preventDefault();
@@ -70,34 +88,14 @@ export class MyAccountComponent implements OnInit {
     return R;
   }
 
-  atualizarUsuario(nome: string, sobrenome: string, email: string, senha: string, cep: string, endereco: string, numero: string, complemento: string, cidade: string, estado: string, perfil: string, sexo: string, numeroCartaoCredito: string, nomeCartaoCredito: string, mesExpiracaoCartaoCredito: string, anoExpiracaoCartaoCredito: string, codigoSegurancaCartaoCredito: string){
-    this.service.putUsuario(this.atualizar).subscribe( data => {
-      this.usuarioEditado = data;
-     
-      console.log(this.atualizar)
-      console.log(this.usuarioEditado)
+  atualizarUsuario(){
+    console.log(this.formulario)
+    this.service.putUsuario(this.formulario).subscribe( data => {
+      console.log(this.formulario)
       window.scroll(0,0);
       this.showModalSuccess = true;
     },
-    this.atualizar.nome = nome;
-    this.atualizar.sobrenome = sobrenome;
-    this.atualizar.emailUsuario = email;
-    this.atualizar.senhaUsuario = senha;
-    this.atualizar.sexoUsuario = sexo;
-    this.atualizar.cepUsuario = cep;
-    this.atualizar.cidadeUsuario = cidade;
-    this.atualizar.estadoUsuario = estado;
-    this.atualizar.enderecoUsuario = endereco;
-    this.atualizar.numeroEnderecoUsuario = numero;
-    this.atualizar.complementoEnderecoUsuario = complemento;
-    this.atualizar.numeroCartaoCredito = numeroCartaoCredito;
-    this.atualizar.nomeCartaoCredito = nomeCartaoCredito;
-    this.atualizar.mesExpiracaoCartaoCredito = mesExpiracaoCartaoCredito;
-    this.atualizar.anoExpiracaoCartaoCredito = anoExpiracaoCartaoCredito;
-    this.atualizar.codigoSegurancaCartaoCredito = codigoSegurancaCartaoCredito;
-    this.atualizar.perfil = tipoUsuario
-    .nome;
-
+   
     error => {
       this.showModalFailure = true;
       window.scroll(0,0);

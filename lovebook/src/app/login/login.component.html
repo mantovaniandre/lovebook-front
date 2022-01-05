@@ -15,7 +15,7 @@
             <input type="password" class="form-control" placeholder="Senha" #inputPassword>
         </div>
         <div class="login-dont-fave-register">
-          <a (click)="go('registrar')">Não tem cadastro ></a>
+          <a (click)="go('registrarUsuario')" style="cursor: pointer;">Não tem cadastro ></a>
         </div>
         <br>
         <button type="submit" (click)="login(inputEmail.value, inputPassword.value)" class="btn login-btn"><i class="fa fa-sign-in"></i>Entrar</button>

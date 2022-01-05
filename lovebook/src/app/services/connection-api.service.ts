@@ -81,5 +81,10 @@ export class ConnectionApiService {
       console.log(id)
     return this.http.delete(url, {params});
   }
+
+  putBook(atualizarLivro: any):Observable<any>{
+    let url = 'http://localhost:8080/book'
+    return this.http.put(url, atualizarLivro);
+  }
   
 }

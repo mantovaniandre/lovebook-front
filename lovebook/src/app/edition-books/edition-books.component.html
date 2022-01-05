@@ -20,47 +20,47 @@
             <div class="row employeeregistrationbook-informations-div1">
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationbook-name-label">Nome do livro</label>
-                <input type="text" class="form-control" placeholder="{{livro.nomeDoLivro}}">
+                <input name="name" type="text" class="form-control" [(ngModel)]="formulario.nome" style="color: rgb(140,205,188);">
               </div>
               <div class="col-sm-12 col-md-3">
                   <label class="employeeregistrationbook-publishingcompany-label">Editora</label>
-                  <input type="text" class="form-control" placeholder="{{livro.editoraDoLivro}}">
+                  <input name="editora" type="text" class="form-control" [(ngModel)]="formulario.editora" style="color: rgb(140,205,188);">
               </div>
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationbook-language-label">Idioma</label>
-                <input type="text" class="form-control" placeholder="{{livro.idiomaDoLivro}}">
+                <input name="idioma" type="text" class="form-control" [(ngModel)]="formulario.idioma" style="color: rgb(140,205,188);">
               </div>
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationbook-price-label">Preço de Venda</label>
-                <input type="text" class="form-control" placeholder="{{livro.precoDeVendaDoLivro}}">
+                <input name="precoDeVenda" type="text" class="form-control" [(ngModel)]="formulario.precoDeVenda" style="color: rgb(140,205,188);">
               </div>
             </div>
             <div class="row mt-2 employeeregistrationbook-informations-div2">
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationbook-urlimage-label">URL da Imagem</label>
-                <input type="text" class="form-control" placeholder="{{livro.urlDaImagemDoLivro}}">
+                <input name="urlDaImagem" type="text" class="form-control" [(ngModel)]="formulario.urlDaImagem" style="color: rgb(140,205,188);">
               </div>
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationbook-numberpage-label">Número de Páginas</label>
-                <input type="text" class="form-control" placeholder="{{livro.numeroDaPaginaDoLivro}}">
+                <input name="numeroDePaginas" type="text" class="form-control" [(ngModel)]="formulario.numeroDePaginas" style="color: rgb(140,205,188);">
               </div>
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationbook-cost-label">Custo</label>
-                <input type="text" class="form-control" placeholder="{{livro.custoDoLivro}}">
+                <input name="custo" type="text" class="form-control" [(ngModel)]="formulario.custo" style="color: rgb(140,205,188);">
               </div>
               <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationbook-authorname-label">Nome do Autor</label>
-                <input type="text" class="form-control" placeholder="{{livro.nomeDoAutor}}">
+                <input name="nomeDoAutor" type="text" class="form-control" [(ngModel)]="formulario.nomeDoAutor" style="color: rgb(140,205,188);">
               </div>
             </div>
             <div class="row mt-2 employeeregistrationbook-informations-div3">
               <div class="col">
                 <label class="employeeregistrationbook-quantity-label">Quantidade</label>
-                <input type="text" class="form-control" placeholder="{{livro.quantidadeDeLivros}}">
+                <input name="quantidade" type="text" class="form-control" [(ngModel)]="formulario.quantidade" style="color: rgb(140,205,188);">
               </div>
               <div class="col">
                 <label class="employeeregistrationbook-category-label">Categoria</label>
-                <input type="text" class="form-control" placeholder="{{livro.categoriaDoLivro}}">
+                <input name="categoria" type="text" class="form-control" [(ngModel)]="formulario.categoria" style="color: rgb(140,205,188);">
               </div>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -84,7 +84,7 @@
           Você confirma a edição desse livro?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn clientregistrationupdate-btn-update-registration"  data-bs-dismiss="modal">Confirmar</button>
+          <button type="button" class="btn clientregistrationupdate-btn-update-registration"  data-bs-dismiss="modal" (click)="atualizarLivro()">Confirmar</button>
         </div>
       </div>
     </div>
