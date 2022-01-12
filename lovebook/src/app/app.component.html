@@ -33,26 +33,26 @@
             <div class="navbar-description-account-login-name">
               <div class="dropdown navbar-description-account-dropdownmenu">
                 <button class="navbar-description-account-dropdownmenu-btn btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <a class="navbar-login-name">{{messageUser}}</a>
+                  <a class="navbar-login-name">{{messageUser[0]}}</a>
                 </button>
                 <div class="dropdown-menu navbar-description-account-dropdownmenu" aria-labelledby="dropdownMenuButton1">
                   <div (click)="go('minhaConta')">
-                    <p class="navbar-description-account-dropdownmenu-myaccount">Minha conta</p>
+                    <p class="navbar-description-account-dropdownmenu-myaccount" >Minha conta</p>
                   </div>
                   <div (click)="go('meusComentarios')">
-                    <p class="navbar-description-account-dropdownmenu-mycomments">Meus Comentários</p>
+                    <p class="navbar-description-account-dropdownmenu-mycomments" *ngIf="messageUser[1] == 2" >Meus Comentários</p>
                   </div>
                   <div (click)="go('minhasCompras')">
-                    <p class="navbar-description-account-dropdownmenu-myshopping">Minhas Compras</p>
+                    <p class="navbar-description-account-dropdownmenu-myshopping" *ngIf="messageUser[1] == 2" >Minhas Compras</p>
                   </div>
                   <div (click)="go('dashboard')">
-                    <p class="navbar-description-account-dropdownmenu-myshopping">Dashboard</p>
+                    <p class="navbar-description-account-dropdownmenu-myshopping" *ngIf="messageUser[1] == 1" >Dashboard</p>
                   </div>
                   <div (click)="go('editarLivros')">
-                    <p class="navbar-description-account-dropdownmenu-myshopping">Edição de Livros</p>
+                    <p class="navbar-description-account-dropdownmenu-myshopping" *ngIf="messageUser[1] == 1" >Edição de Livros</p>
                   </div>
                   <div (click)="go('cadastrarLivros')">
-                    <p class="navbar-description-account-dropdownmenu-myshopping">Cadastro de Livros</p>
+                    <p class="navbar-description-account-dropdownmenu-myshopping" *ngIf="messageUser[1] == 1" >Cadastro de Livros</p>
                   </div>
                   <div (click)="logout()">
                     <p class="navbar-description-account-dropdownmenu-logout">Logout</p>
@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div class="col navbar-cart-container">
+      <div class="col navbar-cart-container" *ngIf="messageUser[1] == 2">
         <div class="navbar-cart-container-div justify-content-center">
           <div class="navbar-cart-container-subdiv">
             <div class="navbar-cart-container-icon-div">

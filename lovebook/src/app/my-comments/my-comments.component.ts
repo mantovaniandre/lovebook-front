@@ -16,7 +16,8 @@ export class MyCommentsComponent implements OnInit {
   comentarios!: Comentarios[];
   livro!: any;
   showModalSuccess!: boolean;
-  showModalFailure!: boolean; 
+  showModalFailure!: boolean;
+  idComentarioDelete!: any; 
 
   constructor(private service: ConnectionApiService, 
               private router: Router) { }
@@ -29,11 +30,42 @@ export class MyCommentsComponent implements OnInit {
     })
 
   }
-  
 
   go(destination: string){
     this.router.navigate(['/' + destination]);
     window.scroll(0,0);
   }
+
+  deleteComentarioId(idDoLivro: any){
+    this.idComentarioDelete = idDoLivro;
+  }
+
+  excluirComentario(){
+    this.service.deleteComentarios(this.idComentarioDelete).subscribe( data => {
+      window.scroll(0,0);
+      this.showModalSuccess = true;
+
+      this.$comentarios = this.service.pegarComentarios();
+      this.$comentarios.subscribe( data => {
+      this.comentarios = data;
+      window.scroll(0,0);
+
+      this.$comentarios = this.service.pegarComentarios();
+      this.$comentarios.subscribe( data => {
+      this.comentarios = data;
+      window.scroll(0,0);
+    })
+    })
+      
+    },
+   
+    error => {
+      this.showModalFailure = true;
+      window.scroll(0,0);
+    }
+    )
+  }
+
+
 
 }

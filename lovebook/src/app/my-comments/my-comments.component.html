@@ -70,7 +70,7 @@
         </div>
         <div class="row mt-3" style="margin-left: 20px;">
           <div class="d-flex justify-content-end">
-            <a class="shoppingcart-delete" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-right: 15px;text-decoration: none; cursor: pointer;">Excluir</a>
+            <a class="shoppingcart-delete" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-right: 15px;text-decoration: none; cursor: pointer;" (click)="deleteComentarioId(item.id)">Excluir</a>
           </div>
         </div>
       </div> 
@@ -91,7 +91,7 @@
         Você confirma a exclusão do comentário?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn bookcategory-btn-modify-book" data-bs-dismiss="modal">Confirmar</button>
+        <button type="button" class="btn bookcategory-btn-modify-book" data-bs-dismiss="modal" (click)="excluirComentario()">Confirmar</button>
       </div>
     </div>
   </div>

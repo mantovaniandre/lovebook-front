@@ -45,7 +45,7 @@ export class AppComponent {
 
   logout(){
     localStorage.removeItem('token')
-    this.data.changeUser("")
+    this.data.changeUser([])
     this.router.navigate(['/login']);
   }
 

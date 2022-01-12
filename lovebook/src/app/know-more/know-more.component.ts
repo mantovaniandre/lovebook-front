@@ -51,8 +51,13 @@ export class KnowMoreComponent implements OnInit {
     this.postComentarios.idDoLivro = this.livro.id;
   
     this.connectionApiService.postComentarios(this.postComentarios).subscribe(data =>{
-      console.log(data);
+      this.$comentarios = this.connectionApiService.getComentarios(this.livro.id);
+      this.$comentarios.subscribe(data => {
+      this.comentarios = data;
     })
+    })
+
+    
   }
 
   listaDeLivros(livro: Livro){
@@ -72,6 +77,7 @@ export class KnowMoreComponent implements OnInit {
 
       let lista: Array<any> = [livro_front];
       this.cookieService.putObject('carrinho', lista);
+
     } else {
       this.cookieService.remove('carrinho');
       
@@ -85,8 +91,21 @@ export class KnowMoreComponent implements OnInit {
         "quantidadeSelecionada": 1
       } 
       
-      this.listaLivros.push(livro_front);
-      this.cookieService.putObject('carrinho', this.listaLivros);
+      let possuiLivro: boolean = false;
+      for(let i=0; i < this.listaLivros.length; i++){
+        if(this.listaLivros[i].id == livro.id){
+          this.listaLivros[i].quantidadeSelecionada += 1;
+          possuiLivro = true;
+        }
+      }
+
+      if(possuiLivro){
+        this.cookieService.putObject('carrinho', this.listaLivros);
+      } else {
+        this.listaLivros.push(livro_front);
+        this.cookieService.putObject('carrinho', this.listaLivros);
+      }
+
     }
 
     this.router.navigate(['/carrinho']);

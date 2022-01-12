@@ -69,6 +69,11 @@ export class ConnectionApiService {
     return this.http.get(url);
   }
 
+  deleteComentarios(idComentario: any): Observable<any>{
+    let url = 'http://localhost:8080/comments/'+idComentario
+    return this.http.delete(url);
+  }
+
   getPurchase(): Observable<any> {
     let url = 'http://localhost:8080/purchase'
     return this.http.get(url);
@@ -86,5 +91,7 @@ export class ConnectionApiService {
     let url = 'http://localhost:8080/book'
     return this.http.put(url, atualizarLivro);
   }
+
+  
   
 }

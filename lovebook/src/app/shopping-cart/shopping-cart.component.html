@@ -43,16 +43,7 @@
             <div class="d-flex justify-content-center" style="height: 100%; width: 100%;">
               <div class="align-self-center">
                 <select (change)="calcular($event, item)" class="form-select">
-                  <option value="1" selected>1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
+                  <option *ngFor="let quantidade of listaQuantidade; let i = index;" [ngClass]="{'selected': quantidadeSelected(quantidade, item.quantidadeSelecionada)}" value={{quantidade}}>{{quantidade}}</option>
                 </select>
                 <div class="col-sm-12 col-md-6 shoppingcart-inventory-div">
                   <p class="shoppingcart-inventory-p1">{{item.quantidadeDeLivros}}</p>

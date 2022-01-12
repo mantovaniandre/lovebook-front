@@ -22,6 +22,7 @@ export class ShoppingCartComponent implements OnInit {
   compra!: any;
   showModalSuccess!: boolean;
   showModalFailure!: boolean;
+  listaQuantidade = [1,2,3,4,5,6,7,8,9,10];
   
 
     constructor(private connectionApiService: ConnectionApiService,
@@ -44,6 +45,8 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   calcular(event: any, item: any){
+    console.log(event.target.value)
+    console.log(item)
     let soma = 0;
     for(let i = 0; i<this.listaLivros.length; i++){
       if(this.listaLivros[i].id == item.id){
@@ -111,6 +114,12 @@ export class ShoppingCartComponent implements OnInit {
     )
 
 
+  }
+
+  quantidadeSelected(quantidade: any, quantidadeSelecionada: any){
+    console.log("quantidade: " + quantidade)
+    console.log("quantidade selecionada: " + quantidadeSelecionada)
+    return quantidade == quantidadeSelecionada;
   }
 
 

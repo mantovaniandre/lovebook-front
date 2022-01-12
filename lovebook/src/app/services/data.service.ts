@@ -9,7 +9,7 @@ export class DataService {
   private messageSource = new BehaviorSubject<any[]>([]);
   currentMessage = this.messageSource.asObservable();
 
-  private messageUser = new BehaviorSubject<any>([]);
+  private messageUser = new BehaviorSubject<any[]>([]);
   currentUser = this.messageUser.asObservable();
 
   constructor() { }
@@ -18,7 +18,7 @@ export class DataService {
     this.messageSource.next(message)
   }
 
-  changeUser(message: string){
+  changeUser(message: []){
     this.messageUser.next(message)
   }
 
