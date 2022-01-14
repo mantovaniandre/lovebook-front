@@ -122,5 +122,10 @@ export class ShoppingCartComponent implements OnInit {
     return quantidade == quantidadeSelecionada;
   }
 
+  alterarTamanhoDecimal(valor: any){
+    return parseFloat(valor).toFixed(2);
+
+  }
+
 
 }

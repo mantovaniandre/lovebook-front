@@ -6,6 +6,8 @@ import { ConnectionApiService } from '../services/connection-api.service';
 import { DataService } from '../services/data.service';
 import { Router } from '@angular/router';
 import { Livro } from '../models/Livro';
+import { Cliente } from '../models/Cliente';
+import { formatDate } from '@angular/common';
 
 
 @Component({
@@ -25,8 +27,12 @@ export class KnowMoreComponent implements OnInit {
   postComentarios = {
     "tituloDoComentario": "",
     "comentarioConteudo": "",
-    "idDoLivro": ""
+    "idDoLivro": "",
+    "nota": 1
   }
+  $dadosUsuario!: Observable<Cliente>;
+  dadosUsuario!: any;
+  currentRate = 1;
 
   constructor(private connectionApiService: ConnectionApiService, 
               private cookieService: CookieService,
@@ -41,6 +47,12 @@ export class KnowMoreComponent implements OnInit {
     this.$comentarios = this.connectionApiService.getComentarios(this.livro.id);
     this.$comentarios.subscribe(data => {
       this.comentarios = data;
+    })
+
+    this.$dadosUsuario = this.connectionApiService.identificacaoUsuario();
+    this.$dadosUsuario.subscribe(data => {
+      this.dadosUsuario = data.tipoUsuario.id;
+    
     })
   }
 
@@ -111,5 +123,11 @@ export class KnowMoreComponent implements OnInit {
     this.router.navigate(['/carrinho']);
 
   }
+
+  formatarData(data: any){
+    let date = new Date(data);
+    return formatDate(date, 'dd/MM/yyyy - hh:mm:ss', "en-US");
+  }
+
 
 }

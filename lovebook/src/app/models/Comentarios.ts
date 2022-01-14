@@ -1,4 +1,3 @@
-import { LoginComponent } from "../login/login.component";
 
 export interface Comentarios{
     "id": number,

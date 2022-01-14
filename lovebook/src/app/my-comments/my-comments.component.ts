@@ -1,10 +1,9 @@
-import { CookieService } from 'ngx-cookie';
+import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Comentarios } from '../models/Comentarios';
 import { ConnectionApiService } from '../services/connection-api.service';
-import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-my-comments',
@@ -64,6 +63,13 @@ export class MyCommentsComponent implements OnInit {
       window.scroll(0,0);
     }
     )
+  }
+  
+  formatarData(data: any){
+
+    let date = new Date(data);
+    return formatDate(date, 'dd/MM/yyyy - hh:mm:ss', "en-US");
+
   }
 
 

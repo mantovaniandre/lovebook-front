@@ -55,7 +55,7 @@ export class MyAccountComponent implements OnInit {
     this.formulario.nome = data.nome;
     this.formulario.sobrenome = data.sobrenome;
     this.formulario.emailUsuario = data.emailUsuario;
-    this.formulario.senhaUsuario = data.senhaUsuario;
+    this.formulario.senhaUsuario = "";
     this.formulario.sexoUsuario = data.sexoUsuario;
     this.formulario.cepUsuario = data.cepUsuario;
     this.formulario.cidadeUsuario = data.cidadeUsuario;

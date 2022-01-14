@@ -91,7 +91,7 @@
         </div>
       </div>
     </div>
-    <div class="d-grid d-md-flex justify-content-md-end">
+    <div class="d-grid d-md-flex justify-content-md-end" *ngIf="dadosUsuario == 2">
       <button type="submit" class="btn yourcomments-btn-update-book" (click)="listaDeLivros(livro)">Adicionar ao carrinho</button>
     </div>
   </div>
@@ -155,19 +155,8 @@
                           <div class="yourcomments-classify-text">
                             <p>Classificar:</p>
                           </div>
-                          <div class="yourcomments-classify-stars-div">
-                            <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                            <label for="cm_star-1"><i class="fa"></i></label>
-                            <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                            <label for="cm_star-2"><i class="fa"></i></label>
-                            <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                            <label for="cm_star-3"><i class="fa"></i></label>
-                            <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                            <label for="cm_star-4"><i class="fa"></i></label>
-                            <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                            <label for="cm_star-5"><i class="fa"></i></label>
-                            <input type="radio" id="cm_star-5" name="fb" value="5"/>
-                          </div>
+                          <ngb-rating [max]="5" [(rate)]="postComentarios.nota" [readonly]="false"></ngb-rating>
+                            <p>Rate: {{ postComentarios.nota }}</p>
                         </div>
                       </div>
                       <div class="d-grid d-md-flex justify-content-md-end">
@@ -213,22 +202,8 @@
                   <p class="comments-language-subdiv1-description1">Avaliação</p>
                 </div>
                 <div class="col-6 comments-rating-appraisal-div">
-                  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-                  <div class="comments-stars-appraisal-container">
-                    <div class="comments-stars-appraisal-div">
-                      <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                      <label for="cm_star-1"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                      <label for="cm_star-2"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                      <label for="cm_star-3"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                      <label for="cm_star-4"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                      <label for="cm_star-5"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-5" name="fb" value="5"/>
-                    </div>
-                  </div>
+                  <ngb-rating></ngb-rating>
+                    <p>Rate: {{ postComentarios.nota }}</p>
                 </div>
               </div>
             </div>
@@ -248,7 +223,7 @@
                   <p class="productdetails-saleprice-subdiv1-description1">Data da avaliação</p>
                 </div>
                 <div class="col-6">
-                  <p class="productdetails-saleprice-subdiv2-description2">{{item.data}}</p>
+                  <p class="productdetails-saleprice-subdiv2-description2">{{formatarData(item.data)}}</p>
                 </div>
               </div>
             </div>

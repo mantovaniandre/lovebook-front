@@ -31,7 +31,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterBookComponent } from './register-book/register-book.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import { EditionBooksComponent } from './edition-books/edition-books.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -68,6 +68,8 @@ import { EditionBooksComponent } from './edition-books/edition-books.component';
     MatMenuModule,
     FormsModule,
     CookieModule.forRoot(),
+    NgbModule,
+    
   ],
   providers: [
     ErrorInterceptorProvider,

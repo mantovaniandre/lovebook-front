@@ -4,6 +4,9 @@
       <div class="shoppingcart-title-div">
         <p class="shoppingcart-title">Minhas Compras</p>
       </div>
+      <div *ngIf="compras.length == 0">
+        <h1>Nenhuma compra realizada!!!!!</h1>
+      </div>
       <div class="container shoppingcart-informations-div mt-5 mb-5" *ngFor="let item of compras">
         <div class="shoppingcart-informations-of-book-container">
           <div class="row shoppingcart-informations-of-book-div mt-4 mb-4">

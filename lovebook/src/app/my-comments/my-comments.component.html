@@ -14,7 +14,10 @@
       <div class="shoppingcart-title-div">
         <p class="shoppingcart-title">Meus Comentários</p>
       </div>
-      <div class="container shoppingcart-informations-div mt-5 mb-5" *ngFor="let item of comentarios" >
+      <div *ngIf="comentarios.length == 0">
+        <h1>Nenhum comentário realizado!!!!!</h1>
+      </div>
+      <div class="container shoppingcart-informations-div mt-5 mb-5" *ngFor="let item of comentarios">
         <div class="shoppingcart-informations-of-book-container">
           <div class="row shoppingcart-informations-of-book-div mt-4 mb-4">
             <div class="col-12 col-sm-12 col-md-4 d-flex align-self-center justify-content-center mb-3">
@@ -33,7 +36,7 @@
                 </div>
                 <div class="col shoppingcart-price-div" style="border-top: 1px solid rgb(204, 203, 203);">
                   <p class="shoppingcart-price-p1 mt-2">Data:</p>
-                  <p class="shoppingcart-price-p2 mt-2">{{item.data}}</p>
+                  <p class="shoppingcart-price-p2 mt-2">{{formatarData(item.data)}}</p>
                 </div>
                 <div class="yourcomments-rating-classify-div" style="border-top: 1px solid rgb(204, 203, 203);">
                   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">

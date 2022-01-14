@@ -192,6 +192,13 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/saibaMais']);
   }
 
+  alterarTamanhoDecimal(valor: any){
+    return parseFloat(valor).toFixed(2);
+
+  }
+
+  
+
  
 
 
