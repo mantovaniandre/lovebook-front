@@ -1,10 +1,9 @@
-import { CookieService } from 'ngx-cookie';
+import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Comentarios } from '../models/Comentarios';
 import { ConnectionApiService } from '../services/connection-api.service';
-import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-my-comments',
@@ -16,7 +15,8 @@ export class MyCommentsComponent implements OnInit {
   comentarios!: Comentarios[];
   livro!: any;
   showModalSuccess!: boolean;
-  showModalFailure!: boolean; 
+  showModalFailure!: boolean;
+  idComentarioDelete!: any; 
 
   constructor(private service: ConnectionApiService, 
               private router: Router) { }
@@ -29,13 +29,13 @@ export class MyCommentsComponent implements OnInit {
     })
 
   }
-  
 
   go(destination: string){
     this.router.navigate(['/' + destination]);
     window.scroll(0,0);
   }
 
+<<<<<<< HEAD
   removerComentario(id: any){
     this.comentarios.forEach((element: any,index: any)=>{
       if(element.id == id) this.comentarios.splice(index,1);
@@ -44,4 +44,45 @@ export class MyCommentsComponent implements OnInit {
     this.service.deleteComentario();
   }
 
+=======
+  deleteComentarioId(idDoLivro: any){
+    this.idComentarioDelete = idDoLivro;
+  }
+
+  excluirComentario(){
+    this.service.deleteComentarios(this.idComentarioDelete).subscribe( data => {
+      window.scroll(0,0);
+      this.showModalSuccess = true;
+
+      this.$comentarios = this.service.pegarComentarios();
+      this.$comentarios.subscribe( data => {
+      this.comentarios = data;
+      window.scroll(0,0);
+
+      this.$comentarios = this.service.pegarComentarios();
+      this.$comentarios.subscribe( data => {
+      this.comentarios = data;
+      window.scroll(0,0);
+    })
+    })
+      
+    },
+   
+    error => {
+      this.showModalFailure = true;
+      window.scroll(0,0);
+    }
+    )
+  }
+  
+  formatarData(data: any){
+
+    let date = new Date(data);
+    return formatDate(date, 'dd/MM/yyyy - hh:mm:ss', "en-US");
+
+  }
+
+
+
+>>>>>>> 40d7ec45f426a80ec7ca5e7aaaac1591fd49d1bf
 }

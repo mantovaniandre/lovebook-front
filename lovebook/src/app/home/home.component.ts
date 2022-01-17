@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
   sidebar!: SidebarComponent;
   erroString!: string;
   $loadingError = new Subject<boolean>();
+  dados: any;
 
   data_literatura!: Array<any>;
   $livros_literatura!: Observable<Array<Livro>>;
@@ -138,7 +139,8 @@ export class HomeComponent implements OnInit {
     this.$nomeUsuario = this.service.identificacaoUsuario();
     this.$nomeUsuario.subscribe(data => {
       this.nomeUsuario = data.nome;
-      this.dataService.changeUser(this.nomeUsuario)
+      this.dados = [this.nomeUsuario, data.tipoUsuario.id]
+      this.dataService.changeUser(this.dados);
     })
   }
 
@@ -189,6 +191,13 @@ export class HomeComponent implements OnInit {
     this.cookieService.putObject('livro', livro);
     this.router.navigate(['/saibaMais']);
   }
+
+  alterarTamanhoDecimal(valor: any){
+    return parseFloat(valor).toFixed(2);
+
+  }
+
+  
 
  
 

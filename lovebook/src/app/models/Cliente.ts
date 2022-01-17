@@ -16,6 +16,7 @@ export interface Cliente{
   "anoExpiracaoCartaoCredito": string,
   "codigoSegurancaCartaoCredito": string,
   "tipoUsuario": {
+    "id": number,
     "nome": string
   }
 }

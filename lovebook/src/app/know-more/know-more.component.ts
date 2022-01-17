@@ -6,6 +6,8 @@ import { ConnectionApiService } from '../services/connection-api.service';
 import { DataService } from '../services/data.service';
 import { Router } from '@angular/router';
 import { Livro } from '../models/Livro';
+import { Cliente } from '../models/Cliente';
+import { formatDate } from '@angular/common';
 
 
 @Component({
@@ -25,8 +27,12 @@ export class KnowMoreComponent implements OnInit {
   postComentarios = {
     "tituloDoComentario": "",
     "comentarioConteudo": "",
-    "idDoLivro": ""
+    "idDoLivro": "",
+    "nota": 1
   }
+  $dadosUsuario!: Observable<Cliente>;
+  dadosUsuario!: any;
+  currentRate = 1;
 
   constructor(private connectionApiService: ConnectionApiService, 
               private cookieService: CookieService,
@@ -42,6 +48,12 @@ export class KnowMoreComponent implements OnInit {
     this.$comentarios.subscribe(data => {
       this.comentarios = data;
     })
+
+    this.$dadosUsuario = this.connectionApiService.identificacaoUsuario();
+    this.$dadosUsuario.subscribe(data => {
+      this.dadosUsuario = data.tipoUsuario.id;
+    
+    })
   }
 
   postar(tituloDoComentario: string, comentarioConteudo: string){
@@ -51,8 +63,13 @@ export class KnowMoreComponent implements OnInit {
     this.postComentarios.idDoLivro = this.livro.id;
   
     this.connectionApiService.postComentarios(this.postComentarios).subscribe(data =>{
-      console.log(data);
+      this.$comentarios = this.connectionApiService.getComentarios(this.livro.id);
+      this.$comentarios.subscribe(data => {
+      this.comentarios = data;
     })
+    })
+
+    
   }
 
   listaDeLivros(livro: Livro){
@@ -72,6 +89,7 @@ export class KnowMoreComponent implements OnInit {
 
       let lista: Array<any> = [livro_front];
       this.cookieService.putObject('carrinho', lista);
+
     } else {
       this.cookieService.remove('carrinho');
       
@@ -85,12 +103,31 @@ export class KnowMoreComponent implements OnInit {
         "quantidadeSelecionada": 1
       } 
       
-      this.listaLivros.push(livro_front);
-      this.cookieService.putObject('carrinho', this.listaLivros);
+      let possuiLivro: boolean = false;
+      for(let i=0; i < this.listaLivros.length; i++){
+        if(this.listaLivros[i].id == livro.id){
+          this.listaLivros[i].quantidadeSelecionada += 1;
+          possuiLivro = true;
+        }
+      }
+
+      if(possuiLivro){
+        this.cookieService.putObject('carrinho', this.listaLivros);
+      } else {
+        this.listaLivros.push(livro_front);
+        this.cookieService.putObject('carrinho', this.listaLivros);
+      }
+
     }
 
     this.router.navigate(['/carrinho']);
 
   }
+
+  formatarData(data: any){
+    let date = new Date(data);
+    return formatDate(date, 'dd/MM/yyyy - hh:mm:ss', "en-US");
+  }
+
 
 }
