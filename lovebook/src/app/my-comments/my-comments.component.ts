@@ -35,16 +35,6 @@ export class MyCommentsComponent implements OnInit {
     window.scroll(0,0);
   }
 
-<<<<<<< HEAD
-  removerComentario(id: any){
-    this.comentarios.forEach((element: any,index: any)=>{
-      if(element.id == id) this.comentarios.splice(index,1);
-    });
-
-    this.service.deleteComentario();
-  }
-
-=======
   deleteComentarioId(idDoLivro: any){
     this.idComentarioDelete = idDoLivro;
   }
@@ -81,8 +71,4 @@ export class MyCommentsComponent implements OnInit {
     return formatDate(date, 'dd/MM/yyyy - hh:mm:ss', "en-US");
 
   }
-
-
-
->>>>>>> 40d7ec45f426a80ec7ca5e7aaaac1591fd49d1bf
 }
