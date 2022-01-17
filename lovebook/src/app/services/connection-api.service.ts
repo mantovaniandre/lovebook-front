@@ -82,9 +82,19 @@ export class ConnectionApiService {
     return this.http.delete(url, {params});
   }
 
-  putBook(atualizarLivro: any):Observable<any>{
+  putBook(atualizarLivro: any): Observable<any>{
     let url = 'http://localhost:8080/book'
     return this.http.put(url, atualizarLivro);
+  }
+
+  postBook(livro: any): Observable<any>{
+    let url = 'http://localhost:8080/book'
+    return this.http.post(url, livro)
+  }
+
+  deleteComentario(): Observable<any>{
+    let url = 'http://localhost:8080/comments'
+    return this.http.delete(url);
   }
   
 }

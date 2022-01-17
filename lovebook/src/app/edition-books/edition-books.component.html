@@ -1,92 +1,94 @@
+<div class="container alert alert-success alert-dismissible fade show mt-5" role="alert" *ngIf="showModalSuccess">
+  <strong>Sucesso:</strong> Sua atualização foi realizado com sucesso.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" *ngIf="showModalFailure">
+  <strong>Erro:</strong> Ocorreu um erro ao realizar sua atualização cadastral.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
 <div class="container employeeregistrationbook-container">
-    <div class="container alert alert-success alert-dismissible fade show mt-5" role="alert" *ngIf="showModalSuccess">
-      <strong>Sucesso:</strong> Sua atualização foi realizado com sucesso.
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
   
-    <div class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" *ngIf="showModalFailure">
-      <strong>Erro:</strong> Ocorreu um erro ao realizar sua atualização cadastral.
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
     
     
-    <div class="container employeeregistrationbook-div">
-      <div class="employeeregistrationbook-div">
-        <div class="employeeregistrationbook-title-div">
-          <p class="employeeregistrationbook-title">Edição de Livros</p>
-        </div>
-        <div class="employeeregistrationbook-informations-container mt-3">
-          <form>
-            <div class="row employeeregistrationbook-informations-div1">
-              <div class="col-sm-12 col-md-3">
-                <label class="employeeregistrationbook-name-label">Nome do livro</label>
-                <input name="name" type="text" class="form-control" [(ngModel)]="formulario.nome" style="color: rgb(140,205,188);">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                  <label class="employeeregistrationbook-publishingcompany-label">Editora</label>
-                  <input name="editora" type="text" class="form-control" [(ngModel)]="formulario.editora" style="color: rgb(140,205,188);">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="employeeregistrationbook-language-label">Idioma</label>
-                <input name="idioma" type="text" class="form-control" [(ngModel)]="formulario.idioma" style="color: rgb(140,205,188);">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="employeeregistrationbook-price-label">Preço de Venda</label>
-                <input name="precoDeVenda" type="text" class="form-control" [(ngModel)]="formulario.precoDeVenda" style="color: rgb(140,205,188);">
-              </div>
+  <div class="container employeeregistrationbook-div">
+    <div class="employeeregistrationbook-div">
+      <div class="employeeregistrationbook-title-div">
+        <p class="employeeregistrationbook-title">Edição de Livros</p>
+      </div>
+      <div class="employeeregistrationbook-informations-container mt-3">
+        <form>
+          <div class="row employeeregistrationbook-informations-div1">
+            <div class="col-sm-12 col-md-3">
+              <label class="employeeregistrationbook-name-label">Nome do livro</label>
+              <input name="name" type="text" class="form-control" [(ngModel)]="formulario.nome" style="color: rgb(140,205,188);">
             </div>
-            <div class="row mt-2 employeeregistrationbook-informations-div2">
-              <div class="col-sm-12 col-md-3">
-                <label class="employeeregistrationbook-urlimage-label">URL da Imagem</label>
-                <input name="urlDaImagem" type="text" class="form-control" [(ngModel)]="formulario.urlDaImagem" style="color: rgb(140,205,188);">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="employeeregistrationbook-numberpage-label">Número de Páginas</label>
-                <input name="numeroDePaginas" type="text" class="form-control" [(ngModel)]="formulario.numeroDePaginas" style="color: rgb(140,205,188);">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="employeeregistrationbook-cost-label">Custo</label>
-                <input name="custo" type="text" class="form-control" [(ngModel)]="formulario.custo" style="color: rgb(140,205,188);">
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <label class="employeeregistrationbook-authorname-label">Nome do Autor</label>
-                <input name="nomeDoAutor" type="text" class="form-control" [(ngModel)]="formulario.nomeDoAutor" style="color: rgb(140,205,188);">
-              </div>
+            <div class="col-sm-12 col-md-3">
+                <label class="employeeregistrationbook-publishingcompany-label">Editora</label>
+                <input name="editora" type="text" class="form-control" [(ngModel)]="formulario.editora" style="color: rgb(140,205,188);">
             </div>
-            <div class="row mt-2 employeeregistrationbook-informations-div3">
-              <div class="col">
-                <label class="employeeregistrationbook-quantity-label">Quantidade</label>
-                <input name="quantidade" type="text" class="form-control" [(ngModel)]="formulario.quantidade" style="color: rgb(140,205,188);">
-              </div>
-              <div class="col">
-                <label class="employeeregistrationbook-category-label">Categoria</label>
-                <input name="categoria" type="text" class="form-control" [(ngModel)]="formulario.categoria" style="color: rgb(140,205,188);">
-              </div>
+            <div class="col-sm-12 col-md-3">
+              <label class="employeeregistrationbook-language-label">Idioma</label>
+              <input name="idioma" type="text" class="form-control" [(ngModel)]="formulario.idioma" style="color: rgb(140,205,188);">
             </div>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-              <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn employeeregistrationbook-btn-update-registration">Editar</button>
+            <div class="col-sm-12 col-md-3">
+              <label class="employeeregistrationbook-price-label">Preço de Venda</label>
+              <input name="precoDeVenda" type="text" class="form-control" [(ngModel)]="formulario.precoDeVenda" style="color: rgb(140,205,188);">
             </div>
-          </form>
-        </div>
+          </div>
+          <div class="row mt-2 employeeregistrationbook-informations-div2">
+            <div class="col-sm-12 col-md-3">
+              <label class="employeeregistrationbook-urlimage-label">URL da Imagem</label>
+              <input name="urlDaImagem" type="text" class="form-control" [(ngModel)]="formulario.urlDaImagem" style="color: rgb(140,205,188);">
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <label class="employeeregistrationbook-numberpage-label">Número de Páginas</label>
+              <input name="numeroDePaginas" type="text" class="form-control" [(ngModel)]="formulario.numeroDePaginas" style="color: rgb(140,205,188);">
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <label class="employeeregistrationbook-cost-label">Custo</label>
+              <input name="custo" type="text" class="form-control" [(ngModel)]="formulario.custo" style="color: rgb(140,205,188);">
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <label class="employeeregistrationbook-authorname-label">Nome do Autor</label>
+              <input name="nomeDoAutor" type="text" class="form-control" [(ngModel)]="formulario.nomeDoAutor" style="color: rgb(140,205,188);">
+            </div>
+          </div>
+          <div class="row mt-2 employeeregistrationbook-informations-div3">
+            <div class="col">
+              <label class="employeeregistrationbook-quantity-label">Quantidade</label>
+              <input name="quantidade" type="text" class="form-control" [(ngModel)]="formulario.quantidade" style="color: rgb(140,205,188);">
+            </div>
+            <div class="col">
+              <label class="employeeregistrationbook-category-label">Categoria</label>
+              <input name="categoria" type="text" class="form-control" [(ngModel)]="formulario.categoria" style="color: rgb(140,205,188);">
+            </div>
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn employeeregistrationbook-btn-update-registration">Editar</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
+</div>
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title employeeregistrationbook-title" id="exampleModalLabel">Edição de Livros</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Você confirma a edição desse livro?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn clientregistrationupdate-btn-update-registration"  data-bs-dismiss="modal" (click)="atualizarLivro()">Confirmar</button>
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title employeeregistrationbook-title" id="exampleModalLabel">Edição de Livros</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Você confirma a edição desse livro?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn clientregistrationupdate-btn-update-registration"  data-bs-dismiss="modal" (click)="atualizarLivro()">Confirmar</button>
       </div>
     </div>
   </div>
+</div>
   

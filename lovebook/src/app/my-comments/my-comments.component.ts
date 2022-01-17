@@ -36,4 +36,12 @@ export class MyCommentsComponent implements OnInit {
     window.scroll(0,0);
   }
 
+  removerComentario(id: any){
+    this.comentarios.forEach((element: any,index: any)=>{
+      if(element.id == id) this.comentarios.splice(index,1);
+    });
+
+    this.service.deleteComentario();
+  }
+
 }

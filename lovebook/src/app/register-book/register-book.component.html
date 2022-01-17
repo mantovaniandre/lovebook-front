@@ -1,15 +1,14 @@
-<div class="container employeeregistrationbook-container">
-  <div class="container alert alert-success alert-dismissible fade show mt-5" role="alert" *ngIf="showModalSuccess">
-    <strong>Sucesso:</strong> Sua atualização foi realizado com sucesso.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
+<div class="container alert alert-success alert-dismissible fade show mt-5" role="alert" *ngIf="showModalSuccess">
+  <strong>Sucesso:</strong> Sua atualização foi realizado com sucesso.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
 
-  <div class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" *ngIf="showModalFailure">
-    <strong>Erro:</strong> Ocorreu um erro ao realizar sua atualização cadastral.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-  
-  
+<div class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" *ngIf="showModalFailure">
+  <strong>Erro:</strong> Ocorreu um erro ao realizar sua atualização cadastral.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="container employeeregistrationbook-container">
   <div class="container employeeregistrationbook-div">
     <div class="employeeregistrationbook-div">
       <div class="employeeregistrationbook-title-div">
@@ -20,47 +19,57 @@
           <div class="row employeeregistrationbook-informations-div1">
             <div class="col-sm-12 col-md-3">
               <label class="employeeregistrationbook-name-label">Nome do livro</label>
-              <input type="text" class="form-control" placeholder="Nome">
+              <input name="nome" type="text" class="form-control" placeholder="Nome" [(ngModel)]="formulario.nome" style="color: rgb(140,205,188);">
             </div>
             <div class="col-sm-12 col-md-3">
                 <label class="employeeregistrationbook-publishingcompany-label">Editora</label>
-                <input type="text" class="form-control" placeholder="Editora">
+                <input name="editora" type="text" class="form-control" placeholder="Editora" [(ngModel)]="formulario.editora" style="color: rgb(140,205,188);">
             </div>
             <div class="col-sm-12 col-md-3">
               <label class="employeeregistrationbook-language-label">Idioma</label>
-              <input type="text" class="form-control" placeholder="Idioma">
+              <input name="idioma" type="text" class="form-control" placeholder="Idioma" [(ngModel)]="formulario.idioma" style="color: rgb(140,205,188);">
             </div>
             <div class="col-sm-12 col-md-3">
               <label class="employeeregistrationbook-price-label">Preço de Venda</label>
-              <input type="text" class="form-control" placeholder="Preço de Venda">
+              <input name="precoDeVenda" type="text" class="form-control" placeholder="Preço de Venda" [(ngModel)]="formulario.precoDeVenda" style="color: rgb(140,205,188);">
             </div>
           </div>
           <div class="row mt-2 employeeregistrationbook-informations-div2">
             <div class="col-sm-12 col-md-3">
               <label class="employeeregistrationbook-urlimage-label">URL da Imagem</label>
-              <input type="text" class="form-control" placeholder="URL da Imagem">
+              <input name="urlDaImagem" type="text" class="form-control" placeholder="URL da Imagem" [(ngModel)]="formulario.urlDaImagem" style="color: rgb(140,205,188);">
             </div>
             <div class="col-sm-12 col-md-3">
               <label class="employeeregistrationbook-numberpage-label">Número de Páginas</label>
-              <input type="text" class="form-control" placeholder="Número de Páginas">
+              <input name="numeroDePaginas" type="text" class="form-control" placeholder="Número de Páginas" [(ngModel)]="formulario.numeroDePaginas" style="color: rgb(140,205,188);">
             </div>
             <div class="col-sm-12 col-md-3">
               <label class="employeeregistrationbook-cost-label">Custo</label>
-              <input type="text" class="form-control" placeholder="Custo">
+              <input name="custo" type="text" class="form-control" placeholder="Custo" [(ngModel)]="formulario.custo" style="color: rgb(140,205,188);">
             </div>
             <div class="col-sm-12 col-md-3">
               <label class="employeeregistrationbook-authorname-label">Nome do Autor</label>
-              <input type="text" class="form-control" placeholder="Nome do Autor">
+              <input name="nomeDoAutor" type="text" class="form-control" placeholder="Nome do Autor" [(ngModel)]="formulario.nomeDoAutor" style="color: rgb(140,205,188);">
             </div>
           </div>
           <div class="row mt-2 employeeregistrationbook-informations-div3">
             <div class="col">
               <label class="employeeregistrationbook-quantity-label">Quantidade</label>
-              <input type="text" class="form-control" placeholder="Quantidade">
+              <input name="quantidade" type="text" class="form-control" placeholder="Quantidade" [(ngModel)]="formulario.quantidade" style="color: rgb(140,205,188);">
             </div>
             <div class="col">
               <label class="employeeregistrationbook-category-label">Categoria</label>
-              <input type="text" class="form-control" placeholder="Categoria">
+              <select name="categoria" class="form-select clientpayment-select-mounth" aria-label="Default select example" [(ngModel)]="formulario.categoria" style="color: rgb(140,205,188);">
+                <option value="" selected>Categoria</option>
+                <option value="Literatura">Literatura</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Romance">Romance</option>
+                <option value="Auto Ajuda">Auto Ajuda</option>
+                <option value="Religião">Religião</option>
+                <option value="Geek">Geek</option>
+                <option value="Biografia">Biografia</option>
+                <option value="Policial">Policial</option>
+              </select>
             </div>
           </div>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -84,7 +93,7 @@
         Você confirma o cadastro desse livro?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn clientregistrationupdate-btn-update-registration"  data-bs-dismiss="modal">Confirmar</button>
+        <button type="button" class="btn clientregistrationupdate-btn-update-registration"  data-bs-dismiss="modal" (click)="cadastrarLivro()">Confirmar</button>
       </div>
     </div>
   </div>
