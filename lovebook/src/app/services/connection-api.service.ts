@@ -92,7 +92,6 @@ export class ConnectionApiService {
     return this.http.put(url, atualizarLivro);
   }
 
-<<<<<<< HEAD
   postBook(livro: any): Observable<any>{
     let url = 'http://localhost:8080/book'
     return this.http.post(url, livro)
@@ -102,8 +101,5 @@ export class ConnectionApiService {
     let url = 'http://localhost:8080/comments'
     return this.http.delete(url);
   }
-=======
-  
->>>>>>> 40d7ec45f426a80ec7ca5e7aaaac1591fd49d1bf
   
 }

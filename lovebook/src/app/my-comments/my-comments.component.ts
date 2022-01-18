@@ -66,9 +66,7 @@ export class MyCommentsComponent implements OnInit {
   }
   
   formatarData(data: any){
-
     let date = new Date(data);
     return formatDate(date, 'dd/MM/yyyy - hh:mm:ss', "en-US");
-
   }
 }
