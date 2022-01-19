@@ -28,7 +28,7 @@ export class KnowMoreComponent implements OnInit {
     "tituloDoComentario": "",
     "comentarioConteudo": "",
     "idDoLivro": "",
-    "nota": 1
+    "nota": 0
   }
   $dadosUsuario!: Observable<Cliente>;
   dadosUsuario!: any;
@@ -52,8 +52,9 @@ export class KnowMoreComponent implements OnInit {
     this.$dadosUsuario = this.connectionApiService.identificacaoUsuario();
     this.$dadosUsuario.subscribe(data => {
       this.dadosUsuario = data.tipoUsuario.id;
-    
     })
+
+    this.livro.nota = this.alterarTamanhoDecimal(this.livro.nota);
   }
 
   postar(tituloDoComentario: string, comentarioConteudo: string){
@@ -68,6 +69,12 @@ export class KnowMoreComponent implements OnInit {
       this.comentarios = data;
     })
     })
+
+    this.livro = this.cookieService.getObject('livro');
+    this.cookieService.remove('livro');
+    this.livro.nota = (this.livro.nota * (this.comentarios.length - 1) + this.postComentarios.nota) / this.comentarios.length  
+    this.livro.nota = this.alterarTamanhoDecimal(this.livro.nota);
+    this.cookieService.putObject('livro', this.livro);
 
     
   }
@@ -127,6 +134,11 @@ export class KnowMoreComponent implements OnInit {
   formatarData(data: any){
     let date = new Date(data);
     return formatDate(date, 'dd/MM/yyyy - hh:mm:ss', "en-US");
+  }
+
+  alterarTamanhoDecimal(valor: any){
+    return parseFloat(valor).toFixed(1);
+
   }
 
 

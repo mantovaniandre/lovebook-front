@@ -11,4 +11,5 @@ export interface Comentarios{
         "nomeDoAutor": string,
         "urlDaImagemDoLivro": string
     }
+    "nota": number,
 }

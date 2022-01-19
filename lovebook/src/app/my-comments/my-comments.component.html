@@ -44,19 +44,7 @@
                     <div class="yourcomments-classify-text mt-2" style="margin-right: 5px;">
                       <p style="font-weight: 700;">Classificação:</p>
                     </div>
-                    <div class="yourcomments-classify-stars-div mt-2">
-                      <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
-                      <label for="cm_star-1"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-1" name="fb" value="1"/>
-                      <label for="cm_star-2"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-2" name="fb" value="2"/>
-                      <label for="cm_star-3"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-3" name="fb" value="3"/>
-                      <label for="cm_star-4"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-4" name="fb" value="4"/>
-                      <label for="cm_star-5"><i class="fa"></i></label>
-                      <input type="radio" id="cm_star-5" name="fb" value="5"/>
-                    </div>
+                    <ngb-rating [max]="5" [(rate)]="item.nota" [readonly]="true"></ngb-rating>
                   </div>
                 </div>
                 <div class="col shoppingcart-price-div" style="border-top: 1px solid rgb(204, 203, 203);">
