@@ -101,5 +101,10 @@ export class ConnectionApiService {
     let url = 'http://localhost:8080/comments'
     return this.http.delete(url);
   }
+
+  getGlobalReport(): Observable<any>{
+    let url = 'http://localhost:8080/dashboard/global'
+    return this.http.get(url);
+  }
   
 }

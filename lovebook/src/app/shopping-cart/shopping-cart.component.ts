@@ -36,7 +36,6 @@ export class ShoppingCartComponent implements OnInit {
     this.$usuario = this.connectionApiService.identificacaoUsuario();
     this.$usuario.subscribe(data => {
       this.usuario = data;
-    console.log(this.usuario)
     })
     this.listaLivros = this.cookieService.getObject('carrinho');
     
@@ -45,8 +44,6 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   calcular(event: any, item: any){
-    console.log(event.target.value)
-    console.log(item)
     let soma = 0;
     for(let i = 0; i<this.listaLivros.length; i++){
       if(this.listaLivros[i].id == item.id){

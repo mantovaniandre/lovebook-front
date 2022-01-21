@@ -57,10 +57,8 @@ export class UserRegistrationComponent implements OnInit {
     this.registrar.anoExpiracaoCartaoCredito = anoExpiracaoCartaoCredito;
     this.registrar.codigoSegurancaCartaoCredito = codigoSegurancaCartaoCredito;
     this.registrar.perfil = perfil;
-    console.log(this.registrar);
 
     this.connection.postRegistrar(this.registrar).subscribe( data =>  {
-      console.log(data);
       this.router.navigate(['/login']);
     })
   }
