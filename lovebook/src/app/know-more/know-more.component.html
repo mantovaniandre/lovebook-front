@@ -104,7 +104,7 @@
         <div class="container row justify-content-center"> 
           <div class="row" >
             <div class="col-12 mt-5">
-              <h1 style="font-size: 45px;">Rating: {{livro.nota}}</h1>
+              <h1 style="font-size: 45px;">{{livro.nota}}</h1>
             </div>
             <div class="col-12 yourcomments-rating-appraisal-div mt-3">
               <ngb-rating [max]="5" [(rate)]="livro.nota" [readonly]="true"></ngb-rating>
