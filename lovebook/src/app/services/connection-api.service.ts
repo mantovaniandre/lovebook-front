@@ -83,7 +83,6 @@ export class ConnectionApiService {
     let url = 'http://localhost:8080/book'
     const params = new HttpParams()
       .set('id', id)
-      console.log(id)
     return this.http.delete(url, {params});
   }
 

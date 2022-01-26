@@ -144,3 +144,17 @@
 .userregistration-select-year {
   color: rgb(140,205,188);
 }
+
+.employeeregistrationbook-title {
+  font-size: 25px;
+  font-style: italic;
+  color: rgb(140,205,188);
+  font-weight: 700;
+}
+
+.clientregistrationupdate-btn-update-registration {
+  background: linear-gradient(0deg, rgba(140,205,188,1) 0%, rgba(53,126,107,1) 71%);
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

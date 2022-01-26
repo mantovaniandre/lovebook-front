@@ -25,12 +25,12 @@ export class ShoppingCartComponent implements OnInit {
   listaQuantidade = [1,2,3,4,5,6,7,8,9,10];
   
 
-    constructor(private connectionApiService: ConnectionApiService,
-                private router: Router,
-                private cookieService: CookieService,
-                ) {
-    this.data = new Array<any>();
-}
+  constructor(private connectionApiService: ConnectionApiService,
+              private router: Router,
+              private cookieService: CookieService,
+              ) {
+  this.data = new Array<any>();
+  }
 
   ngOnInit(): void {
     this.$usuario = this.connectionApiService.identificacaoUsuario();
@@ -109,13 +109,9 @@ export class ShoppingCartComponent implements OnInit {
       window.scroll(0,0);
     }
     )
-
-
   }
 
   quantidadeSelected(quantidade: any, quantidadeSelecionada: any){
-    console.log("quantidade: " + quantidade)
-    console.log("quantidade selecionada: " + quantidadeSelecionada)
     return quantidade == quantidadeSelecionada;
   }
 

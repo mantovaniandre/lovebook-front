@@ -11,7 +11,6 @@ import { DataService } from './services/data.service';
 })
 export class AppComponent {
   title = 'lovebook-frontnew';
-
   message:any;
   messageUser:any;
   subscription!: Subscription;
@@ -25,6 +24,7 @@ export class AppComponent {
   ngOnInit(){
     this.subscription = this.data.currentMessage.subscribe(message => this.message = message)
     this.SubscriptionUser = this.data.currentUser.subscribe(messageUser => this.messageUser = messageUser)
+   console.log(this.messageUser)
   }
 
   getLivros(livro: string){
@@ -48,8 +48,6 @@ export class AppComponent {
     this.data.changeUser([])
     this.router.navigate(['/login']);
   }
-
-
 }
 
 

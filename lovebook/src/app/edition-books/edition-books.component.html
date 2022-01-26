@@ -9,9 +9,6 @@
 </div>
 
 <div class="container employeeregistrationbook-container">
-  
-    
-    
   <div class="container employeeregistrationbook-div">
     <div class="employeeregistrationbook-div">
       <div class="employeeregistrationbook-title-div">
@@ -62,7 +59,17 @@
             </div>
             <div class="col">
               <label class="employeeregistrationbook-category-label">Categoria</label>
-              <input name="categoria" type="text" class="form-control" [(ngModel)]="formulario.categoria" style="color: rgb(140,205,188);">
+              <select name="categoria" class="form-select clientpayment-select-mounth" aria-label="Default select example" [(ngModel)]="formulario.categoria" style="color: rgb(140,205,188);">
+                <option value="" selected>Categoria</option>
+                <option value="Literatura">Literatura</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Romance">Romance</option>
+                <option value="Auto Ajuda">Auto Ajuda</option>
+                <option value="Religião">Religião</option>
+                <option value="Geek">Geek</option>
+                <option value="Biografia">Biografia</option>
+                <option value="Policial">Policial</option>
+              </select>
             </div>
           </div>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -86,7 +93,7 @@
         Você confirma a edição desse livro?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn clientregistrationupdate-btn-update-registration"  data-bs-dismiss="modal" (click)="atualizarLivro()">Confirmar</button>
+        <button type="button" class="btn clientregistrationupdate-btn-update-registration" data-bs-dismiss="modal" (click)="atualizarLivro()">Confirmar</button>
       </div>
     </div>
   </div>

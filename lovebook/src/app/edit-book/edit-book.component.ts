@@ -48,13 +48,13 @@ export class EditBookComponent implements OnInit {
     if(filtro == "Livro"){
       this.$livros = this.service.getBooks(busca,"", "", "");
     }
-    console.log(this.$livros)
+   
     this.$livros.subscribe(data => {
       this.data = data;
       this.slides = this.chunk(this.data, 4);
     },
     (error: HttpErrorResponse) => {
-      console.log(error);
+
 
       if(error.status == 404){
         this.erroString = "Pesquisa não encontrada"
@@ -87,6 +87,10 @@ export class EditBookComponent implements OnInit {
     this.cookieService.remove('livro');
     this.cookieService.putObject('livro', livro);
     this.router.navigate(['/edicaoDeLivros']);
+  }
+
+  alterarTamanhoDecimal(valor: any){
+    return parseFloat(valor).toFixed(2);
   }
 
 }

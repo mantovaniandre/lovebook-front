@@ -135,7 +135,7 @@ export class HomeComponent implements OnInit {
     })
 
     this.subscription = this.dataService.currentMessage.subscribe(message => this.getLivros(message[0],message[1]))
-
+    
     this.$nomeUsuario = this.service.identificacaoUsuario();
     this.$nomeUsuario.subscribe(data => {
       this.nomeUsuario = data.nome;
@@ -167,13 +167,13 @@ export class HomeComponent implements OnInit {
     if(filtro == "Livro"){
       this.$livros = this.service.getBooks(busca,"", "", "");
     }
-    console.log(this.$livros)
+    
     this.$livros.subscribe(data => {
       this.data = data;
       this.slides = this.chunk(this.data, 5);
     },
     (error: HttpErrorResponse) => {
-      console.log(error);
+      
 
       if(error.status == 404){
         this.erroString = "Pesquisa não encontrada"
@@ -194,7 +194,6 @@ export class HomeComponent implements OnInit {
 
   alterarTamanhoDecimal(valor: any){
     return parseFloat(valor).toFixed(2);
-
   }
 
   

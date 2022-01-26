@@ -18,8 +18,7 @@ export class DashboardComponent implements OnInit {
     this.$globalReport = this.service.getGlobalReport();
     this.$globalReport.subscribe( data => {
       this.globalReport = data
-      console.log(data)
-      console.log(this.globalReport)
+
     })
   }
 

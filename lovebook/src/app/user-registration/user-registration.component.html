@@ -1,3 +1,13 @@
+<div class="container alert alert-success alert-dismissible fade show mt-5" role="alert" *ngIf="showModalSuccess">
+  <strong>Sucesso:</strong> Sua cadastro foi realizado com sucesso.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" *ngIf="showModalFailure">
+  <strong>Erro:</strong> Ocorreu um erro ao realizar seu cadastro.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
 <div class="container userregistration-container">
   <div class="userregistration-div">
     <div class="userregistration-title-div">
@@ -8,48 +18,48 @@
         <div class="row userregistration-informations-div1">
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-name-label">Nome</label>
-            <input type="text" class="form-control" placeholder="Nome" #nome>
+            <input name="nome" [(ngModel)]="formulario.nome" type="text" class="form-control" placeholder="Nome" style="color: rgb(140,205,188);">
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
               <label class="userregistration-lastname-label">Sobrenome</label>
-              <input type="text" class="form-control" placeholder="Sobrenome" #sobrenome>
+              <input name="sobrenome" [(ngModel)]="formulario.sobrenome" type="text" class="form-control" placeholder="Sobrenome" style="color: rgb(140,205,188);">
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-email-label">E-mail</label>
-            <input type="email" class="form-control" placeholder="E-mail" #emailUsuario>
+            <input name="emailUsuario" [(ngModel)]="formulario.emailUsuario" type="email" class="form-control" placeholder="E-mail" style="color: rgb(140,205,188);">
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-password-label">Senha</label>
-            <input type="password" class="form-control" placeholder="Senha" #senhaUsuario>
+            <input name="senhaUsuario" [(ngModel)]="formulario.senhaUsuario" type="password" class="form-control" placeholder="Senha" style="color: rgb(140,205,188);">
           </div>
         </div>
         <div class="row userregistration-informations-div2">
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-zipcode-label">CEP</label>
-            <input type="text" class="form-control" placeholder="CEP" #cepUsuario>
+            <input name="cepUsuario" [(ngModel)]="formulario.cepUsuario" type="text" class="form-control" placeholder="CEP" style="color: rgb(140,205,188);">
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-address-label">Endereço</label>
-            <input type="text" class="form-control" placeholder="Endereço" #enderecoUsuario>
+            <input name="enderecoUsuario" [(ngModel)]="formulario.enderecoUsuario" type="text" class="form-control" placeholder="Endereço" style="color: rgb(140,205,188);">
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-number-label">Número</label>
-            <input type="text" class="form-control" placeholder="Número" #numeroEnderecoUsuario>
+            <input name="numeroEnderecoUsuario" [(ngModel)]="formulario.numeroEnderecoUsuario" type="text" class="form-control" placeholder="Número" style="color: rgb(140,205,188);">
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-complement-label">Complemento</label>
-            <input type="text" class="form-control" placeholder="Complemento" #complementoEnderecoUsuario>
+            <input name="complementoEnderecoUsuario" [(ngModel)]="formulario.complementoEnderecoUsuario" type="text" class="form-control" placeholder="Complemento" style="color: rgb(140,205,188);">
           </div>
         </div>
         <div class="row userregistration-informations-div3">
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-city-label">Cidade</label>
-            <input type="text" class="form-control" placeholder="Cidade" #cidadeUsuario>
+            <input name="cidadeUsuario" [(ngModel)]="formulario.cidadeUsuario" type="text" class="form-control" placeholder="Cidade" style="color: rgb(140,205,188);">
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-state-label">Estado</label>
-            <select class="form-select userregistration-select" aria-label="Default select example" #estadoUsuario>
-              <option selected>Estado</option>
+            <select name="estadoUsuario" [(ngModel)]="formulario.estadoUsuario" class="form-select userregistration-select" aria-label="Default select example">
+              <option selected="selected">Estado</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
               <option value="AP">Amapá</option>
@@ -82,7 +92,7 @@
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-user-label">Tipo de Usuário</label>
-            <select class="form-select userregistration-select-user" aria-label="Default select example" #perfil>
+            <select name="perfil" [(ngModel)]="formulario.perfil" class="form-select userregistration-select-user" aria-label="Default select example">
               <option selected>Tipo de Usuário</option>
               <option value="Cliente">Cliente</option>
               <option value="Colaborador">Colaborador</option>
@@ -90,7 +100,7 @@
           </div>
           <div class="col-sm-12 col-md-3 mt-2">
             <label class="userregistration-gender-label">Sexo</label>
-            <select class="form-select userregistration-select-gender" aria-label="Default select example" #sexoUsuario>
+            <select name="sexoUsuario" [(ngModel)]="formulario.sexoUsuario" class="form-select userregistration-select-gender" aria-label="Default select example">
               <option selected>Sexo</option>
               <option value="Masculino">Masculino</option>
               <option value="Feminino">Feminino</option>
@@ -98,19 +108,19 @@
           </div>
         </div>
         <div class="row userregistration-informations-div4">
-          <div class="col-sm-12 col-md-3 mt-2">
+          <div class="col-12 col-sm-12 col-md-3 mt-2">
             <label class="clientpayment-creditcard-label">Número do cartão de crédito</label>
-            <input type="text" class="form-control" placeholder="Número" #numeroCartaoCredito>
+            <input name="numeroCartaoCredito" [(ngModel)]="formulario.numeroCartaoCredito" type="text" class="form-control" placeholder="Número" style="color: rgb(140,205,188);">
           </div>
-          <div class="col-sm-12 col-md-3 mt-2">
+          <div class="col-12 col-sm-12 col-md-3 mt-2">
               <label class="userregistration-cardnumber-label">Nome do cartão de crédito</label>
-              <input type="text" class="form-control" placeholder="Nome" #nomeCartaoCredito>
+              <input name="nomeCartaoCredito" [(ngModel)]="formulario.nomeCartaoCredito" type="text" class="form-control" placeholder="Nome" style="color: rgb(140,205,188);">
           </div>
-          <div class="col-6 col-sm-6 col-md-3 mt-2">
+          <div class="col-12 col-sm-12 col-md-3  mt-2">
             <div class="row">
               <div class="col">
                 <label class="userregistration-expiriondate-label">Mês de expiração</label>
-                <select class="form-select userregistration-select-mounth" aria-label="Default select example" style="width: 120px;" #mesExpiracaoCartaoCredito>
+                <select name="mesExpiracaoCartaoCredito" [(ngModel)]="formulario.mesExpiracaoCartaoCredito" class="form-select userregistration-select-mounth" aria-label="Default select example" style="width: 120px;">
                   <option value="1" selected>1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -127,9 +137,8 @@
               </div>
               <div class="col">
                 <label class="userregistration-expiriondate-label">Ano de expiração</label>
-                <select class="form-select userregistration-select-year" aria-label="Default select example" style="width: 120px;" #anoExpiracaoCartaoCredito>
-                  <option value="2021" selected>2021</option>
-                  <option value="2022">2022</option>
+                <select name="anoExpiracaoCartaoCredito" [(ngModel)]="formulario.anoExpiracaoCartaoCredito" class="form-select userregistration-select-year" style="width: 120px;">
+                  <option selected value="2022">2022</option>
                   <option value="2023">2023</option>
                   <option value="2024">2024</option>
                   <option value="2025">2025</option>
@@ -143,15 +152,33 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-3 mt-2">
+          <div class="col-12 col-sm-12 col-md-3 mt-2">
             <label class="userregistration-securitycode-label">Código de segurança CVV</label>
-            <input type="text" class="form-control" placeholder="CVV" #codigoSegurancaCartaoCredito>
+            <input name="codigoSegurancaCartaoCredito" [(ngModel)]="formulario.codigoSegurancaCartaoCredito" type="text" class="form-control" placeholder="CVV" style="color: rgb(140,205,188);">
           </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button type="submit" class="btn userregistration-btn-update-registration" (click)="registrarUsuario(nome.value, sobrenome.value, emailUsuario.value, senhaUsuario.value, sexoUsuario.value, cepUsuario.value, cidadeUsuario.value, estadoUsuario.value, enderecoUsuario.value, numeroEnderecoUsuario.value, complementoEnderecoUsuario.value, numeroCartaoCredito.value, nomeCartaoCredito.value, mesExpiracaoCartaoCredito.value, anoExpiracaoCartaoCredito.value, codigoSegurancaCartaoCredito.value, perfil.value)">Cadastrar</button>
+          <button type="submit" class="btn userregistration-btn-update-registration" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastrar</button>
         </div>
       </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title employeeregistrationbook-title" id="exampleModalLabel">Cadastro de usuário</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Você confirma o seu cadastro?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn clientregistrationupdate-btn-update-registration" data-bs-dismiss="modal" (click)="registrarUsuario()">Confirmar</button>
+      </div>
     </div>
   </div>
 </div>

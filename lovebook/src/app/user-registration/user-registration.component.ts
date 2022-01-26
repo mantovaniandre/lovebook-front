@@ -9,8 +9,9 @@ import { ConnectionApiService } from '../services/connection-api.service';
   styleUrls: ['./user-registration.component.css']
 })
 export class UserRegistrationComponent implements OnInit {
-
-  registrar = {
+  showModalSuccess!: boolean;
+  showModalFailure!: boolean;
+  formulario = {
     "nome": "",
     "sobrenome": "",
     "emailUsuario": "",
@@ -35,32 +36,41 @@ export class UserRegistrationComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0);
+
   }
 
 
-  registrarUsuario(nome: string, sobrenome: string, emailUsuario: string, senhaUsuario: string, sexoUsuario: string, cepUsuario: string, cidadeUsuario: string, estadoUsuario: string, enderecoUsuario: string, numeroEnderecoUsuario: string, complementoEnderecoUsuario: string, numeroCartaoCredito: string, nomeCartaoCredito: string, mesExpiracaoCartaoCredito: string, anoExpiracaoCartaoCredito: string, codigoSegurancaCartaoCredito: string, perfil: string ){
+  registrarUsuario(){
     event?.preventDefault();
-    this.registrar.nome = nome;
-    this.registrar.sobrenome = sobrenome;
-    this.registrar.emailUsuario = emailUsuario;
-    this.registrar.senhaUsuario = senhaUsuario;
-    this.registrar.sexoUsuario = sexoUsuario;
-    this.registrar.cepUsuario = cepUsuario;
-    this.registrar.cidadeUsuario = cidadeUsuario;
-    this.registrar.estadoUsuario = estadoUsuario;
-    this.registrar.enderecoUsuario = enderecoUsuario;
-    this.registrar.numeroEnderecoUsuario = numeroEnderecoUsuario;
-    this.registrar.complementoEnderecoUsuario = complementoEnderecoUsuario;
-    this.registrar.numeroCartaoCredito = numeroCartaoCredito;
-    this.registrar.nomeCartaoCredito = nomeCartaoCredito;
-    this.registrar.mesExpiracaoCartaoCredito = mesExpiracaoCartaoCredito;
-    this.registrar.anoExpiracaoCartaoCredito = anoExpiracaoCartaoCredito;
-    this.registrar.codigoSegurancaCartaoCredito = codigoSegurancaCartaoCredito;
-    this.registrar.perfil = perfil;
+    this.connection.postRegistrar(this.formulario).subscribe( data =>  {
+      this.showModalSuccess = true;
+      this.reset();
+    },
+    error => {
+      this.showModalFailure = true;
+      window.scroll(0,0);
+    }
+    
+    )
+  }
 
-    this.connection.postRegistrar(this.registrar).subscribe( data =>  {
-      this.router.navigate(['/login']);
-    })
+  reset(){
+    this.formulario.nome = '';
+    this.formulario.sobrenome = '';
+    this.formulario.emailUsuario = '';
+    this.formulario.senhaUsuario = '';
+    this.formulario.cepUsuario = '';
+    this.formulario.cidadeUsuario = '';
+    this.formulario.estadoUsuario = '';
+    this.formulario.enderecoUsuario = '';
+    this.formulario.numeroEnderecoUsuario = '';
+    this.formulario.complementoEnderecoUsuario = '';
+    this.formulario.numeroCartaoCredito = '';
+    this.formulario.nomeCartaoCredito = '';
+    this.formulario.mesExpiracaoCartaoCredito = '';
+    this.formulario.anoExpiracaoCartaoCredito = '';
+    this.formulario.codigoSegurancaCartaoCredito = '';
+    this.formulario.perfil = '';
   }
 
 }

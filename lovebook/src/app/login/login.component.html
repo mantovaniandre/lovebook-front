@@ -1,25 +1,33 @@
+<div class="container alert alert-danger alert-dismissible fade show mt-5" role="alert" *ngIf="showModalFailure">
+  <strong>Erro:</strong> Usuário ou senha inválida. Precisando de apoio, nos contate em atendimento@lovebook.com.br
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
 <div class="container login-container">
   <div class="row login-informations-div">
-    <form class="col-md-6 offset-md-3 login-informations-form">
-      <div class="container">
-        <h3 class="login-informations-form-title">Login</h3>
+    <div class="col-md-6 offset-md-3 login-informations-form">
+      <form class="container needs-validation" novalidate>
+        <h3 class="login-informations-form-title ">Login</h3>
         <hr class="divisor">
         <br>
-        <div class="form-group">
+        <div>
             <label class="login-email-title">E-mail</label>
             <input type="email" class="form-control" placeholder="E-mail" #inputEmail>
         </div>
         <br>
-        <div class="form-group">
-            <label class="login-password-title">Senha</label>
-            <input type="password" class="form-control" placeholder="Senha" #inputPassword>
+        <div>
+          <label for="validationCustom05" class="form-label login-password-title">Senha</label>
+          <input type="password" class="form-control" id="validationCustom05" placeholder="Senha" #inputPassword required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
         </div>
         <div class="login-dont-fave-register">
           <a (click)="go('registrarUsuario')" style="cursor: pointer;">Não tem cadastro ></a>
         </div>
         <br>
         <button type="submit" (click)="login(inputEmail.value, inputPassword.value)" class="btn login-btn"><i class="fa fa-sign-in"></i>Entrar</button>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </div>

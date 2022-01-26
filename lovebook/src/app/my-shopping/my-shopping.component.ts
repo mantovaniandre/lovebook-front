@@ -19,7 +19,7 @@ export class MyShoppingComponent implements OnInit {
     this.$compras = this.service.getPurchase();
     this.$compras.subscribe( data => {
       this.compras = data;
-      console.log(this.compras);
+      
     })
     window.scroll(0,0);
   }

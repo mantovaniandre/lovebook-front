@@ -51,13 +51,11 @@ export class EditionBooksComponent implements OnInit {
 
   atualizarLivro(){
     this.connectionApiService.putBook(this.formulario).subscribe( data => {
-      console.log(this.formulario)
       window.scroll(0,0);
       this.showModalSuccess = true;
     },
    
     error => {
-      console.log(this.formulario)
       this.showModalFailure = true;
       window.scroll(0,0);
     }

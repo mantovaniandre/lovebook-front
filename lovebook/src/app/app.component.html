@@ -6,7 +6,7 @@
           <a class="navbar-logo-text">Lovebook</a>
         </div>
       </div>
-      <div class="col navbar-search-div">
+      <div class="col navbar-search-div" *ngIf="messageUser[1] != null">
         <div class="d-flex justify-content-center navbar-search-subdiv">
           <select (change)="selectFiltro($event)" class="navbar-search-select" aria-label="Default select example">
             <option value="" selected>Pesquisar por</option>
@@ -22,7 +22,7 @@
           </div>
         </div>
       </div>
-      <div class="col navbar-account-div">
+      <div class="col navbar-account-div" *ngIf="messageUser[1] != null">
         <div class="navbar-account-subdiv justify-content-center">
           <div class="navbar-account-div-principal">
             <div class="navbar-account-icon-div">

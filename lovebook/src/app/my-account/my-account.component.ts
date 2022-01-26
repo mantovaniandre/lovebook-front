@@ -50,7 +50,7 @@ export class MyAccountComponent implements OnInit {
   ngOnInit() {
     this.$usuario = this.service.identificacaoUsuario();
     this.$usuario.subscribe(data => {
-      console.log(data);
+      
 
     this.formulario.nome = data.nome;
     this.formulario.sobrenome = data.sobrenome;
@@ -89,11 +89,9 @@ export class MyAccountComponent implements OnInit {
   }
 
   atualizarUsuario(){
-    console.log(this.formulario)
     this.service.putUsuario(this.formulario).subscribe( data => {
-      console.log(this.formulario)
-      window.scroll(0,0);
       this.showModalSuccess = true;
+      window.scroll(0,0);
     },
    
     error => {

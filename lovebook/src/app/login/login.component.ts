@@ -10,11 +10,12 @@ import { CookieService } from 'ngx-cookie';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  showModalFailure!: boolean;
   credentials = {
     email: "",
     senha: ""
   }
+  
 
   constructor(private router: Router,
               private connection: ConnectionApiService,
@@ -22,11 +23,9 @@ export class LoginComponent implements OnInit {
               private cookieService: CookieService,) { }
 
   ngOnInit(): void {
-
     this.cookieService.remove('carrinho');
     this.cookieService.remove('livro');
     window.scroll(0,0);
-
   }
 
   go(destination: string){
@@ -38,14 +37,14 @@ export class LoginComponent implements OnInit {
     event?.preventDefault();
     this.credentials.email = email;
     this.credentials.senha = senha;
-    console.log(this.credentials)
     this.connection.login(this.credentials).subscribe(
       resp => {
         this.userService.setToken(resp.token);
         this.router.navigate(['/home']);
       },
       error => {
-        console.log('Ocorreu algum erro');
+        this.showModalFailure = true;
+        console.log(this.router.url)
       }
     )
 
