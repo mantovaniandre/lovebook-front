@@ -67,15 +67,18 @@ export class KnowMoreComponent implements OnInit {
       this.$comentarios = this.connectionApiService.getComentarios(this.livro.id);
       this.$comentarios.subscribe(data => {
       this.comentarios = data;
+    
+      this.livro = this.cookieService.getObject('livro');
+      this.cookieService.remove('livro');
+      if(data == 0){
+        this.livro.nota = this.postComentarios.nota
+      } else {
+        this.livro.nota = (this.livro.nota * (this.comentarios.length - 1) + this.postComentarios.nota) / this.comentarios.length
+      }
+      this.livro.nota = this.alterarTamanhoDecimal(this.livro.nota);
+      this.cookieService.putObject('livro', this.livro);
     })
     })
-
-    this.livro = this.cookieService.getObject('livro');
-    this.cookieService.remove('livro');
-    this.livro.nota = (this.livro.nota * (this.comentarios.length - 1) + this.postComentarios.nota) / this.comentarios.length  
-    this.livro.nota = this.alterarTamanhoDecimal(this.livro.nota);
-    this.cookieService.putObject('livro', this.livro);
-
     
   }
 

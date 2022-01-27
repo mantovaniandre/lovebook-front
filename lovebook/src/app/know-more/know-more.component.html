@@ -113,7 +113,7 @@
               <h4>Baseado em {{comentarios.length}} avaliações</h4>
             </div>
           </div>
-          <div class="row" >
+          <div class="row" *ngIf="dadosUsuario == 2">
             <p>
               <a class="btn btn-comments" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Avaliar e Comentar</a>
             </p>

@@ -184,8 +184,6 @@ export class HomeComponent implements OnInit {
       }
     })
   }
-
-
   informacaoDoLivro(livro: Livro){
     this.cookieService.remove('livro');
     this.cookieService.putObject('livro', livro);
@@ -195,10 +193,5 @@ export class HomeComponent implements OnInit {
   alterarTamanhoDecimal(valor: any){
     return parseFloat(valor).toFixed(2);
   }
-
-  
-
- 
-
 
 }

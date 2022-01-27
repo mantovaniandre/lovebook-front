@@ -105,5 +105,13 @@ export class ConnectionApiService {
     let url = 'http://localhost:8080/dashboard/global'
     return this.http.get(url);
   }
+
+  getStatsReport(mes: number, ano: number): Observable<any>{
+    let url = 'http://localhost:8080/dashboard/stats'
+    const params = new HttpParams()
+    .set('mes', mes)
+    .set('ano', ano)
+    return this.http.get(url, {params});
+  }
   
 }
