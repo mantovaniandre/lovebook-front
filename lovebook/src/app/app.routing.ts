@@ -1,7 +1,4 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { BrowserModule } from "@angular/platform-browser";
-import { Routes, RouterModule } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from './login/login.component';
 import { UserRegistrationComponent } from "./user-registration/user-registration.component";
@@ -15,6 +12,9 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { RegisterBookComponent } from "./register-book/register-book.component";
 import { MyAccountComponent } from "./my-account/my-account.component";
 import { EditionBooksComponent } from "./edition-books/edition-books.component";
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { BrowserModule } from "@angular/platform-browser";
 
 
 const routes: Routes = [
@@ -82,7 +82,6 @@ const routes: Routes = [
     canActivate: [AuthGuardServiceService]
   },
 ];
-
 @NgModule({
   imports: [
     CommonModule,
